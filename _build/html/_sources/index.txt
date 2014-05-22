@@ -9,12 +9,12 @@ Welcome to AIMBAT's documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+	:numbered:
+   	:maxdepth: 2
 
-   docfiles/introduction
-   docfiles/installing
-   docfiles/PickingTravelTimes
-
+    docfiles/introduction
+    docfiles/installing
+    Picking Travel Times<docfiles/PickingTravelTimes>
 
 
 Indices and tables

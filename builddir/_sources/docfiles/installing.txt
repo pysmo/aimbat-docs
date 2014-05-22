@@ -1,6 +1,14 @@
-Installing
-==========
+Installation
+============
 
-You need Python!
+Getting your operating system
+-----------------------------
 
-u suck
+.. image:: installing-images/system_preferences.png
+
+Installing Python
+-----------------
+
+Installing Python Libraries
+---------------------------
+
