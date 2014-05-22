@@ -76,6 +76,21 @@ ICCC-A
 
 Get rid of really bad seismograms
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+If there are any really bad seismograms, you can click on them to deselect them. Bad seismograms are those that look nothing like the shape of the array stack pictured. Usually, if there are more than enough seismograms, so it is safe to throw out any that deviate more than a bit from the array stack. If you don’t filter your data, you’ll have to throw out more seismograms.
+
+Remember to save your work periodically once you start picking your travel times, otherwise if AIMBAT crashes, you lose it.
+
+ICCC-B
+~~~~~~
+Hit the ``ICCC-B`` button to begin the initial cross-correlations. These appear as red lines.
+
+We are not using ``ICCC-A`` here, but these are the theoretical arrival times, marked in black.
+
+MCCC
+~~~~
+Hit ``MCCC`` to run the Multi-Channel cross-correlation. Do not hit ``ICCC-A`` or ``ICCC-B`` again, or all your work will be erased. A warning will pop up to check if you really do want to hit these two buttons if you do click on them.
+
+
 
 
 .. ############################################################################ ..
