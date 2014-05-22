@@ -17,7 +17,6 @@ Contents:
     docfiles/gettingData
     docfiles/analyzingData
     docfiles/PickingTravelTimes
-    docfiles/citations
 
 
 Indices and tables
