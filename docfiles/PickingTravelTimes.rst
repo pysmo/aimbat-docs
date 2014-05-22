@@ -61,17 +61,19 @@ Getting into the right directory
 
 In the terminal, cd into the directory with all the ``pkl`` files you want to run. You want to run either the ``.bht`` or ``.bhz`` files. ``bht`` files are for S-waves and bhz files are for P-waves. ``PKL`` is a bundle of ``SAC`` files. Each ``SAC`` file is a seismogram, but since you there may be many seismograms from various stations for each event, we bundle them into a ``PKL`` file so we only have to import one file into AIMBAT, not a few hundred of them.
 
-
-.. image::pickingTravelTimes-images/pick_travel_times.png
-	Picking travel times.
-
 Running ttpick.py
 ~~~~~~~~~~~~~~~~~
 
 Run ``ttpick/py <path-to-pkl-file>``. A GUI should pop up if you successfully ran it. Note that if you click on the buttons, they will not work until you move the mouse off them; this is a problem we are hoping to fix.
 
 .. image::pickingTravelTimes-images/pick_travel_times.png
+
 	Picking travel times.
+
+ICCC-A
+------
+
+
 
 .. ############################################################################ ..
 .. #                             PICKING TRAVEL TIMES                         # ..
