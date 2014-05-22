@@ -15,6 +15,7 @@ Contents:
     docfiles/introduction
     docfiles/installing
     docfiles/gettingData
+    docfiles/analyzingData
     docfiles/PickingTravelTimes
 
 

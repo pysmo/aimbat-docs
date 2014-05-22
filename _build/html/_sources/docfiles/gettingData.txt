@@ -20,7 +20,7 @@ Downloading Data with SOD
 -------------------------
 
 :Authors: 
-	Trevor Bollmann
+	`Trevor Bollmann <http://www.earth.northwestern.edu/~trevor/Welcome.html>`_
 
 #. Create a sod recipe and place it in the folder that you would like the data to download to.
     - `sod -f <recipename>.xml`
