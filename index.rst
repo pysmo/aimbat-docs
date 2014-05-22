@@ -14,6 +14,7 @@ Contents:
 
     docfiles/introduction
     docfiles/installing
+    docfiles/gettingData
     Picking Travel Times<docfiles/PickingTravelTimes>
 
 

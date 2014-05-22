@@ -53,7 +53,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'AIMBAT'
-copyright = u'2014, Lay Kuan Loh, Xiaoting Lou, Suzan van der Lee'
+copyright = u'2014, Lay Kuan Loh, Xiaoting Lou & Suzan van der Lee'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
