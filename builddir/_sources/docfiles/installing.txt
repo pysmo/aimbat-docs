@@ -9,6 +9,8 @@ Getting your operating system
 Installing Python
 -----------------
 
+
+
 Installing Python Libraries
 ---------------------------
 
