@@ -48,9 +48,11 @@
             
   <div class="section" id="measuring-teleseismic-body-wave-arrival-times">
 <h1>Measuring Teleseismic Body Wave Arrival Times<a class="headerlink" href="#measuring-teleseismic-body-wave-arrival-times" title="Permalink to this headline">¶</a></h1>
-<p>The core idea in using AIMBAT to measure teleseismic body wave arrival times has two parts:
-* automated phase alignment, to reduce user processing time, and
-* interactive quality control, to retain valuable user inputs.</p>
+<p>The core idea in using AIMBAT to measure teleseismic body wave arrival times has two parts:</p>
+<ul class="simple">
+<li>automated phase alignment, to reduce user processing time, and</li>
+<li>interactive quality control, to retain valuable user inputs.</li>
+</ul>
 <div class="section" id="automated-phase-alignment">
 <h2>Automated Phase Alignment<a class="headerlink" href="#automated-phase-alignment" title="Permalink to this headline">¶</a></h2>
 <p>The ICCS algorithm calculates an array stack from predicted time picks, cross-correlates each seismogram with the array stack to Find the time lags at maximum cross-correlation, then use the new time picks to update the array stack in an iterative process. The MCCC algorithm cross-correlates each possible pair of seismograms and uses a least-squares method to calculate an optimized set of relative arrival times. Our method is to combine ICCS and MCCC in a four-step procedure using four anchoring time picks <span class="math">\(_0T_i,\,_1T_i,\,_2T_i,\)</span> and <span class="math">\(_3T_i\)</span>.</p>

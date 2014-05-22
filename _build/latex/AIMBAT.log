@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.8)  22 MAY 2014 13:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.8)  22 MAY 2014 15:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -989,26 +989,31 @@ Chapter 5.
 
 ]
 Chapter 6.
+
+Overfull \hbox (64.65689pt too wide) in paragraph at lines 459--536
+[] 
+ []
+
 [15] [16
 
 ]
 Chapter 7.
 (./AIMBAT.ind)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 469.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 556.
  [17]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 469.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 556.
  (./AIMBAT.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 469.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 469.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 556.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 556.
 Package rerunfilecheck Info: File `AIMBAT.out' has not changed.
 (rerunfilecheck)             Checksum: 95C8E551F0A659FAD9079B7FEC53D9DD;1220.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 469.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 556.
  ) 
 Here is how much of TeX's memory you used:
- 9168 strings out of 493308
- 128376 string characters out of 6137817
- 227601 words of memory out of 5000000
- 12318 multiletter control sequences out of 15000+600000
+ 9177 strings out of 493308
+ 128475 string characters out of 6137817
+ 229601 words of memory out of 5000000
+ 12323 multiletter control sequences out of 15000+600000
  57992 words of font info for 66 fonts, out of 8000000 for 9000
  958 hyphenation exceptions out of 8191
  36i,12n,45p,826b,495s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1016,17 +1021,18 @@ Here is how much of TeX's memory you used:
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texl
 ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
-/2013/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2013/te
-xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist
-/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/
-type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/
-urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/
-utmbi8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pf
-b></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on AIMBAT.pdf (21 pages, 209861 bytes).
+/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2
+013/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2013/texm
+f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/f
+onts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/ty
+pe1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/ur
+w/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/ut
+mbi8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+</usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on AIMBAT.pdf (21 pages, 218375 bytes).
 PDF statistics:
- 288 PDF objects out of 1000 (max. 8388607)
- 244 compressed objects within 3 object streams
- 55 named destinations out of 1000 (max. 500000)
+ 296 PDF objects out of 1000 (max. 8388607)
+ 251 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
  183 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -424,8 +424,14 @@ AIMBAT uses \href{http://www.iris.edu/files/sac-manual/}{Seismic Analysis Code (
 \chapter{Measuring Teleseismic Body Wave Arrival Times}
 \label{docfiles/PickingTravelTimes::doc}\label{docfiles/PickingTravelTimes:measuring-teleseismic-body-wave-arrival-times}
 The core idea in using AIMBAT to measure teleseismic body wave arrival times has two parts:
-* automated phase alignment, to reduce user processing time, and
-* interactive quality control, to retain valuable user inputs.
+\begin{itemize}
+\item {} 
+automated phase alignment, to reduce user processing time, and
+
+\item {} 
+interactive quality control, to retain valuable user inputs.
+
+\end{itemize}
 
 
 \section{Automated Phase Alignment}
@@ -447,6 +453,87 @@ Final alignment by MCCC
 \end{enumerate}
 
 The one-time manual phase picking at the array stack in step (b) allows the measurement of absolute arrival times. The detailed methodology and procedure can be found in {[}LouVanDerLee2013{]}.
+
+
+\begin{threeparttable}
+\capstart\caption{Time picks and their SAC headers used in the procedure for measuring teleseismic body wave arrival times.}
+
+\begin{tabular}{|p{0.136\linewidth}|p{0.136\linewidth}|p{0.136\linewidth}|p{0.136\linewidth}|p{0.136\linewidth}|p{0.136\linewidth}|p{0.136\linewidth}|}
+\hline
+ \multirow{2}{*}{
+Step
+} &  \multirow{2}{*}{
+Algorithm
+} &  \multicolumn{3}{l|}{
+Input
+} &  \multicolumn{2}{l|}{
+Output
+}\\
+ & 
+Time Window
+ &  & 
+Time Pick
+ & 
+Time Header
+ & 
+Time Pick
+ & 
+Time Header
+\\
+\begin{enumerate}
+\item {} 
+\end{enumerate}
+ & 
+ICCS
+ & 
+\(W_a\)
+ & 
+\(_0T_i\)
+ & 
+\textbf{T0}
+ & 
+\(_1T_i\)
+ & 
+\textbf{T1}
+\\
+\begin{enumerate}
+\setcounter{enumi}{1}
+\item {} 
+\end{enumerate}
+ & 
+ICCS
+ & 
+\(W_b\)
+ & 
+\(_2T'_i\)
+ & 
+\textbf{T2}
+ & 
+\(_2T_i\)
+ & 
+\textbf{T2}
+\\
+\begin{enumerate}
+\setcounter{enumi}{3}
+\item {} 
+\end{enumerate}
+ & 
+MCCS
+ & 
+\(W_b\)
+ & 
+\(_2T_i\)
+ & 
+\textbf{T2}
+ & 
+\(_3T_i\)
+ & 
+\textbf{T3}
+\\
+\hline\end{tabular}
+
+\end{threeparttable}
+
 
 
 \chapter{Indices and tables}

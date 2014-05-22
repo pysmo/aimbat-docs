@@ -2,6 +2,7 @@ Measuring Teleseismic Body Wave Arrival Times
 =============================================
 
 The core idea in using AIMBAT to measure teleseismic body wave arrival times has two parts: 
+
 * automated phase alignment, to reduce user processing time, and
 * interactive quality control, to retain valuable user inputs.
 
