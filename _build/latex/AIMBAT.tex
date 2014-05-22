@@ -126,12 +126,26 @@ Contents:
 
 \chapter{Introduction}
 \label{docfiles/introduction:introduction}\label{docfiles/introduction:welcome-to-aimbat-s-documentation}\label{docfiles/introduction::doc}
-AIMBAT (Automated and Interactive Measurement of Body wave Arrival Times) is an open-source software package for efficiently measuring teleseismic body wave arrival times for large seismic arrays {[}LouVanderleeLloyd2013-SeismologicalResearchLetters{]}. It is based on a widely used method called MCCC (Multi-Channel Cross-Correlation) {[}VandecarCrosson1990-BulletinSeismologicalSocietyOfAmerica{]}. The package is automated in the sense of initially aligning seismograms for MCCC which is achieved by an ICCS (Iterative Cross Correlation and Stack) algorithm. Meanwhile, a GUI (graphical user interface) is built to perform seismogram quality control interactively. Therefore, user processing time is reduced while valuable input from a user's expertise is retained. As a byproduct, SAC {[}GoldsteinDodgeFirpo2003-InternationalGeophysics{]} plotting and phase picking functionalities are replicated and enhanced.
 
-Modules and scripts included in the AIMBAT package were developed using \href{http://www.python.org/}{Python programming language} and its open-source modules on the Mac OS X platform since 2009. The original MCCC {[}VandecarCrosson1990-BulletinSeismologicalSocietyOfAmerica{]} code was transcribed into Python. The GUI of AIMBAT was inspired and initiated at the \href{http://www.iris.edu/hq/es\_course/content/2009.html}{2009 EarthScope USArray Data Processing and Analysis Short Course}. AIMBAT runs on Mac OS X, Linux/Unix and Windows thanks to the platform-independent feature of Python.
+\section{About AIMBAT}
+\label{docfiles/introduction:about-aimbat}
+AIMBAT (Automated and Interactive Measurement of Body wave Arrival Times) is an open-source software package for efficiently measuring teleseismic body wave arrival times for large seismic arrays {[}LouVanDerLee2013{]}. It is based on a widely used method called MCCC (Multi-Channel Cross-Correlation) {[}VanDecarCrosson1990{]}. The package is automated in the sense of initially aligning seismograms for MCCC which is achieved by an ICCS (Iterative Cross Correlation and Stack) algorithm. Meanwhile, a GUI (graphical user interface) is built to perform seismogram quality control interactively. Therefore, user processing time is reduced while valuable input from a user's expertise is retained. As a byproduct, SAC {[}GoldsteinDodge2003{]} plotting and phase picking functionalities are replicated and enhanced.
+
+Modules and scripts included in the AIMBAT package were developed using \href{http://www.python.org/}{Python programming language} and its open-source modules on the Mac OS X platform since 2009. The original MCCC {[}VanDecarCrosson1990{]} code was transcribed into Python. The GUI of AIMBAT was inspired and initiated at the \href{http://www.iris.edu/hq/es\_course/content/2009.html}{2009 EarthScope USArray Data Processing and Analysis Short Course}. AIMBAT runs on Mac OS X, Linux/Unix and Windows thanks to the platform-independent feature of Python.
 It has been tested on Mac OS 10.6.8 and 10.7 and Fedora 16.
 
 The AIMBAT software package is distributed under the \href{http://www.gnu.org/licenses/gpl.html}{GNU General Public License Version 3 (GPLv3)} as published by the Free Software Foundation.
+
+
+\section{Associated Documents}
+\label{docfiles/introduction:associated-documents}\begin{itemize}
+\item {} 
+\code{Seismological Research Letters Paper}
+
+\item {} 
+\code{PDF Version of Manual}
+
+\end{itemize}
 
 
 \chapter{Installing Dependencies}
@@ -268,7 +282,7 @@ Inside my home directory's bash profile (you get the by typing \emph{cd}), you p
 \item {} \begin{description}
 \item[{Create a sod recipe and place it in the folder that you would like the data to download to.}] \leavevmode\begin{itemize}
 \item {} 
-\emph{sod -f \textless{}recipename\textgreater{}.xml}
+\code{sod -f \textless{}recipename\textgreater{}.xml}
 
 \end{itemize}
 
@@ -277,13 +291,13 @@ Inside my home directory's bash profile (you get the by typing \emph{cd}), you p
 \item {} \begin{description}
 \item[{Run verb''sodcut.sh'' to cut the seismogram around phase wanted}] \leavevmode\begin{itemize}
 \item {} 
-check model within \emph{cutevseis.sh}
+check model within \code{cutevseis.sh}
 
 \item {} 
-run using \emph{sodcut.sh \textless{}name\textgreater{}}
+run using \code{sodcut.sh \textless{}name\textgreater{}}
 
 \item {} 
-watch sdir = processed seismograms
+watch \code{sdir = processed seismograms}
 
 \item {} 
 Run over the entire downloaded directory (the files sod downloaded)
@@ -293,9 +307,9 @@ Run over the entire downloaded directory (the files sod downloaded)
 \end{description}
 
 \item {} \begin{description}
-\item[{Run \emph{sodpkl.sh} (converts \emph{.sac} files to python pickles)}] \leavevmode\begin{itemize}
+\item[{Run \code{sodpkl.sh} (converts \emph{.sac} files to python pickles)}] \leavevmode\begin{itemize}
 \item {} 
-run using \emph{sodpkl.sh {[}options{]} \textless{}directory\textgreater{}}
+run using \code{sodpkl.sh {[}options{]} \textless{}directory\textgreater{}}
 
 \item {} 
 output will automatically be zipped
@@ -308,30 +322,30 @@ run in DATA directory
 \end{description}
 
 \item {} \begin{description}
-\item[{Run \emph{ttpick.py} (does travel time picking with plotting)}] \leavevmode\begin{itemize}
+\item[{Run \code{ttpick.py} (does travel time picking with plotting)}] \leavevmode\begin{itemize}
 \item {} 
-can use \emph{iccs.py} but it does not have plotting capabilities
+can use \code{iccs.py} but it does not have plotting capabilities
 
 \item {} 
-run using \emph{ttpick.py {[}options{]} \textless{}pkl.gz file\textgreater{}}
+run using \code{ttpick.py {[}options{]} \textless{}pkl.gz file\textgreater{}}
 
 \item {} 
 do this one event at a time
 
 \item {} 
-use \emph{sacp2} to look at the stacking of the seismograms
+use \code{sacp2} to look at the stacking of the seismograms
 
 \item {} 
-you can sort the seismograms using the \emph{–s} flag
+you can sort the seismograms using the \code{–s} flag
 
 \end{itemize}
 
 \end{description}
 
 \item {} \begin{description}
-\item[{run \emph{getsta.py} (creates a \emph{loc.sta} file)}] \leavevmode\begin{itemize}
+\item[{run \code{getsta.py} (creates a \code{loc.sta} file)}] \leavevmode\begin{itemize}
 \item {} 
-\emph{getsta.py {[}options{]} \textless{}pkl.gz files\textgreater{}}
+\code{getsta.py {[}options{]} \textless{}pkl.gz files\textgreater{}}
 
 \end{itemize}
 
@@ -343,10 +357,10 @@ you can sort the seismograms using the \emph{–s} flag
 FIRST CHOICE
 
 \item {} 
-run \emph{mccc2delay.py} (converts mccc delays to actual delays) by doing \emph{mccc2delay.py {[}option{]} \textless{}.mcp files\textgreater{}}
+run \code{mccc2delay.py} (converts mccc delays to actual delays) by doing \emph{mccc2delay.py {[}option{]} \textless{}.mcp files\textgreater{}}
 
 \item {} \begin{description}
-\item[{run \emph{getdelay.py} (creates a delay file) by doing \emph{getdelay.py {[}options{]} \textless{}*.px\textgreater{}}}] \leavevmode\begin{itemize}
+\item[{run \code{getdelay.py} (creates a delay file) by doing \emph{getdelay.py {[}options{]} \textless{}*.px\textgreater{}}}] \leavevmode\begin{itemize}
 \item {} 
 Can possibly use \emph{doplotsta.sh}, plots all of the events and their station delays
 
@@ -355,12 +369,12 @@ Can possibly use \emph{doplotsta.sh}, plots all of the events and their station 
 \end{description}
 
 \item {} 
-Run \emph{evmcdelay.sh}
+Run \code{evmcdelay.sh}
 
 \item {} \begin{description}
 \item[{SECOND CHOICE}] \leavevmode\begin{itemize}
 \item {} 
-verb''ttcheck.py'' to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.
+:code:verb''ttcheck.py'' to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.
 
 \end{itemize}
 
@@ -371,9 +385,9 @@ verb''ttcheck.py'' to compare the delay times of the p and s waves. Should form 
 \end{description}
 
 \item {} \begin{description}
-\item[{If you need to remove a station from an event you can use verb''pklsel.py''}] \leavevmode\begin{itemize}
+\item[{If you need to remove a station from an event you can use :code:verb''pklsel.py''}] \leavevmode\begin{itemize}
 \item {} 
-Run using verb''pklsel.py {[}pkl file{]} –d {[}stnm{]}'' to remove one station
+Run using :code:verb''pklsel.py {[}pkl file{]} –d {[}stnm{]}'' to remove one station
 
 \item {} 
 Only works for one event at a time
@@ -383,9 +397,9 @@ Only works for one event at a time
 \end{description}
 
 \item {} \begin{description}
-\item[{If you need to filter the data to be able to pick use verb''evsacbp.sh''}] \leavevmode\begin{itemize}
+\item[{If you need to filter the data to be able to pick use :code:verb''evsacbp.sh''}] \leavevmode\begin{itemize}
 \item {} 
-run using verb''evsacbp.sh {[}pkl file{]} bp1 bp2''
+run using :code:verb''evsacbp.sh {[}pkl file{]} bp1 bp2''
 
 \item {} 
 Automatically uses two corners
