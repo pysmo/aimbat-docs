@@ -13,5 +13,5 @@ The AIMBAT software package is distributed under the `GNU General Public License
 Associated Documents
 --------------------
 
-* :download:`Seismological Research Letters Paper <Lou_vanDerLee_Lloyd_2013_SRL_AIMBAT.pdf>`
+* :download:`Seismological Research Letters Paper <Lou_etal_2013_SRL_AIMBAT.pdf>`
 * :download:`PDF Version of Manual <../_build/latex/AIMBAT.pdf>`
