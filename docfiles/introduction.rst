@@ -1,8 +1,8 @@
+.. image:: ../NU_Logo_purple.jpg
+
 ============
 Introduction
 ============
-
-.. image:: ../NU_Logo_purple.jpg
 
 About AIMBAT
 ------------

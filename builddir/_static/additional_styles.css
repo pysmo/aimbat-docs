@@ -13,3 +13,9 @@ footer a {
 footer a:visited {
 	color: green;
 }
+
+#introduction img {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
