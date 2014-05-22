@@ -1,7 +1,7 @@
 Getting Data
 ============
 
-There are several ways to obtain data to input to AIMBAT. If you know of other tools, please `contact the authors <Author's Contact Information>`_.
+There are several ways to obtain data to input to AIMBAT. If you know of other tools, please `contact the authors <Contact Information>`_.
 
 Standing Order for Data
 -----------------------
@@ -43,18 +43,17 @@ Downloading Data with SOD
     - output will automatically be zipped
     - run in DATA directory
 #. Run :code:`ttpick.py` (does travel time picking with plotting)
-        - can use :code:`iccs.py` but it does not have plotting capabilities
-        - run using :code:`ttpick.py [options] <pkl.gz file>`
-        - do this one event at a time
-        - use :code:`sacp2` to look at the stacking of the seismograms
-        - you can sort the seismograms using the :code:`–s` flag
+    - can use :code:`iccs.py` but it does not have plotting capabilities
+    - run using :code:`ttpick.py [options] <pkl.gz file>`
+    - do this one event at a time
+    - use :code:`sacp2` to look at the stacking of the seismograms
+    - you can sort the seismograms using the :code:`–s` flag
 #. run :code:`getsta.py` (creates a :code:`loc.sta` file)
     - :code:`getsta.py [options] <pkl.gz files>`
 #. Run EITHER of these: 
 	- FIRST CHOICE	
         - run :code:`mccc2delay.py` (converts mccc delays to actual delays) by doing :code:`mccc2delay.py [option] <.mcp files>`
-        - run :code:`getdelay.py` (creates a delay file) by doing `getdelay.py [options] <*.px>`
-            - Can possibly use `doplotsta.sh`, plots all of the events and their station delays
+        - run :code:`getdelay.py` (creates a delay file) by doing `getdelay.py [options] <*.px>`. Can possibly use `doplotsta.sh`, plots all of the events and their station delays
         - Run :code:`evmcdelay.sh`
   	- SECOND CHOICE
   		- :code:`ttcheck.py` to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.
