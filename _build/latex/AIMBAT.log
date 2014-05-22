@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.8)  22 MAY 2014 17:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.8)  22 MAY 2014 17:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1002,10 +1002,7 @@ Underfull \hbox (badness 5533) in paragraph at lines 563--564
 es \T1/pcr/m/n/10 pysmo.aimbat.algiccs \T1/ptm/m/n/10 and
  []
 
-[15]
-LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <12> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 576.
- [16]
+[15] [16]
 Chapter 7.
 [17
 
@@ -1029,11 +1026,11 @@ Package rerunfilecheck Info: File `AIMBAT.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 616.
  ) 
 Here is how much of TeX's memory you used:
- 9232 strings out of 493308
- 129523 string characters out of 6137817
- 230269 words of memory out of 5000000
- 12353 multiletter control sequences out of 15000+600000
- 63079 words of font info for 71 fonts, out of 8000000 for 9000
+ 9228 strings out of 493308
+ 129474 string characters out of 6137817
+ 230266 words of memory out of 5000000
+ 12351 multiletter control sequences out of 15000+600000
+ 62458 words of font info for 69 fonts, out of 8000000 for 9000
  958 hyphenation exceptions out of 8191
  36i,12n,49p,1022b,495s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
@@ -1048,7 +1045,7 @@ pe1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/ur
 w/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/ut
 mbi8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on AIMBAT.pdf (25 pages, 222974 bytes).
+Output written on AIMBAT.pdf (25 pages, 222965 bytes).
 PDF statistics:
  360 PDF objects out of 1000 (max. 8388607)
  310 compressed objects within 4 object streams

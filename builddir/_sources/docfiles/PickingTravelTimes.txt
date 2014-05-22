@@ -1,3 +1,4 @@
+=============================================
 Measuring Teleseismic Body Wave Arrival Times
 =============================================
 
@@ -64,8 +65,8 @@ In the terminal, cd into the directory with all the ``pkl`` files you want to ru
 .. image::pickingTravelTimes-images/pick_travel_times.png
 	Picking travel times.
 
-Running ``ttpick.py``
-~~~~~~~~~~~~~~~~~~~~~
+Running ttpick.py
+~~~~~~~~~~~~~~~~~
 
 Run ``ttpick/py <path-to-pkl-file>``. A GUI should pop up if you successfully ran it. Note that if you click on the buttons, they will not work until you move the mouse off them; this is a problem we are hoping to fix.
 
