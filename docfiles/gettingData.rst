@@ -23,37 +23,37 @@ Downloading Data with SOD
 	`Trevor Bollmann <http://www.earth.northwestern.edu/~trevor/Welcome.html>`_
 
 #. Create a sod recipe and place it in the folder that you would like the data to download to.
-    - `sod -f <recipename>.xml`
+    - :code:`sod -f <recipename>.xml`
 #. Run \verb"sodcut.sh" to cut the seismogram around phase wanted
-    - check model within `cutevseis.sh`
-    - run using `sodcut.sh <name>`
-    - watch sdir = processed seismograms
+    - check model within :code:`cutevseis.sh`
+    - run using :code:`sodcut.sh <name>`
+    - watch :code:`sdir = processed seismograms`
     - Run over the entire downloaded directory (the files sod downloaded)
-#. Run `sodpkl.sh` (converts `.sac` files to python pickles)
-    - run using `sodpkl.sh [options] <directory>`
+#. Run :code:`sodpkl.sh` (converts `.sac` files to python pickles)
+    - run using :code:`sodpkl.sh [options] <directory>`
     - output will automatically be zipped
     - run in DATA directory
-#. Run `ttpick.py` (does travel time picking with plotting)
-        - can use `iccs.py` but it does not have plotting capabilities
-        - run using `ttpick.py [options] <pkl.gz file>`
+#. Run :code:`ttpick.py` (does travel time picking with plotting)
+        - can use :code:`iccs.py` but it does not have plotting capabilities
+        - run using :code:`ttpick.py [options] <pkl.gz file>`
         - do this one event at a time
-        - use `sacp2` to look at the stacking of the seismograms
-        - you can sort the seismograms using the `–s` flag
-#. run `getsta.py` (creates a `loc.sta` file)
-    - `getsta.py [options] <pkl.gz files>`
+        - use :code:`sacp2` to look at the stacking of the seismograms
+        - you can sort the seismograms using the :code:`–s` flag
+#. run :code:`getsta.py` (creates a :code:`loc.sta` file)
+    - :code:`getsta.py [options] <pkl.gz files>`
 #. Run EITHER of these: 
 	- FIRST CHOICE	
-        - run `mccc2delay.py` (converts mccc delays to actual delays) by doing `mccc2delay.py [option] <.mcp files>`
-        - run `getdelay.py` (creates a delay file) by doing `getdelay.py [options] <*.px>`
+        - run :code:`mccc2delay.py` (converts mccc delays to actual delays) by doing `mccc2delay.py [option] <.mcp files>`
+        - run :code:`getdelay.py` (creates a delay file) by doing `getdelay.py [options] <*.px>`
             - Can possibly use `doplotsta.sh`, plots all of the events and their station delays
-        - Run `evmcdelay.sh`
+        - Run :code:`evmcdelay.sh`
   	- SECOND CHOICE
-  		- \verb"ttcheck.py" to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.
-#. If you need to remove a station from an event you can use \verb"pklsel.py"
-    - Run using \verb"pklsel.py [pkl file] –d [stnm]" to remove one station
+  		- :code:\verb"ttcheck.py" to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.
+#. If you need to remove a station from an event you can use :code:\verb"pklsel.py"
+    - Run using :code:\verb"pklsel.py [pkl file] –d [stnm]" to remove one station
     - Only works for one event at a time
-#. If you need to filter the data to be able to pick use \verb"evsacbp.sh"
-    - run using \verb"evsacbp.sh [pkl file] bp1 bp2"
+#. If you need to filter the data to be able to pick use :code:\verb"evsacbp.sh"
+    - run using :code:\verb"evsacbp.sh [pkl file] bp1 bp2"
     - Automatically uses two corners
     - run in the whole downloaded directory (the one with the sac directory)
 

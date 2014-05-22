@@ -26,7 +26,7 @@
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="AIMBAT 0.1.2 documentation" href="../index.html" />
     <link rel="next" title="Analyzing Data" href="analyzingData.html" />
-    <link rel="prev" title="Installation" href="installing.html" /> 
+    <link rel="prev" title="Installing AIMBAT" href="install_aimbat.html" /> 
   </head>
   <body>
     <div class="related">
@@ -39,7 +39,7 @@
           <a href="analyzingData.html" title="Analyzing Data"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="installing.html" title="Installation"
+          <a href="install_aimbat.html" title="Installing AIMBAT"
              accesskey="P">previous</a> |</li>
         <li><a href="../index.html">AIMBAT 0.1.2 documentation</a> &raquo;</li> 
       </ul>
@@ -75,7 +75,7 @@
 <li><dl class="first docutils">
 <dt>Create a sod recipe and place it in the folder that you would like the data to download to.</dt>
 <dd><ul class="first last simple">
-<li><cite>sod -f &lt;recipename&gt;.xml</cite></li>
+<li><tt class="code docutils literal"><span class="pre">sod</span> <span class="pre">-f</span> <span class="pre">&lt;recipename&gt;.xml</span></tt></li>
 </ul>
 </dd>
 </dl>
@@ -83,18 +83,18 @@
 <li><dl class="first docutils">
 <dt>Run verb&#8221;sodcut.sh&#8221; to cut the seismogram around phase wanted</dt>
 <dd><ul class="first last simple">
-<li>check model within <cite>cutevseis.sh</cite></li>
-<li>run using <cite>sodcut.sh &lt;name&gt;</cite></li>
-<li>watch sdir = processed seismograms</li>
+<li>check model within <tt class="code docutils literal"><span class="pre">cutevseis.sh</span></tt></li>
+<li>run using <tt class="code docutils literal"><span class="pre">sodcut.sh</span> <span class="pre">&lt;name&gt;</span></tt></li>
+<li>watch <tt class="code docutils literal"><span class="pre">sdir</span> <span class="pre">=</span> <span class="pre">processed</span> <span class="pre">seismograms</span></tt></li>
 <li>Run over the entire downloaded directory (the files sod downloaded)</li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Run <cite>sodpkl.sh</cite> (converts <cite>.sac</cite> files to python pickles)</dt>
+<dt>Run <tt class="code docutils literal"><span class="pre">sodpkl.sh</span></tt> (converts <cite>.sac</cite> files to python pickles)</dt>
 <dd><ul class="first last simple">
-<li>run using <cite>sodpkl.sh [options] &lt;directory&gt;</cite></li>
+<li>run using <tt class="code docutils literal"><span class="pre">sodpkl.sh</span> <span class="pre">[options]</span> <span class="pre">&lt;directory&gt;</span></tt></li>
 <li>output will automatically be zipped</li>
 <li>run in DATA directory</li>
 </ul>
@@ -102,21 +102,21 @@
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Run <cite>ttpick.py</cite> (does travel time picking with plotting)</dt>
+<dt>Run <tt class="code docutils literal"><span class="pre">ttpick.py</span></tt> (does travel time picking with plotting)</dt>
 <dd><ul class="first last simple">
-<li>can use <cite>iccs.py</cite> but it does not have plotting capabilities</li>
-<li>run using <cite>ttpick.py [options] &lt;pkl.gz file&gt;</cite></li>
+<li>can use <tt class="code docutils literal"><span class="pre">iccs.py</span></tt> but it does not have plotting capabilities</li>
+<li>run using <tt class="code docutils literal"><span class="pre">ttpick.py</span> <span class="pre">[options]</span> <span class="pre">&lt;pkl.gz</span> <span class="pre">file&gt;</span></tt></li>
 <li>do this one event at a time</li>
-<li>use <cite>sacp2</cite> to look at the stacking of the seismograms</li>
-<li>you can sort the seismograms using the <cite>–s</cite> flag</li>
+<li>use <tt class="code docutils literal"><span class="pre">sacp2</span></tt> to look at the stacking of the seismograms</li>
+<li>you can sort the seismograms using the <tt class="code docutils literal"><span class="pre">–s</span></tt> flag</li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>run <cite>getsta.py</cite> (creates a <cite>loc.sta</cite> file)</dt>
+<dt>run <tt class="code docutils literal"><span class="pre">getsta.py</span></tt> (creates a <tt class="code docutils literal"><span class="pre">loc.sta</span></tt> file)</dt>
 <dd><ul class="first last simple">
-<li><cite>getsta.py [options] &lt;pkl.gz files&gt;</cite></li>
+<li><tt class="code docutils literal"><span class="pre">getsta.py</span> <span class="pre">[options]</span> <span class="pre">&lt;pkl.gz</span> <span class="pre">files&gt;</span></tt></li>
 </ul>
 </dd>
 </dl>
@@ -126,22 +126,22 @@
 <dd><ul class="first last">
 <li><p class="first">FIRST CHOICE</p>
 </li>
-<li><p class="first">run <cite>mccc2delay.py</cite> (converts mccc delays to actual delays) by doing <cite>mccc2delay.py [option] &lt;.mcp files&gt;</cite></p>
+<li><p class="first">run <tt class="code docutils literal"><span class="pre">mccc2delay.py</span></tt> (converts mccc delays to actual delays) by doing <cite>mccc2delay.py [option] &lt;.mcp files&gt;</cite></p>
 </li>
 <li><dl class="first docutils">
-<dt>run <cite>getdelay.py</cite> (creates a delay file) by doing <cite>getdelay.py [options] &lt;*.px&gt;</cite></dt>
+<dt>run <tt class="code docutils literal"><span class="pre">getdelay.py</span></tt> (creates a delay file) by doing <cite>getdelay.py [options] &lt;*.px&gt;</cite></dt>
 <dd><ul class="first last simple">
 <li>Can possibly use <cite>doplotsta.sh</cite>, plots all of the events and their station delays</li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p class="first">Run <cite>evmcdelay.sh</cite></p>
+<li><p class="first">Run <tt class="code docutils literal"><span class="pre">evmcdelay.sh</span></tt></p>
 </li>
 <li><dl class="first docutils">
 <dt>SECOND CHOICE</dt>
 <dd><ul class="first last simple">
-<li>verb&#8221;ttcheck.py&#8221; to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.</li>
+<li>:code:verb&#8221;ttcheck.py&#8221; to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.</li>
 </ul>
 </dd>
 </dl>
@@ -151,18 +151,18 @@
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>If you need to remove a station from an event you can use verb&#8221;pklsel.py&#8221;</dt>
+<dt>If you need to remove a station from an event you can use :code:verb&#8221;pklsel.py&#8221;</dt>
 <dd><ul class="first last simple">
-<li>Run using verb&#8221;pklsel.py [pkl file] –d [stnm]&#8221; to remove one station</li>
+<li>Run using :code:verb&#8221;pklsel.py [pkl file] –d [stnm]&#8221; to remove one station</li>
 <li>Only works for one event at a time</li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>If you need to filter the data to be able to pick use verb&#8221;evsacbp.sh&#8221;</dt>
+<dt>If you need to filter the data to be able to pick use :code:verb&#8221;evsacbp.sh&#8221;</dt>
 <dd><ul class="first last simple">
-<li>run using verb&#8221;evsacbp.sh [pkl file] bp1 bp2&#8221;</li>
+<li>run using :code:verb&#8221;evsacbp.sh [pkl file] bp1 bp2&#8221;</li>
 <li>Automatically uses two corners</li>
 <li>run in the whole downloaded directory (the one with the sac directory)</li>
 </ul>
@@ -189,8 +189,8 @@
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="installing.html"
-                        title="previous chapter">Installation</a></p>
+  <p class="topless"><a href="install_aimbat.html"
+                        title="previous chapter">Installing AIMBAT</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="analyzingData.html"
                         title="next chapter">Analyzing Data</a></p>
@@ -226,7 +226,7 @@
           <a href="analyzingData.html" title="Analyzing Data"
              >next</a> |</li>
         <li class="right" >
-          <a href="installing.html" title="Installation"
+          <a href="install_aimbat.html" title="Installing AIMBAT"
              >previous</a> |</li>
         <li><a href="../index.html">AIMBAT 0.1.2 documentation</a> &raquo;</li> 
       </ul>
