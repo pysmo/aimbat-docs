@@ -1,7 +1,7 @@
 aimbat-docs
 ===========
 
-Documentation for AIMBAT, hosted by Sphinx
+Documentation for AIMBAT, hosted by Sphinx <http://sphinx-doc.org/>
 
 Building
 --------
