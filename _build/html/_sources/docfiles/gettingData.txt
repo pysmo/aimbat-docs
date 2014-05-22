@@ -1,7 +1,7 @@
 Getting Data
 ============
 
-There are several ways to obtain data to input to AIMBAT. If you know of other tools, please :ref:`contact the authors <authors-contacts>`.
+There are several ways to obtain data to input to AIMBAT. If want to suggest other tools, please :ref:`contact the authors <authors-contacts>`.
 
 Standing Order for Data
 -----------------------

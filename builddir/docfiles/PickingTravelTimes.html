@@ -25,6 +25,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="AIMBAT 0.1.2 documentation" href="../index.html" />
+    <link rel="next" title="Citations" href="citations.html" />
     <link rel="prev" title="Analyzing Data" href="analyzingData.html" /> 
   </head>
   <body>
@@ -34,6 +35,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="citations.html" title="Citations"
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="analyzingData.html" title="Analyzing Data"
              accesskey="P">previous</a> |</li>
@@ -123,13 +127,17 @@
 </table>
 <p>The ICCS and MCCC algorithms are implemented in two modules <tt class="docutils literal"><span class="pre">pysmo.aimbat.algiccs</span></tt> and <tt class="docutils literal"><span class="pre">pysmo.aimbat.algmccc</span></tt>, and can be executed in scripts <tt class="docutils literal"><span class="pre">iccs.py</span></tt> and <tt class="docutils literal"><span class="pre">mccc.py</span></tt> respectively.</p>
 </div>
-</div>
 <div class="section" id="picking-travel-times">
-<h1>Picking Travel Times<a class="headerlink" href="#picking-travel-times" title="Permalink to this headline">¶</a></h1>
+<h2>Picking Travel Times<a class="headerlink" href="#picking-travel-times" title="Permalink to this headline">¶</a></h2>
 <p>This section explains how to run the program <tt class="code docutils literal"><span class="pre">ttpick.py</span></tt> to get the travel times you want.</p>
 <div class="section" id="getting-into-the-right-directory">
-<h2>Getting into the right directory<a class="headerlink" href="#getting-into-the-right-directory" title="Permalink to this headline">¶</a></h2>
-<p>In the terminal, cd into the directory with all the <tt class="docutils literal"><span class="pre">pkl</span></tt> files you want to run. You want to run either the .bht or .bhz files. bht files are for S-waves and bhz files are for P -waves. PKL is a bundle of SAC files. Each SAC file is a seismogram, but since you there may be many seismograms from various stations for each event, we bundle them into a PKL file so we only have to import one file into AIMBAT, not a few hundred of them.</p>
+<h3>Getting into the right directory<a class="headerlink" href="#getting-into-the-right-directory" title="Permalink to this headline">¶</a></h3>
+<p>In the terminal, cd into the directory with all the <tt class="docutils literal"><span class="pre">pkl</span></tt> files you want to run. You want to run either the <tt class="docutils literal"><span class="pre">.bht</span></tt> or <tt class="docutils literal"><span class="pre">.bhz</span></tt> files. <tt class="docutils literal"><span class="pre">bht</span></tt> files are for S-waves and bhz files are for P-waves. <tt class="docutils literal"><span class="pre">PKL</span></tt> is a bundle of <tt class="docutils literal"><span class="pre">SAC</span></tt> files. Each <tt class="docutils literal"><span class="pre">SAC</span></tt> file is a seismogram, but since you there may be many seismograms from various stations for each event, we bundle them into a <tt class="docutils literal"><span class="pre">PKL</span></tt> file so we only have to import one file into AIMBAT, not a few hundred of them.</p>
+</div>
+<div class="section" id="running-ttpick-py">
+<h3>Running <tt class="docutils literal"><span class="pre">ttpick.py</span></tt><a class="headerlink" href="#running-ttpick-py" title="Permalink to this headline">¶</a></h3>
+<p>Run <tt class="docutils literal"><span class="pre">ttpick/py</span> <span class="pre">&lt;path-to-pkl-file&gt;</span></tt>. A GUI should pop up if you successfully ran it. Note that if you click on the buttons, they will not work until you move the mouse off them; this is a problem we are hoping to fix.</p>
+</div>
 </div>
 </div>
 
@@ -143,10 +151,11 @@
   <ul>
 <li><a class="reference internal" href="#">Measuring Teleseismic Body Wave Arrival Times</a><ul>
 <li><a class="reference internal" href="#automated-phase-alignment">Automated Phase Alignment</a></li>
-</ul>
-</li>
 <li><a class="reference internal" href="#picking-travel-times">Picking Travel Times</a><ul>
 <li><a class="reference internal" href="#getting-into-the-right-directory">Getting into the right directory</a></li>
+<li><a class="reference internal" href="#running-ttpick-py">Running <tt class="docutils literal"><span class="pre">ttpick.py</span></tt></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -154,6 +163,9 @@
   <h4>Previous topic</h4>
   <p class="topless"><a href="analyzingData.html"
                         title="previous chapter">Analyzing Data</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="citations.html"
+                        title="next chapter">Citations</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../_sources/docfiles/PickingTravelTimes.txt"
@@ -182,6 +194,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="citations.html" title="Citations"
+             >next</a> |</li>
         <li class="right" >
           <a href="analyzingData.html" title="Analyzing Data"
              >previous</a> |</li>

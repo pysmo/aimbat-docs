@@ -129,9 +129,9 @@ Contents:
 
 \section{About AIMBAT}
 \label{docfiles/introduction:about-aimbat}
-AIMBAT (Automated and Interactive Measurement of Body wave Arrival Times) is an open-source software package for efficiently measuring teleseismic body wave arrival times for large seismic arrays {[}LouVanDerLee2013{]}. It is based on a widely used method called MCCC (Multi-Channel Cross-Correlation) {[}VanDecarCrosson1990{]}. The package is automated in the sense of initially aligning seismograms for MCCC which is achieved by an ICCS (Iterative Cross Correlation and Stack) algorithm. Meanwhile, a GUI (graphical user interface) is built to perform seismogram quality control interactively. Therefore, user processing time is reduced while valuable input from a user's expertise is retained. As a byproduct, SAC {[}GoldsteinDodge2003{]} plotting and phase picking functionalities are replicated and enhanced.
+AIMBAT (Automated and Interactive Measurement of Body wave Arrival Times) is an open-source software package for efficiently measuring teleseismic body wave arrival times for large seismic arrays {\hyperref[docfiles/citations:louvanderlee2013]{{[}LouVanDerLee2013{]}}}. It is based on a widely used method called MCCC (Multi-Channel Cross-Correlation) {\hyperref[docfiles/citations:vandecarcrosson1990]{{[}VanDecarCrosson1990{]}}}. The package is automated in the sense of initially aligning seismograms for MCCC which is achieved by an ICCS (Iterative Cross Correlation and Stack) algorithm. Meanwhile, a GUI (graphical user interface) is built to perform seismogram quality control interactively. Therefore, user processing time is reduced while valuable input from a user's expertise is retained. As a byproduct, SAC {\hyperref[docfiles/citations:goldsteindodge2003]{{[}GoldsteinDodge2003{]}}} plotting and phase picking functionalities are replicated and enhanced.
 
-Modules and scripts included in the AIMBAT package were developed using \href{http://www.python.org/}{Python programming language} and its open-source modules on the Mac OS X platform since 2009. The original MCCC {[}VanDecarCrosson1990{]} code was transcribed into Python. The GUI of AIMBAT was inspired and initiated at the \href{http://www.iris.edu/hq/es\_course/content/2009.html}{2009 EarthScope USArray Data Processing and Analysis Short Course}. AIMBAT runs on Mac OS X, Linux/Unix and Windows thanks to the platform-independent feature of Python. It has been tested on Mac OS 10.6.8 and 10.7 and Fedora 16.
+Modules and scripts included in the AIMBAT package were developed using \href{http://www.python.org/}{Python programming language} and its open-source modules on the Mac OS X platform since 2009. The original MCCC {\hyperref[docfiles/citations:vandecarcrosson1990]{{[}VanDecarCrosson1990{]}}} code was transcribed into Python. The GUI of AIMBAT was inspired and initiated at the \href{http://www.iris.edu/hq/es\_course/content/2009.html}{2009 EarthScope USArray Data Processing and Analysis Short Course}. AIMBAT runs on Mac OS X, Linux/Unix and Windows thanks to the platform-independent feature of Python. It has been tested on Mac OS 10.6.8 and 10.7 and Fedora 16.
 
 The AIMBAT software package is distributed under the \href{http://www.gnu.org/licenses/gpl.html}{GNU General Public License Version 3 (GPLv3)} as published by the Free Software Foundation.
 
@@ -147,18 +147,21 @@ The AIMBAT software package is distributed under the \href{http://www.gnu.org/li
 \end{itemize}
 
 
-\section{Author's Contact Information}
-\label{docfiles/introduction:author-s-contact-information}\begin{itemize}
+\section{Authors' Contacts}
+\label{docfiles/introduction:authors-contacts}\label{docfiles/introduction:id5}\begin{itemize}
 \item {} 
 \href{http://lkloh2410.wordpress.com/}{Lay Kuan Loh}
+
 Email: \href{mailto:lkloh@cmu.edu}{lkloh@cmu.edu}
 
 \item {} 
 \href{http://www.earth.northwestern.edu/~xlou/Welcome.html}{Xiaoting Lou}
+
 Email: \href{mailto:xlou@u.northwestern.edu}{xlou@u.northwestern.edu}
 
 \item {} 
 \href{http://www.earth.northwestern.edu/research/suzan/}{Suzan van der Lee}
+
 Email: \href{mailto:suzan@earth.northwestern.edu}{suzan@earth.northwestern.edu}
 
 \end{itemize}
@@ -272,7 +275,7 @@ If AIMBAT has beenn installed, type from \code{pysmo import aimbat} in a Python 
 
 \chapter{Getting Data}
 \label{docfiles/gettingData:getting-data}\label{docfiles/gettingData::doc}
-There are several ways to obtain data to input to AIMBAT. If you know of other tools, please contact the authors.
+There are several ways to obtain data to input to AIMBAT. If want to suggest other tools, please {\hyperref[docfiles/introduction:authors-contacts]{\emph{contact the authors}}}.
 
 
 \section{Standing Order for Data}
@@ -386,14 +389,8 @@ FIRST CHOICE
 \item {} 
 run \code{mccc2delay.py} (converts mccc delays to actual delays) by doing \code{mccc2delay.py {[}option{]} \textless{}.mcp files\textgreater{}}
 
-\item {} \begin{description}
-\item[{run \code{getdelay.py} (creates a delay file) by doing \emph{getdelay.py {[}options{]} \textless{}*.px\textgreater{}}}] \leavevmode\begin{itemize}
 \item {} 
-Can possibly use \emph{doplotsta.sh}, plots all of the events and their station delays
-
-\end{itemize}
-
-\end{description}
+run \code{getdelay.py} (creates a delay file) by doing \emph{getdelay.py {[}options{]} \textless{}*.px\textgreater{}}. Can possibly use \emph{doplotsta.sh}, plots all of the events and their station delays
 
 \item {} 
 Run \code{evmcdelay.sh}
@@ -480,7 +477,7 @@ Final alignment by MCCC
 
 \end{enumerate}
 
-The one-time manual phase picking at the array stack in step (b) allows the measurement of absolute arrival times. The detailed methodology and procedure can be found in {[}LouVanDerLee2013{]}.
+The one-time manual phase picking at the array stack in step (b) allows the measurement of absolute arrival times. The detailed methodology and procedure can be found in {\hyperref[docfiles/citations:louvanderlee2013]{{[}LouVanDerLee2013{]}}}.
 
 
 \begin{threeparttable}
@@ -566,15 +563,23 @@ MCCS
 The ICCS and MCCC algorithms are implemented in two modules \code{pysmo.aimbat.algiccs} and \code{pysmo.aimbat.algmccc}, and can be executed in scripts \code{iccs.py} and \code{mccc.py} respectively.
 
 
-\chapter{Picking Travel Times}
+\section{Picking Travel Times}
 \label{docfiles/PickingTravelTimes:picking-travel-times}
 This section explains how to run the program \code{ttpick.py} to get the travel times you want.
 
 
-\section{Getting into the right directory}
+\subsection{Getting into the right directory}
 \label{docfiles/PickingTravelTimes:getting-into-the-right-directory}
-In the terminal, cd into the directory with all the \code{pkl} files you want to run. You want to run either the .bht or .bhz files. bht files are for S-waves and bhz files are for P -waves. PKL is a bundle of SAC files. Each SAC file is a seismogram, but since you there may be many seismograms from various stations for each event, we bundle them into a PKL file so we only have to import one file into AIMBAT, not a few hundred of them.
+In the terminal, cd into the directory with all the \code{pkl} files you want to run. You want to run either the \code{.bht} or \code{.bhz} files. \code{bht} files are for S-waves and bhz files are for P-waves. \code{PKL} is a bundle of \code{SAC} files. Each \code{SAC} file is a seismogram, but since you there may be many seismograms from various stations for each event, we bundle them into a \code{PKL} file so we only have to import one file into AIMBAT, not a few hundred of them.
 
+
+\subsection{Running \texttt{ttpick.py}}
+\label{docfiles/PickingTravelTimes:running-ttpick-py}
+Run \code{ttpick/py \textless{}path-to-pkl-file\textgreater{}}. A GUI should pop up if you successfully ran it. Note that if you click on the buttons, they will not work until you move the mouse off them; this is a problem we are hoping to fix.
+
+
+\chapter{Citations}
+\label{docfiles/citations:citations}\label{docfiles/citations::doc}
 
 \chapter{Indices and tables}
 \label{index:indices-and-tables}\begin{itemize}
@@ -588,6 +593,21 @@ In the terminal, cd into the directory with all the \code{pkl} files you want to
 \emph{search}
 
 \end{itemize}
+
+\begin{thebibliography}{VanDecarCrosson1990}
+\bibitem[GoldsteinDodge2003]{GoldsteinDodge2003}{\phantomsection\label{docfiles/citations:goldsteindodge2003} 
+Goldstein, P., D. Dodge, M. Firpo, and L. Minner (2003), SAC2000: Signal processing and analysis tools for seismologists and engineers, International Geophysics, 81, 1613–1614.
+}
+\bibitem[Hunder2007]{Hunder2007}{\phantomsection\label{docfiles/citations:hunder2007} 
+Hunter, J. (2007), Matplotlib: A 2D Graphics Environment, Computing in Science \& Engi- neering, 3(9), 90–95.
+}
+\bibitem[LouVanDerLee2013]{LouVanDerLee2013}{\phantomsection\label{docfiles/citations:louvanderlee2013} 
+AIMBAT: A Python/Matplotlib Tool for Measuring Teleseismic Arrival Times. Xiaoting Lou, Suzan van der Lee, and Simon Lloyd (2013), Seismol. Res. Lett., 84(1), 85-93, doi:10.1785/0220120033.
+}
+\bibitem[VanDecarCrosson1990]{VanDecarCrosson1990}{\phantomsection\label{docfiles/citations:vandecarcrosson1990} 
+VanDecar, J. C., and R. S. Crosson (1990), Determination of teleseismic relative phase arrival times using multi-channel cross-correlation and least squares, Bulletin of the Seismological Society of America, 80(1), 150–169.
+}
+\end{thebibliography}
 
 
 
