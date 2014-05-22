@@ -11,6 +11,10 @@ Installing Python
 
 
 
-Installing Python Libraries
----------------------------
+Python Dependencies
+-------------------
+* Numpy
+* Scipy
+* Matplotlib
+* iPython (recommended)
 
