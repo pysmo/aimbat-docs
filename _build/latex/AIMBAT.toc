@@ -6,6 +6,8 @@
 \contentsline {section}{\numberline {2.3}Python Dependencies}{5}{section.2.3}
 \contentsline {chapter}{\numberline {3}Installing AIMBAT}{7}{chapter.3}
 \contentsline {section}{\numberline {3.1}Getting the Packages}{7}{section.3.1}
+\contentsline {section}{\numberline {3.2}Installing pysmo.sac}{7}{section.3.2}
+\contentsline {section}{\numberline {3.3}Installing pysmo.aimbat}{8}{section.3.3}
 \contentsline {chapter}{\numberline {4}Standing Order for Data (SOD)}{9}{chapter.4}
 \contentsline {section}{\numberline {4.1}Installing SOD}{9}{section.4.1}
 \contentsline {section}{\numberline {4.2}Downloading Data with SOD}{10}{section.4.2}

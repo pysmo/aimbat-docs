@@ -5,10 +5,12 @@
 \BOOKMARK [1][-]{section.2.3}{Python Dependencies}{chapter.2}% 5
 \BOOKMARK [0][-]{chapter.3}{Installing AIMBAT}{}% 6
 \BOOKMARK [1][-]{section.3.1}{Getting the Packages}{chapter.3}% 7
-\BOOKMARK [0][-]{chapter.4}{Standing Order for Data \(SOD\)}{}% 8
-\BOOKMARK [1][-]{section.4.1}{Installing SOD}{chapter.4}% 9
-\BOOKMARK [1][-]{section.4.2}{Downloading Data with SOD}{chapter.4}% 10
-\BOOKMARK [0][-]{chapter.5}{Analyzing Data}{}% 11
-\BOOKMARK [1][-]{section.5.1}{Seismic Analysis Code \(SAC\)}{chapter.5}% 12
-\BOOKMARK [0][-]{chapter.6}{Picking Travel Times}{}% 13
-\BOOKMARK [0][-]{chapter.7}{Indices and tables}{}% 14
+\BOOKMARK [1][-]{section.3.2}{Installing pysmo.sac}{chapter.3}% 8
+\BOOKMARK [1][-]{section.3.3}{Installing pysmo.aimbat}{chapter.3}% 9
+\BOOKMARK [0][-]{chapter.4}{Standing Order for Data \(SOD\)}{}% 10
+\BOOKMARK [1][-]{section.4.1}{Installing SOD}{chapter.4}% 11
+\BOOKMARK [1][-]{section.4.2}{Downloading Data with SOD}{chapter.4}% 12
+\BOOKMARK [0][-]{chapter.5}{Analyzing Data}{}% 13
+\BOOKMARK [1][-]{section.5.1}{Seismic Analysis Code \(SAC\)}{chapter.5}% 14
+\BOOKMARK [0][-]{chapter.6}{Picking Travel Times}{}% 15
+\BOOKMARK [0][-]{chapter.7}{Indices and tables}{}% 16
