@@ -2,6 +2,7 @@
 \contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}
 \contentsline {section}{\numberline {1.1}About AIMBAT}{3}{section.1.1}
 \contentsline {section}{\numberline {1.2}Associated Documents}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}Author's Contact Information}{3}{section.1.3}
 \contentsline {chapter}{\numberline {2}Installing Dependencies}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Getting your operating system}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}Installing Python}{5}{section.2.2}
@@ -10,9 +11,10 @@
 \contentsline {section}{\numberline {3.1}Getting the Packages}{7}{section.3.1}
 \contentsline {section}{\numberline {3.2}Installing pysmo.sac}{7}{section.3.2}
 \contentsline {section}{\numberline {3.3}Installing pysmo.aimbat}{8}{section.3.3}
-\contentsline {chapter}{\numberline {4}Standing Order for Data (SOD)}{9}{chapter.4}
-\contentsline {section}{\numberline {4.1}Installing SOD}{9}{section.4.1}
-\contentsline {section}{\numberline {4.2}Downloading Data with SOD}{10}{section.4.2}
+\contentsline {chapter}{\numberline {4}Getting Data}{9}{chapter.4}
+\contentsline {section}{\numberline {4.1}Standing Order for Data}{9}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Installing SOD}{9}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Downloading Data with SOD}{10}{subsection.4.1.2}
 \contentsline {chapter}{\numberline {5}Analyzing Data}{13}{chapter.5}
 \contentsline {section}{\numberline {5.1}Seismic Analysis Code (SAC)}{13}{section.5.1}
 \contentsline {chapter}{\numberline {6}Measuring Teleseismic Body Wave Arrival Times}{15}{chapter.6}

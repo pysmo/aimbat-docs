@@ -15,3 +15,13 @@ Associated Documents
 
 * :download:`Seismological Research Letters Paper <Lou_etal_2013_SRL_AIMBAT.pdf>`
 * :download:`PDF Version of Manual <../_build/latex/AIMBAT.pdf>`
+
+Author's Contact Information
+----------------------------
+
+* `Lay Kuan Loh <http://lkloh2410.wordpress.com/>`_ 
+  Email: lkloh@cmu.edu
+* `Xiaoting Lou <http://www.earth.northwestern.edu/~xlou/Welcome.html>`_
+  Email: xlou@u.northwestern.edu
+* `Suzan van der Lee <http://www.earth.northwestern.edu/research/suzan/>`_
+  Email: suzan@earth.northwestern.edu

@@ -147,6 +147,23 @@ The AIMBAT software package is distributed under the \href{http://www.gnu.org/li
 \end{itemize}
 
 
+\section{Author's Contact Information}
+\label{docfiles/introduction:author-s-contact-information}\begin{itemize}
+\item {} 
+\href{http://lkloh2410.wordpress.com/}{Lay Kuan Loh}
+Email: \href{mailto:lkloh@cmu.edu}{lkloh@cmu.edu}
+
+\item {} 
+\href{http://www.earth.northwestern.edu/~xlou/Welcome.html}{Xiaoting Lou}
+Email: \href{mailto:xlou@u.northwestern.edu}{xlou@u.northwestern.edu}
+
+\item {} 
+\href{http://www.earth.northwestern.edu/research/suzan/}{Suzan van der Lee}
+Email: \href{mailto:suzan@earth.northwestern.edu}{suzan@earth.northwestern.edu}
+
+\end{itemize}
+
+
 \chapter{Installing Dependencies}
 \label{docfiles/install_dependencies:installing-dependencies}\label{docfiles/install_dependencies::doc}
 
@@ -253,10 +270,21 @@ Add \code{\textless{}pkg-install-dir\textgreater{}/pysmo/pysmo-aimbat.0.1.2/scri
 If AIMBAT has beenn installed, type from \code{pysmo import aimbat} in a Python shell, and no errors should appear.
 
 
-\chapter{Standing Order for Data (SOD)}
-\label{docfiles/gettingData:standing-order-for-data-sod}\label{docfiles/gettingData::doc}
+\chapter{Getting Data}
+\label{docfiles/gettingData:getting-data}\label{docfiles/gettingData::doc}
+There are several ways to obtain data to input to AIMBAT. If you know of other tools, please contact the authors.
 
-\section{Installing SOD}
+
+\section{Standing Order for Data}
+\label{docfiles/gettingData:standing-order-for-data}
+From the \href{http://www.seis.sc.edu/index.html}{SOD} website:
+\begin{quote}
+
+Standing Order for Data, is a framework to define rules to select seismic events, stations, and data. It then allows you to apply processing to the events, stations, and data and currently contains a large set of rules that allow you to select with great precision in these items. The processes mainly consist of simple data transformation and retrieval, but SOD defines hooks to allow you to cleanly insert your own processing steps, either written in Java or an external program.
+\end{quote}
+
+
+\subsection{Installing SOD}
 \label{docfiles/gettingData:installing-sod}
 First, download \href{http://www.seis.sc.edu/index.html}{SOD}.
 
@@ -271,7 +299,7 @@ Once you have it there, get the path to the sod folder's bin and put it in your 
 Inside my home directory's bash profile (you get the by typing \emph{cd}), you put the path to \emph{sod-3.2.3/bin} by adding in either the \emph{bash} or \emph{bash\_profile} or \emph{profile} files:
 
 
-\section{Downloading Data with SOD}
+\subsection{Downloading Data with SOD}
 \label{docfiles/gettingData:downloading-data-with-sod}\begin{quote}\begin{description}
 \item[{Authors}] \leavevmode
 \href{http://www.earth.northwestern.edu/~trevor/Welcome.html}{Trevor Bollmann}

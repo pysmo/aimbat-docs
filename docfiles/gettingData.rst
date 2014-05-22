@@ -1,8 +1,17 @@
-Standing Order for Data (SOD)
-=============================
+Getting Data
+============
+
+There are several ways to obtain data to input to AIMBAT. If you know of other tools, please `contact the authors <Author's Contact Information>`_.
+
+Standing Order for Data
+-----------------------
+
+From the `SOD <http://www.seis.sc.edu/index.html>`_ website:
+
+    Standing Order for Data, is a framework to define rules to select seismic events, stations, and data. It then allows you to apply processing to the events, stations, and data and currently contains a large set of rules that allow you to select with great precision in these items. The processes mainly consist of simple data transformation and retrieval, but SOD defines hooks to allow you to cleanly insert your own processing steps, either written in Java or an external program.
 
 Installing SOD
---------------
+~~~~~~~~~~~~~~
 
 First, download `SOD <http://www.seis.sc.edu/index.html>`_.
 
@@ -17,7 +26,7 @@ Once you have it there, get the path to the sod folder's bin and put it in your 
 Inside my home directory's bash profile (you get the by typing `cd`), you put the path to `sod-3.2.3/bin` by adding in either the `bash` or `bash_profile` or `profile` files: 
 
 Downloading Data with SOD
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :Authors: 
 	`Trevor Bollmann <http://www.earth.northwestern.edu/~trevor/Welcome.html>`_
