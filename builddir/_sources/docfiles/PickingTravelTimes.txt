@@ -71,8 +71,11 @@ Run ``ttpick/py <path-to-pkl-file>``. A GUI should pop up if you successfully ra
 	Picking travel times.
 
 ICCC-A
-------
+~~~~~~
+``ICCC-A`` is only used in the beginning, if you have altered some of the travel time arrivals of the seismograms by pressing ``t2``, and want to realign the array stack.
 
+Get rid of really bad seismograms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 .. ############################################################################ ..
