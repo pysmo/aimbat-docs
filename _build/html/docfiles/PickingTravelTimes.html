@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Picking Travel Times &mdash; AIMBAT 0.1.2 documentation</title>
+    <title>Measuring Teleseismic Body Wave Arrival Times &mdash; AIMBAT 0.1.2 documentation</title>
     
     <link rel="stylesheet" href="../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="AIMBAT 0.1.2 documentation" href="../index.html" />
-    <link rel="prev" title="Installation" href="installing.html" /> 
+    <link rel="prev" title="Analyzing Data" href="analyzingData.html" /> 
   </head>
   <body>
     <div class="related">
@@ -35,7 +35,7 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="installing.html" title="Installation"
+          <a href="analyzingData.html" title="Analyzing Data"
              accesskey="P">previous</a> |</li>
         <li><a href="../index.html">AIMBAT 0.1.2 documentation</a> &raquo;</li> 
       </ul>
@@ -46,9 +46,22 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="picking-travel-times">
-<h1>Picking Travel Times<a class="headerlink" href="#picking-travel-times" title="Permalink to this headline">¶</a></h1>
-<p>Hello, World! I love picking travel times manually!</p>
+  <div class="section" id="measuring-teleseismic-body-wave-arrival-times">
+<h1>Measuring Teleseismic Body Wave Arrival Times<a class="headerlink" href="#measuring-teleseismic-body-wave-arrival-times" title="Permalink to this headline">¶</a></h1>
+<p>The core idea in using AIMBAT to measure teleseismic body wave arrival times has two parts:
+* automated phase alignment, to reduce user processing time, and
+* interactive quality control, to retain valuable user inputs.</p>
+<div class="section" id="automated-phase-alignment">
+<h2>Automated Phase Alignment<a class="headerlink" href="#automated-phase-alignment" title="Permalink to this headline">¶</a></h2>
+<p>The ICCS algorithm calculates an array stack from predicted time picks, cross-correlates each seismogram with the array stack to Find the time lags at maximum cross-correlation, then use the new time picks to update the array stack in an iterative process. The MCCC algorithm cross-correlates each possible pair of seismograms and uses a least-squares method to calculate an optimized set of relative arrival times. Our method is to combine ICCS and MCCC in a four-step procedure using four anchoring time picks <span class="math">\(_0T_i,\,_1T_i,\,_2T_i,\)</span> and <span class="math">\(_3T_i\)</span>.</p>
+<ol class="loweralpha simple">
+<li>Coarse alignment by ICCS</li>
+<li>Pick phase arrival at the array stack</li>
+<li>Refined alignment by ICCS</li>
+<li>Final alignment by MCCC</li>
+</ol>
+<p>The one-time manual phase picking at the array stack in step (b) allows the measurement of absolute arrival times. The detailed methodology and procedure can be found in <a class="reference internal" href="citations.html#louvanderlee2013" id="id1">[LouVanDerLee2013]</a>.</p>
+</div>
 </div>
 
 
@@ -57,9 +70,17 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Measuring Teleseismic Body Wave Arrival Times</a><ul>
+<li><a class="reference internal" href="#automated-phase-alignment">Automated Phase Alignment</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
-  <p class="topless"><a href="installing.html"
-                        title="previous chapter">Installation</a></p>
+  <p class="topless"><a href="analyzingData.html"
+                        title="previous chapter">Analyzing Data</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../_sources/docfiles/PickingTravelTimes.txt"
@@ -89,7 +110,7 @@
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="installing.html" title="Installation"
+          <a href="analyzingData.html" title="Analyzing Data"
              >previous</a> |</li>
         <li><a href="../index.html">AIMBAT 0.1.2 documentation</a> &raquo;</li> 
       </ul>

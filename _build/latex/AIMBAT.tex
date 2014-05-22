@@ -131,8 +131,7 @@ Contents:
 \label{docfiles/introduction:about-aimbat}
 AIMBAT (Automated and Interactive Measurement of Body wave Arrival Times) is an open-source software package for efficiently measuring teleseismic body wave arrival times for large seismic arrays {[}LouVanDerLee2013{]}. It is based on a widely used method called MCCC (Multi-Channel Cross-Correlation) {[}VanDecarCrosson1990{]}. The package is automated in the sense of initially aligning seismograms for MCCC which is achieved by an ICCS (Iterative Cross Correlation and Stack) algorithm. Meanwhile, a GUI (graphical user interface) is built to perform seismogram quality control interactively. Therefore, user processing time is reduced while valuable input from a user's expertise is retained. As a byproduct, SAC {[}GoldsteinDodge2003{]} plotting and phase picking functionalities are replicated and enhanced.
 
-Modules and scripts included in the AIMBAT package were developed using \href{http://www.python.org/}{Python programming language} and its open-source modules on the Mac OS X platform since 2009. The original MCCC {[}VanDecarCrosson1990{]} code was transcribed into Python. The GUI of AIMBAT was inspired and initiated at the \href{http://www.iris.edu/hq/es\_course/content/2009.html}{2009 EarthScope USArray Data Processing and Analysis Short Course}. AIMBAT runs on Mac OS X, Linux/Unix and Windows thanks to the platform-independent feature of Python.
-It has been tested on Mac OS 10.6.8 and 10.7 and Fedora 16.
+Modules and scripts included in the AIMBAT package were developed using \href{http://www.python.org/}{Python programming language} and its open-source modules on the Mac OS X platform since 2009. The original MCCC {[}VanDecarCrosson1990{]} code was transcribed into Python. The GUI of AIMBAT was inspired and initiated at the \href{http://www.iris.edu/hq/es\_course/content/2009.html}{2009 EarthScope USArray Data Processing and Analysis Short Course}. AIMBAT runs on Mac OS X, Linux/Unix and Windows thanks to the platform-independent feature of Python. It has been tested on Mac OS 10.6.8 and 10.7 and Fedora 16.
 
 The AIMBAT software package is distributed under the \href{http://www.gnu.org/licenses/gpl.html}{GNU General Public License Version 3 (GPLv3)} as published by the Free Software Foundation.
 
@@ -422,9 +421,32 @@ run in the whole downloaded directory (the one with the sac directory)
 AIMBAT uses \href{http://www.iris.edu/files/sac-manual/}{Seismic Analysis Code (SAC)} formatting for some of the files it runs and outputs. To get SAC, you will need to fill out a software request form available on the IRIS website.
 
 
-\chapter{Picking Travel Times}
-\label{docfiles/PickingTravelTimes:picking-travel-times}\label{docfiles/PickingTravelTimes::doc}
-Hello, World! I love picking travel times manually!
+\chapter{Measuring Teleseismic Body Wave Arrival Times}
+\label{docfiles/PickingTravelTimes::doc}\label{docfiles/PickingTravelTimes:measuring-teleseismic-body-wave-arrival-times}
+The core idea in using AIMBAT to measure teleseismic body wave arrival times has two parts:
+* automated phase alignment, to reduce user processing time, and
+* interactive quality control, to retain valuable user inputs.
+
+
+\section{Automated Phase Alignment}
+\label{docfiles/PickingTravelTimes:automated-phase-alignment}
+The ICCS algorithm calculates an array stack from predicted time picks, cross-correlates each seismogram with the array stack to Find the time lags at maximum cross-correlation, then use the new time picks to update the array stack in an iterative process. The MCCC algorithm cross-correlates each possible pair of seismograms and uses a least-squares method to calculate an optimized set of relative arrival times. Our method is to combine ICCS and MCCC in a four-step procedure using four anchoring time picks \(_0T_i,\,_1T_i,\,_2T_i,\) and \(_3T_i\).
+\begin{enumerate}
+\item {} 
+Coarse alignment by ICCS
+
+\item {} 
+Pick phase arrival at the array stack
+
+\item {} 
+Refined alignment by ICCS
+
+\item {} 
+Final alignment by MCCC
+
+\end{enumerate}
+
+The one-time manual phase picking at the array stack in step (b) allows the measurement of absolute arrival times. The detailed methodology and procedure can be found in {[}LouVanDerLee2013{]}.
 
 
 \chapter{Indices and tables}
