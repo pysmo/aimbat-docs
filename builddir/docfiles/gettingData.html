@@ -61,6 +61,116 @@
 <img alt="../_images/path_to_sod_bin.png" src="../_images/path_to_sod_bin.png" />
 <p>Inside my home directory&#8217;s bash profile (you get the by typing <cite>cd</cite>), you put the path to <cite>sod-3.2.3/bin</cite> by adding in either the <cite>bash</cite> or <cite>bash_profile</cite> or <cite>profile</cite> files:</p>
 </div>
+<div class="section" id="downloading-data-with-sod">
+<h2>Downloading Data with SOD<a class="headerlink" href="#downloading-data-with-sod" title="Permalink to this headline">¶</a></h2>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Authors:</th><td class="field-body">Trevor Bollmann</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt>Create a sod recipe and place it in the folder that you would like the data to download to.</dt>
+<dd><ul class="first last simple">
+<li><cite>sod -f &lt;recipename&gt;.xml</cite></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Run verb&#8221;sodcut.sh&#8221; to cut the seismogram around phase wanted</dt>
+<dd><ul class="first last simple">
+<li>check model within <cite>cutevseis.sh</cite></li>
+<li>run using <cite>sodcut.sh &lt;name&gt;</cite></li>
+<li>watch sdir = processed seismograms</li>
+<li>Run over the entire downloaded directory (the files sod downloaded)</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Run <cite>sodpkl.sh</cite> (converts <cite>.sac</cite> files to python pickles)</dt>
+<dd><ul class="first last simple">
+<li>run using <cite>sodpkl.sh [options] &lt;directory&gt;</cite></li>
+<li>output will automatically be zipped</li>
+<li>run in DATA directory</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Run <cite>ttpick.py</cite> (does travel time picking with plotting)</dt>
+<dd><ul class="first last simple">
+<li>can use <cite>iccs.py</cite> but it does not have plotting capabilities</li>
+<li>run using <cite>ttpick.py [options] &lt;pkl.gz file&gt;</cite></li>
+<li>do this one event at a time</li>
+<li>use <cite>sacp2</cite> to look at the stacking of the seismograms</li>
+<li>you can sort the seismograms using the <cite>–s</cite> flag</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>run <cite>getsta.py</cite> (creates a <cite>loc.sta</cite> file)</dt>
+<dd><ul class="first last simple">
+<li><cite>getsta.py [options] &lt;pkl.gz files&gt;</cite></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Run EITHER of these:</dt>
+<dd><ul class="first last">
+<li><p class="first">FIRST CHOICE</p>
+</li>
+<li><p class="first">run <cite>mccc2delay.py</cite> (converts mccc delays to actual delays) by doing <cite>mccc2delay.py [option] &lt;.mcp files&gt;</cite></p>
+</li>
+<li><dl class="first docutils">
+<dt>run <cite>getdelay.py</cite> (creates a delay file) by doing <cite>getdelay.py [options] &lt;*.px&gt;</cite></dt>
+<dd><ul class="first last simple">
+<li>Can possibly use <cite>doplotsta.sh</cite>, plots all of the events and their station delays</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Run <cite>evmcdelay.sh</cite></p>
+</li>
+<li><dl class="first docutils">
+<dt>SECOND CHOICE</dt>
+<dd><ul class="first last simple">
+<li>verb&#8221;ttcheck.py&#8221; to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>If you need to remove a station from an event you can use verb&#8221;pklsel.py&#8221;</dt>
+<dd><ul class="first last simple">
+<li>Run using verb&#8221;pklsel.py [pkl file] –d [stnm]&#8221; to remove one station</li>
+<li>Only works for one event at a time</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>If you need to filter the data to be able to pick use verb&#8221;evsacbp.sh&#8221;</dt>
+<dd><ul class="first last simple">
+<li>run using verb&#8221;evsacbp.sh [pkl file] bp1 bp2&#8221;</li>
+<li>Automatically uses two corners</li>
+<li>run in the whole downloaded directory (the one with the sac directory)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
 </div>
 
 
@@ -73,6 +183,7 @@
   <ul>
 <li><a class="reference internal" href="#">Standing Order for Data (SOD)</a><ul>
 <li><a class="reference internal" href="#installing-sod">Installing SOD</a></li>
+<li><a class="reference internal" href="#downloading-data-with-sod">Downloading Data with SOD</a></li>
 </ul>
 </li>
 </ul>
