@@ -16,8 +16,8 @@ Associated Documents
 * :download:`Seismological Research Letters Paper <Lou_etal_2013_SRL_AIMBAT.pdf>`
 * :download:`PDF Version of Manual <../_build/latex/AIMBAT.pdf>`
 
-Contact Information
--------------------
+Contact Authors
+---------------
 
 * `Lay Kuan Loh <http://lkloh2410.wordpress.com/>`_ 
 
