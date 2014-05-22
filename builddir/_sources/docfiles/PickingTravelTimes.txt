@@ -66,7 +66,7 @@ Running ttpick.py
 
 Run ``ttpick/py <path-to-pkl-file>``. A GUI should pop up if you successfully ran it. Note that if you click on the buttons, they will not work until you move the mouse off them; this is a problem we are hoping to fix.
 
-.. image::pickingTravelTimes-images/pick_travel_times.png
+.. image:: pickingTravelTimes-images/pick_travel_times.png
 
 	Picking travel times.
 
