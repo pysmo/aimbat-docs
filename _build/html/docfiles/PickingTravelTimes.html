@@ -121,6 +121,15 @@
 </tr>
 </tbody>
 </table>
+<p>The ICCS and MCCC algorithms are implemented in two modules <tt class="docutils literal"><span class="pre">pysmo.aimbat.algiccs</span></tt> and <tt class="docutils literal"><span class="pre">pysmo.aimbat.algmccc</span></tt>, and can be executed in scripts <tt class="docutils literal"><span class="pre">iccs.py</span></tt> and <tt class="docutils literal"><span class="pre">mccc.py</span></tt> respectively.</p>
+</div>
+</div>
+<div class="section" id="picking-travel-times">
+<h1>Picking Travel Times<a class="headerlink" href="#picking-travel-times" title="Permalink to this headline">¶</a></h1>
+<p>This section explains how to run the program <tt class="code docutils literal"><span class="pre">ttpick.py</span></tt> to get the travel times you want.</p>
+<div class="section" id="getting-into-the-right-directory">
+<h2>Getting into the right directory<a class="headerlink" href="#getting-into-the-right-directory" title="Permalink to this headline">¶</a></h2>
+<p>In the terminal, cd into the directory with all the <tt class="docutils literal"><span class="pre">pkl</span></tt> files you want to run. You want to run either the .bht or .bhz files. bht files are for S-waves and bhz files are for P -waves. PKL is a bundle of SAC files. Each SAC file is a seismogram, but since you there may be many seismograms from various stations for each event, we bundle them into a PKL file so we only have to import one file into AIMBAT, not a few hundred of them.</p>
 </div>
 </div>
 
@@ -134,6 +143,10 @@
   <ul>
 <li><a class="reference internal" href="#">Measuring Teleseismic Body Wave Arrival Times</a><ul>
 <li><a class="reference internal" href="#automated-phase-alignment">Automated Phase Alignment</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#picking-travel-times">Picking Travel Times</a><ul>
+<li><a class="reference internal" href="#getting-into-the-right-directory">Getting into the right directory</a></li>
 </ul>
 </li>
 </ul>

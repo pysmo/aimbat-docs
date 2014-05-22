@@ -17,4 +17,6 @@
 \contentsline {section}{\numberline {5.1}Seismic Analysis Code (SAC)}{13}{section.5.1}
 \contentsline {chapter}{\numberline {6}Measuring Teleseismic Body Wave Arrival Times}{15}{chapter.6}
 \contentsline {section}{\numberline {6.1}Automated Phase Alignment}{15}{section.6.1}
-\contentsline {chapter}{\numberline {7}Indices and tables}{17}{chapter.7}
+\contentsline {chapter}{\numberline {7}Picking Travel Times}{17}{chapter.7}
+\contentsline {section}{\numberline {7.1}Getting into the right directory}{17}{section.7.1}
+\contentsline {chapter}{\numberline {8}Indices and tables}{19}{chapter.8}

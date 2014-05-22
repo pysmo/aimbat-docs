@@ -24,7 +24,7 @@ Downloading Data with SOD
 
 #. Create a sod recipe and place it in the folder that you would like the data to download to.
     - :code:`sod -f <recipename>.xml`
-#. Run \verb"sodcut.sh" to cut the seismogram around phase wanted
+#. Run :code:`sodcut.sh` to cut the seismogram around phase wanted
     - check model within :code:`cutevseis.sh`
     - run using :code:`sodcut.sh <name>`
     - watch :code:`sdir = processed seismograms`
@@ -43,17 +43,17 @@ Downloading Data with SOD
     - :code:`getsta.py [options] <pkl.gz files>`
 #. Run EITHER of these: 
 	- FIRST CHOICE	
-        - run :code:`mccc2delay.py` (converts mccc delays to actual delays) by doing `mccc2delay.py [option] <.mcp files>`
+        - run :code:`mccc2delay.py` (converts mccc delays to actual delays) by doing :code:`mccc2delay.py [option] <.mcp files>`
         - run :code:`getdelay.py` (creates a delay file) by doing `getdelay.py [options] <*.px>`
             - Can possibly use `doplotsta.sh`, plots all of the events and their station delays
         - Run :code:`evmcdelay.sh`
   	- SECOND CHOICE
-  		- :code:\verb"ttcheck.py" to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.
-#. If you need to remove a station from an event you can use :code:\verb"pklsel.py"
-    - Run using :code:\verb"pklsel.py [pkl file] –d [stnm]" to remove one station
+  		- :code:`ttcheck.py` to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.
+#. If you need to remove a station from an event you can use :code:`pklsel.py`
+    - Run using :code:`pklsel.py [pkl file] –d [stnm]` to remove one station
     - Only works for one event at a time
-#. If you need to filter the data to be able to pick use :code:\verb"evsacbp.sh"
-    - run using :code:\verb"evsacbp.sh [pkl file] bp1 bp2"
+#. If you need to filter the data to be able to pick use :code:`evsacbp.sh`
+    - run using :code:`evsacbp.sh [pkl file] bp1 bp2`
     - Automatically uses two corners
     - run in the whole downloaded directory (the one with the sac directory)
 

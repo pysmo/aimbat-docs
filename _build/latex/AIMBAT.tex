@@ -288,7 +288,7 @@ Inside my home directory's bash profile (you get the by typing \emph{cd}), you p
 \end{description}
 
 \item {} \begin{description}
-\item[{Run verb''sodcut.sh'' to cut the seismogram around phase wanted}] \leavevmode\begin{itemize}
+\item[{Run \code{sodcut.sh} to cut the seismogram around phase wanted}] \leavevmode\begin{itemize}
 \item {} 
 check model within \code{cutevseis.sh}
 
@@ -356,7 +356,7 @@ you can sort the seismograms using the \code{–s} flag
 FIRST CHOICE
 
 \item {} 
-run \code{mccc2delay.py} (converts mccc delays to actual delays) by doing \emph{mccc2delay.py {[}option{]} \textless{}.mcp files\textgreater{}}
+run \code{mccc2delay.py} (converts mccc delays to actual delays) by doing \code{mccc2delay.py {[}option{]} \textless{}.mcp files\textgreater{}}
 
 \item {} \begin{description}
 \item[{run \code{getdelay.py} (creates a delay file) by doing \emph{getdelay.py {[}options{]} \textless{}*.px\textgreater{}}}] \leavevmode\begin{itemize}
@@ -373,7 +373,7 @@ Run \code{evmcdelay.sh}
 \item {} \begin{description}
 \item[{SECOND CHOICE}] \leavevmode\begin{itemize}
 \item {} 
-:code:verb''ttcheck.py'' to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.
+\code{ttcheck.py} to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.
 
 \end{itemize}
 
@@ -384,9 +384,9 @@ Run \code{evmcdelay.sh}
 \end{description}
 
 \item {} \begin{description}
-\item[{If you need to remove a station from an event you can use :code:verb''pklsel.py''}] \leavevmode\begin{itemize}
+\item[{If you need to remove a station from an event you can use \code{pklsel.py}}] \leavevmode\begin{itemize}
 \item {} 
-Run using :code:verb''pklsel.py {[}pkl file{]} –d {[}stnm{]}'' to remove one station
+Run using \code{pklsel.py {[}pkl file{]} –d {[}stnm{]}} to remove one station
 
 \item {} 
 Only works for one event at a time
@@ -396,9 +396,9 @@ Only works for one event at a time
 \end{description}
 
 \item {} \begin{description}
-\item[{If you need to filter the data to be able to pick use :code:verb''evsacbp.sh''}] \leavevmode\begin{itemize}
+\item[{If you need to filter the data to be able to pick use \code{evsacbp.sh}}] \leavevmode\begin{itemize}
 \item {} 
-run using :code:verb''evsacbp.sh {[}pkl file{]} bp1 bp2''
+run using \code{evsacbp.sh {[}pkl file{]} bp1 bp2}
 
 \item {} 
 Automatically uses two corners
@@ -534,6 +534,18 @@ MCCS
 
 \end{threeparttable}
 
+
+The ICCS and MCCC algorithms are implemented in two modules \code{pysmo.aimbat.algiccs} and \code{pysmo.aimbat.algmccc}, and can be executed in scripts \code{iccs.py} and \code{mccc.py} respectively.
+
+
+\chapter{Picking Travel Times}
+\label{docfiles/PickingTravelTimes:picking-travel-times}
+This section explains how to run the program \code{ttpick.py} to get the travel times you want.
+
+
+\section{Getting into the right directory}
+\label{docfiles/PickingTravelTimes:getting-into-the-right-directory}
+In the terminal, cd into the directory with all the \code{pkl} files you want to run. You want to run either the .bht or .bhz files. bht files are for S-waves and bhz files are for P -waves. PKL is a bundle of SAC files. Each SAC file is a seismogram, but since you there may be many seismograms from various stations for each event, we bundle them into a PKL file so we only have to import one file into AIMBAT, not a few hundred of them.
 
 
 \chapter{Indices and tables}

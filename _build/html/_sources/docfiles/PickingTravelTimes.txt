@@ -6,6 +6,10 @@ The core idea in using AIMBAT to measure teleseismic body wave arrival times has
 * automated phase alignment, to reduce user processing time, and
 * interactive quality control, to retain valuable user inputs.
 
+.. ############################################################################ ..
+.. #                           AUTOMATED PHASE ALIGNMENT                      # ..
+.. ############################################################################ ..
+
 Automated Phase Alignment
 -------------------------
 
@@ -31,4 +35,53 @@ The one-time manual phase picking at the array stack in step (b) allows the meas
 	+------+-----------+-------------+----------------+-------------+---------------+-------------+
 	| (d)  |   MCCS    | :math:`W_b` | :math:`_2T_i`  | **T2**      | :math:`_3T_i` | **T3**      |     
 	+------+-----------+-------------+----------------+-------------+---------------+-------------+
+
+The ICCS and MCCC algorithms are implemented in two modules ``pysmo.aimbat.algiccs`` and ``pysmo.aimbat.algmccc``, and can be executed in scripts ``iccs.py`` and ``mccc.py`` respectively. 
+
+.. ############################################################################ ..
+.. #                           AUTOMATED PHASE ALIGNMENT                      # ..
+.. ############################################################################ ..
+
+
+
+
+
+.. ############################################################################ ..
+.. #                           AUTOMATED PHASE ALIGNMENT                      # ..
+.. ############################################################################ ..
+
+Picking Travel Times
+====================
+
+This section explains how to run the program :code:`ttpick.py` to get the travel times you want.
+
+Getting into the right directory
+--------------------------------
+
+In the terminal, cd into the directory with all the ``pkl`` files you want to run. You want to run either the .bht or .bhz files. bht files are for S-waves and bhz files are for P -waves. PKL is a bundle of SAC files. Each SAC file is a seismogram, but since you there may be many seismograms from various stations for each event, we bundle them into a PKL file so we only have to import one file into AIMBAT, not a few hundred of them.
+
+.. image::pickingTravelTimes-images/pick_travel_times.png
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
