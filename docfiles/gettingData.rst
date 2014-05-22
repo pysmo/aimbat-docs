@@ -20,7 +20,7 @@ Downloading Data with SOD
 -------------------------
 
 :Authors: 
-	Trevor Bollman
+	Trevor Bollmann
 
 #. Create a sod recipe and place it in the folder that you would like the data to download to.
     - `sod -f <recipename>.xml`
@@ -39,36 +39,21 @@ Downloading Data with SOD
         - do this one event at a time
         - use `sacp2` to look at the stacking of the seismograms
         - you can sort the seismograms using the `–s` flag
-  \item run \verb"getsta.py" (creates a \verb"loc.sta" file)
-        \begin{verbatim}
-          getsta.py [options] <pkl.gz files>
-        \end{verbatim}
-  \item Run EITHER of these: 
-        \begin{enumerate}
-          \item \begin{itemize}
-                  \item run \verb"mccc2delay.py" (converts mccc delays to actual delays)
-                        \begin{verbatim}
-                          mccc2delay.py [option] <.mcp files>
-                        \end{verbatim}
-                  \item run \verb"getdelay.py" (creates a delay file)
-                        \begin{verbatim}
-                          getdelay.py [options] <*.px>
-                        \end{verbatim}
-                  \item Can possibly use \verb"doplotsta.sh", plots all of the events and their station delays
-                \end{itemize}
-          \item Run \verb"evmcdelay.sh"
-        \end{enumerate}
-  \item \verb"ttcheck.py" to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.
-  \item If you need to remove a station from an event you can use \verb"pklsel.py"
-        \begin{itemize}
-          \item Run using \verb"pklsel.py [pkl file] –d [stnm]" to remove one station
-          \item Only works for one event at a time
-        \end{itemize}
-  \item If you need to filter the data to be able to pick use \verb"evsacbp.sh"
-        \begin{itemize}
-          \item run using \verb"evsacbp.sh [pkl file] bp1 bp2"
-          \item Automatically uses two corners
-          \item run in the whole downloaded directory (the one with the sac directory)
-        \end{itemize}
-\end{enumerate}
+#. run `getsta.py` (creates a `loc.sta` file)
+    - `getsta.py [options] <pkl.gz files>`
+#. Run EITHER of these: 
+	- FIRST CHOICE	
+        - run `mccc2delay.py` (converts mccc delays to actual delays) by doing `mccc2delay.py [option] <.mcp files>`
+        - run `getdelay.py` (creates a delay file) by doing `getdelay.py [options] <*.px>`
+            - Can possibly use `doplotsta.sh`, plots all of the events and their station delays
+        - Run `evmcdelay.sh`
+  	- SECOND CHOICE
+  		- \verb"ttcheck.py" to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.
+#. If you need to remove a station from an event you can use \verb"pklsel.py"
+    - Run using \verb"pklsel.py [pkl file] –d [stnm]" to remove one station
+    - Only works for one event at a time
+#. If you need to filter the data to be able to pick use \verb"evsacbp.sh"
+    - run using \verb"evsacbp.sh [pkl file] bp1 bp2"
+    - Automatically uses two corners
+    - run in the whole downloaded directory (the one with the sac directory)
 
