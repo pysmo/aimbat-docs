@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Installing AIMBAT &mdash; AIMBAT 0.1.2 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="AIMBAT 0.1.2 documentation" href="../index.html" />
+    <link rel="next" title="Standing Order for Data (SOD)" href="gettingData.html" />
+    <link rel="prev" title="Installing Dependencies" href="install_dependencies.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="gettingData.html" title="Standing Order for Data (SOD)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="install_dependencies.html" title="Installing Dependencies"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">AIMBAT 0.1.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="installing-aimbat">
+<h1>Installing AIMBAT<a class="headerlink" href="#installing-aimbat" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="getting-the-packages">
+<h2>Getting the Packages<a class="headerlink" href="#getting-the-packages" title="Permalink to this headline">¶</a></h2>
+<p>AIMBAT is released as a sub-package of pysmo in the name of pysmo.aimbat along with another sub-package pysmo.sac. The latest releases of <tt class="code docutils literal"><span class="pre">pysmo.sac</span></tt> and <tt class="code docutils literal"><span class="pre">pysmo.aimbat</span></tt> are available for download at the <a class="reference external" href="http://www.earth.northwestern.edu/~xlou/aimbat.html">official project webpage</a> and <a class="reference external" href="https://github.com/pysmo">Github</a>.</p>
+<p>The packages should be installed into the Python site-packages directory. To find out where that is, in the python console, do:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">site</span><span class="p">;</span>
+<span class="n">site</span><span class="o">.</span><span class="n">getsitepackages</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Whatever is output there, lets call it <tt class="code docutils literal"><span class="pre">&lt;pkg-install-dir&gt;</span></tt>. You can choose to install AIMBAT either locally or globally, depending on whether you want all users of the computer to have access to it.</p>
+<p>Make a directory called <tt class="code docutils literal"><span class="pre">pysmo</span></tt>, and place the sac and aimbat directories there.</p>
+<p>Now that we know the location of the site-packages direction, cd into it. Call the path to it <tt class="code docutils literal"><span class="pre">&lt;pkg-install-dir&gt;</span></tt>. Notice that in this case, the site-packages has been installed for all users on the computer, not just the current user’s home directory.</p>
+<p>Put the two Python packages inside the directory.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Installing AIMBAT</a><ul>
+<li><a class="reference internal" href="#getting-the-packages">Getting the Packages</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="install_dependencies.html"
+                        title="previous chapter">Installing Dependencies</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="gettingData.html"
+                        title="next chapter">Standing Order for Data (SOD)</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/docfiles/install_aimbat.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="gettingData.html" title="Standing Order for Data (SOD)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="install_dependencies.html" title="Installing Dependencies"
+             >previous</a> |</li>
+        <li><a href="../index.html">AIMBAT 0.1.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Lay Kuan Loh, Xiaoting Lou &amp; Suzan van der Lee.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

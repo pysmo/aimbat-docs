@@ -13,7 +13,8 @@ Contents:
    	:maxdepth: 2
 
     docfiles/introduction
-    docfiles/installing
+    docfiles/install_dependencies
+    docfiles/install_aimbat
     docfiles/gettingData
     docfiles/analyzingData
     docfiles/PickingTravelTimes

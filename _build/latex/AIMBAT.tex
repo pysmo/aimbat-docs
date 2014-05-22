@@ -126,29 +126,30 @@ Contents:
 
 \chapter{Introduction}
 \label{docfiles/introduction:introduction}\label{docfiles/introduction:welcome-to-aimbat-s-documentation}\label{docfiles/introduction::doc}
-AIMBAT (Automated and Interactive Measurement of Body wave Arrival Times) is an open-source software package for efficiently measuring teleseismic body wave arrival times for large seismic arrays {\hyperref[docfiles/citations:louvanderleelloyd2013-seismologicalresearchletters]{{[}LouVanderleeLloyd2013-SeismologicalResearchLetters{]}}}. It is based on a widely used method called MCCC (Multi-Channel Cross-Correlation) {\hyperref[docfiles/citations:vandecarcrosson1990-bulletinseismologicalsocietyofamerica]{{[}VandecarCrosson1990-BulletinSeismologicalSocietyOfAmerica{]}}}. The package is automated in the sense of initially aligning seismograms for MCCC which is achieved by an ICCS (Iterative Cross Correlation and Stack) algorithm. Meanwhile, a GUI (graphical user interface) is built to perform seismogram quality control interactively. Therefore, user processing time is reduced while valuable input from a user's expertise is retained. As a byproduct, SAC {\hyperref[docfiles/citations:goldsteindodgefirpo2003-internationalgeophysics]{{[}GoldsteinDodgeFirpo2003-InternationalGeophysics{]}}} plotting and phase picking functionalities are replicated and enhanced.
+AIMBAT (Automated and Interactive Measurement of Body wave Arrival Times) is an open-source software package for efficiently measuring teleseismic body wave arrival times for large seismic arrays {[}LouVanderleeLloyd2013-SeismologicalResearchLetters{]}. It is based on a widely used method called MCCC (Multi-Channel Cross-Correlation) {[}VandecarCrosson1990-BulletinSeismologicalSocietyOfAmerica{]}. The package is automated in the sense of initially aligning seismograms for MCCC which is achieved by an ICCS (Iterative Cross Correlation and Stack) algorithm. Meanwhile, a GUI (graphical user interface) is built to perform seismogram quality control interactively. Therefore, user processing time is reduced while valuable input from a user's expertise is retained. As a byproduct, SAC {[}GoldsteinDodgeFirpo2003-InternationalGeophysics{]} plotting and phase picking functionalities are replicated and enhanced.
 
-Modules and scripts included in the AIMBAT package were developed using \href{http://www.python.org/}{Python programming language} and its open-source modules on the Mac OS X platform since 2009. The original MCCC {\hyperref[docfiles/citations:vandecarcrosson1990-bulletinseismologicalsocietyofamerica]{{[}VandecarCrosson1990-BulletinSeismologicalSocietyOfAmerica{]}}} code was transcribed into Python. The GUI of AIMBAT was inspired and initiated at the \href{http://www.iris.edu/hq/es\_course/content/2009.html}{2009 EarthScope USArray Data Processing and Analysis Short Course}. AIMBAT runs on Mac OS X, Linux/Unix and Windows thanks to the platform-independent feature of Python.
+Modules and scripts included in the AIMBAT package were developed using \href{http://www.python.org/}{Python programming language} and its open-source modules on the Mac OS X platform since 2009. The original MCCC {[}VandecarCrosson1990-BulletinSeismologicalSocietyOfAmerica{]} code was transcribed into Python. The GUI of AIMBAT was inspired and initiated at the \href{http://www.iris.edu/hq/es\_course/content/2009.html}{2009 EarthScope USArray Data Processing and Analysis Short Course}. AIMBAT runs on Mac OS X, Linux/Unix and Windows thanks to the platform-independent feature of Python.
 It has been tested on Mac OS 10.6.8 and 10.7 and Fedora 16.
 
 The AIMBAT software package is distributed under the \href{http://www.gnu.org/licenses/gpl.html}{GNU General Public License Version 3 (GPLv3)} as published by the Free Software Foundation.
 
 
-\chapter{Installation}
-\label{docfiles/installing:installation}\label{docfiles/installing::doc}
+\chapter{Installing Dependencies}
+\label{docfiles/install_dependencies:installing-dependencies}\label{docfiles/install_dependencies::doc}
 
 \section{Getting your operating system}
-\label{docfiles/installing:getting-your-operating-system}
-\includegraphics{system_preferences.png}
+\label{docfiles/install_dependencies:getting-your-operating-system}
+You may need to know
+.. image:: installing-images/system\_preferences.png
 
 
 \section{Installing Python}
-\label{docfiles/installing:installing-python}
+\label{docfiles/install_dependencies:installing-python}
 \href{http://www1.i2r.a-star.edu.sg/~lins/codes/python.html}{Shaowei Lin} suggested Enthought Canopy to install all the Python packages easily. If you download the free version of Enthought Canopy, it gives you everything you need for installing AIMBAT properly. If you do not want to use Enthought Canopy, read the rest of this section to use Macports or Pip.
 
 
 \section{Python Dependencies}
-\label{docfiles/installing:python-dependencies}\begin{itemize}
+\label{docfiles/install_dependencies:python-dependencies}\begin{itemize}
 \item {} 
 \href{http://www.numpy.org/}{Numpy}
 
@@ -162,6 +163,29 @@ The AIMBAT software package is distributed under the \href{http://www.gnu.org/li
 \href{http://ipython.org/}{iPython} (optional)
 
 \end{itemize}
+
+
+\chapter{Installing AIMBAT}
+\label{docfiles/install_aimbat::doc}\label{docfiles/install_aimbat:installing-aimbat}
+
+\section{Getting the Packages}
+\label{docfiles/install_aimbat:getting-the-packages}
+AIMBAT is released as a sub-package of pysmo in the name of pysmo.aimbat along with another sub-package pysmo.sac. The latest releases of \code{pysmo.sac} and \code{pysmo.aimbat} are available for download at the \href{http://www.earth.northwestern.edu/~xlou/aimbat.html}{official project webpage} and \href{https://github.com/pysmo}{Github}.
+
+The packages should be installed into the Python site-packages directory. To find out where that is, in the python console, do:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{site}\PYG{p}{;}
+\PYG{n}{site}\PYG{o}{.}\PYG{n}{getsitepackages}\PYG{p}{(}\PYG{p}{)}
+\end{Verbatim}
+
+Whatever is output there, lets call it \code{\textless{}pkg-install-dir\textgreater{}}. You can choose to install AIMBAT either locally or globally, depending on whether you want all users of the computer to have access to it.
+
+Make a directory called \code{pysmo}, and place the sac and aimbat directories there.
+
+Now that we know the location of the site-packages direction, cd into it. Call the path to it \code{\textless{}pkg-install-dir\textgreater{}}. Notice that in this case, the site-packages has been installed for all users on the computer, not just the current user’s home directory.
+
+Put the two Python packages inside the directory.
 
 
 \chapter{Standing Order for Data (SOD)}
@@ -337,9 +361,6 @@ run in the whole downloaded directory (the one with the sac directory)
 Hello, World! I love picking travel times manually!
 
 
-\chapter{Citations}
-\label{docfiles/citations:citations}\label{docfiles/citations::doc}
-
 \chapter{Indices and tables}
 \label{index:indices-and-tables}\begin{itemize}
 \item {} 
@@ -352,21 +373,6 @@ Hello, World! I love picking travel times manually!
 \emph{search}
 
 \end{itemize}
-
-\begin{thebibliography}{VandecarCrosson1990-BulletinSeismologicalSocietyOfAmerica}
-\bibitem[GoldsteinDodgeFirpo2003-InternationalGeophysics]{GoldsteinDodgeFirpo2003-InternationalGeophysics}{\phantomsection\label{docfiles/citations:goldsteindodgefirpo2003-internationalgeophysics} 
-Goldstein, P., D. Dodge, M. Firpo, and L. Minner (2003), SAC2000: Signal processing and analysis tools for seismologists and engineers, International Geophysics, 81, 1613–1614.
-}
-\bibitem[Hunder2007-ComputingInScienceAndEngineering]{Hunder2007-ComputingInScienceAndEngineering}{\phantomsection\label{docfiles/citations:hunder2007-computinginscienceandengineering} 
-Hunter, J. (2007), Matplotlib: A 2D Graphics Environment, Computing in Science \& Engi- neering, 3(9), 90–95.
-}
-\bibitem[LouVanderleeLloyd2013-SeismologicalResearchLetters]{LouVanderleeLloyd2013-SeismologicalResearchLetters}{\phantomsection\label{docfiles/citations:louvanderleelloyd2013-seismologicalresearchletters} 
-AIMBAT: A Python/Matplotlib Tool for Measuring Teleseismic Arrival Times. Xiaoting Lou, Suzan van der Lee, and Simon Lloyd (2013), Seismol. Res. Lett., 84(1), 85-93, doi:10.1785/0220120033.
-}
-\bibitem[VandecarCrosson1990-BulletinSeismologicalSocietyOfAmerica]{VandecarCrosson1990-BulletinSeismologicalSocietyOfAmerica}{\phantomsection\label{docfiles/citations:vandecarcrosson1990-bulletinseismologicalsocietyofamerica} 
-VanDecar, J. C., and R. S. Crosson (1990), Determination of teleseismic relative phase arrival times using multi-channel cross-correlation and least squares, Bulletin of the Seismological Society of America, 80(1), 150–169.
-}
-\end{thebibliography}
 
 
 
