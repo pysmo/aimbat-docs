@@ -14,7 +14,7 @@
 
 
 \title{AIMBAT Documentation}
-\date{May 21, 2014}
+\date{May 22, 2014}
 \release{0.1.2}
 \author{Lay Kuan Loh, Xiaoting Lou, \& Suzan van der Lee}
 \newcommand{\sphinxlogo}{}
@@ -126,20 +126,219 @@ Contents:
 
 \chapter{Introduction}
 \label{docfiles/introduction:introduction}\label{docfiles/introduction:welcome-to-aimbat-s-documentation}\label{docfiles/introduction::doc}
-Lol
+AIMBAT (Automated and Interactive Measurement of Body wave Arrival Times) is an open-source software package for efficiently measuring teleseismic body wave arrival times for large seismic arrays {\hyperref[docfiles/citations:louvanderleelloyd2013-seismologicalresearchletters]{{[}LouVanderleeLloyd2013\_SeismologicalResearchLetters{]}}}. It is based on a widely used method called MCCC (Multi-Channel Cross-Correlation) {\hyperref[docfiles/citations:vandecarcrosson1990-bulletinseismologicalsocietyofamerica]{{[}VandecarCrosson1990\_BulletinSeismologicalSocietyOfAmerica{]}}}. The package is automated in the sense of initially aligning seismograms for MCCC which is achieved by an ICCS (Iterative Cross Correlation and Stack) algorithm. Meanwhile, a GUI (graphical user interface) is built to perform seismogram quality control interactively. Therefore, user processing time is reduced while valuable input from a user's expertise is retained. As a byproduct, SAC {\hyperref[docfiles/citations:goldsteindodgefirpo2003-internationalgeophysics]{{[}GoldsteinDodgeFirpo2003\_InternationalGeophysics{]}}} plotting and phase picking functionalities are replicated and enhanced.
+
+Modules and scripts included in the AIMBAT package were developed using \href{http://www.python.org/}{Python programming language} and its open-source modules on the Mac OS X platform since 2009. The original MCCC {\hyperref[docfiles/citations:vandecarcrosson1990-bulletinseismologicalsocietyofamerica]{{[}VandecarCrosson1990\_BulletinSeismologicalSocietyOfAmerica{]}}} code was transcribed into Python. The GUI of AIMBAT was inspired and initiated at the \href{http://www.iris.edu/hq/es\_course/content/2009.html}{2009 EarthScope USArray Data Processing and Analysis Short Course}. AIMBAT runs on Mac OS X, Linux/Unix and Windows thanks to the platform-independent feature of Python.
+It has been tested on Mac OS 10.6.8 and 10.7 and Fedora 16.
+
+The AIMBAT software package is distributed under the \href{http://www.gnu.org/licenses/gpl.html}{GNU General Public License Version 3 (GPLv3)} as published by the Free Software Foundation.
 
 
-\chapter{Installing}
-\label{docfiles/installing::doc}\label{docfiles/installing:installing}
-You need Python!
+\chapter{Installation}
+\label{docfiles/installing:installation}\label{docfiles/installing::doc}
 
-u suck
+\section{Getting your operating system}
+\label{docfiles/installing:getting-your-operating-system}
+\includegraphics{system_preferences.png}
+
+
+\section{Installing Python}
+\label{docfiles/installing:installing-python}
+\href{http://www1.i2r.a-star.edu.sg/~lins/codes/python.html}{Shaowei Lin} suggested Enthought Canopy to install all the Python packages easily. If you download the free version of Enthought Canopy, it gives you everything you need for installing AIMBAT properly. If you do not want to use Enthought Canopy, read the rest of this section to use Macports or Pip.
+
+
+\section{Python Dependencies}
+\label{docfiles/installing:python-dependencies}\begin{itemize}
+\item {} 
+\href{http://www.numpy.org/}{Numpy}
+
+\item {} 
+\href{http://www.scipy.org/}{Scipy}
+
+\item {} 
+\href{http://matplotlib.org/}{Matplotlib}
+
+\item {} 
+\href{http://ipython.org/}{iPython} (optional)
+
+\end{itemize}
+
+
+\chapter{Standing Order for Data (SOD)}
+\label{docfiles/gettingData:standing-order-for-data-sod}\label{docfiles/gettingData::doc}
+
+\section{Installing SOD}
+\label{docfiles/gettingData:installing-sod}
+First, download \href{http://www.seis.sc.edu/index.html}{SOD}.
+
+Once you have gotten the folder for SOD, put it somewhere where you won't touch it too much. What I did was put the SOD folder in my home directory, though other places are acceptable as well, as long as its not too easy to delete it by accident.
+
+\includegraphics{sod_location.png}
+
+Once you have it there, get the path to the sod folder's bin and put it in your path folder.
+
+\includegraphics{path_to_sod_bin.png}
+
+Inside my home directory's bash profile (you get the by typing \emph{cd}), you put the path to \emph{sod-3.2.3/bin} by adding in either the \emph{bash} or \emph{bash\_profile} or \emph{profile} files:
+
+
+\section{Downloading Data with SOD}
+\label{docfiles/gettingData:downloading-data-with-sod}\begin{quote}\begin{description}
+\item[{Authors}] \leavevmode
+\href{http://www.earth.northwestern.edu/~trevor/Welcome.html}{Trevor Bollmann}
+
+\end{description}\end{quote}
+\begin{enumerate}
+\item {} \begin{description}
+\item[{Create a sod recipe and place it in the folder that you would like the data to download to.}] \leavevmode\begin{itemize}
+\item {} 
+\emph{sod -f \textless{}recipename\textgreater{}.xml}
+
+\end{itemize}
+
+\end{description}
+
+\item {} \begin{description}
+\item[{Run verb''sodcut.sh'' to cut the seismogram around phase wanted}] \leavevmode\begin{itemize}
+\item {} 
+check model within \emph{cutevseis.sh}
+
+\item {} 
+run using \emph{sodcut.sh \textless{}name\textgreater{}}
+
+\item {} 
+watch sdir = processed seismograms
+
+\item {} 
+Run over the entire downloaded directory (the files sod downloaded)
+
+\end{itemize}
+
+\end{description}
+
+\item {} \begin{description}
+\item[{Run \emph{sodpkl.sh} (converts \emph{.sac} files to python pickles)}] \leavevmode\begin{itemize}
+\item {} 
+run using \emph{sodpkl.sh {[}options{]} \textless{}directory\textgreater{}}
+
+\item {} 
+output will automatically be zipped
+
+\item {} 
+run in DATA directory
+
+\end{itemize}
+
+\end{description}
+
+\item {} \begin{description}
+\item[{Run \emph{ttpick.py} (does travel time picking with plotting)}] \leavevmode\begin{itemize}
+\item {} 
+can use \emph{iccs.py} but it does not have plotting capabilities
+
+\item {} 
+run using \emph{ttpick.py {[}options{]} \textless{}pkl.gz file\textgreater{}}
+
+\item {} 
+do this one event at a time
+
+\item {} 
+use \emph{sacp2} to look at the stacking of the seismograms
+
+\item {} 
+you can sort the seismograms using the \emph{–s} flag
+
+\end{itemize}
+
+\end{description}
+
+\item {} \begin{description}
+\item[{run \emph{getsta.py} (creates a \emph{loc.sta} file)}] \leavevmode\begin{itemize}
+\item {} 
+\emph{getsta.py {[}options{]} \textless{}pkl.gz files\textgreater{}}
+
+\end{itemize}
+
+\end{description}
+
+\item {} \begin{description}
+\item[{Run EITHER of these:}] \leavevmode\begin{itemize}
+\item {} 
+FIRST CHOICE
+
+\item {} 
+run \emph{mccc2delay.py} (converts mccc delays to actual delays) by doing \emph{mccc2delay.py {[}option{]} \textless{}.mcp files\textgreater{}}
+
+\item {} \begin{description}
+\item[{run \emph{getdelay.py} (creates a delay file) by doing \emph{getdelay.py {[}options{]} \textless{}*.px\textgreater{}}}] \leavevmode\begin{itemize}
+\item {} 
+Can possibly use \emph{doplotsta.sh}, plots all of the events and their station delays
+
+\end{itemize}
+
+\end{description}
+
+\item {} 
+Run \emph{evmcdelay.sh}
+
+\item {} \begin{description}
+\item[{SECOND CHOICE}] \leavevmode\begin{itemize}
+\item {} 
+verb''ttcheck.py'' to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.
+
+\end{itemize}
+
+\end{description}
+
+\end{itemize}
+
+\end{description}
+
+\item {} \begin{description}
+\item[{If you need to remove a station from an event you can use verb''pklsel.py''}] \leavevmode\begin{itemize}
+\item {} 
+Run using verb''pklsel.py {[}pkl file{]} –d {[}stnm{]}'' to remove one station
+
+\item {} 
+Only works for one event at a time
+
+\end{itemize}
+
+\end{description}
+
+\item {} \begin{description}
+\item[{If you need to filter the data to be able to pick use verb''evsacbp.sh''}] \leavevmode\begin{itemize}
+\item {} 
+run using verb''evsacbp.sh {[}pkl file{]} bp1 bp2''
+
+\item {} 
+Automatically uses two corners
+
+\item {} 
+run in the whole downloaded directory (the one with the sac directory)
+
+\end{itemize}
+
+\end{description}
+
+\end{enumerate}
+
+
+\chapter{Analyzing Data}
+\label{docfiles/analyzingData:analyzing-data}\label{docfiles/analyzingData::doc}
+
+\section{Seismic Analysis Code (SAC)}
+\label{docfiles/analyzingData:seismic-analysis-code-sac}
+\href{http://www.iris.edu/files/sac-manual/}{SAC} is used.
 
 
 \chapter{Picking Travel Times}
 \label{docfiles/PickingTravelTimes:picking-travel-times}\label{docfiles/PickingTravelTimes::doc}
 Hello, World! I love picking travel times manually!
 
+
+\chapter{Citations}
+\label{docfiles/citations:citations}\label{docfiles/citations::doc}
 
 \chapter{Indices and tables}
 \label{index:indices-and-tables}\begin{itemize}
@@ -153,6 +352,21 @@ Hello, World! I love picking travel times manually!
 \emph{search}
 
 \end{itemize}
+
+\begin{thebibliography}{VandecarCrosson1990_BulletinSeismologicalSocietyOfAmerica}
+\bibitem[GoldsteinDodgeFirpo2003_InternationalGeophysics]{GoldsteinDodgeFirpo2003_InternationalGeophysics}{\phantomsection\label{docfiles/citations:goldsteindodgefirpo2003-internationalgeophysics} 
+Goldstein, P., D. Dodge, M. Firpo, and L. Minner (2003), SAC2000: Signal processing and analysis tools for seismologists and engineers, International Geophysics, 81, 1613–1614.
+}
+\bibitem[Hunder2007_ComputingInScienceAndEngineering]{Hunder2007_ComputingInScienceAndEngineering}{\phantomsection\label{docfiles/citations:hunder2007-computinginscienceandengineering} 
+Hunter, J. (2007), Matplotlib: A 2D Graphics Environment, Computing in Science \& Engi- neering, 3(9), 90–95.
+}
+\bibitem[LouVanderleeLloyd2013_SeismologicalResearchLetters]{LouVanderleeLloyd2013_SeismologicalResearchLetters}{\phantomsection\label{docfiles/citations:louvanderleelloyd2013-seismologicalresearchletters} 
+AIMBAT: A Python/Matplotlib Tool for Measuring Teleseismic Arrival Times. Xiaoting Lou, Suzan van der Lee, and Simon Lloyd (2013), Seismol. Res. Lett., 84(1), 85-93, doi:10.1785/0220120033.
+}
+\bibitem[VandecarCrosson1990_BulletinSeismologicalSocietyOfAmerica]{VandecarCrosson1990_BulletinSeismologicalSocietyOfAmerica}{\phantomsection\label{docfiles/citations:vandecarcrosson1990-bulletinseismologicalsocietyofamerica} 
+VanDecar, J. C., and R. S. Crosson (1990), Determination of teleseismic relative phase arrival times using multi-channel cross-correlation and least squares, Bulletin of the Seismological Society of America, 80(1), 150–169.
+}
+\end{thebibliography}
 
 
 
