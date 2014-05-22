@@ -13,3 +13,4 @@ cd into the repository `aimbat-docs`, and run:
   make html
   make latexpdf
 ````
+It takes a while for the online docs to build and configure after you have pushed to Github.
