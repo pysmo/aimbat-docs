@@ -17,6 +17,7 @@ Contents:
     docfiles/install_aimbat
     docfiles/gettingData
     docfiles/analyzingData
+    docfiles/parameterConfiguration
     docfiles/PickingTravelTimes
     docfiles/citations
 
