@@ -53,11 +53,16 @@ Downloading Data with SOD
     - :code:`getsta.py [options] <pkl.gz files>`
 #. Run EITHER of these: 
 	- FIRST CHOICE	
-        - run :code:`mccc2delay.py` (converts mccc delays to actual delays) by doing :code:`mccc2delay.py [option] <.mcp files>`
-        - run :code:`getdelay.py` (creates a delay file) by doing `getdelay.py [options] <*.px>`. Can possibly use `doplotsta.sh`, plots all of the events and their station delays
-        - Run :code:`evmcdelay.sh`
+    
+    run :code:`mccc2delay.py` (converts mccc delays to actual delays) by doing :code:`mccc2delay.py [option] <.mcp files>`
+    
+    run :code:`getdelay.py` (creates a delay file) by doing `getdelay.py [options] <*.px>`. Can possibly use `doplotsta.sh`, plots all of the events and their station delays
+    
+    Run :code:`evmcdelay.sh`
+    
   	- SECOND CHOICE
-  		- :code:`ttcheck.py` to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.
+  	
+    :code:`ttcheck.py` to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.
 #. If you need to remove a station from an event you can use :code:`pklsel.py`
     - Run using :code:`pklsel.py [pkl file] –d [stnm]` to remove one station
     - Only works for one event at a time
