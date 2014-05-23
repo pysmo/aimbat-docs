@@ -14,7 +14,7 @@ footer a:visited {
 	color: green;
 }
 
-div#introduction.section img {
+div[role='main'] img {
 	display: block;
 	margin-right: auto;
 	margin-left: auto;

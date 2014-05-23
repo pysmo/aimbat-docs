@@ -123,6 +123,8 @@
 
 Contents:
 
+\includegraphics{NU_Logo_purple.jpg}
+
 
 \chapter{Introduction}
 \label{docfiles/introduction:introduction}\label{docfiles/introduction:welcome-to-aimbat-s-documentation}\label{docfiles/introduction::doc}
@@ -576,6 +578,100 @@ In the terminal, cd into the directory with all the \code{pkl} files you want to
 \subsection{Running ttpick.py}
 \label{docfiles/PickingTravelTimes:running-ttpick-py}
 Run \code{ttpick/py \textless{}path-to-pkl-file\textgreater{}}. A GUI should pop up if you successfully ran it. Note that if you click on the buttons, they will not work until you move the mouse off them; this is a problem we are hoping to fix.
+
+\includegraphics{pick_travel_times.png}
+
+
+\subsection{ICCC-A}
+\label{docfiles/PickingTravelTimes:iccc-a}
+\code{ICCC-A} is only used in the beginning, if you have altered some of the travel time arrivals of the seismograms by pressing \code{t2}, and want to realign the array stack.
+
+
+\subsection{Get rid of really bad seismograms}
+\label{docfiles/PickingTravelTimes:get-rid-of-really-bad-seismograms}
+If there are any really bad seismograms, you can click on them to deselect them. Bad seismograms are those that look nothing like the shape of the array stack pictured. Usually, if there are more than enough seismograms, so it is safe to throw out any that deviate more than a bit from the array stack. If you don’t filter your data, you’ll have to throw out more seismograms.
+
+Remember to save your work periodically once you start picking your travel times, otherwise if AIMBAT crashes, you lose it.
+
+
+\subsection{ICCC-B}
+\label{docfiles/PickingTravelTimes:iccc-b}
+Hit the \code{ICCC-B} button to begin the initial cross-correlations. These appear as red lines.
+
+We are not using \code{ICCC-A} here, but these are the theoretical arrival times, marked in black.
+
+
+\subsection{MCCC}
+\label{docfiles/PickingTravelTimes:mccc}
+Hit \code{MCCC} to run the Multi-Channel cross-correlation. Do not hit \code{ICCC-A} or \code{ICCC-B} again, or all your work will be erased. A warning will pop up to check if you really do want to hit these two buttons if you do click on them.
+
+
+\subsection{Manually pick the arrival times using t2}
+\label{docfiles/PickingTravelTimes:manually-pick-the-arrival-times-using-t2}
+For an earthquake, it is expected that the arrival times should be identical in an idealize situation. However, since stations are located in 3D space, this is not necessarily the case. For earthquakes of magnitude 7.0 and above, usually the arrival times are very well aligned as the signal is high. However, if the earthquake is too strong, the source gets complicated, so it needs filtering.
+
+Below a magnitude of 6.0, the signal to noise ratio gets very weak. If the weighted average quality gets too low (1.0 and below), it may not be worth keeping that data set unless you really need it.
+
+We manually pick the the arrival times to align them. Click on the GUI window, hover over the correct spot where you want to pick the new travel time, and type \code{t2}. A red line should appear exactly where your mouse was. You can zoom in to help you with this picking. To zoom out, just hit \code{MCCC} again.
+
+Also pick the arrival time on the array stack. For the arrival times, you want to align the point where the first peak occurs most of all, then try to get the peaks to align.
+
+
+\subsection{SACP2 to check for outlier seismograms}
+\label{docfiles/PickingTravelTimes:sacp2-to-check-for-outlier-seismograms}
+Hit and go to the last figure, (d). Zoom in to have a better look. Zooming in doesn’t always work well; close and reopen the \code{SACP2} window if there are problems.
+
+Click on the outliers that stray from the main group of stacked seismograms. The terminal will output the names of the seismograms that you clicked on, so you can return to the main GUI window and readjust the travel times.
+
+
+\subsection{Go through the badly aligned seismograms and realign the travel times manually}
+\label{docfiles/PickingTravelTimes:go-through-the-badly-aligned-seismograms-and-realign-the-travel-times-manually}
+By default, the worst seismograms are on the first page, and as you click through the pages, the quality of the seismograms gradually gets better. Keep using \code{t2} to realign the arrival times so that the peaks of all the seismograms are nicely aligned. Remember to zoom in to have a better look.
+
+However, you may which to sort the seismograms in alphabetical order so that you can find the bad seismogrrams and correct them more easily. Run:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+ttpick.py \PYGZhy{}s \PYGZhy{}i \PYGZus{}\PYGZus{}\PYGZus{}.bhz.pkl
+\end{Verbatim}
+
+and scroll through the pages. Notice that clicking through the pages may be slow, move the mouse around and off/on the GUI window to stop it stalling. You can also hit \code{MCCC} to jump back to the front page.
+
+The seismograms are stretched to fit together, but they may be scaled differently.
+
+
+\section{What the Alignments Stand For}
+\label{docfiles/PickingTravelTimes:what-the-alignments-stand-for}\begin{itemize}
+\item {} 
+T0: Theoretical Arrival
+
+\item {} 
+T1: Pick from initial cross correlation
+
+\item {} 
+T2: Travel Time pick
+
+\item {} 
+T3: MCCC pick
+
+\item {} 
+T4: Zoom in
+
+\end{itemize}
+
+
+\section{Post Processing}
+\label{docfiles/PickingTravelTimes:post-processing}
+
+\subsection{Getting the output}
+\label{docfiles/PickingTravelTimes:getting-the-output}
+In the same folder as the initial PKL file you ran \code{ttpick.py} on, you can find the output list with extension \code{\textless{}event name\textgreater{}.mcp}, which contains the travel time arrivals.
+
+
+\subsection{Getting the stations of the seismograms chosen}
+\label{docfiles/PickingTravelTimes:getting-the-stations-of-the-seismograms-chosen}
+Run \code{getsta.py} in the additional scripts (not on Github for now). It gives the unique list of stations where the seismograms came from. You need to run it with the list of all \code{pkl} files chosen after you saved to. You so this \code{./getsta.py *.pkl}.
+
+\includegraphics{count_stations.png}
 
 
 \chapter{Citations}

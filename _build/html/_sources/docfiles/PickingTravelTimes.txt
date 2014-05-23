@@ -56,10 +56,14 @@ Picking Travel Times
 
 This section explains how to run the program :code:`ttpick.py` to get the travel times you want.
 
+.. ----------------------------------------------------------------------------- ..
+
 Getting into the right directory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In the terminal, cd into the directory with all the ``pkl`` files you want to run. You want to run either the ``.bht`` or ``.bhz`` files. ``bht`` files are for S-waves and bhz files are for P-waves. ``PKL`` is a bundle of ``SAC`` files. Each ``SAC`` file is a seismogram, but since you there may be many seismograms from various stations for each event, we bundle them into a ``PKL`` file so we only have to import one file into AIMBAT, not a few hundred of them.
+
+.. ----------------------------------------------------------------------------- ..
 
 Running ttpick.py
 ~~~~~~~~~~~~~~~~~
@@ -68,32 +72,153 @@ Run ``ttpick/py <path-to-pkl-file>``. A GUI should pop up if you successfully ra
 
 .. image:: pickingTravelTimes-images/pick_travel_times.png
 
+.. ----------------------------------------------------------------------------- ..
+
 ICCC-A
 ~~~~~~
+
 ``ICCC-A`` is only used in the beginning, if you have altered some of the travel time arrivals of the seismograms by pressing ``t2``, and want to realign the array stack.
+
+.. ----------------------------------------------------------------------------- ..
 
 Get rid of really bad seismograms
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 If there are any really bad seismograms, you can click on them to deselect them. Bad seismograms are those that look nothing like the shape of the array stack pictured. Usually, if there are more than enough seismograms, so it is safe to throw out any that deviate more than a bit from the array stack. If you don’t filter your data, you’ll have to throw out more seismograms.
 
 Remember to save your work periodically once you start picking your travel times, otherwise if AIMBAT crashes, you lose it.
 
+.. ----------------------------------------------------------------------------- ..
+
 ICCC-B
 ~~~~~~
+
 Hit the ``ICCC-B`` button to begin the initial cross-correlations. These appear as red lines.
 
 We are not using ``ICCC-A`` here, but these are the theoretical arrival times, marked in black.
 
+.. ----------------------------------------------------------------------------- ..
+
 MCCC
 ~~~~
+
 Hit ``MCCC`` to run the Multi-Channel cross-correlation. Do not hit ``ICCC-A`` or ``ICCC-B`` again, or all your work will be erased. A warning will pop up to check if you really do want to hit these two buttons if you do click on them.
 
 
+.. ----------------------------------------------------------------------------- ..
 
+Manually pick the arrival times using t2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For an earthquake, it is expected that the arrival times should be identical in an idealize situation. However, since stations are located in 3D space, this is not necessarily the case. For earthquakes of magnitude 7.0 and above, usually the arrival times are very well aligned as the signal is high. However, if the earthquake is too strong, the source gets complicated, so it needs filtering.
+
+Below a magnitude of 6.0, the signal to noise ratio gets very weak. If the weighted average quality gets too low (1.0 and below), it may not be worth keeping that data set unless you really need it.
+
+.. image:: pickingTravelTimes-images/not_worth_it.png
+
+	Weighted average quality is 0.85 - should throw away
+
+We manually pick the the arrival times to align them. Click on the GUI window, hover over the correct spot where you want to pick the new travel time, and type ``t2``. A red line should appear exactly where your mouse was. You can zoom in to help you with this picking. To zoom out, just hit ``MCCC`` again.
+
+Also pick the arrival time on the array stack. For the arrival times, you want to align the point where the first peak occurs most of all, then try to get the peaks to align.
+
+.. image:: pickingTravelTimes-images/align_seismogram.png
+
+	Align Seismogram
+
+.. ----------------------------------------------------------------------------- ..
+
+SACP2 to check for outlier seismograms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Hit and go to the last figure, (d). Zoom in to have a better look. Zooming in doesn’t always work well; close and reopen the ``SACP2`` window if there are problems.
+
+Click on the outliers that stray from the main group of stacked seismograms. The terminal will output the names of the seismograms that you clicked on, so you can return to the main GUI window and readjust the travel times.
+
+.. ----------------------------------------------------------------------------- ..
+
+Go through the badly aligned seismograms and realign the travel times manually
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+By default, the worst seismograms are on the first page, and as you click through the pages, the quality of the seismograms gradually gets better. Keep using ``t2`` to realign the arrival times so that the peaks of all the seismograms are nicely aligned. Remember to zoom in to have a better look.
+
+However, you may which to sort the seismograms in alphabetical order so that you can find the bad seismogrrams and correct them more easily. Run::
+
+	ttpick.py -s -i ___.bhz.pkl
+
+and scroll through the pages. Notice that clicking through the pages may be slow, move the mouse around and off/on the GUI window to stop it stalling. You can also hit ``MCCC`` to jump back to the front page.
+
+.. image:: pickingTravelTimes-images/SACP2_popup.png
+
+	SACP2 popup
+
+The seismograms are stretched to fit together, but they may be scaled differently.
 
 .. ############################################################################ ..
 .. #                             PICKING TRAVEL TIMES                         # ..
 .. ############################################################################ ..
+
+
+
+
+
+
+.. ############################################################################ ..
+.. #                            ALIGNMENTS SUMMARY                            # ..
+.. ############################################################################ ..
+
+
+What the Alignments Stand For
+-----------------------------
+
+* T0: Theoretical Arrival
+* T1: Pick from initial cross correlation
+* T2: Travel Time pick
+* T3: MCCC pick
+* T4: Zoom in
+
+
+.. ############################################################################ ..
+.. #                            ALIGNMENTS SUMMARY                            # ..
+.. ############################################################################ ..
+
+
+
+
+
+.. ############################################################################ ..
+.. #                              POST PROCESSING                             # ..
+.. ############################################################################ ..
+
+
+Post Processing
+---------------
+
+.. ----------------------------------------------------------------------------- ..
+
+Getting the output
+~~~~~~~~~~~~~~~~~~
+
+In the same folder as the initial PKL file you ran ``ttpick.py`` on, you can find the output list with extension ``<event name>.mcp``, which contains the travel time arrivals.
+
+.. image:: pickingTravelTimes-images/output_list.png
+
+	Output List
+
+.. ----------------------------------------------------------------------------- ..
+
+Getting the stations of the seismograms chosen
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Run ``getsta.py`` in the additional scripts (not on Github for now). It gives the unique list of stations where the seismograms came from. You need to run it with the list of all ``pkl`` files chosen after you saved to. You so this ``./getsta.py *.pkl``.
+
+.. image:: pickingTravelTimes-images/count_stations.png
+
+
+.. ############################################################################ ..
+.. #                              POST PROCESSING                             # ..
+.. ############################################################################ ..
+
 
 
 
