@@ -53,6 +53,8 @@
             
   <div class="section" id="parameter-configuration">
 <h1>Parameter Configuration<a class="headerlink" href="#parameter-configuration" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="backend">
+<h2>Backend<a class="headerlink" href="#backend" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://matplotlib.org/contents.html">Matplotlib</a> works with six GUI (Graphical User Interface) toolkits:
 #. WX
 #. Tk
@@ -63,6 +65,21 @@
 <p>The GUI of AIMBAT uses the following to support interactive plotting:
 #. <a class="reference external" href="http://matplotlib.org/api/widgets_api.html">GUI neutral widgets</a>
 #. <a class="reference external" href="http://matplotlib.org/users/event_handling.html">GUI neutral event handling API (Application Programming Interface)</a></p>
+<p>Examples given in this documentation are using the default toolkit <tt class="docutils literal"><span class="pre">Tk</span></tt> and backend <tt class="docutils literal"><span class="pre">TkAgg</span></tt>.</p>
+<p>Visit these pages for an <a class="reference external" href="http://matplotlib.org/faq/usage_faq.html#what-is-a-backend">explanation of the backend</a> and <cite>how to customize it &lt;http://matplotlib.org/users/customizing.html#customizing-matplotlib&gt;</cite>.</p>
+<p><strong>Put the following line in you ``matplotlibrc`` file:</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>backend : TkAgg #Agg rendering to a Tk canvas
+</pre></div>
+</div>
+<p>Other parameters for the package can be set up by a configuration file <tt class="docutils literal"><span class="pre">ttdefaults.conf</span></tt>, which is interpreted by the module ConfigParser. This configuration file is searched in the following order:</p>
+<ol class="arabic simple">
+<li>file <tt class="docutils literal"><span class="pre">ttdefaults.conf</span></tt> in the current working directory</li>
+<li>file <tt class="docutils literal"><span class="pre">.aimbat/ttdefaults.conf</span></tt> in your <tt class="docutils literal"><span class="pre">HOME</span></tt> directory</li>
+<li>a file specified by environment variable <tt class="docutils literal"><span class="pre">TTCONFIG</span></tt></li>
+<li>file <tt class="docutils literal"><span class="pre">ttdefaults.conf</span></tt> in the directory where AIMBAT is installed</li>
+</ol>
+<p>Python scripts in the <tt class="docutils literal"><span class="pre">&lt;pkg-install-dir&gt;/pysmo-aimbat-0.1.2/scripts</span></tt> can be executed from the command line. The command line arguments are parsed by the optparse module to improve the scripts&#8217; exibility. If conflicts existed, the command line options override the default parameters given in the configuration file <tt class="docutils literal"><span class="pre">ttdefaults.conf</span></tt>. Run the scripts with the <tt class="docutils literal"><span class="pre">-h</span></tt> option for the usage messages.</p>
+</div>
 </div>
 
 
@@ -74,6 +91,14 @@
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/NU_Logo_purple.jpg" alt="Logo"/>
             </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Parameter Configuration</a><ul>
+<li><a class="reference internal" href="#backend">Backend</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="analyzingData.html"
                         title="previous chapter">Analyzing Data</a></p>

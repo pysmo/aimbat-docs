@@ -6,14 +6,6 @@ h1, h2, h3 {
 	background-color: #520063;
 }
 
-footer a {
-	color: rgba(124,11,149,1);
-}
-
-a:visited {
-	color: green;
-}
-
 div[role='main'] img {
 	display: block;
 	margin-right: auto;

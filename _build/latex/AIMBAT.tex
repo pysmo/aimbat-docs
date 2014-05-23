@@ -450,6 +450,9 @@ AIMBAT uses \href{http://www.iris.edu/files/sac-manual/}{Seismic Analysis Code (
 
 \chapter{Parameter Configuration}
 \label{docfiles/parameterConfiguration:parameter-configuration}\label{docfiles/parameterConfiguration::doc}
+
+\section{Backend}
+\label{docfiles/parameterConfiguration:backend}
 \href{http://matplotlib.org/contents.html}{Matplotlib} works with six GUI (Graphical User Interface) toolkits:
 \#. WX
 \#. Tk
@@ -461,6 +464,34 @@ AIMBAT uses \href{http://www.iris.edu/files/sac-manual/}{Seismic Analysis Code (
 The GUI of AIMBAT uses the following to support interactive plotting:
 \#. \href{http://matplotlib.org/api/widgets\_api.html}{GUI neutral widgets}
 \#. \href{http://matplotlib.org/users/event\_handling.html}{GUI neutral event handling API (Application Programming Interface)}
+
+Examples given in this documentation are using the default toolkit \code{Tk} and backend \code{TkAgg}.
+
+Visit these pages for an \href{http://matplotlib.org/faq/usage\_faq.html\#what-is-a-backend}{explanation of the backend} and \emph{how to customize it \textless{}http://matplotlib.org/users/customizing.html\#customizing-matplotlib\textgreater{}}.
+
+\textbf{Put the following line in you {}`{}`matplotlibrc{}`{}` file:}:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+backend : TkAgg \PYGZsh{}Agg rendering to a Tk canvas
+\end{Verbatim}
+
+Other parameters for the package can be set up by a configuration file \code{ttdefaults.conf}, which is interpreted by the module ConfigParser. This configuration file is searched in the following order:
+\begin{enumerate}
+\item {} 
+file \code{ttdefaults.conf} in the current working directory
+
+\item {} 
+file \code{.aimbat/ttdefaults.conf} in your \code{HOME} directory
+
+\item {} 
+a file specified by environment variable \code{TTCONFIG}
+
+\item {} 
+file \code{ttdefaults.conf} in the directory where AIMBAT is installed
+
+\end{enumerate}
+
+Python scripts in the \code{\textless{}pkg-install-dir\textgreater{}/pysmo-aimbat-0.1.2/scripts} can be executed from the command line. The command line arguments are parsed by the optparse module to improve the scripts' exibility. If conflicts existed, the command line options override the default parameters given in the configuration file \code{ttdefaults.conf}. Run the scripts with the \code{-h} option for the usage messages.
 
 
 \chapter{Measuring Teleseismic Body Wave Arrival Times}
