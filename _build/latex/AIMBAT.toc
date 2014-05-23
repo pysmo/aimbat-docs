@@ -7,34 +7,44 @@
 \contentsline {section}{\numberline {2.1}Getting your operating system}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}Installing Python}{5}{section.2.2}
 \contentsline {section}{\numberline {2.3}Python Dependencies}{5}{section.2.3}
-\contentsline {chapter}{\numberline {3}Installing AIMBAT}{7}{chapter.3}
-\contentsline {section}{\numberline {3.1}Getting the Packages}{7}{section.3.1}
-\contentsline {section}{\numberline {3.2}Installing pysmo.sac}{7}{section.3.2}
-\contentsline {section}{\numberline {3.3}Installing pysmo.aimbat}{8}{section.3.3}
-\contentsline {chapter}{\numberline {4}Getting Data}{9}{chapter.4}
-\contentsline {section}{\numberline {4.1}Standing Order for Data}{9}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Installing SOD}{9}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Downloading Data with SOD}{10}{subsection.4.1.2}
-\contentsline {chapter}{\numberline {5}Analyzing Data}{13}{chapter.5}
-\contentsline {section}{\numberline {5.1}Seismic Analysis Code (SAC)}{13}{section.5.1}
-\contentsline {chapter}{\numberline {6}Parameter Configuration}{15}{chapter.6}
-\contentsline {section}{\numberline {6.1}Backend}{15}{section.6.1}
-\contentsline {chapter}{\numberline {7}Measuring Teleseismic Body Wave Arrival Times}{17}{chapter.7}
-\contentsline {section}{\numberline {7.1}Automated Phase Alignment}{17}{section.7.1}
-\contentsline {section}{\numberline {7.2}Picking Travel Times}{18}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Getting into the right directory}{18}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Running ttpick.py}{18}{subsection.7.2.2}
-\contentsline {subsection}{\numberline {7.2.3}ICCC-A}{18}{subsection.7.2.3}
-\contentsline {subsection}{\numberline {7.2.4}Get rid of really bad seismograms}{18}{subsection.7.2.4}
-\contentsline {subsection}{\numberline {7.2.5}ICCC-B}{19}{subsection.7.2.5}
-\contentsline {subsection}{\numberline {7.2.6}MCCC}{19}{subsection.7.2.6}
-\contentsline {subsection}{\numberline {7.2.7}Manually pick the arrival times using t2}{19}{subsection.7.2.7}
-\contentsline {subsection}{\numberline {7.2.8}SACP2 to check for outlier seismograms}{19}{subsection.7.2.8}
-\contentsline {subsection}{\numberline {7.2.9}Go through the badly aligned seismograms and realign the travel times manually}{19}{subsection.7.2.9}
-\contentsline {section}{\numberline {7.3}What the Alignments Stand For}{20}{section.7.3}
-\contentsline {section}{\numberline {7.4}Post Processing}{20}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Getting the output}{20}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Getting the stations of the seismograms chosen}{20}{subsection.7.4.2}
-\contentsline {chapter}{\numberline {8}Citations}{21}{chapter.8}
-\contentsline {chapter}{\numberline {9}Indices and tables}{23}{chapter.9}
-\contentsline {chapter}{Bibliography}{25}{chapter*.4}
+\contentsline {section}{\numberline {2.4}Possible Issues}{5}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Macport}{5}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Installing Python with Pip}{6}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Setting the Python Path to the scripts}{6}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Terminal Commands stop working}{6}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}Installing Enthought Canopy}{6}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.6}Uninstalling Enthought Canopy}{6}{subsection.2.4.6}
+\contentsline {subsection}{\numberline {2.4.7}Path to python files not found}{8}{subsection.2.4.7}
+\contentsline {chapter}{\numberline {3}Installing AIMBAT}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Getting the Packages}{13}{section.3.1}
+\contentsline {section}{\numberline {3.2}Installing pysmo.sac}{13}{section.3.2}
+\contentsline {section}{\numberline {3.3}Installing pysmo.aimbat}{14}{section.3.3}
+\contentsline {chapter}{\numberline {4}Getting Data}{15}{chapter.4}
+\contentsline {section}{\numberline {4.1}Standing Order for Data}{15}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Installing SOD}{15}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Downloading Data with SOD}{16}{subsection.4.1.2}
+\contentsline {chapter}{\numberline {5}Analyzing Data}{19}{chapter.5}
+\contentsline {section}{\numberline {5.1}Seismic Analysis Code (SAC)}{19}{section.5.1}
+\contentsline {chapter}{\numberline {6}Parameter Configuration}{21}{chapter.6}
+\contentsline {section}{\numberline {6.1}Backend}{21}{section.6.1}
+\contentsline {chapter}{\numberline {7}Measuring Teleseismic Body Wave Arrival Times}{23}{chapter.7}
+\contentsline {section}{\numberline {7.1}Automated Phase Alignment}{23}{section.7.1}
+\contentsline {section}{\numberline {7.2}Picking Travel Times}{24}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Getting into the right directory}{24}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Running ttpick.py}{24}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}ICCC-A}{24}{subsection.7.2.3}
+\contentsline {subsection}{\numberline {7.2.4}Get rid of really bad seismograms}{24}{subsection.7.2.4}
+\contentsline {subsection}{\numberline {7.2.5}ICCC-B}{25}{subsection.7.2.5}
+\contentsline {subsection}{\numberline {7.2.6}MCCC}{25}{subsection.7.2.6}
+\contentsline {subsection}{\numberline {7.2.7}Manually pick the arrival times using t2}{25}{subsection.7.2.7}
+\contentsline {subsection}{\numberline {7.2.8}SACP2 to check for outlier seismograms}{25}{subsection.7.2.8}
+\contentsline {subsection}{\numberline {7.2.9}Go through the badly aligned seismograms and realign the travel times manually}{25}{subsection.7.2.9}
+\contentsline {section}{\numberline {7.3}What the Alignments Stand For}{26}{section.7.3}
+\contentsline {section}{\numberline {7.4}Post Processing}{26}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Getting the output}{26}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Getting the stations of the seismograms chosen}{26}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.3}Picking Travel Times does not work}{26}{subsection.7.4.3}
+\contentsline {subsection}{\numberline {7.4.4}Travel Times}{27}{subsection.7.4.4}
+\contentsline {chapter}{\numberline {8}Citations}{29}{chapter.8}
+\contentsline {chapter}{\numberline {9}Indices and tables}{31}{chapter.9}
+\contentsline {chapter}{Bibliography}{33}{chapter*.4}

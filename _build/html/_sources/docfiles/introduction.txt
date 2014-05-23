@@ -17,7 +17,7 @@ Associated Documents
 --------------------
 
 * :download:`Seismological Research Letters Paper <Lou_etal_2013_SRL_AIMBAT.pdf>`
-* :download:`PDF Version of Manual <../_build/latex/AIMBAT.pdf>`
+* :download:`PDF Version of Manual <../_build/latex/AIMBAT.pdf>`. Automatically generated from these online docs, please excuse minor issues that may arise from automated conversion. 
 
 
 .. _authors-contacts:

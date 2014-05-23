@@ -222,11 +222,50 @@ Run ``getsta.py`` in the additional scripts (not on Github for now). It gives th
 
 
 
+.. ############################################################################ ..
+.. #                              POSSIBLE ISSUES                             # ..
+.. ############################################################################ ..
+
+.. -------------------------------------------------------------------------------- ..
+
+Picking Travel Times does not work
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you run ``ttick.py <Event name>.bhz.pkl``, a GUI will pop up for you to manually pick the travel times by pressing the keyboard. If typing on the keyboard as directed does not allow you to pick travel times, it could be a problem with the keyboard settings, or the matplotlib backend.
+
+To fix this, first look for the .matplotlib directory. It is hidden so in your home directory do ``ls -a`` to find it.
+Once you have found the ``.matplotlib`` directory, cd into it, and then look for the ``matplotlibrc`` file.
+Inside that file, ensure the backend is set to::
+
+  	backend : TkAgg
+
+Comment out the other backends!
+
+.. -------------------------------------------------------------------------------- ..
+
+Travel Times
+~~~~~~~~~~~~
+
+If one of the seismograms being picked does not fit completely within the green (computer) window, nad you hit `ICCC-A` or `ICCC-B`, you will get an error message complaining about the exact seismogram which is too short. Deselect it.
+
+.. image:: pickingTravelTimes-images/matplotlib_hidden_directory.png
+	
+	Matplotlib hidden directory
+
+.. image:: pickingTravelTimes-images/files_in_matplotlib.png
+
+	``.matplotlib`` files within
+
+.. image:: pickingTravelTimes-images/matplotlibrc_file.png
+
+	Matplotlibrc backend
 
 
 
 
-
+.. ############################################################################ ..
+.. #                              POSSIBLE ISSUES                             # ..
+.. ############################################################################ ..
 
 
 

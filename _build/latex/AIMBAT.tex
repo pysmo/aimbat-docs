@@ -144,7 +144,7 @@ The AIMBAT software package is distributed under the \href{http://www.gnu.org/li
 \code{Seismological Research Letters Paper}
 
 \item {} 
-\code{PDF Version of Manual}
+\code{PDF Version of Manual}. Automatically generated from these online docs, please excuse minor issues that may arise from automated conversion.
 
 \end{itemize}
 
@@ -198,6 +198,100 @@ You may need to know
 \href{http://ipython.org/}{iPython} (optional)
 
 \end{itemize}
+
+
+\section{Possible Issues}
+\label{docfiles/install_dependencies:possible-issues}
+Here some common problems and possible resolutions. If your problem is not listed here, or you have a suggestion, please {\hyperref[docfiles/introduction:authors-contacts]{\emph{contact the authors}}}.
+
+
+\subsection{Macport}
+\label{docfiles/install_dependencies:macport}
+You may run into problems with AIMBAT if your \href{http://www.macports.org/}{Macport} version is not compatible with your operating system version. For example, if you used Macports for OS X 10.8 to install AIMBAT, then upgraded your operating system or OS X 10.9, you may find that AIMBAT no longer works properly. You will need to upgrade Macports to fix this error.
+
+Do not uninstall MacPorts unless you know what you are doing, uninstalling MacPorts may get rid of other programs you installed using MacPorts. However, if you are sure you want to do so, see \href{https://guide.macports.org/chunked/installing.macports.uninstalling.html}{here} for instructions.
+
+
+\subsection{Installing Python with Pip}
+\label{docfiles/install_dependencies:installing-python-with-pip}
+Be careful with the operating system. For OS X 10.9 and above, Python 2.7 is not fully compatible and there may be problems installing python with Pip. Best to use Enthought Canopy or Python 3 with OS X 10.9.
+
+
+\subsection{Setting the Python Path to the scripts}
+\label{docfiles/install_dependencies:setting-the-python-path-to-the-scripts}
+You are asked to add the path to the AIMBAT scripts in your file. To do that, you add them to the \code{.bashrc} file. There are other files you could add it to that work as well, such as the \code{.profile} or \code{.bash\_profile} files. You can see the files by opening the terminal and doing \code{ls -a} to see all the hidden files, and open then by doing \code{vi .bashrc} in vim, for instance.
+To ensure you can open a script, you need to add:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+export PATH=\PYGZdl{}PATH:\PYGZlt{}path\PYGZhy{}to\PYGZhy{}folder\PYGZhy{}with\PYGZhy{}scripts\PYGZgt{}
+export PYTHONPATH=\PYGZdl{}PYTHONPATH:\PYGZlt{}path\PYGZhy{}to\PYGZhy{}folder\PYGZhy{}with\PYGZhy{}scripts\PYGZgt{}
+\end{Verbatim}
+
+to the \code{.bashrc} file. We recommend adding the paths to the \code{.bashrc} file.
+
+
+\subsection{Terminal Commands stop working}
+\label{docfiles/install_dependencies:terminal-commands-stop-working}
+If ever the terminal commands such as ls stop working in the terminal, it could be that something went wrong with a path in the \code{.bashrc} or \code{.profile} files. If that happens you may not be able to open them in vim as that command would have stopped working as well. Instead, in the terminal, you do:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+PATH=/bin:\PYGZdl{}\PYGZob{}PATH\PYGZcb{}
+PATH=/usr/bin:\PYGZdl{}\PYGZob{}PATH\PYGZcb{}
+\end{Verbatim}
+
+And that should allow the commands to start working again. Figure out what you did wrong and remove that command.
+
+
+\subsection{Installing Enthought Canopy}
+\label{docfiles/install_dependencies:installing-enthought-canopy}
+Occasionally, Enthought Canopy may not open the default setup environment after you downloaded and tried to install it. If this happens, open the Canopy package, go to ``Preferences'', and select Canopy as your default environment.
+
+
+\subsection{Uninstalling Enthought Canopy}
+\label{docfiles/install_dependencies:uninstalling-enthought-canopy}
+The official Enthought gives suggestions on uninstalling \href{https://guide.macports.org/chunked/installing.macports.uninstalling.html}{here}.
+
+\includegraphics{canopy_preferences.png}
+
+STEPS:
+\begin{enumerate}
+\item {} 
+From the Canopy preferences menu, unset Canopy as your default Python.
+
+\item {} 
+For each Canopy user, delete the following directory which contains that user’s ``System'' and ``User'' virtual environment subdirections.
+
+\item {} 
+Delete Canopy from the Applications folder.
+
+\item {} 
+Clean up the hidden files. Delete anything referencing Canopy or Enthought in the hidden files, as evidence by referencing \code{ls -a} in your home directory. Check the \code{.bashrc} and \code{.profile} directories first. If Enthought is not completely gone, this happens if you call Python.
+
+\item {} 
+(Optional). Keep doing \code{which python} and cleaning the python files that show up, until \code{which python} gives you nothing when you type it in the terminal.
+
+\end{enumerate}
+
+\includegraphics{applications_canopy.png}
+
+
+\subsection{Path to python files not found}
+\label{docfiles/install_dependencies:path-to-python-files-not-found}
+After adding the path to your directory with scripts in \code{.bashrc}, you still need to source the \code{.bashrc} files in \code{.profile}, or the system may not find the directory. See here for more \href{http://publib.boulder.ibm.com/infocenter/pseries/v5r3/index.jsp?topic=/com.ibm.aix.baseadmn/doc/baseadmndita/prof\_file.htm}{details} to see how the profile file is sourced. Note that this one will override the file in \emph{/etc/profile}.
+
+\includegraphics{residue.png}
+
+\includegraphics{profile_file.png}
+
+\href{http://linux.die.net/man/1/bash}{This explanation} explains how the bashrc file is sourced.
+
+\includegraphics{bashrc_file.png}
+
+This is what the bashrc and profile files should look like on your home directory:
+
+\includegraphics{bashrc_home.png}
+
+\includegraphics{profile_home.png}
 
 
 \chapter{Installing AIMBAT}
@@ -718,6 +812,26 @@ In the same folder as the initial PKL file you ran \code{ttpick.py} on, you can 
 Run \code{getsta.py} in the additional scripts (not on Github for now). It gives the unique list of stations where the seismograms came from. You need to run it with the list of all \code{pkl} files chosen after you saved to. You so this \code{./getsta.py *.pkl}.
 
 \includegraphics{count_stations.png}
+
+
+\subsection{Picking Travel Times does not work}
+\label{docfiles/PickingTravelTimes:picking-travel-times-does-not-work}
+If you run \code{ttick.py \textless{}Event name\textgreater{}.bhz.pkl}, a GUI will pop up for you to manually pick the travel times by pressing the keyboard. If typing on the keyboard as directed does not allow you to pick travel times, it could be a problem with the keyboard settings, or the matplotlib backend.
+
+To fix this, first look for the .matplotlib directory. It is hidden so in your home directory do \code{ls -a} to find it.
+Once you have found the \code{.matplotlib} directory, cd into it, and then look for the \code{matplotlibrc} file.
+Inside that file, ensure the backend is set to:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+backend : TkAgg
+\end{Verbatim}
+
+Comment out the other backends!
+
+
+\subsection{Travel Times}
+\label{docfiles/PickingTravelTimes:travel-times}
+If one of the seismograms being picked does not fit completely within the green (computer) window, nad you hit \emph{ICCC-A} or \emph{ICCC-B}, you will get an error message complaining about the exact seismogram which is too short. Deselect it.
 
 
 \chapter{Citations}

@@ -27,7 +27,7 @@
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="AIMBAT 0.1.2 documentation" href="../index.html" />
     <link rel="next" title="Citations" href="citations.html" />
-    <link rel="prev" title="Analyzing Data" href="analyzingData.html" /> 
+    <link rel="prev" title="Parameter Configuration" href="parameterConfiguration.html" /> 
   </head>
   <body>
     <div class="related">
@@ -40,7 +40,7 @@
           <a href="citations.html" title="Citations"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="analyzingData.html" title="Analyzing Data"
+          <a href="parameterConfiguration.html" title="Parameter Configuration"
              accesskey="P">previous</a> |</li>
         <li><a href="../index.html">AIMBAT 0.1.2 documentation</a> &raquo;</li> 
       </ul>
@@ -202,6 +202,21 @@
 <p>Run <tt class="docutils literal"><span class="pre">getsta.py</span></tt> in the additional scripts (not on Github for now). It gives the unique list of stations where the seismograms came from. You need to run it with the list of all <tt class="docutils literal"><span class="pre">pkl</span></tt> files chosen after you saved to. You so this <tt class="docutils literal"><span class="pre">./getsta.py</span> <span class="pre">*.pkl</span></tt>.</p>
 <img alt="../_images/count_stations.png" src="../_images/count_stations.png" />
 </div>
+<div class="section" id="picking-travel-times-does-not-work">
+<h3>Picking Travel Times does not work<a class="headerlink" href="#picking-travel-times-does-not-work" title="Permalink to this headline">¶</a></h3>
+<p>If you run <tt class="docutils literal"><span class="pre">ttick.py</span> <span class="pre">&lt;Event</span> <span class="pre">name&gt;.bhz.pkl</span></tt>, a GUI will pop up for you to manually pick the travel times by pressing the keyboard. If typing on the keyboard as directed does not allow you to pick travel times, it could be a problem with the keyboard settings, or the matplotlib backend.</p>
+<p>To fix this, first look for the .matplotlib directory. It is hidden so in your home directory do <tt class="docutils literal"><span class="pre">ls</span> <span class="pre">-a</span></tt> to find it.
+Once you have found the <tt class="docutils literal"><span class="pre">.matplotlib</span></tt> directory, cd into it, and then look for the <tt class="docutils literal"><span class="pre">matplotlibrc</span></tt> file.
+Inside that file, ensure the backend is set to:</p>
+<div class="highlight-python"><div class="highlight"><pre>backend : TkAgg
+</pre></div>
+</div>
+<p>Comment out the other backends!</p>
+</div>
+<div class="section" id="travel-times">
+<h3>Travel Times<a class="headerlink" href="#travel-times" title="Permalink to this headline">¶</a></h3>
+<p>If one of the seismograms being picked does not fit completely within the green (computer) window, nad you hit <cite>ICCC-A</cite> or <cite>ICCC-B</cite>, you will get an error message complaining about the exact seismogram which is too short. Deselect it.</p>
+</div>
 </div>
 </div>
 
@@ -234,6 +249,8 @@
 <li><a class="reference internal" href="#post-processing">Post Processing</a><ul>
 <li><a class="reference internal" href="#getting-the-output">Getting the output</a></li>
 <li><a class="reference internal" href="#getting-the-stations-of-the-seismograms-chosen">Getting the stations of the seismograms chosen</a></li>
+<li><a class="reference internal" href="#picking-travel-times-does-not-work">Picking Travel Times does not work</a></li>
+<li><a class="reference internal" href="#travel-times">Travel Times</a></li>
 </ul>
 </li>
 </ul>
@@ -241,8 +258,8 @@
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="analyzingData.html"
-                        title="previous chapter">Analyzing Data</a></p>
+  <p class="topless"><a href="parameterConfiguration.html"
+                        title="previous chapter">Parameter Configuration</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="citations.html"
                         title="next chapter">Citations</a></p>
@@ -278,7 +295,7 @@
           <a href="citations.html" title="Citations"
              >next</a> |</li>
         <li class="right" >
-          <a href="analyzingData.html" title="Analyzing Data"
+          <a href="parameterConfiguration.html" title="Parameter Configuration"
              >previous</a> |</li>
         <li><a href="../index.html">AIMBAT 0.1.2 documentation</a> &raquo;</li> 
       </ul>
