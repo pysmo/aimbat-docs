@@ -34,17 +34,18 @@
 \contentsline {subsection}{\numberline {7.2.2}Running ttpick.py}{24}{subsection.7.2.2}
 \contentsline {subsection}{\numberline {7.2.3}ICCC-A}{24}{subsection.7.2.3}
 \contentsline {subsection}{\numberline {7.2.4}Get rid of really bad seismograms}{24}{subsection.7.2.4}
-\contentsline {subsection}{\numberline {7.2.5}ICCC-B}{25}{subsection.7.2.5}
-\contentsline {subsection}{\numberline {7.2.6}MCCC}{25}{subsection.7.2.6}
-\contentsline {subsection}{\numberline {7.2.7}Manually pick the arrival times using t2}{25}{subsection.7.2.7}
-\contentsline {subsection}{\numberline {7.2.8}SACP2 to check for outlier seismograms}{25}{subsection.7.2.8}
-\contentsline {subsection}{\numberline {7.2.9}Go through the badly aligned seismograms and realign the travel times manually}{25}{subsection.7.2.9}
-\contentsline {section}{\numberline {7.3}What the Alignments Stand For}{26}{section.7.3}
-\contentsline {section}{\numberline {7.4}Post Processing}{26}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Getting the output}{26}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Getting the stations of the seismograms chosen}{26}{subsection.7.4.2}
-\contentsline {subsection}{\numberline {7.4.3}Picking Travel Times does not work}{26}{subsection.7.4.3}
-\contentsline {subsection}{\numberline {7.4.4}Travel Times}{27}{subsection.7.4.4}
-\contentsline {chapter}{\numberline {8}Citations}{29}{chapter.8}
-\contentsline {chapter}{\numberline {9}Indices and tables}{31}{chapter.9}
-\contentsline {chapter}{Bibliography}{33}{chapter*.4}
+\contentsline {subsection}{\numberline {7.2.5}Filtering}{25}{subsection.7.2.5}
+\contentsline {subsection}{\numberline {7.2.6}ICCC-B}{25}{subsection.7.2.6}
+\contentsline {subsection}{\numberline {7.2.7}MCCC}{25}{subsection.7.2.7}
+\contentsline {subsection}{\numberline {7.2.8}Manually pick the arrival times using t2}{25}{subsection.7.2.8}
+\contentsline {subsection}{\numberline {7.2.9}SACP2 to check for outlier seismograms}{25}{subsection.7.2.9}
+\contentsline {subsection}{\numberline {7.2.10}Go through the badly aligned seismograms and realign the travel times manually}{25}{subsection.7.2.10}
+\contentsline {section}{\numberline {7.3}What the Alignments Stand For}{28}{section.7.3}
+\contentsline {section}{\numberline {7.4}Post Processing}{28}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Getting the output}{28}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Getting the stations of the seismograms chosen}{28}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.3}Picking Travel Times does not work}{28}{subsection.7.4.3}
+\contentsline {subsection}{\numberline {7.4.4}Travel Times}{29}{subsection.7.4.4}
+\contentsline {chapter}{\numberline {8}Citations}{31}{chapter.8}
+\contentsline {chapter}{\numberline {9}Indices and tables}{33}{chapter.9}
+\contentsline {chapter}{Bibliography}{35}{chapter*.4}

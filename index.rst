@@ -9,8 +9,7 @@ Welcome to AIMBAT's documentation!
 Contents:
 
 .. toctree::
-	  :numbered:
-   	:maxdepth: 2
+    :numbered:
 
     docfiles/introduction
     docfiles/install_dependencies

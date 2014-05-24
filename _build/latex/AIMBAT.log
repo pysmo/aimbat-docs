@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.8)  22 MAY 2014 23:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.8)  23 MAY 2014 22:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1076,7 +1076,7 @@ Chapter 5.
 ]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 564--565
+Underfull \hbox (badness 10000) in paragraph at lines 559--560
 []\T1/ptm/m/n/10 Visit these pages for an [][]ex-pla-na-tion of the back-end[][
 ] and \T1/ptm/m/it/10 how to cus-tomize it
  []
@@ -1086,12 +1086,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 564--565
 ]
 Chapter 7.
 
-Overfull \hbox (64.65689pt too wide) in paragraph at lines 626--703
+Overfull \hbox (64.65689pt too wide) in paragraph at lines 621--698
 [] 
  []
 
 
-Underfull \hbox (badness 5533) in paragraph at lines 705--706
+Underfull \hbox (badness 5533) in paragraph at lines 700--701
 []\T1/ptm/m/n/10 The ICCS and MCCC al-go-rithms are im-ple-mented in two mod-ul
 es \T1/pcr/m/n/10 pysmo.aimbat.algiccs \T1/ptm/m/n/10 and
  []
@@ -1100,14 +1100,36 @@ es \T1/pcr/m/n/10 pysmo.aimbat.algiccs \T1/ptm/m/n/10 and
 File: pick_travel_times.png Graphic file (type png)
 
 <use pick_travel_times.png>
-Package pdftex.def Info: pick_travel_times.png used on input line 722.
+Package pdftex.def Info: pick_travel_times.png used on input line 717.
 (pdftex.def)             Requested size: 1793.6969pt x 967.61266pt.
 File: pick_travel_times.png Graphic file (type png)
  <use pick_travel_times.png>
-Package pdftex.def Info: pick_travel_times.png used on input line 722.
+Package pdftex.def Info: pick_travel_times.png used on input line 717.
 (pdftex.def)             Requested size: 469.755pt x 253.40479pt.
- [24 <./pick_travel_times.png>] [25] <count_stations.png, id=377, 649.42625pt x
- 263.98625pt>
+ [24 <./pick_travel_times.png>] [25] <sorting-interface.png, id=379, 1019.81pt 
+x 941.5175pt>
+File: sorting-interface.png Graphic file (type png)
+
+<use sorting-interface.png>
+Package pdftex.def Info: sorting-interface.png used on input line 775.
+(pdftex.def)             Requested size: 1019.80751pt x 941.51521pt.
+File: sorting-interface.png Graphic file (type png)
+ <use sorting-interface.png>
+Package pdftex.def Info: sorting-interface.png used on input line 775.
+(pdftex.def)             Requested size: 469.755pt x 433.69234pt.
+
+<SACP2_popup.png, id=380, 779.91376pt x 953.5625pt>
+File: SACP2_popup.png Graphic file (type png)
+ <use SACP2_popup.png>
+Package pdftex.def Info: SACP2_popup.png used on input line 777.
+(pdftex.def)             Requested size: 779.91187pt x 953.56018pt.
+File: SACP2_popup.png Graphic file (type png)
+
+<use SACP2_popup.png>
+Package pdftex.def Info: SACP2_popup.png used on input line 777.
+(pdftex.def)             Requested size: 469.755pt x 574.339pt.
+ [26 <./sorting-interface.png>] [27 <./SACP2_popup.png>]
+<count_stations.png, id=390, 649.42625pt x 263.98625pt>
 File: count_stations.png Graphic file (type png)
 
 <use count_stations.png>
@@ -1117,20 +1139,20 @@ File: count_stations.png Graphic file (type png)
  <use count_stations.png>
 Package pdftex.def Info: count_stations.png used on input line 814.
 (pdftex.def)             Requested size: 469.755pt x 190.95613pt.
- [26 <./count_stations.png>]
-[27] [28
-
-]
-Chapter 8.
+ [28 <./count_stations.png>]
 [29] [30
 
 ]
-Chapter 9.
+Chapter 8.
 [31] [32
+
+]
+Chapter 9.
+[33] [34
 
 ] (./AIMBAT.ind)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 872.
- [33
+ [35
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 872.
@@ -1142,10 +1164,10 @@ Package rerunfilecheck Info: File `AIMBAT.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 872.
  ) 
 Here is how much of TeX's memory you used:
- 9352 strings out of 493308
- 132456 string characters out of 6137817
- 231671 words of memory out of 5000000
- 12420 multiletter control sequences out of 15000+600000
+ 9366 strings out of 493308
+ 132744 string characters out of 6137817
+ 232717 words of memory out of 5000000
+ 12429 multiletter control sequences out of 15000+600000
  62458 words of font info for 69 fonts, out of 8000000 for 9000
  958 hyphenation exceptions out of 8191
  36i,12n,49p,1022b,495s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1161,10 +1183,10 @@ pe1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/ur
 w/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/ut
 mbi8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on AIMBAT.pdf (37 pages, 2862157 bytes).
+Output written on AIMBAT.pdf (39 pages, 3215664 bytes).
 PDF statistics:
- 494 PDF objects out of 1000 (max. 8388607)
- 421 compressed objects within 5 object streams
- 123 named destinations out of 1000 (max. 500000)
- 297 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 506 PDF objects out of 1000 (max. 8388607)
+ 429 compressed objects within 5 object streams
+ 126 named destinations out of 1000 (max. 500000)
+ 307 words of extra memory for PDF output out of 10000 (max. 10000000)
 

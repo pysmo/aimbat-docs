@@ -14,7 +14,7 @@
 
 
 \title{AIMBAT Documentation}
-\date{May 22, 2014}
+\date{May 23, 2014}
 \release{0.1.2}
 \author{Lay Kuan Loh, Xiaoting Lou, \& Suzan van der Lee}
 \newcommand{\sphinxlogo}{}
@@ -482,25 +482,20 @@ you can sort the seismograms using the \code{–s} flag
 \item {} 
 FIRST CHOICE
 
-\item {} 
+\end{itemize}
+
 run \code{mccc2delay.py} (converts mccc delays to actual delays) by doing \code{mccc2delay.py {[}option{]} \textless{}.mcp files\textgreater{}}
 
-\item {} 
 run \code{getdelay.py} (creates a delay file) by doing \emph{getdelay.py {[}options{]} \textless{}*.px\textgreater{}}. Can possibly use \emph{doplotsta.sh}, plots all of the events and their station delays
 
-\item {} 
 Run \code{evmcdelay.sh}
-
-\item {} \begin{description}
-\item[{SECOND CHOICE}] \leavevmode\begin{itemize}
+\begin{itemize}
 \item {} 
+SECOND CHOICE
+
+\end{itemize}
+
 \code{ttcheck.py} to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.
-
-\end{itemize}
-
-\end{description}
-
-\end{itemize}
 
 \end{description}
 
@@ -729,9 +724,16 @@ Run \code{ttpick/py \textless{}path-to-pkl-file\textgreater{}}. A GUI should pop
 
 \subsection{Get rid of really bad seismograms}
 \label{docfiles/PickingTravelTimes:get-rid-of-really-bad-seismograms}
-If there are any really bad seismograms, you can click on them to deselect them. Bad seismograms are those that look nothing like the shape of the array stack pictured. Usually, if there are more than enough seismograms, so it is safe to throw out any that deviate more than a bit from the array stack. If you don’t filter your data, you’ll have to throw out more seismograms.
+If there are any really bad seismograms, you can click on them to deselect them. Bad seismograms are those that look nothing like the shape of the array stack pictured. Usually, if there are more than enough seismograms, so it is safe to throw out any that deviate more than a bit from the array stack.
+
+
+\subsection{Filtering}
+\label{docfiles/PickingTravelTimes:filtering}
+To filter your data, hit the \code{filter} button, and a window will popup for you to use the \href{http://en.wikipedia.org/wiki/Butterworth\_filter}{Butterworth filter} to filter your data.
 
 Remember to save your work periodically once you start picking your travel times, otherwise if AIMBAT crashes, you lose it.
+
+You can choose the order by selecting one of the values provided (default is 1), and choose the low and high frequencies for bandpassing by clicking on the appropriate start and stop frequency on the lower graph.
 
 
 \subsection{ICCC-B}
@@ -768,13 +770,11 @@ Click on the outliers that stray from the main group of stacked seismograms. The
 \label{docfiles/PickingTravelTimes:go-through-the-badly-aligned-seismograms-and-realign-the-travel-times-manually}
 By default, the worst seismograms are on the first page, and as you click through the pages, the quality of the seismograms gradually gets better. Keep using \code{t2} to realign the arrival times so that the peaks of all the seismograms are nicely aligned. Remember to zoom in to have a better look.
 
-However, you may which to sort the seismograms in alphabetical order so that you can find the bad seismogrrams and correct them more easily. Run:
+However, you may which to sort the seismograms in alphabetical order so that you can find the bad seismogrrams and correct them more easily. Hit the \code{sort} button and a window will popup for you to choose which sorting method to use. In this case, choose to sort the files by filename.
 
-\begin{Verbatim}[commandchars=\\\{\}]
-ttpick.py \PYGZhy{}s \PYGZhy{}i \PYGZus{}\PYGZus{}\PYGZus{}.bhz.pkl
-\end{Verbatim}
+\includegraphics{sorting-interface.png}
 
-and scroll through the pages. Notice that clicking through the pages may be slow, move the mouse around and off/on the GUI window to stop it stalling. You can also hit \code{MCCC} to jump back to the front page.
+\includegraphics{SACP2_popup.png}
 
 The seismograms are stretched to fit together, but they may be scaled differently.
 
@@ -855,7 +855,7 @@ If one of the seismograms being picked does not fit completely within the green 
 Goldstein, P., D. Dodge, M. Firpo, and L. Minner (2003), SAC2000: Signal processing and analysis tools for seismologists and engineers, International Geophysics, 81, 1613–1614.
 }
 \bibitem[Hunder2007]{Hunder2007}{\phantomsection\label{docfiles/citations:hunder2007} 
-Hunter, J. (2007), Matplotlib: A 2D Graphics Environment, Computing in Science \& Engi- neering, 3(9), 90–95.
+Hunter, J. (2007), Matplotlib: A 2D Graphics Environment, Computing in Science \& Engineering, 3(9), 90–95.
 }
 \bibitem[LouVanDerLee2013]{LouVanDerLee2013}{\phantomsection\label{docfiles/citations:louvanderlee2013} 
 AIMBAT: A Python/Matplotlib Tool for Measuring Teleseismic Arrival Times. Xiaoting Lou, Suzan van der Lee, and Simon Lloyd (2013), Seismol. Res. Lett., 84(1), 85-93, doi:10.1785/0220120033.

@@ -81,12 +81,25 @@ ICCC-A
 
 .. ----------------------------------------------------------------------------- ..
 
-Get rid of really bad seismograms
+Get rid of really bad seismograms 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If there are any really bad seismograms, you can click on them to deselect them. Bad seismograms are those that look nothing like the shape of the array stack pictured. Usually, if there are more than enough seismograms, so it is safe to throw out any that deviate more than a bit from the array stack. If you don’t filter your data, you’ll have to throw out more seismograms.
+If there are any really bad seismograms, you can click on them to deselect them. Bad seismograms are those that look nothing like the shape of the array stack pictured. Usually, if there are more than enough seismograms, so it is safe to throw out any that deviate more than a bit from the array stack. 
+
+.. ----------------------------------------------------------------------------- ..
+
+Filtering
+~~~~~~~~~
+
+To filter your data, hit the ``filter`` button, and a window will popup for you to use the `Butterworth filter <http://en.wikipedia.org/wiki/Butterworth_filter>`_ to filter your data. 
+
+.. image:: pickingTravelTimes-images/filtering-interface.png
+
+	Interface to filter your data.
 
 Remember to save your work periodically once you start picking your travel times, otherwise if AIMBAT crashes, you lose it.
+
+You can choose the order by selecting one of the values provided (default is 1), and choose the low and high frequencies for bandpassing by clicking on the appropriate start and stop frequency on the lower graph.
 
 .. ----------------------------------------------------------------------------- ..
 
@@ -142,15 +155,11 @@ Go through the badly aligned seismograms and realign the travel times manually
 
 By default, the worst seismograms are on the first page, and as you click through the pages, the quality of the seismograms gradually gets better. Keep using ``t2`` to realign the arrival times so that the peaks of all the seismograms are nicely aligned. Remember to zoom in to have a better look.
 
-However, you may which to sort the seismograms in alphabetical order so that you can find the bad seismogrrams and correct them more easily. Run::
+However, you may which to sort the seismograms in alphabetical order so that you can find the bad seismogrrams and correct them more easily. Hit the ``sort`` button and a window will popup for you to choose which sorting method to use. In this case, choose to sort the files by filename.
 
-	ttpick.py -s -i ___.bhz.pkl
-
-and scroll through the pages. Notice that clicking through the pages may be slow, move the mouse around and off/on the GUI window to stop it stalling. You can also hit ``MCCC`` to jump back to the front page.
+.. image:: pickingTravelTimes-images/sorting-interface.png
 
 .. image:: pickingTravelTimes-images/SACP2_popup.png
-
-	SACP2 popup
 
 The seismograms are stretched to fit together, but they may be scaled differently.
 
