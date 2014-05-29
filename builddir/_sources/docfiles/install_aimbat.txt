@@ -56,45 +56,30 @@ Open your terminal. Type ``open .`` and that will open your home directory. Tran
 
 
 .. ############################################################################ ..
-.. #                          BUILDING PYSMO.SAC                            # ..
+.. #                             BUILDING PYSMO                               # ..
 .. ############################################################################ ..
 
-Building pysmo.sac
---------------------
+Building the Pysmo Packages
+---------------------------
 
-Python module :code:`Distutils` is used to write a setup.py script to build, distribute, and install ``pysmo.sac``. In the directory :code:`<pkg-install-dir>/pysmo-sac-0.5>`, type::
+You need to be an administrator on the computer you are installing AIMBAT in, as you need to run the commands with ``sudo``.
+
+Building pysmo.sac
+~~~~~~~~~~~~~~~~~~
+
+Python module ``Distutils`` is used to write a setup.py script to build, distribute, and install ``pysmo.sac``. cd into the ``sac`` directory on the command line and run 
 
 	sudo python setup.py build
   	sudo python setup.py install
 
-to install it and its package information file :code:`pysmo.sac-0.5-py2.7.egg-info` to the global site-packages directory :code:`<prefix>/lib/python2.7/site-packages`, which is the same as Numpy, Scipy, and Matplotlib.
-
 .. image::install-aimbat-images/site_package_location.png
-
-If you don’t have write permission to the global site-packages directory, use the `--user` option to install to `<userbase>/lib/python2.7/site-packages`::
-
-	python setup.py install --user
-
-This will install it to your home directory only, not for all users on the computer. Try not to use this option though, as installing without the :code:`sudo` command has caused problems in the past.
 
 If you successfully installed the sac module, in the python console, this should happen after you type :code:`from pysmo import sac`
 
 .. image::install-aimbat-images/sac_installed.png
 
-.. ############################################################################ ..
-.. #                          INSTALLING PYSMO.SAC                            # ..
-.. ############################################################################ ..
-
-
-
-
-
-.. ############################################################################ ..
-.. #                        INSTALLING PYSMO.AIMBAT                           # ..
-.. ############################################################################ ..
-
 Installing pysmo.aimbat
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Three sub-directories are included in the :code:`<pkg-install-dir>/pysmo/pysmo-aimbat-0.1.2>` directory: :code:`example`, :code:`scripts`, and :code:`src`, which contain example SAC files, Python scripts to run at the command line, and Python modules to install, respectively.
 
@@ -120,9 +105,13 @@ C Shell Users:
 If AIMBAT has beenn installed, type from :code:`pysmo import aimbat` in a Python shell, and no errors should appear.
 
 
+.
+
 .. ############################################################################ ..
-.. #                        INSTALLING PYSMO.AIMBAT                           # ..
+.. #                             BUILDING PYSMO                               # ..
 .. ############################################################################ ..
+
+
 
 
 
