@@ -67,7 +67,7 @@ You need to be an administrator on the computer you are installing AIMBAT in, as
 Building pysmo.sac
 ~~~~~~~~~~~~~~~~~~
 
-Python module ``Distutils`` is used to write a setup.py script to build, distribute, and install ``pysmo.sac``. cd into the ``sac`` directory on the command line and run 
+Python module ``Distutils`` is used to write a setup.py script to build, distribute, and install ``pysmo.sac``. cd into the ``sac`` directory on the command line and run::
 
 	sudo python setup.py build
   	sudo python setup.py install
@@ -81,31 +81,32 @@ If you successfully installed the sac module, in the python console, this should
 Installing pysmo.aimbat
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Three sub-directories are included in the :code:`<pkg-install-dir>/pysmo/pysmo-aimbat-0.1.2>` directory: :code:`example`, :code:`scripts`, and :code:`src`, which contain example SAC files, Python scripts to run at the command line, and Python modules to install, respectively.
+Three sub-directories are included in the ``aimbat`` directory
+* ``example``: Example SAC files
+* ``scripts``: Python scripts to run at the command line
+* ``src``: Python modules to install
 
-The core cross-correlation functions in :code:`pysmo.aimbat` are written in both Python/Numpy (:code:`xcorr.py`) and Fortran (:code:`xcorr.f90`). Therefore, we need to use Numpy’s :code:`Distutils` module for enhanced support of Fortran extension. The usage is similar to the standard Disutils.
+The core cross-correlation functions are written in both Python/Numpy (``xcorr.py``) and Fortran (``xcorr.f90``). Therefore, we need to use Numpy’s ``Distutils`` module for enhanced support of Fortran extension. The usage is similar to the standard Disutils.
 
 Note that some sort of Fortran compiler must already be installed first. Specify them in place of gfortran in the following commands.
 
-In the directory :code:`<pkg-install-dir>/pysmo/pysmo-aimbat-0.1.2`, type::
+cd into the directory the ``aimbat`` package was placed in, and type::
 
 	sudo python setup.py build --fcompiler=gfortran
   	sudo python setup.py install
 
 to install the :code:`src` directory.
 
-Add :code:`<pkg-install-dir>/pysmo/pysmo-aimbat.0.1.2/scripts` to environment variable :code:`PATH` in a shells start-up file for command line execution of the scripts.
+Add ``<path-to-folder>/aimbat/scripts`` to environment variable ``PATH`` in a shells start-up file for command line execution of the scripts.
 
 Bash Shell Users:
-	:code:`export PATH=$PATH:<pkg-install-dir>/pysmo/pysmo-aimbat-0.1.2/scripts` in :code:`.bashrc` files.
+	:code:`export PATH=$PATH:<path-to-folder>/aimbat/scripts` in :code:`.bashrc` files.
 
 C Shell Users:
-	:code:`setenv PATH=$PATH:<pkg-install-dir>/pysmo/pysmo-aimbat-0.1.2/scripts` in :code:`.bashrc` files.
+	:code:`setenv PATH=$PATH:<path-to-folder>/aimbat/scripts` in :code:`.bashrc` files.
 
-If AIMBAT has beenn installed, type from :code:`pysmo import aimbat` in a Python shell, and no errors should appear.
+If AIMBAT has beenn installed, type from ``pysmo import aimbat`` in a Python shell, and no errors should appear.
 
-
-.
 
 .. ############################################################################ ..
 .. #                             BUILDING PYSMO                               # ..
