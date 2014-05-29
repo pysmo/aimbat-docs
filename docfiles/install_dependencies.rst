@@ -9,7 +9,9 @@ Installing Dependencies
 Getting your operating system
 -----------------------------
 
-You may need to know
+We assume that most users of AIMBAT will be using macs. If our assumptions are wrong, please :ref:`contact the authors <authors-contacts>`, and if there is sufficient interest we will construct documentation for installations on other operating systems as well. 
+
+Users may need to 
 .. image:: installing-images/system_preferences.png
 
 .. ############################################################################ ..
@@ -109,8 +111,7 @@ Installing Enthought Canopy
 
 Occasionally, Enthought Canopy may not open the default setup environment after you downloaded and tried to install it. If this happens, open the Canopy package, go to "Preferences", and select Canopy as your default environment.
 
-.. images:: installing-images/enthought_as_default.png
-	Manually opening the default setup environment
+.. image:: installing-images/enthought_as_default.png
 
 .. -------------------------------------------------------------------------------- ..
 
