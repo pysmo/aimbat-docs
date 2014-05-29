@@ -9,19 +9,20 @@
 \BOOKMARK [1][-]{section.2.4}{Possible Issues}{chapter.2}% 9
 \BOOKMARK [0][-]{chapter.3}{Installing AIMBAT}{}% 10
 \BOOKMARK [1][-]{section.3.1}{Getting the Packages}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.2}{Installing pysmo.sac}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.3}{Installing pysmo.aimbat}{chapter.3}% 13
-\BOOKMARK [0][-]{chapter.4}{Getting Data}{}% 14
-\BOOKMARK [1][-]{section.4.1}{Standing Order for Data}{chapter.4}% 15
-\BOOKMARK [0][-]{chapter.5}{Analyzing Data}{}% 16
-\BOOKMARK [1][-]{section.5.1}{Seismic Analysis Code \(SAC\)}{chapter.5}% 17
-\BOOKMARK [0][-]{chapter.6}{Parameter Configuration}{}% 18
-\BOOKMARK [1][-]{section.6.1}{Backend}{chapter.6}% 19
-\BOOKMARK [0][-]{chapter.7}{Measuring Teleseismic Body Wave Arrival Times}{}% 20
-\BOOKMARK [1][-]{section.7.1}{Automated Phase Alignment}{chapter.7}% 21
-\BOOKMARK [1][-]{section.7.2}{Picking Travel Times}{chapter.7}% 22
-\BOOKMARK [1][-]{section.7.3}{What the Alignments Stand For}{chapter.7}% 23
-\BOOKMARK [1][-]{section.7.4}{Post Processing}{chapter.7}% 24
-\BOOKMARK [0][-]{chapter.8}{Citations}{}% 25
-\BOOKMARK [0][-]{chapter.9}{Indices and tables}{}% 26
-\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 27
+\BOOKMARK [1][-]{section.3.2}{Where to install the packages}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.3}{Building pysmo.sac}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.4}{Installing pysmo.aimbat}{chapter.3}% 14
+\BOOKMARK [0][-]{chapter.4}{Getting Data}{}% 15
+\BOOKMARK [1][-]{section.4.1}{Standing Order for Data}{chapter.4}% 16
+\BOOKMARK [0][-]{chapter.5}{Analyzing Data}{}% 17
+\BOOKMARK [1][-]{section.5.1}{Seismic Analysis Code \(SAC\)}{chapter.5}% 18
+\BOOKMARK [0][-]{chapter.6}{Parameter Configuration}{}% 19
+\BOOKMARK [1][-]{section.6.1}{Backend}{chapter.6}% 20
+\BOOKMARK [0][-]{chapter.7}{Measuring Teleseismic Body Wave Arrival Times}{}% 21
+\BOOKMARK [1][-]{section.7.1}{Automated Phase Alignment}{chapter.7}% 22
+\BOOKMARK [1][-]{section.7.2}{Picking Travel Times}{chapter.7}% 23
+\BOOKMARK [1][-]{section.7.3}{What the Alignments Stand For}{chapter.7}% 24
+\BOOKMARK [1][-]{section.7.4}{Post Processing}{chapter.7}% 25
+\BOOKMARK [0][-]{chapter.8}{Citations}{}% 26
+\BOOKMARK [0][-]{chapter.9}{Indices and tables}{}% 27
+\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 28

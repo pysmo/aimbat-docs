@@ -14,7 +14,7 @@
 
 
 \title{AIMBAT Documentation}
-\date{May 23, 2014}
+\date{May 29, 2014}
 \release{0.1.2}
 \author{Lay Kuan Loh, Xiaoting Lou, \& Suzan van der Lee}
 \newcommand{\sphinxlogo}{}
@@ -299,27 +299,36 @@ This is what the bashrc and profile files should look like on your home director
 
 \section{Getting the Packages}
 \label{docfiles/install_aimbat:getting-the-packages}
-AIMBAT is released as a sub-package of pysmo in the name of pysmo.aimbat along with another sub-package pysmo.sac. The latest releases of \code{pysmo.sac} and \code{pysmo.aimbat} are available for download at the \href{http://www.earth.northwestern.edu/~xlou/aimbat.html}{official project webpage} and \href{https://github.com/pysmo}{Github}.
+AIMBAT is released as a sub-package of pysmo in the name of \code{pysmo.aimbat} along with another sub-package \code{pysmo.sac}. The latest stable release of AIMBAT is available for download at the \href{http://www.earth.northwestern.edu/~xlou/aimbat.html}{official project webpage}.
 
-The packages should be installed into the Python site-packages directory. To find out where that is, in the python console, do:
+We are working on a new release of AIMBAT, available on \href{https://github.com/pysmo}{Github}. We are adding more features to make using AIMBAT more convenient, and fixing some bugs in the old code. Download \href{https://github.com/pysmo/aimbat}{pysmo.aimbat} and \href{https://github.com/pysmo/sac}{pysmo.sac} from Github. You will now have two folders called \code{aimbat} and \code{sac} respectively.
+
+
+\section{Where to install the packages}
+\label{docfiles/install_aimbat:where-to-install-the-packages}
+There are several options to install the packages. If you just want to use AIMBAT, it is best to store it somewhere where you would not touch the packages so easily, such as the Python \code{site-packages} directory. If you would like to make some changes to the Python code, it is best to store it somewhere pretty accessible, such as your \code{home} directory on your computer, or in \code{Documents}.
+
+
+\subsection{Installing into the Python Site-Packages Directory}
+\label{docfiles/install_aimbat:installing-into-the-python-site-packages-directory}
+To find out where the Python Site-Packages Directory is, in the python console, do:
 
 \begin{Verbatim}[commandchars=\\\{\}]
 \PYG{k+kn}{import} \PYG{n+nn}{site}\PYG{p}{;}
 \PYG{n}{site}\PYG{o}{.}\PYG{n}{getsitepackages}\PYG{p}{(}\PYG{p}{)}
 \end{Verbatim}
 
-Whatever is output there, lets call it \code{\textless{}pkg-install-dir\textgreater{}}. You can choose to install AIMBAT either locally or globally, depending on whether you want all users of the computer to have access to it.
-
-Make a directory called \code{pysmo}, and place the sac and aimbat directories there.
-
-Now that we know the location of the site-packages direction, cd into it. Call the path to it \code{\textless{}pkg-install-dir\textgreater{}}. Notice that in this case, the site-packages has been installed for all users on the computer, not just the current user’s home directory.
-
-Put the two Python packages inside the directory.
+Whatever is output is obtained, lets call it \code{\textless{}pkg-install-dir\textgreater{}}. Make a directory called \code{pysmo}, and place the sac and aimbat directories inside \code{\textless{}pkg-install-dir\textgreater{}/pysmo}.
 
 
-\section{Installing pysmo.sac}
-\label{docfiles/install_aimbat:installing-pysmo-sac}
-Python module \code{Distutils} is used to write a setup.py script to build, distribute, and install pysmo.sac. In the directory \code{\textless{}pkg-install-dir\textgreater{}/pysmo-sac-0.5\textgreater{}}, type:
+\subsection{Installing into the home directory}
+\label{docfiles/install_aimbat:installing-into-the-home-directory}
+Open your terminal. Type \code{open .} and that will open your home directory. Transfer the \code{aimbat} and \code{sac} repositories inside there.
+
+
+\section{Building pysmo.sac}
+\label{docfiles/install_aimbat:building-pysmo-sac}
+Python module \code{Distutils} is used to write a setup.py script to build, distribute, and install \code{pysmo.sac}. In the directory \code{\textless{}pkg-install-dir\textgreater{}/pysmo-sac-0.5\textgreater{}}, type:
 
 \begin{Verbatim}[commandchars=\\\{\}]
 sudo python setup.py build
