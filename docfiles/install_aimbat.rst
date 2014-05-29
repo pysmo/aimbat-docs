@@ -9,20 +9,9 @@ Installing AIMBAT
 Getting the Packages
 --------------------
 
-AIMBAT is released as a sub-package of pysmo in the name of pysmo.aimbat along with another sub-package pysmo.sac. The latest releases of :code:`pysmo.sac` and :code:`pysmo.aimbat` are available for download at the `official project webpage <http://www.earth.northwestern.edu/~xlou/aimbat.html>`_ and `Github <https://github.com/pysmo>`_. 
+AIMBAT is released as a sub-package of pysmo in the name of ``pysmo.aimbat`` along with another sub-package ``pysmo.sac``. The latest stable release of AIMBAT is available for download at the `official project webpage <http://www.earth.northwestern.edu/~xlou/aimbat.html>`_. 
 
-The packages should be installed into the Python site-packages directory. To find out where that is, in the python console, do::
-
-	import site;
-	site.getsitepackages()
-
-Whatever is output there, lets call it :code:`<pkg-install-dir>`. You can choose to install AIMBAT either locally or globally, depending on whether you want all users of the computer to have access to it.
-
-Make a directory called :code:`pysmo`, and place the sac and aimbat directories there.
-
-Now that we know the location of the site-packages direction, cd into it. Call the path to it :code:`<pkg-install-dir>`. Notice that in this case, the site-packages has been installed for all users on the computer, not just the current user’s home directory.
-
-Put the two Python packages inside the directory.
+We are working on a new release of AIMBAT, available on `Github <https://github.com/pysmo>`_. We are adding more features to make using AIMBAT more convenient, and fixing some bugs in the old code. Download `pysmo.aimbat <https://github.com/pysmo/aimbat>`_ and `pysmo.sac <https://github.com/pysmo/sac>`_ from Github. You will now have two folders called ``aimbat`` and ``sac`` respectively. 
 
 .. ############################################################################ ..
 .. #                          GETTING THE PACKAGES                            # ..
@@ -31,14 +20,49 @@ Put the two Python packages inside the directory.
 
 
 
+
 .. ############################################################################ ..
-.. #                          INSTALLING PYSMO.SAC                            # ..
+.. #                        WHERE TO INSTALL THE PACKAGES                     # ..
 .. ############################################################################ ..
 
-Installing pysmo.sac
+Where to install the packages
+-----------------------------
+
+There are several options to install the packages. If you just want to use AIMBAT, it is best to store it somewhere where you would not touch the packages so easily, such as the Python ``site-packages`` directory. If you would like to make some changes to the Python code, it is best to store it somewhere pretty accessible, such as your ``home`` directory on your computer, or in ``Documents``.
+
+Installing into the Python Site-Packages Directory
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To find out where the Python Site-Packages Directory is, in the python console, do::
+
+	import site;
+	site.getsitepackages()
+
+Whatever is output is obtained, lets call it ``<pkg-install-dir>``. Make a directory called ``pysmo``, and place the sac and aimbat directories inside ``<pkg-install-dir>/pysmo``.
+
+Installing into the home directory
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Open your terminal. Type ``open .`` and that will open your home directory. Transfer the ``aimbat`` and ``sac`` repositories inside there. 
+
+.. ############################################################################ ..
+.. #                        WHERE TO INSTALL THE PACKAGES                     # ..
+.. ############################################################################ ..
+
+
+
+
+
+
+
+.. ############################################################################ ..
+.. #                          BUILDING PYSMO.SAC                            # ..
+.. ############################################################################ ..
+
+Building pysmo.sac
 --------------------
 
-Python module :code:`Distutils` is used to write a setup.py script to build, distribute, and install pysmo.sac. In the directory :code:`<pkg-install-dir>/pysmo-sac-0.5>`, type::
+Python module :code:`Distutils` is used to write a setup.py script to build, distribute, and install ``pysmo.sac``. In the directory :code:`<pkg-install-dir>/pysmo-sac-0.5>`, type::
 
 	sudo python setup.py build
   	sudo python setup.py install
