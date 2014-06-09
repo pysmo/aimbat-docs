@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>7. Measuring Teleseismic Body Wave Arrival Times &mdash; AIMBAT 0.1.2 documentation</title>
+    <title>8. Measuring Teleseismic Body Wave Arrival Times &mdash; AIMBAT 0.1.2 documentation</title>
     
     <link rel="stylesheet" href="../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -26,8 +26,8 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="AIMBAT 0.1.2 documentation" href="../index.html" />
-    <link rel="next" title="8. Citations" href="citations.html" />
-    <link rel="prev" title="6. Parameter Configuration" href="parameterConfiguration.html" /> 
+    <link rel="next" title="9. Citations" href="citations.html" />
+    <link rel="prev" title="7. Parameter Configuration" href="parameterConfiguration.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,10 +37,10 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="citations.html" title="8. Citations"
+          <a href="citations.html" title="9. Citations"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="parameterConfiguration.html" title="6. Parameter Configuration"
+          <a href="parameterConfiguration.html" title="7. Parameter Configuration"
              accesskey="P">previous</a> |</li>
         <li><a href="../index.html">AIMBAT 0.1.2 documentation</a> &raquo;</li> 
       </ul>
@@ -52,14 +52,14 @@
           <div class="body">
             
   <div class="section" id="measuring-teleseismic-body-wave-arrival-times">
-<h1>7. Measuring Teleseismic Body Wave Arrival Times<a class="headerlink" href="#measuring-teleseismic-body-wave-arrival-times" title="Permalink to this headline">¶</a></h1>
+<h1>8. Measuring Teleseismic Body Wave Arrival Times<a class="headerlink" href="#measuring-teleseismic-body-wave-arrival-times" title="Permalink to this headline">¶</a></h1>
 <p>The core idea in using AIMBAT to measure teleseismic body wave arrival times has two parts:</p>
 <ul class="simple">
 <li>automated phase alignment, to reduce user processing time, and</li>
 <li>interactive quality control, to retain valuable user inputs.</li>
 </ul>
 <div class="section" id="automated-phase-alignment">
-<h2>7.1. Automated Phase Alignment<a class="headerlink" href="#automated-phase-alignment" title="Permalink to this headline">¶</a></h2>
+<h2>8.1. Automated Phase Alignment<a class="headerlink" href="#automated-phase-alignment" title="Permalink to this headline">¶</a></h2>
 <p>The ICCS algorithm calculates an array stack from predicted time picks, cross-correlates each seismogram with the array stack to Find the time lags at maximum cross-correlation, then use the new time picks to update the array stack in an iterative process. The MCCC algorithm cross-correlates each possible pair of seismograms and uses a least-squares method to calculate an optimized set of relative arrival times. Our method is to combine ICCS and MCCC in a four-step procedure using four anchoring time picks <span class="math">\(_0T_i,\,_1T_i,\,_2T_i,\)</span> and <span class="math">\(_3T_i\)</span>.</p>
 <ol class="loweralpha simple">
 <li>Coarse alignment by ICCS</li>
@@ -129,54 +129,54 @@
 <p>The ICCS and MCCC algorithms are implemented in two modules <tt class="docutils literal"><span class="pre">pysmo.aimbat.algiccs</span></tt> and <tt class="docutils literal"><span class="pre">pysmo.aimbat.algmccc</span></tt>, and can be executed in scripts <tt class="docutils literal"><span class="pre">iccs.py</span></tt> and <tt class="docutils literal"><span class="pre">mccc.py</span></tt> respectively.</p>
 </div>
 <div class="section" id="picking-travel-times">
-<h2>7.2. Picking Travel Times<a class="headerlink" href="#picking-travel-times" title="Permalink to this headline">¶</a></h2>
+<h2>8.2. Picking Travel Times<a class="headerlink" href="#picking-travel-times" title="Permalink to this headline">¶</a></h2>
 <p>This section explains how to run the program <tt class="code docutils literal"><span class="pre">ttpick.py</span></tt> to get the travel times you want.</p>
 <div class="section" id="getting-into-the-right-directory">
-<h3>7.2.1. Getting into the right directory<a class="headerlink" href="#getting-into-the-right-directory" title="Permalink to this headline">¶</a></h3>
+<h3>8.2.1. Getting into the right directory<a class="headerlink" href="#getting-into-the-right-directory" title="Permalink to this headline">¶</a></h3>
 <p>In the terminal, cd into the directory with all the <tt class="docutils literal"><span class="pre">pkl</span></tt> files you want to run. You want to run either the <tt class="docutils literal"><span class="pre">.bht</span></tt> or <tt class="docutils literal"><span class="pre">.bhz</span></tt> files. <tt class="docutils literal"><span class="pre">bht</span></tt> files are for S-waves and bhz files are for P-waves. <tt class="docutils literal"><span class="pre">PKL</span></tt> is a bundle of <tt class="docutils literal"><span class="pre">SAC</span></tt> files. Each <tt class="docutils literal"><span class="pre">SAC</span></tt> file is a seismogram, but since you there may be many seismograms from various stations for each event, we bundle them into a <tt class="docutils literal"><span class="pre">PKL</span></tt> file so we only have to import one file into AIMBAT, not a few hundred of them.</p>
 </div>
 <div class="section" id="running-ttpick-py">
-<h3>7.2.2. Running ttpick.py<a class="headerlink" href="#running-ttpick-py" title="Permalink to this headline">¶</a></h3>
+<h3>8.2.2. Running ttpick.py<a class="headerlink" href="#running-ttpick-py" title="Permalink to this headline">¶</a></h3>
 <p>Run <tt class="docutils literal"><span class="pre">ttpick/py</span> <span class="pre">&lt;path-to-pkl-file&gt;</span></tt>. A GUI should pop up if you successfully ran it. Note that if you click on the buttons, they will not work until you move the mouse off them; this is a problem we are hoping to fix.</p>
 <img alt="../_images/pick_travel_times.png" src="../_images/pick_travel_times.png" />
 </div>
 <div class="section" id="iccc-a">
-<h3>7.2.3. ICCC-A<a class="headerlink" href="#iccc-a" title="Permalink to this headline">¶</a></h3>
+<h3>8.2.3. ICCC-A<a class="headerlink" href="#iccc-a" title="Permalink to this headline">¶</a></h3>
 <p><tt class="docutils literal"><span class="pre">ICCC-A</span></tt> is only used in the beginning, if you have altered some of the travel time arrivals of the seismograms by pressing <tt class="docutils literal"><span class="pre">t2</span></tt>, and want to realign the array stack.</p>
 </div>
 <div class="section" id="get-rid-of-really-bad-seismograms">
-<h3>7.2.4. Get rid of really bad seismograms<a class="headerlink" href="#get-rid-of-really-bad-seismograms" title="Permalink to this headline">¶</a></h3>
+<h3>8.2.4. Get rid of really bad seismograms<a class="headerlink" href="#get-rid-of-really-bad-seismograms" title="Permalink to this headline">¶</a></h3>
 <p>If there are any really bad seismograms, you can click on them to deselect them. Bad seismograms are those that look nothing like the shape of the array stack pictured. Usually, if there are more than enough seismograms, so it is safe to throw out any that deviate more than a bit from the array stack.</p>
 </div>
 <div class="section" id="filtering">
-<h3>7.2.5. Filtering<a class="headerlink" href="#filtering" title="Permalink to this headline">¶</a></h3>
+<h3>8.2.5. Filtering<a class="headerlink" href="#filtering" title="Permalink to this headline">¶</a></h3>
 <p>To filter your data, hit the <tt class="docutils literal"><span class="pre">filter</span></tt> button, and a window will popup for you to use the <a class="reference external" href="http://en.wikipedia.org/wiki/Butterworth_filter">Butterworth filter</a> to filter your data.</p>
 <p>Remember to save your work periodically once you start picking your travel times, otherwise if AIMBAT crashes, you lose it.</p>
 <p>You can choose the order by selecting one of the values provided (default is 1), and choose the low and high frequencies for bandpassing by clicking on the appropriate start and stop frequency on the lower graph.</p>
 </div>
 <div class="section" id="iccc-b">
-<h3>7.2.6. ICCC-B<a class="headerlink" href="#iccc-b" title="Permalink to this headline">¶</a></h3>
+<h3>8.2.6. ICCC-B<a class="headerlink" href="#iccc-b" title="Permalink to this headline">¶</a></h3>
 <p>Hit the <tt class="docutils literal"><span class="pre">ICCC-B</span></tt> button to begin the initial cross-correlations. These appear as red lines.</p>
 <p>We are not using <tt class="docutils literal"><span class="pre">ICCC-A</span></tt> here, but these are the theoretical arrival times, marked in black.</p>
 </div>
 <div class="section" id="mccc">
-<h3>7.2.7. MCCC<a class="headerlink" href="#mccc" title="Permalink to this headline">¶</a></h3>
+<h3>8.2.7. MCCC<a class="headerlink" href="#mccc" title="Permalink to this headline">¶</a></h3>
 <p>Hit <tt class="docutils literal"><span class="pre">MCCC</span></tt> to run the Multi-Channel cross-correlation. Do not hit <tt class="docutils literal"><span class="pre">ICCC-A</span></tt> or <tt class="docutils literal"><span class="pre">ICCC-B</span></tt> again, or all your work will be erased. A warning will pop up to check if you really do want to hit these two buttons if you do click on them.</p>
 </div>
 <div class="section" id="manually-pick-the-arrival-times-using-t2">
-<h3>7.2.8. Manually pick the arrival times using t2<a class="headerlink" href="#manually-pick-the-arrival-times-using-t2" title="Permalink to this headline">¶</a></h3>
+<h3>8.2.8. Manually pick the arrival times using t2<a class="headerlink" href="#manually-pick-the-arrival-times-using-t2" title="Permalink to this headline">¶</a></h3>
 <p>For an earthquake, it is expected that the arrival times should be identical in an idealize situation. However, since stations are located in 3D space, this is not necessarily the case. For earthquakes of magnitude 7.0 and above, usually the arrival times are very well aligned as the signal is high. However, if the earthquake is too strong, the source gets complicated, so it needs filtering.</p>
 <p>Below a magnitude of 6.0, the signal to noise ratio gets very weak. If the weighted average quality gets too low (1.0 and below), it may not be worth keeping that data set unless you really need it.</p>
 <p>We manually pick the the arrival times to align them. Click on the GUI window, hover over the correct spot where you want to pick the new travel time, and type <tt class="docutils literal"><span class="pre">t2</span></tt>. A red line should appear exactly where your mouse was. You can zoom in to help you with this picking. To zoom out, just hit <tt class="docutils literal"><span class="pre">MCCC</span></tt> again.</p>
 <p>Also pick the arrival time on the array stack. For the arrival times, you want to align the point where the first peak occurs most of all, then try to get the peaks to align.</p>
 </div>
 <div class="section" id="sacp2-to-check-for-outlier-seismograms">
-<h3>7.2.9. SACP2 to check for outlier seismograms<a class="headerlink" href="#sacp2-to-check-for-outlier-seismograms" title="Permalink to this headline">¶</a></h3>
+<h3>8.2.9. SACP2 to check for outlier seismograms<a class="headerlink" href="#sacp2-to-check-for-outlier-seismograms" title="Permalink to this headline">¶</a></h3>
 <p>Hit and go to the last figure, (d). Zoom in to have a better look. Zooming in doesn’t always work well; close and reopen the <tt class="docutils literal"><span class="pre">SACP2</span></tt> window if there are problems.</p>
 <p>Click on the outliers that stray from the main group of stacked seismograms. The terminal will output the names of the seismograms that you clicked on, so you can return to the main GUI window and readjust the travel times.</p>
 </div>
 <div class="section" id="go-through-the-badly-aligned-seismograms-and-realign-the-travel-times-manually">
-<h3>7.2.10. Go through the badly aligned seismograms and realign the travel times manually<a class="headerlink" href="#go-through-the-badly-aligned-seismograms-and-realign-the-travel-times-manually" title="Permalink to this headline">¶</a></h3>
+<h3>8.2.10. Go through the badly aligned seismograms and realign the travel times manually<a class="headerlink" href="#go-through-the-badly-aligned-seismograms-and-realign-the-travel-times-manually" title="Permalink to this headline">¶</a></h3>
 <p>By default, the worst seismograms are on the first page, and as you click through the pages, the quality of the seismograms gradually gets better. Keep using <tt class="docutils literal"><span class="pre">t2</span></tt> to realign the arrival times so that the peaks of all the seismograms are nicely aligned. Remember to zoom in to have a better look.</p>
 <p>However, you may which to sort the seismograms in alphabetical order so that you can find the bad seismogrrams and correct them more easily. Hit the <tt class="docutils literal"><span class="pre">sort</span></tt> button and a window will popup for you to choose which sorting method to use. In this case, choose to sort the files by filename.</p>
 <img alt="../_images/sorting-interface.png" src="../_images/sorting-interface.png" />
@@ -185,7 +185,7 @@
 </div>
 </div>
 <div class="section" id="what-the-alignments-stand-for">
-<h2>7.3. What the Alignments Stand For<a class="headerlink" href="#what-the-alignments-stand-for" title="Permalink to this headline">¶</a></h2>
+<h2>8.3. What the Alignments Stand For<a class="headerlink" href="#what-the-alignments-stand-for" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>T0: Theoretical Arrival</li>
 <li>T1: Pick from initial cross correlation</li>
@@ -195,18 +195,18 @@
 </ul>
 </div>
 <div class="section" id="post-processing">
-<h2>7.4. Post Processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">¶</a></h2>
+<h2>8.4. Post Processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="getting-the-output">
-<h3>7.4.1. Getting the output<a class="headerlink" href="#getting-the-output" title="Permalink to this headline">¶</a></h3>
+<h3>8.4.1. Getting the output<a class="headerlink" href="#getting-the-output" title="Permalink to this headline">¶</a></h3>
 <p>In the same folder as the initial PKL file you ran <tt class="docutils literal"><span class="pre">ttpick.py</span></tt> on, you can find the output list with extension <tt class="docutils literal"><span class="pre">&lt;event</span> <span class="pre">name&gt;.mcp</span></tt>, which contains the travel time arrivals.</p>
 </div>
 <div class="section" id="getting-the-stations-of-the-seismograms-chosen">
-<h3>7.4.2. Getting the stations of the seismograms chosen<a class="headerlink" href="#getting-the-stations-of-the-seismograms-chosen" title="Permalink to this headline">¶</a></h3>
+<h3>8.4.2. Getting the stations of the seismograms chosen<a class="headerlink" href="#getting-the-stations-of-the-seismograms-chosen" title="Permalink to this headline">¶</a></h3>
 <p>Run <tt class="docutils literal"><span class="pre">getsta.py</span></tt> in the additional scripts (not on Github for now). It gives the unique list of stations where the seismograms came from. You need to run it with the list of all <tt class="docutils literal"><span class="pre">pkl</span></tt> files chosen after you saved to. You so this <tt class="docutils literal"><span class="pre">./getsta.py</span> <span class="pre">*.pkl</span></tt>.</p>
 <img alt="../_images/count_stations.png" src="../_images/count_stations.png" />
 </div>
 <div class="section" id="picking-travel-times-does-not-work">
-<h3>7.4.3. Picking Travel Times does not work<a class="headerlink" href="#picking-travel-times-does-not-work" title="Permalink to this headline">¶</a></h3>
+<h3>8.4.3. Picking Travel Times does not work<a class="headerlink" href="#picking-travel-times-does-not-work" title="Permalink to this headline">¶</a></h3>
 <p>If you run <tt class="docutils literal"><span class="pre">ttick.py</span> <span class="pre">&lt;Event</span> <span class="pre">name&gt;.bhz.pkl</span></tt>, a GUI will pop up for you to manually pick the travel times by pressing the keyboard. If typing on the keyboard as directed does not allow you to pick travel times, it could be a problem with the keyboard settings, or the matplotlib backend.</p>
 <p>To fix this, first look for the .matplotlib directory. It is hidden so in your home directory do <tt class="docutils literal"><span class="pre">ls</span> <span class="pre">-a</span></tt> to find it.
 Once you have found the <tt class="docutils literal"><span class="pre">.matplotlib</span></tt> directory, cd into it, and then look for the <tt class="docutils literal"><span class="pre">matplotlibrc</span></tt> file.
@@ -217,7 +217,7 @@ Inside that file, ensure the backend is set to:</p>
 <p>Comment out the other backends!</p>
 </div>
 <div class="section" id="travel-times">
-<h3>7.4.4. Travel Times<a class="headerlink" href="#travel-times" title="Permalink to this headline">¶</a></h3>
+<h3>8.4.4. Travel Times<a class="headerlink" href="#travel-times" title="Permalink to this headline">¶</a></h3>
 <p>If one of the seismograms being picked does not fit completely within the green (computer) window, nad you hit <cite>ICCC-A</cite> or <cite>ICCC-B</cite>, you will get an error message complaining about the exact seismogram which is too short. Deselect it.</p>
 </div>
 </div>
@@ -234,27 +234,27 @@ Inside that file, ensure the backend is set to:</p>
             </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">7. Measuring Teleseismic Body Wave Arrival Times</a><ul>
-<li><a class="reference internal" href="#automated-phase-alignment">7.1. Automated Phase Alignment</a></li>
-<li><a class="reference internal" href="#picking-travel-times">7.2. Picking Travel Times</a><ul>
-<li><a class="reference internal" href="#getting-into-the-right-directory">7.2.1. Getting into the right directory</a></li>
-<li><a class="reference internal" href="#running-ttpick-py">7.2.2. Running ttpick.py</a></li>
-<li><a class="reference internal" href="#iccc-a">7.2.3. ICCC-A</a></li>
-<li><a class="reference internal" href="#get-rid-of-really-bad-seismograms">7.2.4. Get rid of really bad seismograms</a></li>
-<li><a class="reference internal" href="#filtering">7.2.5. Filtering</a></li>
-<li><a class="reference internal" href="#iccc-b">7.2.6. ICCC-B</a></li>
-<li><a class="reference internal" href="#mccc">7.2.7. MCCC</a></li>
-<li><a class="reference internal" href="#manually-pick-the-arrival-times-using-t2">7.2.8. Manually pick the arrival times using t2</a></li>
-<li><a class="reference internal" href="#sacp2-to-check-for-outlier-seismograms">7.2.9. SACP2 to check for outlier seismograms</a></li>
-<li><a class="reference internal" href="#go-through-the-badly-aligned-seismograms-and-realign-the-travel-times-manually">7.2.10. Go through the badly aligned seismograms and realign the travel times manually</a></li>
+<li><a class="reference internal" href="#">8. Measuring Teleseismic Body Wave Arrival Times</a><ul>
+<li><a class="reference internal" href="#automated-phase-alignment">8.1. Automated Phase Alignment</a></li>
+<li><a class="reference internal" href="#picking-travel-times">8.2. Picking Travel Times</a><ul>
+<li><a class="reference internal" href="#getting-into-the-right-directory">8.2.1. Getting into the right directory</a></li>
+<li><a class="reference internal" href="#running-ttpick-py">8.2.2. Running ttpick.py</a></li>
+<li><a class="reference internal" href="#iccc-a">8.2.3. ICCC-A</a></li>
+<li><a class="reference internal" href="#get-rid-of-really-bad-seismograms">8.2.4. Get rid of really bad seismograms</a></li>
+<li><a class="reference internal" href="#filtering">8.2.5. Filtering</a></li>
+<li><a class="reference internal" href="#iccc-b">8.2.6. ICCC-B</a></li>
+<li><a class="reference internal" href="#mccc">8.2.7. MCCC</a></li>
+<li><a class="reference internal" href="#manually-pick-the-arrival-times-using-t2">8.2.8. Manually pick the arrival times using t2</a></li>
+<li><a class="reference internal" href="#sacp2-to-check-for-outlier-seismograms">8.2.9. SACP2 to check for outlier seismograms</a></li>
+<li><a class="reference internal" href="#go-through-the-badly-aligned-seismograms-and-realign-the-travel-times-manually">8.2.10. Go through the badly aligned seismograms and realign the travel times manually</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#what-the-alignments-stand-for">7.3. What the Alignments Stand For</a></li>
-<li><a class="reference internal" href="#post-processing">7.4. Post Processing</a><ul>
-<li><a class="reference internal" href="#getting-the-output">7.4.1. Getting the output</a></li>
-<li><a class="reference internal" href="#getting-the-stations-of-the-seismograms-chosen">7.4.2. Getting the stations of the seismograms chosen</a></li>
-<li><a class="reference internal" href="#picking-travel-times-does-not-work">7.4.3. Picking Travel Times does not work</a></li>
-<li><a class="reference internal" href="#travel-times">7.4.4. Travel Times</a></li>
+<li><a class="reference internal" href="#what-the-alignments-stand-for">8.3. What the Alignments Stand For</a></li>
+<li><a class="reference internal" href="#post-processing">8.4. Post Processing</a><ul>
+<li><a class="reference internal" href="#getting-the-output">8.4.1. Getting the output</a></li>
+<li><a class="reference internal" href="#getting-the-stations-of-the-seismograms-chosen">8.4.2. Getting the stations of the seismograms chosen</a></li>
+<li><a class="reference internal" href="#picking-travel-times-does-not-work">8.4.3. Picking Travel Times does not work</a></li>
+<li><a class="reference internal" href="#travel-times">8.4.4. Travel Times</a></li>
 </ul>
 </li>
 </ul>
@@ -263,10 +263,10 @@ Inside that file, ensure the backend is set to:</p>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="parameterConfiguration.html"
-                        title="previous chapter">6. Parameter Configuration</a></p>
+                        title="previous chapter">7. Parameter Configuration</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="citations.html"
-                        title="next chapter">8. Citations</a></p>
+                        title="next chapter">9. Citations</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../_sources/docfiles/PickingTravelTimes.txt"
@@ -296,10 +296,10 @@ Inside that file, ensure the backend is set to:</p>
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="citations.html" title="8. Citations"
+          <a href="citations.html" title="9. Citations"
              >next</a> |</li>
         <li class="right" >
-          <a href="parameterConfiguration.html" title="6. Parameter Configuration"
+          <a href="parameterConfiguration.html" title="7. Parameter Configuration"
              >previous</a> |</li>
         <li><a href="../index.html">AIMBAT 0.1.2 documentation</a> &raquo;</li> 
       </ul>

@@ -16,15 +16,18 @@
 \BOOKMARK [1][-]{section.3.3}{Building the Pysmo Packages}{chapter.3}% 16
 \BOOKMARK [0][-]{chapter.4}{Getting Data}{}% 17
 \BOOKMARK [1][-]{section.4.1}{Standing Order for Data}{chapter.4}% 18
-\BOOKMARK [0][-]{chapter.5}{Analyzing Data}{}% 19
-\BOOKMARK [1][-]{section.5.1}{Seismic Analysis Code \(SAC\)}{chapter.5}% 20
-\BOOKMARK [0][-]{chapter.6}{Parameter Configuration}{}% 21
-\BOOKMARK [1][-]{section.6.1}{Backend}{chapter.6}% 22
-\BOOKMARK [0][-]{chapter.7}{Measuring Teleseismic Body Wave Arrival Times}{}% 23
-\BOOKMARK [1][-]{section.7.1}{Automated Phase Alignment}{chapter.7}% 24
-\BOOKMARK [1][-]{section.7.2}{Picking Travel Times}{chapter.7}% 25
-\BOOKMARK [1][-]{section.7.3}{What the Alignments Stand For}{chapter.7}% 26
-\BOOKMARK [1][-]{section.7.4}{Post Processing}{chapter.7}% 27
-\BOOKMARK [0][-]{chapter.8}{Citations}{}% 28
-\BOOKMARK [0][-]{chapter.9}{Indices and tables}{}% 29
-\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 30
+\BOOKMARK [0][-]{chapter.5}{Filtering Data}{}% 19
+\BOOKMARK [1][-]{section.5.1}{Filtering GUI}{chapter.5}% 20
+\BOOKMARK [1][-]{section.5.2}{Saving Options}{chapter.5}% 21
+\BOOKMARK [0][-]{chapter.6}{Analyzing Data}{}% 22
+\BOOKMARK [1][-]{section.6.1}{Seismic Analysis Code \(SAC\)}{chapter.6}% 23
+\BOOKMARK [0][-]{chapter.7}{Parameter Configuration}{}% 24
+\BOOKMARK [1][-]{section.7.1}{Backend}{chapter.7}% 25
+\BOOKMARK [0][-]{chapter.8}{Measuring Teleseismic Body Wave Arrival Times}{}% 26
+\BOOKMARK [1][-]{section.8.1}{Automated Phase Alignment}{chapter.8}% 27
+\BOOKMARK [1][-]{section.8.2}{Picking Travel Times}{chapter.8}% 28
+\BOOKMARK [1][-]{section.8.3}{What the Alignments Stand For}{chapter.8}% 29
+\BOOKMARK [1][-]{section.8.4}{Post Processing}{chapter.8}% 30
+\BOOKMARK [0][-]{chapter.9}{Citations}{}% 31
+\BOOKMARK [0][-]{chapter.10}{Indices and tables}{}% 32
+\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 33

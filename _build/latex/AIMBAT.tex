@@ -584,6 +584,82 @@ run in the whole downloaded directory (the one with the sac directory)
 \end{enumerate}
 
 
+\chapter{Filtering Data}
+\label{docfiles/filteringData::doc}\label{docfiles/filteringData:filtering-data}
+There are several options for filtering data. \href{http://www.iris.edu/files/sac-manual/}{SAC} offers several ways to filter data, which are not discussed here. You could also do so when downloading data using SOD. Alternatively, you could filter data in AIMBAT.
+
+
+\section{Filtering GUI}
+\label{docfiles/filteringData:filtering-gui}
+To filter data, once you have imported the files to run into the GUI, hit the \code{filter} button to bring up the filtering GUI. The figure on top shows the results of the signal plotted against time before and after filtering with a \href{http://en.wikipedia.org/wiki/Butterworth\_filter}{butterworth filter}.
+
+You can adjust the corner frequencies used on the figure on the lower corner. The defaults used here are:
+
+\begin{tabulary}{\linewidth}{|L|L|}
+\hline
+\textsf{\relax 
+Variable
+} & \textsf{\relax 
+Default
+}\\
+\hline
+Order
+ & 
+2
+\\
+
+Filter Type
+ & 
+Bandpass
+\\
+
+Low Frequency
+ & 
+0.05 Hz
+\\
+
+High Frequency
+ & 
+0.25 Hz
+\\
+\hline\end{tabulary}
+
+
+You can change the order and filter type by selecting the option you want. By clicking on the lower figure, you can select the low frequency and the high frequency you want. Click \code{apply} to filter the seismograms when you are satisfied with the filter paramters chosen.
+
+
+\section{Saving Options}
+\label{docfiles/filteringData:saving-options}
+There are several options for saving the SAC header files of the seismograms you have chosen.
+
+\begin{tabulary}{\linewidth}{|L|L|}
+\hline
+\textsf{\relax 
+Button Title
+} & \textsf{\relax 
+What it does
+}\\
+\hline
+Save Headers Only
+ & 
+Saves the SAC headers only
+\\
+
+Save Headers \& Filter Parameters
+ & 
+Saves the SAC headers and filter parameters used.
+Those filter parameters will automatically the
+next time the SAC headers are loaded in AIMBAT
+\\
+
+Save Headers \& Override Data
+ & 
+Save SAV headers and write in the filtered data
+\\
+\hline\end{tabulary}
+
+
+
 \chapter{Analyzing Data}
 \label{docfiles/analyzingData:analyzing-data}\label{docfiles/analyzingData::doc}
 
