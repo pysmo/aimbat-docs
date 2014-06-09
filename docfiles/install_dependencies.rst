@@ -13,7 +13,7 @@ Usually, Macs already have python installed by default. To check if you have pyt
 Getting Git
 -----------
 
-The `latest version of AIMBAT <https://github.com/pysmo>`_ will be on Github, so it would be good to get `Git <https://github.com/>`_ on your computer. This is not strictly necessary, as you could also download it as a zipfile from the `AIMBAT website <http://www.earth.northwestern.edu/~xlou/aimbat.html>_`.
+The `latest version of AIMBAT <https://github.com/pysmo>`_ will be on Github, so it would be good to get `Git <https://github.com/>`_ on your computer. This is not strictly necessary, as you could also download it as a zipfile from the `AIMBAT website <http://www.earth.northwestern.edu/~xlou/aimbat.html>`_.
 
 The best way to get Git is to use `Git for Mac <https://mac.github.com/>`_. This is a GUI you can used for your repositories, but if you want to use the command line interface you can also enable it when setting it up.	
 
@@ -94,6 +94,8 @@ If you do not want to use Enthought Canopy, read the rest of this section.
 
 
 
+
+
 .. ############################################################################ ..
 .. #                       INSTALLING PYTHON - MACPORTS                       # ..
 .. ############################################################################ ..
@@ -101,11 +103,62 @@ If you do not want to use Enthought Canopy, read the rest of this section.
 Installing Python with Macports
 -------------------------------
 
+Usually, Macs already have python installed by default. To check if you have python on your mac, open up terminal, and type ``python``. If python is installed, a console should pop up. If python is not installed, you should see an error message show up. You should download the correct verion for your operating system `here <https://www.python.org/>`_. 
+
+.. -------------------------------------------------------------------------------- ..
+
+Getting Macports
+~~~~~~~~~~~~~~~~
+
+Its best to use `Macports <http://guide.macports.org/>`_ to install the necessary python libraries for AIMBAT. If you just upgraded your operating system, you need to `upgrade Macports and re-install the libraries <https://trac. macports.org/wiki/Migration>`_ as well. 
+
+.. -------------------------------------------------------------------------------- ..
+
+Installing the necessary components
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Inside the terminal, once python is install, type these commands in using sudo mode. Note you will need to enter your admin password.::
+
+	sudo port install python27
+  	sudo port install py27-numpy
+  	sudo port install py27-scipy
+  	sudo port install py27-matplotlib
+ 	sudo port install py27-ipython
+  	sudo port install python_select
+
+Installing the last two packages is optional. ``ipython`` is an enhanced interactive python shell. ``python_select`` is used to select default Python version by the following command::
+
+	port select --set python python27
+
+You need this version, not other versions on your computer, since this is the one that has the libraries AIMBAT needs.
 
 
 .. ############################################################################ ..
 .. #                       INSTALLING PYTHON - MACPORTS                       # ..
 .. ############################################################################ ..
+
+
+
+
+
+
+.. ############################################################################ ..
+.. #                         REGARDING PACKAGE MANAGERS                       # ..
+.. ############################################################################ ..
+
+Regarding Package Managers
+--------------------------
+
+The package manager brew caused many problems when tried. If you figured it out properly, please :ref:`contact the authors <authors-contacts>` with instructions~ In general, the authors do not recommend trying to install the packages separately when there are Python versions that will come with all the packages pre-installed already.
+
+`Scipy <http://www.scipy.org/install.html>`_ is especially tricky as it relies on Fortran and C as well. The authors of scipy recommend using Enthought Canopy or Anacoda to install it.
+
+.. ############################################################################ ..
+.. #                         REGARDING PACKAGE MANAGERS                       # ..
+.. ############################################################################ ..
+
+
+
 
 
 

@@ -9,14 +9,17 @@
 \contentsline {section}{\numberline {2.3}Python Packages needed}{6}{section.2.3}
 \contentsline {section}{\numberline {2.4}Installing Python with Enthought Canopy}{6}{section.2.4}
 \contentsline {section}{\numberline {2.5}Installing Python with Macports}{7}{section.2.5}
-\contentsline {section}{\numberline {2.6}Possible Issues}{7}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Macport}{7}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Installing Python with Pip}{7}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {2.6.3}Setting the Python Path to the scripts}{7}{subsection.2.6.3}
-\contentsline {subsection}{\numberline {2.6.4}Terminal Commands stop working}{7}{subsection.2.6.4}
-\contentsline {subsection}{\numberline {2.6.5}Installing Enthought Canopy}{7}{subsection.2.6.5}
-\contentsline {subsection}{\numberline {2.6.6}Uninstalling Enthought Canopy}{8}{subsection.2.6.6}
-\contentsline {subsection}{\numberline {2.6.7}Path to python files not found}{10}{subsection.2.6.7}
+\contentsline {subsection}{\numberline {2.5.1}Getting Macports}{7}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Installing the necessary components}{7}{subsection.2.5.2}
+\contentsline {section}{\numberline {2.6}Regarding Package Managers}{7}{section.2.6}
+\contentsline {section}{\numberline {2.7}Possible Issues}{7}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Macport}{7}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Installing Python with Pip}{8}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}Setting the Python Path to the scripts}{8}{subsection.2.7.3}
+\contentsline {subsection}{\numberline {2.7.4}Terminal Commands stop working}{8}{subsection.2.7.4}
+\contentsline {subsection}{\numberline {2.7.5}Installing Enthought Canopy}{8}{subsection.2.7.5}
+\contentsline {subsection}{\numberline {2.7.6}Uninstalling Enthought Canopy}{9}{subsection.2.7.6}
+\contentsline {subsection}{\numberline {2.7.7}Path to python files not found}{11}{subsection.2.7.7}
 \contentsline {chapter}{\numberline {3}Installing AIMBAT}{15}{chapter.3}
 \contentsline {section}{\numberline {3.1}Getting the Packages}{15}{section.3.1}
 \contentsline {section}{\numberline {3.2}Where to install the packages}{15}{section.3.2}

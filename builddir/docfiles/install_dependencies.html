@@ -56,7 +56,7 @@
 <p>Usually, Macs already have python installed by default. To check if you have python on your mac, open up terminal, and do python in the terminal. If python is installed you should see a python console show up, displaying the version number of python. The version number should be at least 2.7 or higher. If python is not installed, you should see an error message show up. However, you may or may not have some necessary packages installed.</p>
 <div class="section" id="getting-git">
 <h2>2.1. Getting Git<a class="headerlink" href="#getting-git" title="Permalink to this headline">¶</a></h2>
-<p>The <a class="reference external" href="https://github.com/pysmo">latest version of AIMBAT</a> will be on Github, so it would be good to get <a class="reference external" href="https://github.com/">Git</a> on your computer. This is not strictly necessary, as you could also download it as a zipfile from the <cite>AIMBAT website &lt;http://www.earth.northwestern.edu/~xlou/aimbat.html&gt;_</cite>.</p>
+<p>The <a class="reference external" href="https://github.com/pysmo">latest version of AIMBAT</a> will be on Github, so it would be good to get <a class="reference external" href="https://github.com/">Git</a> on your computer. This is not strictly necessary, as you could also download it as a zipfile from the <a class="reference external" href="http://www.earth.northwestern.edu/~xlou/aimbat.html">AIMBAT website</a>.</p>
 <p>The best way to get Git is to use <a class="reference external" href="https://mac.github.com/">Git for Mac</a>. This is a GUI you can used for your repositories, but if you want to use the command line interface you can also enable it when setting it up.</p>
 </div>
 <div class="section" id="getting-your-operating-system">
@@ -80,21 +80,48 @@
 </div>
 <div class="section" id="installing-python-with-macports">
 <h2>2.5. Installing Python with Macports<a class="headerlink" href="#installing-python-with-macports" title="Permalink to this headline">¶</a></h2>
+<p>Usually, Macs already have python installed by default. To check if you have python on your mac, open up terminal, and type <tt class="docutils literal"><span class="pre">python</span></tt>. If python is installed, a console should pop up. If python is not installed, you should see an error message show up. You should download the correct verion for your operating system <a class="reference external" href="https://www.python.org/">here</a>.</p>
+<div class="section" id="getting-macports">
+<h3>2.5.1. Getting Macports<a class="headerlink" href="#getting-macports" title="Permalink to this headline">¶</a></h3>
+<p>Its best to use <a class="reference external" href="http://guide.macports.org/">Macports</a> to install the necessary python libraries for AIMBAT. If you just upgraded your operating system, you need to <a class="reference external" href="https://trac.macports.org/wiki/Migration">upgrade Macports and re-install the libraries</a> as well.</p>
+</div>
+<div class="section" id="installing-the-necessary-components">
+<h3>2.5.2. Installing the necessary components<a class="headerlink" href="#installing-the-necessary-components" title="Permalink to this headline">¶</a></h3>
+<p>Inside the terminal, once python is install, type these commands in using sudo mode. Note you will need to enter your admin password.:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo port install python27
+sudo port install py27-numpy
+sudo port install py27-scipy
+sudo port install py27-matplotlib
+sudo port install py27-ipython
+sudo port install python_select
+</pre></div>
+</div>
+<p>Installing the last two packages is optional. <tt class="docutils literal"><span class="pre">ipython</span></tt> is an enhanced interactive python shell. <tt class="docutils literal"><span class="pre">python_select</span></tt> is used to select default Python version by the following command:</p>
+<div class="highlight-python"><div class="highlight"><pre>port select --set python python27
+</pre></div>
+</div>
+<p>You need this version, not other versions on your computer, since this is the one that has the libraries AIMBAT needs.</p>
+</div>
+</div>
+<div class="section" id="regarding-package-managers">
+<h2>2.6. Regarding Package Managers<a class="headerlink" href="#regarding-package-managers" title="Permalink to this headline">¶</a></h2>
+<p>The package manager brew caused many problems when tried. If you figured it out properly, please <a class="reference internal" href="introduction.html#authors-contacts"><em>contact the authors</em></a> with instructions~ In general, the authors do not recommend trying to install the packages separately when there are Python versions that will come with all the packages pre-installed already.</p>
+<p><a class="reference external" href="http://www.scipy.org/install.html">Scipy</a> is especially tricky as it relies on Fortran and C as well. The authors of scipy recommend using Enthought Canopy or Anacoda to install it.</p>
 </div>
 <div class="section" id="possible-issues">
-<h2>2.6. Possible Issues<a class="headerlink" href="#possible-issues" title="Permalink to this headline">¶</a></h2>
+<h2>2.7. Possible Issues<a class="headerlink" href="#possible-issues" title="Permalink to this headline">¶</a></h2>
 <p>Here some common problems and possible resolutions. If your problem is not listed here, or you have a suggestion, please <a class="reference internal" href="introduction.html#authors-contacts"><em>contact the authors</em></a>.</p>
 <div class="section" id="macport">
-<h3>2.6.1. Macport<a class="headerlink" href="#macport" title="Permalink to this headline">¶</a></h3>
+<h3>2.7.1. Macport<a class="headerlink" href="#macport" title="Permalink to this headline">¶</a></h3>
 <p>You may run into problems with AIMBAT if your <a class="reference external" href="http://www.macports.org/">Macport</a> version is not compatible with your operating system version. For example, if you used Macports for OS X 10.8 to install AIMBAT, then upgraded your operating system or OS X 10.9, you may find that AIMBAT no longer works properly. You will need to upgrade Macports to fix this error.</p>
 <p>Do not uninstall MacPorts unless you know what you are doing, uninstalling MacPorts may get rid of other programs you installed using MacPorts. However, if you are sure you want to do so, see <a class="reference external" href="https://guide.macports.org/chunked/installing.macports.uninstalling.html">here</a> for instructions.</p>
 </div>
 <div class="section" id="installing-python-with-pip">
-<h3>2.6.2. Installing Python with Pip<a class="headerlink" href="#installing-python-with-pip" title="Permalink to this headline">¶</a></h3>
+<h3>2.7.2. Installing Python with Pip<a class="headerlink" href="#installing-python-with-pip" title="Permalink to this headline">¶</a></h3>
 <p>Be careful with the operating system. For OS X 10.9 and above, Python 2.7 is not fully compatible and there may be problems installing python with Pip. Best to use Enthought Canopy or Python 3 with OS X 10.9.</p>
 </div>
 <div class="section" id="setting-the-python-path-to-the-scripts">
-<h3>2.6.3. Setting the Python Path to the scripts<a class="headerlink" href="#setting-the-python-path-to-the-scripts" title="Permalink to this headline">¶</a></h3>
+<h3>2.7.3. Setting the Python Path to the scripts<a class="headerlink" href="#setting-the-python-path-to-the-scripts" title="Permalink to this headline">¶</a></h3>
 <p>You are asked to add the path to the AIMBAT scripts in your file. To do that, you add them to the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> file. There are other files you could add it to that work as well, such as the <tt class="docutils literal"><span class="pre">.profile</span></tt> or <tt class="docutils literal"><span class="pre">.bash_profile</span></tt> files. You can see the files by opening the terminal and doing <tt class="docutils literal"><span class="pre">ls</span> <span class="pre">-a</span></tt> to see all the hidden files, and open then by doing <tt class="docutils literal"><span class="pre">vi</span> <span class="pre">.bashrc</span></tt> in vim, for instance.
 To ensure you can open a script, you need to add:</p>
 <div class="highlight-python"><div class="highlight"><pre>export PATH=$PATH:&lt;path-to-folder-with-scripts&gt;
@@ -104,7 +131,7 @@ export PYTHONPATH=$PYTHONPATH:&lt;path-to-folder-with-scripts&gt;
 <p>to the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> file. We recommend adding the paths to the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> file.</p>
 </div>
 <div class="section" id="terminal-commands-stop-working">
-<h3>2.6.4. Terminal Commands stop working<a class="headerlink" href="#terminal-commands-stop-working" title="Permalink to this headline">¶</a></h3>
+<h3>2.7.4. Terminal Commands stop working<a class="headerlink" href="#terminal-commands-stop-working" title="Permalink to this headline">¶</a></h3>
 <p>If ever the terminal commands such as ls stop working in the terminal, it could be that something went wrong with a path in the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> or <tt class="docutils literal"><span class="pre">.profile</span></tt> files. If that happens you may not be able to open them in vim as that command would have stopped working as well. Instead, in the terminal, you do:</p>
 <div class="highlight-python"><div class="highlight"><pre>PATH=/bin:${PATH}
 PATH=/usr/bin:${PATH}
@@ -113,12 +140,12 @@ PATH=/usr/bin:${PATH}
 <p>And that should allow the commands to start working again. Figure out what you did wrong and remove that command.</p>
 </div>
 <div class="section" id="installing-enthought-canopy">
-<h3>2.6.5. Installing Enthought Canopy<a class="headerlink" href="#installing-enthought-canopy" title="Permalink to this headline">¶</a></h3>
+<h3>2.7.5. Installing Enthought Canopy<a class="headerlink" href="#installing-enthought-canopy" title="Permalink to this headline">¶</a></h3>
 <p>Occasionally, Enthought Canopy may not open the default setup environment after you downloaded and tried to install it. If this happens, open the Canopy package, go to &#8220;Preferences&#8221;, and select Canopy as your default environment.</p>
 <img alt="../_images/enthought_as_default.png" src="../_images/enthought_as_default.png" />
 </div>
 <div class="section" id="uninstalling-enthought-canopy">
-<h3>2.6.6. Uninstalling Enthought Canopy<a class="headerlink" href="#uninstalling-enthought-canopy" title="Permalink to this headline">¶</a></h3>
+<h3>2.7.6. Uninstalling Enthought Canopy<a class="headerlink" href="#uninstalling-enthought-canopy" title="Permalink to this headline">¶</a></h3>
 <p>The official Enthought gives suggestions on uninstalling <a class="reference external" href="https://guide.macports.org/chunked/installing.macports.uninstalling.html">here</a>.</p>
 <img alt="../_images/canopy_preferences.png" src="../_images/canopy_preferences.png" />
 <p>STEPS:</p>
@@ -132,7 +159,7 @@ PATH=/usr/bin:${PATH}
 <img alt="../_images/applications_canopy.png" src="../_images/applications_canopy.png" />
 </div>
 <div class="section" id="path-to-python-files-not-found">
-<h3>2.6.7. Path to python files not found<a class="headerlink" href="#path-to-python-files-not-found" title="Permalink to this headline">¶</a></h3>
+<h3>2.7.7. Path to python files not found<a class="headerlink" href="#path-to-python-files-not-found" title="Permalink to this headline">¶</a></h3>
 <p>After adding the path to your directory with scripts in <tt class="docutils literal"><span class="pre">.bashrc</span></tt>, you still need to source the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> files in <tt class="docutils literal"><span class="pre">.profile</span></tt>, or the system may not find the directory. See here for more <a class="reference external" href="http://publib.boulder.ibm.com/infocenter/pseries/v5r3/index.jsp?topic=/com.ibm.aix.baseadmn/doc/baseadmndita/prof_file.htm">details</a> to see how the profile file is sourced. Note that this one will override the file in <cite>/etc/profile</cite>.</p>
 <img alt="../_images/residue.png" src="../_images/residue.png" />
 <img alt="../_images/profile_file.png" src="../_images/profile_file.png" />
@@ -161,15 +188,20 @@ PATH=/usr/bin:${PATH}
 <li><a class="reference internal" href="#getting-your-operating-system">2.2. Getting your operating system</a></li>
 <li><a class="reference internal" href="#python-packages-needed">2.3. Python Packages needed</a></li>
 <li><a class="reference internal" href="#installing-python-with-enthought-canopy">2.4. Installing Python with Enthought Canopy</a></li>
-<li><a class="reference internal" href="#installing-python-with-macports">2.5. Installing Python with Macports</a></li>
-<li><a class="reference internal" href="#possible-issues">2.6. Possible Issues</a><ul>
-<li><a class="reference internal" href="#macport">2.6.1. Macport</a></li>
-<li><a class="reference internal" href="#installing-python-with-pip">2.6.2. Installing Python with Pip</a></li>
-<li><a class="reference internal" href="#setting-the-python-path-to-the-scripts">2.6.3. Setting the Python Path to the scripts</a></li>
-<li><a class="reference internal" href="#terminal-commands-stop-working">2.6.4. Terminal Commands stop working</a></li>
-<li><a class="reference internal" href="#installing-enthought-canopy">2.6.5. Installing Enthought Canopy</a></li>
-<li><a class="reference internal" href="#uninstalling-enthought-canopy">2.6.6. Uninstalling Enthought Canopy</a></li>
-<li><a class="reference internal" href="#path-to-python-files-not-found">2.6.7. Path to python files not found</a></li>
+<li><a class="reference internal" href="#installing-python-with-macports">2.5. Installing Python with Macports</a><ul>
+<li><a class="reference internal" href="#getting-macports">2.5.1. Getting Macports</a></li>
+<li><a class="reference internal" href="#installing-the-necessary-components">2.5.2. Installing the necessary components</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#regarding-package-managers">2.6. Regarding Package Managers</a></li>
+<li><a class="reference internal" href="#possible-issues">2.7. Possible Issues</a><ul>
+<li><a class="reference internal" href="#macport">2.7.1. Macport</a></li>
+<li><a class="reference internal" href="#installing-python-with-pip">2.7.2. Installing Python with Pip</a></li>
+<li><a class="reference internal" href="#setting-the-python-path-to-the-scripts">2.7.3. Setting the Python Path to the scripts</a></li>
+<li><a class="reference internal" href="#terminal-commands-stop-working">2.7.4. Terminal Commands stop working</a></li>
+<li><a class="reference internal" href="#installing-enthought-canopy">2.7.5. Installing Enthought Canopy</a></li>
+<li><a class="reference internal" href="#uninstalling-enthought-canopy">2.7.6. Uninstalling Enthought Canopy</a></li>
+<li><a class="reference internal" href="#path-to-python-files-not-found">2.7.7. Path to python files not found</a></li>
 </ul>
 </li>
 </ul>

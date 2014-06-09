@@ -176,7 +176,7 @@ Usually, Macs already have python installed by default. To check if you have pyt
 
 \section{Getting Git}
 \label{docfiles/install_dependencies:getting-git}
-The \href{https://github.com/pysmo}{latest version of AIMBAT} will be on Github, so it would be good to get \href{https://github.com/}{Git} on your computer. This is not strictly necessary, as you could also download it as a zipfile from the \emph{AIMBAT website \textless{}http://www.earth.northwestern.edu/\textasciitilde{}xlou/aimbat.html\textgreater{}\_}.
+The \href{https://github.com/pysmo}{latest version of AIMBAT} will be on Github, so it would be good to get \href{https://github.com/}{Git} on your computer. This is not strictly necessary, as you could also download it as a zipfile from the \href{http://www.earth.northwestern.edu/~xlou/aimbat.html}{AIMBAT website}.
 
 The best way to get Git is to use \href{https://mac.github.com/}{Git for Mac}. This is a GUI you can used for your repositories, but if you want to use the command line interface you can also enable it when setting it up.
 
@@ -209,6 +209,42 @@ If you do not want to use Enthought Canopy, read the rest of this section.
 
 \section{Installing Python with Macports}
 \label{docfiles/install_dependencies:installing-python-with-macports}
+Usually, Macs already have python installed by default. To check if you have python on your mac, open up terminal, and type \code{python}. If python is installed, a console should pop up. If python is not installed, you should see an error message show up. You should download the correct verion for your operating system \href{https://www.python.org/}{here}.
+
+
+\subsection{Getting Macports}
+\label{docfiles/install_dependencies:getting-macports}
+Its best to use \href{http://guide.macports.org/}{Macports} to install the necessary python libraries for AIMBAT. If you just upgraded your operating system, you need to \href{https://trac.macports.org/wiki/Migration}{upgrade Macports and re-install the libraries} as well.
+
+
+\subsection{Installing the necessary components}
+\label{docfiles/install_dependencies:installing-the-necessary-components}
+Inside the terminal, once python is install, type these commands in using sudo mode. Note you will need to enter your admin password.:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+sudo port install python27
+sudo port install py27\PYGZhy{}numpy
+sudo port install py27\PYGZhy{}scipy
+sudo port install py27\PYGZhy{}matplotlib
+sudo port install py27\PYGZhy{}ipython
+sudo port install python\PYGZus{}select
+\end{Verbatim}
+
+Installing the last two packages is optional. \code{ipython} is an enhanced interactive python shell. \code{python\_select} is used to select default Python version by the following command:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+port select \PYGZhy{}\PYGZhy{}set python python27
+\end{Verbatim}
+
+You need this version, not other versions on your computer, since this is the one that has the libraries AIMBAT needs.
+
+
+\section{Regarding Package Managers}
+\label{docfiles/install_dependencies:regarding-package-managers}
+The package manager brew caused many problems when tried. If you figured it out properly, please {\hyperref[docfiles/introduction:authors-contacts]{\emph{contact the authors}}} with instructions\textasciitilde{} In general, the authors do not recommend trying to install the packages separately when there are Python versions that will come with all the packages pre-installed already.
+
+\href{http://www.scipy.org/install.html}{Scipy} is especially tricky as it relies on Fortran and C as well. The authors of scipy recommend using Enthought Canopy or Anacoda to install it.
+
 
 \section{Possible Issues}
 \label{docfiles/install_dependencies:possible-issues}
