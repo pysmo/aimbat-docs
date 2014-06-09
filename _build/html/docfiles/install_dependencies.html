@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>2. Installing Dependencies &mdash; AIMBAT 0.1.2 documentation</title>
+    <title>2. Installing Python Dependencies &mdash; AIMBAT 0.1.2 documentation</title>
     
     <link rel="stylesheet" href="../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -51,41 +51,50 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="installing-dependencies">
-<h1>2. Installing Dependencies<a class="headerlink" href="#installing-dependencies" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="installing-python-dependencies">
+<h1>2. Installing Python Dependencies<a class="headerlink" href="#installing-python-dependencies" title="Permalink to this headline">¶</a></h1>
+<p>Usually, Macs already have python installed by default. To check if you have python on your mac, open up terminal, and do python in the terminal. If python is installed you should see a python console show up, displaying the version number of python. The version number should be at least 2.7 or higher. If python is not installed, you should see an error message show up. However, you may or may not have some necessary packages installed.</p>
+<div class="section" id="getting-git">
+<h2>2.1. Getting Git<a class="headerlink" href="#getting-git" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://github.com/pysmo">latest version of AIMBAT</a> will be on Github, so it would be good to get <a class="reference external" href="https://github.com/">Git</a> on your computer. This is not strictly necessary, as you could also download it as a zipfile from the <cite>AIMBAT website &lt;http://www.earth.northwestern.edu/~xlou/aimbat.html&gt;_</cite>.</p>
+<p>The best way to get Git is to use <a class="reference external" href="https://mac.github.com/">Git for Mac</a>. This is a GUI you can used for your repositories, but if you want to use the command line interface you can also enable it when setting it up.</p>
+</div>
 <div class="section" id="getting-your-operating-system">
-<h2>2.1. Getting your operating system<a class="headerlink" href="#getting-your-operating-system" title="Permalink to this headline">¶</a></h2>
+<h2>2.2. Getting your operating system<a class="headerlink" href="#getting-your-operating-system" title="Permalink to this headline">¶</a></h2>
 <p>We assume that most users of AIMBAT will be using macs. If our assumptions are wrong, please <a class="reference internal" href="introduction.html#authors-contacts"><em>contact the authors</em></a>, and if there is sufficient interest we will construct documentation for installations on other operating systems as well.</p>
-<p>Users may need to
-.. image:: installing-images/system_preferences.png</p>
+<p>On a mac, to find the version of your operating system, first click on the apple icon on the top bar of your desktop, go to <tt class="docutils literal"><span class="pre">System</span> <span class="pre">Preferences</span></tt>, and click on <tt class="docutils literal"><span class="pre">Startup</span> <span class="pre">Disk</span></tt>. The operating system version should then be displayed.</p>
+<img alt="../_images/system_preferences.png" src="../_images/system_preferences.png" />
 </div>
-<div class="section" id="installing-python">
-<h2>2.2. Installing Python<a class="headerlink" href="#installing-python" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="http://www1.i2r.a-star.edu.sg/~lins/codes/python.html">Shaowei Lin</a> suggested Enthought Canopy to install all the Python packages easily. If you download the free version of Enthought Canopy, it gives you everything you need for installing AIMBAT properly. If you do not want to use Enthought Canopy, read the rest of this section to use Macports or Pip.</p>
+<div class="section" id="python-packages-needed">
+<h2>2.3. Python Packages needed<a class="headerlink" href="#python-packages-needed" title="Permalink to this headline">¶</a></h2>
+<p>The following are required for AIMBAT
+* <a class="reference external" href="http://www.numpy.org/">Numpy</a>
+* <a class="reference external" href="http://www.scipy.org/">Scipy</a>
+* <a class="reference external" href="http://matplotlib.org/">Matplotlib</a></p>
+<p>Using <a class="reference external" href="http://ipython.org/">iPython</a> is optional but recommended, as iPython is an interactive console designed to make</p>
 </div>
-<div class="section" id="python-dependencies">
-<h2>2.3. Python Dependencies<a class="headerlink" href="#python-dependencies" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference external" href="http://www.numpy.org/">Numpy</a></li>
-<li><a class="reference external" href="http://www.scipy.org/">Scipy</a></li>
-<li><a class="reference external" href="http://matplotlib.org/">Matplotlib</a></li>
-<li><a class="reference external" href="http://ipython.org/">iPython</a> (optional)</li>
-</ul>
+<div class="section" id="installing-python-with-enthought-canopy">
+<h2>2.4. Installing Python with Enthought Canopy<a class="headerlink" href="#installing-python-with-enthought-canopy" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://www1.i2r.a-star.edu.sg/~lins/codes/python.html">Shaowei Lin</a> suggested <a class="reference external" href="https://www.enthought.com/store/">Enthought Canopy</a> to install all the Python packages easily. If you download the free version of Express Enthought Canopy, it gives you everything you need for installing AIMBAT properly.</p>
+<p>If you do not want to use Enthought Canopy, read the rest of this section.</p>
+</div>
+<div class="section" id="installing-python-with-macports">
+<h2>2.5. Installing Python with Macports<a class="headerlink" href="#installing-python-with-macports" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="possible-issues">
-<h2>2.4. Possible Issues<a class="headerlink" href="#possible-issues" title="Permalink to this headline">¶</a></h2>
+<h2>2.6. Possible Issues<a class="headerlink" href="#possible-issues" title="Permalink to this headline">¶</a></h2>
 <p>Here some common problems and possible resolutions. If your problem is not listed here, or you have a suggestion, please <a class="reference internal" href="introduction.html#authors-contacts"><em>contact the authors</em></a>.</p>
 <div class="section" id="macport">
-<h3>2.4.1. Macport<a class="headerlink" href="#macport" title="Permalink to this headline">¶</a></h3>
+<h3>2.6.1. Macport<a class="headerlink" href="#macport" title="Permalink to this headline">¶</a></h3>
 <p>You may run into problems with AIMBAT if your <a class="reference external" href="http://www.macports.org/">Macport</a> version is not compatible with your operating system version. For example, if you used Macports for OS X 10.8 to install AIMBAT, then upgraded your operating system or OS X 10.9, you may find that AIMBAT no longer works properly. You will need to upgrade Macports to fix this error.</p>
 <p>Do not uninstall MacPorts unless you know what you are doing, uninstalling MacPorts may get rid of other programs you installed using MacPorts. However, if you are sure you want to do so, see <a class="reference external" href="https://guide.macports.org/chunked/installing.macports.uninstalling.html">here</a> for instructions.</p>
 </div>
 <div class="section" id="installing-python-with-pip">
-<h3>2.4.2. Installing Python with Pip<a class="headerlink" href="#installing-python-with-pip" title="Permalink to this headline">¶</a></h3>
+<h3>2.6.2. Installing Python with Pip<a class="headerlink" href="#installing-python-with-pip" title="Permalink to this headline">¶</a></h3>
 <p>Be careful with the operating system. For OS X 10.9 and above, Python 2.7 is not fully compatible and there may be problems installing python with Pip. Best to use Enthought Canopy or Python 3 with OS X 10.9.</p>
 </div>
 <div class="section" id="setting-the-python-path-to-the-scripts">
-<h3>2.4.3. Setting the Python Path to the scripts<a class="headerlink" href="#setting-the-python-path-to-the-scripts" title="Permalink to this headline">¶</a></h3>
+<h3>2.6.3. Setting the Python Path to the scripts<a class="headerlink" href="#setting-the-python-path-to-the-scripts" title="Permalink to this headline">¶</a></h3>
 <p>You are asked to add the path to the AIMBAT scripts in your file. To do that, you add them to the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> file. There are other files you could add it to that work as well, such as the <tt class="docutils literal"><span class="pre">.profile</span></tt> or <tt class="docutils literal"><span class="pre">.bash_profile</span></tt> files. You can see the files by opening the terminal and doing <tt class="docutils literal"><span class="pre">ls</span> <span class="pre">-a</span></tt> to see all the hidden files, and open then by doing <tt class="docutils literal"><span class="pre">vi</span> <span class="pre">.bashrc</span></tt> in vim, for instance.
 To ensure you can open a script, you need to add:</p>
 <div class="highlight-python"><div class="highlight"><pre>export PATH=$PATH:&lt;path-to-folder-with-scripts&gt;
@@ -95,7 +104,7 @@ export PYTHONPATH=$PYTHONPATH:&lt;path-to-folder-with-scripts&gt;
 <p>to the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> file. We recommend adding the paths to the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> file.</p>
 </div>
 <div class="section" id="terminal-commands-stop-working">
-<h3>2.4.4. Terminal Commands stop working<a class="headerlink" href="#terminal-commands-stop-working" title="Permalink to this headline">¶</a></h3>
+<h3>2.6.4. Terminal Commands stop working<a class="headerlink" href="#terminal-commands-stop-working" title="Permalink to this headline">¶</a></h3>
 <p>If ever the terminal commands such as ls stop working in the terminal, it could be that something went wrong with a path in the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> or <tt class="docutils literal"><span class="pre">.profile</span></tt> files. If that happens you may not be able to open them in vim as that command would have stopped working as well. Instead, in the terminal, you do:</p>
 <div class="highlight-python"><div class="highlight"><pre>PATH=/bin:${PATH}
 PATH=/usr/bin:${PATH}
@@ -104,12 +113,12 @@ PATH=/usr/bin:${PATH}
 <p>And that should allow the commands to start working again. Figure out what you did wrong and remove that command.</p>
 </div>
 <div class="section" id="installing-enthought-canopy">
-<h3>2.4.5. Installing Enthought Canopy<a class="headerlink" href="#installing-enthought-canopy" title="Permalink to this headline">¶</a></h3>
+<h3>2.6.5. Installing Enthought Canopy<a class="headerlink" href="#installing-enthought-canopy" title="Permalink to this headline">¶</a></h3>
 <p>Occasionally, Enthought Canopy may not open the default setup environment after you downloaded and tried to install it. If this happens, open the Canopy package, go to &#8220;Preferences&#8221;, and select Canopy as your default environment.</p>
 <img alt="../_images/enthought_as_default.png" src="../_images/enthought_as_default.png" />
 </div>
 <div class="section" id="uninstalling-enthought-canopy">
-<h3>2.4.6. Uninstalling Enthought Canopy<a class="headerlink" href="#uninstalling-enthought-canopy" title="Permalink to this headline">¶</a></h3>
+<h3>2.6.6. Uninstalling Enthought Canopy<a class="headerlink" href="#uninstalling-enthought-canopy" title="Permalink to this headline">¶</a></h3>
 <p>The official Enthought gives suggestions on uninstalling <a class="reference external" href="https://guide.macports.org/chunked/installing.macports.uninstalling.html">here</a>.</p>
 <img alt="../_images/canopy_preferences.png" src="../_images/canopy_preferences.png" />
 <p>STEPS:</p>
@@ -123,7 +132,7 @@ PATH=/usr/bin:${PATH}
 <img alt="../_images/applications_canopy.png" src="../_images/applications_canopy.png" />
 </div>
 <div class="section" id="path-to-python-files-not-found">
-<h3>2.4.7. Path to python files not found<a class="headerlink" href="#path-to-python-files-not-found" title="Permalink to this headline">¶</a></h3>
+<h3>2.6.7. Path to python files not found<a class="headerlink" href="#path-to-python-files-not-found" title="Permalink to this headline">¶</a></h3>
 <p>After adding the path to your directory with scripts in <tt class="docutils literal"><span class="pre">.bashrc</span></tt>, you still need to source the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> files in <tt class="docutils literal"><span class="pre">.profile</span></tt>, or the system may not find the directory. See here for more <a class="reference external" href="http://publib.boulder.ibm.com/infocenter/pseries/v5r3/index.jsp?topic=/com.ibm.aix.baseadmn/doc/baseadmndita/prof_file.htm">details</a> to see how the profile file is sourced. Note that this one will override the file in <cite>/etc/profile</cite>.</p>
 <img alt="../_images/residue.png" src="../_images/residue.png" />
 <img alt="../_images/profile_file.png" src="../_images/profile_file.png" />
@@ -147,18 +156,20 @@ PATH=/usr/bin:${PATH}
             </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">2. Installing Dependencies</a><ul>
-<li><a class="reference internal" href="#getting-your-operating-system">2.1. Getting your operating system</a></li>
-<li><a class="reference internal" href="#installing-python">2.2. Installing Python</a></li>
-<li><a class="reference internal" href="#python-dependencies">2.3. Python Dependencies</a></li>
-<li><a class="reference internal" href="#possible-issues">2.4. Possible Issues</a><ul>
-<li><a class="reference internal" href="#macport">2.4.1. Macport</a></li>
-<li><a class="reference internal" href="#installing-python-with-pip">2.4.2. Installing Python with Pip</a></li>
-<li><a class="reference internal" href="#setting-the-python-path-to-the-scripts">2.4.3. Setting the Python Path to the scripts</a></li>
-<li><a class="reference internal" href="#terminal-commands-stop-working">2.4.4. Terminal Commands stop working</a></li>
-<li><a class="reference internal" href="#installing-enthought-canopy">2.4.5. Installing Enthought Canopy</a></li>
-<li><a class="reference internal" href="#uninstalling-enthought-canopy">2.4.6. Uninstalling Enthought Canopy</a></li>
-<li><a class="reference internal" href="#path-to-python-files-not-found">2.4.7. Path to python files not found</a></li>
+<li><a class="reference internal" href="#">2. Installing Python Dependencies</a><ul>
+<li><a class="reference internal" href="#getting-git">2.1. Getting Git</a></li>
+<li><a class="reference internal" href="#getting-your-operating-system">2.2. Getting your operating system</a></li>
+<li><a class="reference internal" href="#python-packages-needed">2.3. Python Packages needed</a></li>
+<li><a class="reference internal" href="#installing-python-with-enthought-canopy">2.4. Installing Python with Enthought Canopy</a></li>
+<li><a class="reference internal" href="#installing-python-with-macports">2.5. Installing Python with Macports</a></li>
+<li><a class="reference internal" href="#possible-issues">2.6. Possible Issues</a><ul>
+<li><a class="reference internal" href="#macport">2.6.1. Macport</a></li>
+<li><a class="reference internal" href="#installing-python-with-pip">2.6.2. Installing Python with Pip</a></li>
+<li><a class="reference internal" href="#setting-the-python-path-to-the-scripts">2.6.3. Setting the Python Path to the scripts</a></li>
+<li><a class="reference internal" href="#terminal-commands-stop-working">2.6.4. Terminal Commands stop working</a></li>
+<li><a class="reference internal" href="#installing-enthought-canopy">2.6.5. Installing Enthought Canopy</a></li>
+<li><a class="reference internal" href="#uninstalling-enthought-canopy">2.6.6. Uninstalling Enthought Canopy</a></li>
+<li><a class="reference internal" href="#path-to-python-files-not-found">2.6.7. Path to python files not found</a></li>
 </ul>
 </li>
 </ul>

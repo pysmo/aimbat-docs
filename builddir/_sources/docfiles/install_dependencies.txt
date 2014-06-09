@@ -1,6 +1,33 @@
-=======================
-Installing Dependencies
-=======================
+==============================
+Installing Python Dependencies
+==============================
+
+Usually, Macs already have python installed by default. To check if you have python on your mac, open up terminal, and do python in the terminal. If python is installed you should see a python console show up, displaying the version number of python. The version number should be at least 2.7 or higher. If python is not installed, you should see an error message show up. However, you may or may not have some necessary packages installed. 
+
+
+
+.. ############################################################################ ..
+.. #                                 GITHUB                                   # ..
+.. ############################################################################ ..
+
+Getting Git
+-----------
+
+The `latest version of AIMBAT <https://github.com/pysmo>`_ will be on Github, so it would be good to get `Git <https://github.com/>`_ on your computer. This is not strictly necessary, as you could also download it as a zipfile from the `AIMBAT website <http://www.earth.northwestern.edu/~xlou/aimbat.html>_`.
+
+The best way to get Git is to use `Git for Mac <https://mac.github.com/>`_. This is a GUI you can used for your repositories, but if you want to use the command line interface you can also enable it when setting it up.	
+
+.. ############################################################################ ..
+.. #                                 GITHUB                                   # ..
+.. ############################################################################ ..
+
+
+
+
+
+
+
+
 
 .. ############################################################################ ..
 .. #                              OPERATING SYSTEM                            # ..
@@ -11,7 +38,8 @@ Getting your operating system
 
 We assume that most users of AIMBAT will be using macs. If our assumptions are wrong, please :ref:`contact the authors <authors-contacts>`, and if there is sufficient interest we will construct documentation for installations on other operating systems as well. 
 
-Users may need to 
+On a mac, to find the version of your operating system, first click on the apple icon on the top bar of your desktop, go to ``System Preferences``, and click on ``Startup Disk``. The operating system version should then be displayed. 
+
 .. image:: installing-images/system_preferences.png
 
 .. ############################################################################ ..
@@ -21,36 +49,64 @@ Users may need to
 
 
 
-.. ############################################################################ ..
-.. #                             INSTALLING PYTHON                            # ..
-.. ############################################################################ ..
-
-Installing Python
------------------
-
-`Shaowei Lin <http://www1.i2r.a-star.edu.sg/~lins/codes/python.html>`_ suggested Enthought Canopy to install all the Python packages easily. If you download the free version of Enthought Canopy, it gives you everything you need for installing AIMBAT properly. If you do not want to use Enthought Canopy, read the rest of this section to use Macports or Pip.
-
-.. ############################################################################ ..
-.. #                             INSTALLING PYTHON                            # ..
-.. ############################################################################ ..
-
-
 
 
 .. ############################################################################ ..
 .. #                            PYTHON DEPENDENCIES                           # ..
 .. ############################################################################ ..
 
-Python Dependencies
--------------------
+Python Packages needed
+----------------------
+
+The following are required for AIMBAT
 * `Numpy <http://www.numpy.org/>`_
 * `Scipy <http://www.scipy.org/>`_
 * `Matplotlib <http://matplotlib.org/>`_
-* `iPython <http://ipython.org/>`_ (optional)
+
+
+Using `iPython <http://ipython.org/>`_ is optional but recommended, as iPython is an interactive console designed to make 
 
 .. ############################################################################ ..
 .. #                            PYTHON DEPENDENCIES                           # ..
 .. ############################################################################ ..
+
+
+
+
+
+
+.. ############################################################################ ..
+.. #                             ENTHOUGHT CANOPY                             # ..
+.. ############################################################################ ..
+
+Installing Python with Enthought Canopy
+---------------------------------------
+
+`Shaowei Lin <http://www1.i2r.a-star.edu.sg/~lins/codes/python.html>`_ suggested `Enthought Canopy <https://www.enthought.com/store/>`_ to install all the Python packages easily. If you download the free version of Express Enthought Canopy, it gives you everything you need for installing AIMBAT properly. 
+
+If you do not want to use Enthought Canopy, read the rest of this section.
+
+.. ############################################################################ ..
+.. #                             ENTHOUGHT CANOPY                             # ..
+.. ############################################################################ ..
+
+
+
+
+
+.. ############################################################################ ..
+.. #                       INSTALLING PYTHON - MACPORTS                       # ..
+.. ############################################################################ ..
+
+Installing Python with Macports
+-------------------------------
+
+
+
+.. ############################################################################ ..
+.. #                       INSTALLING PYTHON - MACPORTS                       # ..
+.. ############################################################################ ..
+
 
 
 

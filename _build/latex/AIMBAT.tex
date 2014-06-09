@@ -14,7 +14,7 @@
 
 
 \title{AIMBAT Documentation}
-\date{May 29, 2014}
+\date{June 09, 2014}
 \release{0.1.2}
 \author{Lay Kuan Loh, Xiaoting Lou, \& Suzan van der Lee}
 \newcommand{\sphinxlogo}{}
@@ -169,36 +169,46 @@ Email: \href{mailto:suzan@earth.northwestern.edu}{suzan@earth.northwestern.edu}
 \end{itemize}
 
 
-\chapter{Installing Dependencies}
-\label{docfiles/install_dependencies:installing-dependencies}\label{docfiles/install_dependencies::doc}
+\chapter{Installing Python Dependencies}
+\label{docfiles/install_dependencies::doc}\label{docfiles/install_dependencies:installing-python-dependencies}
+Usually, Macs already have python installed by default. To check if you have python on your mac, open up terminal, and do python in the terminal. If python is installed you should see a python console show up, displaying the version number of python. The version number should be at least 2.7 or higher. If python is not installed, you should see an error message show up. However, you may or may not have some necessary packages installed.
+
+
+\section{Getting Git}
+\label{docfiles/install_dependencies:getting-git}
+The \href{https://github.com/pysmo}{latest version of AIMBAT} will be on Github, so it would be good to get \href{https://github.com/}{Git} on your computer. This is not strictly necessary, as you could also download it as a zipfile from the \emph{AIMBAT website \textless{}http://www.earth.northwestern.edu/\textasciitilde{}xlou/aimbat.html\textgreater{}\_}.
+
+The best way to get Git is to use \href{https://mac.github.com/}{Git for Mac}. This is a GUI you can used for your repositories, but if you want to use the command line interface you can also enable it when setting it up.
+
 
 \section{Getting your operating system}
 \label{docfiles/install_dependencies:getting-your-operating-system}
-You may need to know
-.. image:: installing-images/system\_preferences.png
+We assume that most users of AIMBAT will be using macs. If our assumptions are wrong, please {\hyperref[docfiles/introduction:authors-contacts]{\emph{contact the authors}}}, and if there is sufficient interest we will construct documentation for installations on other operating systems as well.
+
+On a mac, to find the version of your operating system, first click on the apple icon on the top bar of your desktop, go to \code{System Preferences}, and click on \code{Startup Disk}. The operating system version should then be displayed.
+
+\includegraphics{system_preferences.png}
 
 
-\section{Installing Python}
-\label{docfiles/install_dependencies:installing-python}
-\href{http://www1.i2r.a-star.edu.sg/~lins/codes/python.html}{Shaowei Lin} suggested Enthought Canopy to install all the Python packages easily. If you download the free version of Enthought Canopy, it gives you everything you need for installing AIMBAT properly. If you do not want to use Enthought Canopy, read the rest of this section to use Macports or Pip.
+\section{Python Packages needed}
+\label{docfiles/install_dependencies:python-packages-needed}
+The following are required for AIMBAT
+* \href{http://www.numpy.org/}{Numpy}
+* \href{http://www.scipy.org/}{Scipy}
+* \href{http://matplotlib.org/}{Matplotlib}
+
+Using \href{http://ipython.org/}{iPython} is optional but recommended, as iPython is an interactive console designed to make
 
 
-\section{Python Dependencies}
-\label{docfiles/install_dependencies:python-dependencies}\begin{itemize}
-\item {} 
-\href{http://www.numpy.org/}{Numpy}
+\section{Installing Python with Enthought Canopy}
+\label{docfiles/install_dependencies:installing-python-with-enthought-canopy}
+\href{http://www1.i2r.a-star.edu.sg/~lins/codes/python.html}{Shaowei Lin} suggested \href{https://www.enthought.com/store/}{Enthought Canopy} to install all the Python packages easily. If you download the free version of Express Enthought Canopy, it gives you everything you need for installing AIMBAT properly.
 
-\item {} 
-\href{http://www.scipy.org/}{Scipy}
+If you do not want to use Enthought Canopy, read the rest of this section.
 
-\item {} 
-\href{http://matplotlib.org/}{Matplotlib}
 
-\item {} 
-\href{http://ipython.org/}{iPython} (optional)
-
-\end{itemize}
-
+\section{Installing Python with Macports}
+\label{docfiles/install_dependencies:installing-python-with-macports}
 
 \section{Possible Issues}
 \label{docfiles/install_dependencies:possible-issues}
@@ -245,6 +255,8 @@ And that should allow the commands to start working again. Figure out what you d
 \subsection{Installing Enthought Canopy}
 \label{docfiles/install_dependencies:installing-enthought-canopy}
 Occasionally, Enthought Canopy may not open the default setup environment after you downloaded and tried to install it. If this happens, open the Canopy package, go to ``Preferences'', and select Canopy as your default environment.
+
+\includegraphics{enthought_as_default.png}
 
 
 \subsection{Uninstalling Enthought Canopy}
