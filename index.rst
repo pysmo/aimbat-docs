@@ -19,6 +19,7 @@ Contents:
     docfiles/analyzingData
     docfiles/parameterConfiguration
     docfiles/PickingTravelTimes
+    docfiles/unitTests
     docfiles/citations
 
 Indices and tables

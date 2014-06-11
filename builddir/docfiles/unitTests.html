@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>10. Citations &mdash; AIMBAT 0.1.2 documentation</title>
+    <title>9. Unit Testing &mdash; AIMBAT 0.1.2 documentation</title>
     
     <link rel="stylesheet" href="../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -26,7 +26,8 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="AIMBAT 0.1.2 documentation" href="../index.html" />
-    <link rel="prev" title="9. Unit Testing" href="unitTests.html" /> 
+    <link rel="next" title="10. Citations" href="citations.html" />
+    <link rel="prev" title="8. Measuring Teleseismic Body Wave Arrival Times" href="PickingTravelTimes.html" /> 
   </head>
   <body>
     <div class="related">
@@ -36,7 +37,10 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="unitTests.html" title="9. Unit Testing"
+          <a href="citations.html" title="10. Citations"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="PickingTravelTimes.html" title="8. Measuring Teleseismic Body Wave Arrival Times"
              accesskey="P">previous</a> |</li>
         <li><a href="../index.html">AIMBAT 0.1.2 documentation</a> &raquo;</li> 
       </ul>
@@ -47,32 +51,28 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="citations">
-<h1>10. Citations<a class="headerlink" href="#citations" title="Permalink to this headline">¶</a></h1>
-<table class="docutils citation" frame="void" id="goldsteindodge2003" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[GoldsteinDodge2003]</td><td>Goldstein, P., D. Dodge, M. Firpo, and L. Minner (2003), SAC2000: Signal processing and analysis tools for seismologists and engineers, International Geophysics, 81, 1613–1614.</td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="hunder2007" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[Hunder2007]</td><td>Hunter, J. (2007), Matplotlib: A 2D Graphics Environment, Computing in Science &amp; Engineering, 3(9), 90–95.</td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="louvanderlee2013" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[LouVanDerLee2013]</td><td>AIMBAT: A Python/Matplotlib Tool for Measuring Teleseismic Arrival Times. Xiaoting Lou, Suzan van der Lee, and Simon Lloyd (2013), Seismol. Res. Lett., 84(1), 85-93, doi:10.1785/0220120033.</td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="vandecarcrosson1990" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[VanDecarCrosson1990]</td><td>VanDecar, J. C., and R. S. Crosson (1990), Determination of teleseismic relative phase arrival times using multi-channel cross-correlation and least squares, Bulletin of the Seismological Society of America, 80(1), 150–169.</td></tr>
-</tbody>
-</table>
+  <div class="section" id="unit-testing">
+<h1>9. Unit Testing<a class="headerlink" href="#unit-testing" title="Permalink to this headline">¶</a></h1>
+<p>This section is mainly for those who which to make tweaks to AIMBAT themselves. We have added some unit tests to AIMBAT to ensure its robustness.</p>
+<div class="section" id="getting-the-dependencies">
+<h2>9.1. Getting the Dependencies<a class="headerlink" href="#getting-the-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>We are using <a class="reference external" href="https://github.com/SavinaRoja/PyUserInput">PyUserInput</a> to simulate matplotlib GUI events, which in turn requires Quartz and AppKit for Mac users.</p>
+<p>To install Quartz and AppKit, we recommending doing the following as suggested <a class="reference external" href="http://stackoverflow.com/questions/21359285/no-module-named-appkit">here</a>:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo pip install pyobjc-core
+sudo pip install pyobjc
+</pre></div>
+</div>
+<p>To check that you have successfully installed them, inside the Python console do:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">AppKit</span>
+<span class="kn">import</span> <span class="nn">Quartz</span>
+</pre></div>
+</div>
+<p>and ensure there are no errors.</p>
+<p>To import PyUserInput, we recommend running:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo pip install PyUserInput
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -84,12 +84,23 @@
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/NU_Logo_purple.jpg" alt="Logo"/>
             </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">9. Unit Testing</a><ul>
+<li><a class="reference internal" href="#getting-the-dependencies">9.1. Getting the Dependencies</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
-  <p class="topless"><a href="unitTests.html"
-                        title="previous chapter">9. Unit Testing</a></p>
+  <p class="topless"><a href="PickingTravelTimes.html"
+                        title="previous chapter">8. Measuring Teleseismic Body Wave Arrival Times</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="citations.html"
+                        title="next chapter">10. Citations</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
-    <li><a href="../_sources/docfiles/citations.txt"
+    <li><a href="../_sources/docfiles/unitTests.txt"
            rel="nofollow">Show Source</a></li>
   </ul>
 <div id="searchbox" style="display: none">
@@ -116,7 +127,10 @@
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="unitTests.html" title="9. Unit Testing"
+          <a href="citations.html" title="10. Citations"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="PickingTravelTimes.html" title="8. Measuring Teleseismic Body Wave Arrival Times"
              >previous</a> |</li>
         <li><a href="../index.html">AIMBAT 0.1.2 documentation</a> &raquo;</li> 
       </ul>

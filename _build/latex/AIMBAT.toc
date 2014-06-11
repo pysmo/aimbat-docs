@@ -58,6 +58,8 @@
 \contentsline {subsection}{\numberline {8.4.2}Getting the stations of the seismograms chosen}{32}{subsection.8.4.2}
 \contentsline {subsection}{\numberline {8.4.3}Picking Travel Times does not work}{32}{subsection.8.4.3}
 \contentsline {subsection}{\numberline {8.4.4}Travel Times}{33}{subsection.8.4.4}
-\contentsline {chapter}{\numberline {9}Citations}{35}{chapter.9}
-\contentsline {chapter}{\numberline {10}Indices and tables}{37}{chapter.10}
-\contentsline {chapter}{Bibliography}{39}{chapter*.4}
+\contentsline {chapter}{\numberline {9}Unit Testing}{35}{chapter.9}
+\contentsline {section}{\numberline {9.1}Getting the Dependencies}{35}{section.9.1}
+\contentsline {chapter}{\numberline {10}Citations}{37}{chapter.10}
+\contentsline {chapter}{\numberline {11}Indices and tables}{39}{chapter.11}
+\contentsline {chapter}{Bibliography}{41}{chapter*.4}

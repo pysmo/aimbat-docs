@@ -14,7 +14,7 @@
 
 
 \title{AIMBAT Documentation}
-\date{June 09, 2014}
+\date{June 10, 2014}
 \release{0.1.2}
 \author{Lay Kuan Loh, Xiaoting Lou, \& Suzan van der Lee}
 \newcommand{\sphinxlogo}{}
@@ -963,6 +963,38 @@ Comment out the other backends!
 \subsection{Travel Times}
 \label{docfiles/PickingTravelTimes:travel-times}
 If one of the seismograms being picked does not fit completely within the green (computer) window, nad you hit \emph{ICCC-A} or \emph{ICCC-B}, you will get an error message complaining about the exact seismogram which is too short. Deselect it.
+
+
+\chapter{Unit Testing}
+\label{docfiles/unitTests:unit-testing}\label{docfiles/unitTests::doc}
+This section is mainly for those who which to make tweaks to AIMBAT themselves. We have added some unit tests to AIMBAT to ensure its robustness.
+
+
+\section{Getting the Dependencies}
+\label{docfiles/unitTests:getting-the-dependencies}
+We are using \href{https://github.com/SavinaRoja/PyUserInput}{PyUserInput} to simulate matplotlib GUI events, which in turn requires Quartz and AppKit for Mac users.
+
+To install Quartz and AppKit, we recommending doing the following as suggested \href{http://stackoverflow.com/questions/21359285/no-module-named-appkit}{here}:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+sudo pip install pyobjc\PYGZhy{}core
+sudo pip install pyobjc
+\end{Verbatim}
+
+To check that you have successfully installed them, inside the Python console do:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{AppKit}
+\PYG{k+kn}{import} \PYG{n+nn}{Quartz}
+\end{Verbatim}
+
+and ensure there are no errors.
+
+To import PyUserInput, we recommend running:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+sudo pip install PyUserInput
+\end{Verbatim}
 
 
 \chapter{Citations}
