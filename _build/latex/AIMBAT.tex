@@ -14,7 +14,7 @@
 
 
 \title{AIMBAT Documentation}
-\date{June 10, 2014}
+\date{June 16, 2014}
 \release{0.1.2}
 \author{Lay Kuan Loh, Xiaoting Lou, \& Suzan van der Lee}
 \newcommand{\sphinxlogo}{}
@@ -244,6 +244,42 @@ You need this version, not other versions on your computer, since this is the on
 The package manager brew caused many problems when tried. If you figured it out properly, please {\hyperref[docfiles/introduction:authors-contacts]{\emph{contact the authors}}} with instructions\textasciitilde{} In general, the authors do not recommend trying to install the packages separately when there are Python versions that will come with all the packages pre-installed already.
 
 \href{http://www.scipy.org/install.html}{Scipy} is especially tricky as it relies on Fortran and C as well. The authors of scipy recommend using Enthought Canopy or Anacoda to install it.
+
+
+\section{Installing Basemap}
+\label{docfiles/install_dependencies:installing-basemap}
+Disclaimer: Lifted from content written by \href{http://blog.bluedackers.com/2012/11/13/installing-basemap-on-mac-os-x-mountain-lion/}{this guy} with some tweaks.
+
+Enthough Python should get you most of the dependencies needed. You do need to get \href{http://trac.osgeo.org/geos/}{Geos} though. The best way to get it is \href{http://matthewcarriere.com/2013/08/05/how-to-install-and-use-homebrew/}{install Homebrew}, and then install \code{gdal}, a package that has \code{Geos} as a dependency. To get \code{gdal}, do:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+brew install gdal
+\end{Verbatim}
+
+Now install Basemap. Download it \href{http://sourceforge.net/projects/matplotlib/files/matplotlib-toolkits/}{here}. Unzip the package and cd into the unzipped package. Export the directory where \code{Geos} was installed:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+export GEOS\PYGZus{}DIR=/usr/local/Cellar/geos/3.4.2/
+\end{Verbatim}
+
+And install Basemap:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+sudo python setup.py build
+sudo python setup.py install
+\end{Verbatim}
+
+To check it worked, at the terminal, do:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{python}
+\end{Verbatim}
+
+and then:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{mpl\PYGZus{}toolkits.basemap} \PYG{k+kn}{import} \PYG{n}{Basemap}
+\end{Verbatim}
 
 
 \section{Possible Issues}
@@ -970,30 +1006,12 @@ If one of the seismograms being picked does not fit completely within the green 
 This section is mainly for those who which to make tweaks to AIMBAT themselves. We have added some unit tests to AIMBAT to ensure its robustness.
 
 
-\section{Getting the Dependencies}
-\label{docfiles/unitTests:getting-the-dependencies}
-We are using \href{https://github.com/SavinaRoja/PyUserInput}{PyUserInput} to simulate matplotlib GUI events, which in turn requires Quartz and AppKit for Mac users.
-
-To install Quartz and AppKit, we recommending doing the following as suggested \href{http://stackoverflow.com/questions/21359285/no-module-named-appkit}{here}:
+\section{Running the Tests}
+\label{docfiles/unitTests:running-the-tests}
+In the AIMBAT repository, \code{cd} into \code{/src/pysmo/unit\_tests} and run:
 
 \begin{Verbatim}[commandchars=\\\{\}]
-sudo pip install pyobjc\PYGZhy{}core
-sudo pip install pyobjc
-\end{Verbatim}
-
-To check that you have successfully installed them, inside the Python console do:
-
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k+kn}{import} \PYG{n+nn}{AppKit}
-\PYG{k+kn}{import} \PYG{n+nn}{Quartz}
-\end{Verbatim}
-
-and ensure there are no errors.
-
-To import PyUserInput, we recommend running:
-
-\begin{Verbatim}[commandchars=\\\{\}]
-sudo pip install PyUserInput
+python run\PYGZus{}unit\PYGZus{}tests.py
 \end{Verbatim}
 
 

@@ -161,6 +161,41 @@ The package manager brew caused many problems when tried. If you figured it out 
 
 
 
+.. ############################################################################ ..
+.. #                           INSTALLING BASEMAP                             # ..
+.. ############################################################################ ..
+
+Installing Basemap
+------------------
+
+Disclaimer: Lifted from content written by `this guy <http://blog.bluedackers.com/2012/11/13/installing-basemap-on-mac-os-x-mountain-lion/>`_ with some tweaks. 
+
+Enthough Python should get you most of the dependencies needed. You do need to get `Geos <http://trac.osgeo.org/geos/>`_ though. The best way to get it is `install Homebrew <http://matthewcarriere.com/2013/08/05/how-to-install-and-use-homebrew/>`_, and then install ``gdal``, a package that has ``Geos`` as a dependency. To get ``gdal``, do::
+
+  brew install gdal
+
+Now install Basemap. Download it `here <http://sourceforge.net/projects/matplotlib/files/matplotlib-toolkits/>`_. Unzip the package and cd into the unzipped package. Export the directory where ``Geos`` was installed::
+
+  export GEOS_DIR=/usr/local/Cellar/geos/3.4.2/
+
+And install Basemap::
+
+  sudo python setup.py build
+  sudo python setup.py install
+
+To check it worked, at the terminal, do::
+  
+  python
+
+and then::
+
+  from mpl_toolkits.basemap import Basemap
+
+.. ############################################################################ ..
+.. #                           INSTALLING BASEMAP                             # ..
+.. ############################################################################ ..
+
+
 
 
 .. ############################################################################ ..

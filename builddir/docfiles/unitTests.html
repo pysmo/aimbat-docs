@@ -54,22 +54,10 @@
   <div class="section" id="unit-testing">
 <h1>9. Unit Testing<a class="headerlink" href="#unit-testing" title="Permalink to this headline">¶</a></h1>
 <p>This section is mainly for those who which to make tweaks to AIMBAT themselves. We have added some unit tests to AIMBAT to ensure its robustness.</p>
-<div class="section" id="getting-the-dependencies">
-<h2>9.1. Getting the Dependencies<a class="headerlink" href="#getting-the-dependencies" title="Permalink to this headline">¶</a></h2>
-<p>We are using <a class="reference external" href="https://github.com/SavinaRoja/PyUserInput">PyUserInput</a> to simulate matplotlib GUI events, which in turn requires Quartz and AppKit for Mac users.</p>
-<p>To install Quartz and AppKit, we recommending doing the following as suggested <a class="reference external" href="http://stackoverflow.com/questions/21359285/no-module-named-appkit">here</a>:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo pip install pyobjc-core
-sudo pip install pyobjc
-</pre></div>
-</div>
-<p>To check that you have successfully installed them, inside the Python console do:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">AppKit</span>
-<span class="kn">import</span> <span class="nn">Quartz</span>
-</pre></div>
-</div>
-<p>and ensure there are no errors.</p>
-<p>To import PyUserInput, we recommend running:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo pip install PyUserInput
+<div class="section" id="running-the-tests">
+<h2>9.1. Running the Tests<a class="headerlink" href="#running-the-tests" title="Permalink to this headline">¶</a></h2>
+<p>In the AIMBAT repository, <tt class="docutils literal"><span class="pre">cd</span></tt> into <tt class="docutils literal"><span class="pre">/src/pysmo/unit_tests</span></tt> and run:</p>
+<div class="highlight-python"><div class="highlight"><pre>python run_unit_tests.py
 </pre></div>
 </div>
 </div>
@@ -87,7 +75,7 @@ sudo pip install pyobjc
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">9. Unit Testing</a><ul>
-<li><a class="reference internal" href="#getting-the-dependencies">9.1. Getting the Dependencies</a></li>
+<li><a class="reference internal" href="#running-the-tests">9.1. Running the Tests</a></li>
 </ul>
 </li>
 </ul>

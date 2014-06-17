@@ -9,27 +9,28 @@
 \BOOKMARK [1][-]{section.2.4}{Installing Python with Enthought Canopy}{chapter.2}% 9
 \BOOKMARK [1][-]{section.2.5}{Installing Python with Macports}{chapter.2}% 10
 \BOOKMARK [1][-]{section.2.6}{Regarding Package Managers}{chapter.2}% 11
-\BOOKMARK [1][-]{section.2.7}{Possible Issues}{chapter.2}% 12
-\BOOKMARK [0][-]{chapter.3}{Installing AIMBAT}{}% 13
-\BOOKMARK [1][-]{section.3.1}{Getting the Packages}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.2}{Where to install the packages}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.3}{Building the Pysmo Packages}{chapter.3}% 16
-\BOOKMARK [0][-]{chapter.4}{Getting Data}{}% 17
-\BOOKMARK [1][-]{section.4.1}{Standing Order for Data}{chapter.4}% 18
-\BOOKMARK [0][-]{chapter.5}{Filtering Data}{}% 19
-\BOOKMARK [1][-]{section.5.1}{Filtering GUI}{chapter.5}% 20
-\BOOKMARK [1][-]{section.5.2}{Saving Options}{chapter.5}% 21
-\BOOKMARK [0][-]{chapter.6}{Analyzing Data}{}% 22
-\BOOKMARK [1][-]{section.6.1}{Seismic Analysis Code \(SAC\)}{chapter.6}% 23
-\BOOKMARK [0][-]{chapter.7}{Parameter Configuration}{}% 24
-\BOOKMARK [1][-]{section.7.1}{Backend}{chapter.7}% 25
-\BOOKMARK [0][-]{chapter.8}{Measuring Teleseismic Body Wave Arrival Times}{}% 26
-\BOOKMARK [1][-]{section.8.1}{Automated Phase Alignment}{chapter.8}% 27
-\BOOKMARK [1][-]{section.8.2}{Picking Travel Times}{chapter.8}% 28
-\BOOKMARK [1][-]{section.8.3}{What the Alignments Stand For}{chapter.8}% 29
-\BOOKMARK [1][-]{section.8.4}{Post Processing}{chapter.8}% 30
-\BOOKMARK [0][-]{chapter.9}{Unit Testing}{}% 31
-\BOOKMARK [1][-]{section.9.1}{Getting the Dependencies}{chapter.9}% 32
-\BOOKMARK [0][-]{chapter.10}{Citations}{}% 33
-\BOOKMARK [0][-]{chapter.11}{Indices and tables}{}% 34
-\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 35
+\BOOKMARK [1][-]{section.2.7}{Installing Basemap}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.8}{Possible Issues}{chapter.2}% 13
+\BOOKMARK [0][-]{chapter.3}{Installing AIMBAT}{}% 14
+\BOOKMARK [1][-]{section.3.1}{Getting the Packages}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.2}{Where to install the packages}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.3}{Building the Pysmo Packages}{chapter.3}% 17
+\BOOKMARK [0][-]{chapter.4}{Getting Data}{}% 18
+\BOOKMARK [1][-]{section.4.1}{Standing Order for Data}{chapter.4}% 19
+\BOOKMARK [0][-]{chapter.5}{Filtering Data}{}% 20
+\BOOKMARK [1][-]{section.5.1}{Filtering GUI}{chapter.5}% 21
+\BOOKMARK [1][-]{section.5.2}{Saving Options}{chapter.5}% 22
+\BOOKMARK [0][-]{chapter.6}{Analyzing Data}{}% 23
+\BOOKMARK [1][-]{section.6.1}{Seismic Analysis Code \(SAC\)}{chapter.6}% 24
+\BOOKMARK [0][-]{chapter.7}{Parameter Configuration}{}% 25
+\BOOKMARK [1][-]{section.7.1}{Backend}{chapter.7}% 26
+\BOOKMARK [0][-]{chapter.8}{Measuring Teleseismic Body Wave Arrival Times}{}% 27
+\BOOKMARK [1][-]{section.8.1}{Automated Phase Alignment}{chapter.8}% 28
+\BOOKMARK [1][-]{section.8.2}{Picking Travel Times}{chapter.8}% 29
+\BOOKMARK [1][-]{section.8.3}{What the Alignments Stand For}{chapter.8}% 30
+\BOOKMARK [1][-]{section.8.4}{Post Processing}{chapter.8}% 31
+\BOOKMARK [0][-]{chapter.9}{Unit Testing}{}% 32
+\BOOKMARK [1][-]{section.9.1}{Running the Tests}{chapter.9}% 33
+\BOOKMARK [0][-]{chapter.10}{Citations}{}% 34
+\BOOKMARK [0][-]{chapter.11}{Indices and tables}{}% 35
+\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 36

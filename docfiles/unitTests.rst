@@ -8,26 +8,12 @@ This section is mainly for those who which to make tweaks to AIMBAT themselves. 
 .. #                          GETTING THE PACKAGES                            # ..
 .. ############################################################################ ..
 
-Getting the Dependencies
-------------------------
+Running the Tests
+-----------------
 
-We are using `PyUserInput <https://github.com/SavinaRoja/PyUserInput>`_ to simulate matplotlib GUI events, which in turn requires Quartz and AppKit for Mac users. 
+In the AIMBAT repository, ``cd`` into ``/src/pysmo/unit_tests`` and run::
 
-To install Quartz and AppKit, we recommending doing the following as suggested `here <http://stackoverflow.com/questions/21359285/no-module-named-appkit>`_::
-	
-	sudo pip install pyobjc-core
-	sudo pip install pyobjc
-
-To check that you have successfully installed them, inside the Python console do::
-
-	import AppKit
-	import Quartz
-
-and ensure there are no errors.
-
-To import PyUserInput, we recommend running::
-
-	sudo pip install PyUserInput
+	python run_unit_tests.py
 
 
 
