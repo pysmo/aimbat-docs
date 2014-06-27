@@ -11,6 +11,8 @@ Plot Stations
 
 Click on the `Plot Stations` button and you will get a graph of all the stations for the set you are using. Stations used are the red circles, and deleted stations not used in the cross-correlation are the black triangles.
 
+.. image::plot-stations/basemap_stations.png
+
 .. ############################################################################ ..
 .. #                             PLOT STATIONS                                # ..
 .. ############################################################################ ..
@@ -24,9 +26,9 @@ Click on the `Plot Stations` button and you will get a graph of all the stations
 Color By Delay Times
 --------------------
 
-* On the terminal, cd into the same folder where you sourced the SAC files to run ``ttpick.py``, after running ``MCCC`` on a pickle file name, for instance, ``20120123.16045298.pkl``, you will get a mcp file named ``20120123.16045298.mcp``. 
+* On the terminal, cd into the same folder where you sourced the SAC files to run ``ttpick.py``, after running ``MCCC`` on a pickle file name, for instance, ``earthquake-event.pkl``, you will get a mcp file named ``earthquake-event.mcp``. 
 
-* Run ``mccc2pkl.py 20120123.16045298.mcp`` and you will get a file with travel times called ``20120123.16045298.dtp``.
+* Run ``mccc2pkl.py earthquake-event.mcp`` and you will get a file with travel times called ``earthquake-event.dtp``.
 
 * Run ``doplotsta.sh`` and you will get a two ``gif`` files of the stations colored by delay times.
 
