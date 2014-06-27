@@ -65,6 +65,8 @@
 \contentsline {chapter}{\numberline {9}Plot Stations}{37}{chapter.9}
 \contentsline {section}{\numberline {9.1}Plot Stations}{37}{section.9.1}
 \contentsline {section}{\numberline {9.2}Color By Delay Times}{37}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Instructions}{37}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}Learn more about how to compute delay times}{37}{subsection.9.2.2}
 \contentsline {chapter}{\numberline {10}Unit Testing}{39}{chapter.10}
 \contentsline {section}{\numberline {10.1}Running the Tests}{39}{section.10.1}
 \contentsline {chapter}{\numberline {11}Citations}{41}{chapter.11}
