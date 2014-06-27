@@ -59,8 +59,11 @@
 \contentsline {subsection}{\numberline {8.4.2}Getting the stations of the seismograms chosen}{34}{subsection.8.4.2}
 \contentsline {subsection}{\numberline {8.4.3}Picking Travel Times does not work}{34}{subsection.8.4.3}
 \contentsline {subsection}{\numberline {8.4.4}Travel Times}{35}{subsection.8.4.4}
-\contentsline {chapter}{\numberline {9}Unit Testing}{37}{chapter.9}
-\contentsline {section}{\numberline {9.1}Running the Tests}{37}{section.9.1}
-\contentsline {chapter}{\numberline {10}Citations}{39}{chapter.10}
-\contentsline {chapter}{\numberline {11}Indices and tables}{41}{chapter.11}
-\contentsline {chapter}{Bibliography}{43}{chapter*.4}
+\contentsline {chapter}{\numberline {9}Plot Stations}{37}{chapter.9}
+\contentsline {section}{\numberline {9.1}Plot Stations}{37}{section.9.1}
+\contentsline {section}{\numberline {9.2}Color By Delay Times}{37}{section.9.2}
+\contentsline {chapter}{\numberline {10}Unit Testing}{39}{chapter.10}
+\contentsline {section}{\numberline {10.1}Running the Tests}{39}{section.10.1}
+\contentsline {chapter}{\numberline {11}Citations}{41}{chapter.11}
+\contentsline {chapter}{\numberline {12}Indices and tables}{43}{chapter.12}
+\contentsline {chapter}{Bibliography}{45}{chapter*.4}

@@ -29,8 +29,11 @@
 \BOOKMARK [1][-]{section.8.2}{Picking Travel Times}{chapter.8}% 29
 \BOOKMARK [1][-]{section.8.3}{What the Alignments Stand For}{chapter.8}% 30
 \BOOKMARK [1][-]{section.8.4}{Post Processing}{chapter.8}% 31
-\BOOKMARK [0][-]{chapter.9}{Unit Testing}{}% 32
-\BOOKMARK [1][-]{section.9.1}{Running the Tests}{chapter.9}% 33
-\BOOKMARK [0][-]{chapter.10}{Citations}{}% 34
-\BOOKMARK [0][-]{chapter.11}{Indices and tables}{}% 35
-\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 36
+\BOOKMARK [0][-]{chapter.9}{Plot Stations}{}% 32
+\BOOKMARK [1][-]{section.9.1}{Plot Stations}{chapter.9}% 33
+\BOOKMARK [1][-]{section.9.2}{Color By Delay Times}{chapter.9}% 34
+\BOOKMARK [0][-]{chapter.10}{Unit Testing}{}% 35
+\BOOKMARK [1][-]{section.10.1}{Running the Tests}{chapter.10}% 36
+\BOOKMARK [0][-]{chapter.11}{Citations}{}% 37
+\BOOKMARK [0][-]{chapter.12}{Indices and tables}{}% 38
+\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 39

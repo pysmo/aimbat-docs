@@ -14,7 +14,7 @@
 
 
 \title{AIMBAT Documentation}
-\date{June 16, 2014}
+\date{June 26, 2014}
 \release{0.1.2}
 \author{Lay Kuan Loh, Xiaoting Lou, \& Suzan van der Lee}
 \newcommand{\sphinxlogo}{}
@@ -1001,9 +1001,31 @@ Comment out the other backends!
 If one of the seismograms being picked does not fit completely within the green (computer) window, nad you hit \emph{ICCC-A} or \emph{ICCC-B}, you will get an error message complaining about the exact seismogram which is too short. Deselect it.
 
 
+\chapter{Plot Stations}
+\label{docfiles/PlotStations:plot-stations}\label{docfiles/PlotStations::doc}
+
+\section{Plot Stations}
+\label{docfiles/PlotStations:id1}
+Click on the \emph{Plot Stations} button and you will get a graph of all the stations for the set you are using. Stations used are the red circles, and deleted stations not used in the cross-correlation are the black triangles.
+
+
+\section{Color By Delay Times}
+\label{docfiles/PlotStations:color-by-delay-times}\begin{itemize}
+\item {} 
+On the terminal, cd into the same folder where you sourced the SAC files to run \code{ttpick.py}, after running \code{MCCC} on a pickle file name, for instance, \code{20120123.16045298.pkl}, you will get a mcp file named \code{20120123.16045298.mcp}.
+
+\item {} 
+Run \code{mccc2pkl.py 20120123.16045298.mcp} and you will get a file with travel times called \code{20120123.16045298.dtp}.
+
+\item {} 
+Run \code{doplotsta.sh} and you will get a two \code{gif} files of the stations colored by delay times.
+
+\end{itemize}
+
+
 \chapter{Unit Testing}
 \label{docfiles/unitTests:unit-testing}\label{docfiles/unitTests::doc}
-This section is mainly for those who which to make tweaks to AIMBAT themselves. We have added some unit tests to AIMBAT to ensure its robustness.
+This section is mainly for those who which to make tweaks to AIMBAT themselves. We have added some unit tests to AIMBAT to ensure its robustness. See the \href{https://docs.python.org/2/library/unittest.html}{Python Unit Testing Framework} for more details.
 
 
 \section{Running the Tests}
