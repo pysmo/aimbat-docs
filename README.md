@@ -1,12 +1,8 @@
 aimbat-docs
 ===========
 
-Documentation for AIMBAT, hosted by Sphinx: http://sphinx-doc.org/
-
-Links
------
-* Using AIMBAT: http://aimbat.readthedocs.org/en/latest/
-* Code for AIMBAT: *Construction to begin soon*
+* Documentation for AIMBAT, hosted by [Sphinx](http://sphinx-doc.org/).
+* Read the docs [here](http://aimbat.readthedocs.org/en/latest/).
 
 Building
 --------
