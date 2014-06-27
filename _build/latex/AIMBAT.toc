@@ -30,9 +30,12 @@
 \contentsline {subsection}{\numberline {3.3.1}Building pysmo.sac}{18}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Installing pysmo.aimbat}{18}{subsection.3.3.2}
 \contentsline {chapter}{\numberline {4}Getting Data}{19}{chapter.4}
-\contentsline {section}{\numberline {4.1}Standing Order for Data}{19}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Installing SOD}{19}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Downloading Data with SOD}{20}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.1}Obspy.fdsn for downloading data}{19}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Installing Obspy}{19}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Using Obspy}{19}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Standing Order for Data}{19}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Installing SOD}{19}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Downloading Data with SOD}{20}{subsection.4.2.2}
 \contentsline {chapter}{\numberline {5}Filtering Data}{23}{chapter.5}
 \contentsline {section}{\numberline {5.1}Filtering GUI}{23}{section.5.1}
 \contentsline {section}{\numberline {5.2}Saving Options}{23}{section.5.2}

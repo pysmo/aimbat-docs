@@ -16,24 +16,25 @@
 \BOOKMARK [1][-]{section.3.2}{Where to install the packages}{chapter.3}% 16
 \BOOKMARK [1][-]{section.3.3}{Building the Pysmo Packages}{chapter.3}% 17
 \BOOKMARK [0][-]{chapter.4}{Getting Data}{}% 18
-\BOOKMARK [1][-]{section.4.1}{Standing Order for Data}{chapter.4}% 19
-\BOOKMARK [0][-]{chapter.5}{Filtering Data}{}% 20
-\BOOKMARK [1][-]{section.5.1}{Filtering GUI}{chapter.5}% 21
-\BOOKMARK [1][-]{section.5.2}{Saving Options}{chapter.5}% 22
-\BOOKMARK [0][-]{chapter.6}{Analyzing Data}{}% 23
-\BOOKMARK [1][-]{section.6.1}{Seismic Analysis Code \(SAC\)}{chapter.6}% 24
-\BOOKMARK [0][-]{chapter.7}{Parameter Configuration}{}% 25
-\BOOKMARK [1][-]{section.7.1}{Backend}{chapter.7}% 26
-\BOOKMARK [0][-]{chapter.8}{Measuring Teleseismic Body Wave Arrival Times}{}% 27
-\BOOKMARK [1][-]{section.8.1}{Automated Phase Alignment}{chapter.8}% 28
-\BOOKMARK [1][-]{section.8.2}{Picking Travel Times}{chapter.8}% 29
-\BOOKMARK [1][-]{section.8.3}{What the Alignments Stand For}{chapter.8}% 30
-\BOOKMARK [1][-]{section.8.4}{Post Processing}{chapter.8}% 31
-\BOOKMARK [0][-]{chapter.9}{Plot Stations}{}% 32
-\BOOKMARK [1][-]{section.9.1}{Plot Stations}{chapter.9}% 33
-\BOOKMARK [1][-]{section.9.2}{Color By Delay Times}{chapter.9}% 34
-\BOOKMARK [0][-]{chapter.10}{Unit Testing}{}% 35
-\BOOKMARK [1][-]{section.10.1}{Running the Tests}{chapter.10}% 36
-\BOOKMARK [0][-]{chapter.11}{Citations}{}% 37
-\BOOKMARK [0][-]{chapter.12}{Indices and tables}{}% 38
-\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 39
+\BOOKMARK [1][-]{section.4.1}{Obspy.fdsn for downloading data}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.2}{Standing Order for Data}{chapter.4}% 20
+\BOOKMARK [0][-]{chapter.5}{Filtering Data}{}% 21
+\BOOKMARK [1][-]{section.5.1}{Filtering GUI}{chapter.5}% 22
+\BOOKMARK [1][-]{section.5.2}{Saving Options}{chapter.5}% 23
+\BOOKMARK [0][-]{chapter.6}{Analyzing Data}{}% 24
+\BOOKMARK [1][-]{section.6.1}{Seismic Analysis Code \(SAC\)}{chapter.6}% 25
+\BOOKMARK [0][-]{chapter.7}{Parameter Configuration}{}% 26
+\BOOKMARK [1][-]{section.7.1}{Backend}{chapter.7}% 27
+\BOOKMARK [0][-]{chapter.8}{Measuring Teleseismic Body Wave Arrival Times}{}% 28
+\BOOKMARK [1][-]{section.8.1}{Automated Phase Alignment}{chapter.8}% 29
+\BOOKMARK [1][-]{section.8.2}{Picking Travel Times}{chapter.8}% 30
+\BOOKMARK [1][-]{section.8.3}{What the Alignments Stand For}{chapter.8}% 31
+\BOOKMARK [1][-]{section.8.4}{Post Processing}{chapter.8}% 32
+\BOOKMARK [0][-]{chapter.9}{Plot Stations}{}% 33
+\BOOKMARK [1][-]{section.9.1}{Plot Stations}{chapter.9}% 34
+\BOOKMARK [1][-]{section.9.2}{Color By Delay Times}{chapter.9}% 35
+\BOOKMARK [0][-]{chapter.10}{Unit Testing}{}% 36
+\BOOKMARK [1][-]{section.10.1}{Running the Tests}{chapter.10}% 37
+\BOOKMARK [0][-]{chapter.11}{Citations}{}% 38
+\BOOKMARK [0][-]{chapter.12}{Indices and tables}{}% 39
+\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 40

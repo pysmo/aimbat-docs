@@ -9,7 +9,7 @@ Plot Stations
 Plot Stations
 -------------
 
-Click on the `Plot Stations` button and you will get a graph of all the stations for the set you are using. Stations used are the red circles, and deleted stations not used in the cross-correlation are the black triangles.
+Click on the ``Plot Stations`` button and you will get a graph of all the stations for the set you are using. Stations used are the red circles, and deleted stations not used in the cross-correlation are the black triangles.
 
 .. image::plot-stations/basemap_stations.png
 

@@ -462,7 +462,20 @@ If AIMBAT has beenn installed, type from \code{pysmo import aimbat} in a Python 
 
 \chapter{Getting Data}
 \label{docfiles/gettingData:getting-data}\label{docfiles/gettingData::doc}
-There are several ways to obtain data to input to AIMBAT. If want to suggest other tools, please {\hyperref[docfiles/introduction:authors-contacts]{\emph{contact the authors}}}.
+There are several ways to obtain seismic data from \href{http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/}{IRIS} to input to AIMBAT. The authors used two ways to do it, and a further list of libraries for obtaining seismic data is provided in the sidebars \href{http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/}{here}.
+
+
+\section{Obspy.fdsn for downloading data}
+\label{docfiles/gettingData:obspy-fdsn-for-downloading-data}
+
+\subsection{Installing Obspy}
+\label{docfiles/gettingData:installing-obspy}
+We recommend using Macports to install Obspy as detailed in the \emph{Installation} section \href{https://github.com/obspy/obspy/wiki}{here}.
+
+
+\subsection{Using Obspy}
+\label{docfiles/gettingData:using-obspy}
+Use the \href{http://docs.obspy.org/packages/obspy.fdsn.html\#}{Obspy FDSN} Web service client for Obspy in Python. Once you have done so, check out the \href{http://docs.obspy.org/packages/obspy.sac.html}{SAC-Input Output} libraries for loading the data to Python and saving it as SAC or Pickle files.
 
 
 \section{Standing Order for Data}
@@ -1006,7 +1019,7 @@ If one of the seismograms being picked does not fit completely within the green 
 
 \section{Plot Stations}
 \label{docfiles/PlotStations:id1}
-Click on the \emph{Plot Stations} button and you will get a graph of all the stations for the set you are using. Stations used are the red circles, and deleted stations not used in the cross-correlation are the black triangles.
+Click on the \code{Plot Stations} button and you will get a graph of all the stations for the set you are using. Stations used are the red circles, and deleted stations not used in the cross-correlation are the black triangles.
 
 
 \section{Color By Delay Times}

@@ -2,7 +2,40 @@
 Getting Data
 ============
 
-There are several ways to obtain data to input to AIMBAT. If want to suggest other tools, please :ref:`contact the authors <authors-contacts>`.
+There are several ways to obtain seismic data from `IRIS <http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/>`_ to input to AIMBAT. The authors used two ways to do it, and a further list of libraries for obtaining seismic data is provided in the sidebars `here <http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/>`_. 
+
+.. ############################################################################ ..
+.. #                           OBSPY CLIENT FDSN                              # ..
+.. ############################################################################ ..
+
+Obspy.fdsn for downloading data
+-------------------------------
+
+Installing Obspy
+~~~~~~~~~~~~~~~~
+
+We recommend using Macports to install Obspy as detailed in the `Installation` section `here <https://github.com/obspy/obspy/wiki>`_.
+
+Using Obspy
+~~~~~~~~~~~
+
+Use the `Obspy FDSN <http://docs.obspy.org/packages/obspy.fdsn.html#>`_ Web service client for Obspy in Python. Once you have done so, check out the `SAC-Input Output <http://docs.obspy.org/packages/obspy.sac.html>`_ libraries for loading the data to Python and saving it as SAC or Pickle files. 
+
+
+.. ############################################################################ ..
+.. #                           OBSPY CLIENT FDSN                              # ..
+.. ############################################################################ ..
+
+
+
+
+
+
+
+
+.. ############################################################################ ..
+.. #                        STANDING ORDER FOR DATA                           # ..
+.. ############################################################################ ..
 
 Standing Order for Data
 -----------------------
@@ -70,4 +103,20 @@ Downloading Data with SOD
     - run using :code:`evsacbp.sh [pkl file] bp1 bp2`
     - Automatically uses two corners
     - run in the whole downloaded directory (the one with the sac directory)
+
+
+.. ############################################################################ ..
+.. #                        STANDING ORDER FOR DATA                           # ..
+.. ############################################################################ ..
+
+
+
+
+
+
+
+
+
+
+
 
