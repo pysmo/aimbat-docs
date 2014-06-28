@@ -74,10 +74,10 @@ Run ``ttpick/py <path-to-pkl-file>``. A GUI should pop up if you successfully ra
 
 .. ----------------------------------------------------------------------------- ..
 
-ICCC-A
-~~~~~~
+Align
+~~~~~
 
-``ICCC-A`` is only used in the beginning, if you have altered some of the travel time arrivals of the seismograms by pressing ``t2``, and want to realign the array stack.
+``Align`` is only used in the beginning, if you have altered some of the travel time arrivals of the seismograms by pressing ``t2``, and want to realign the array stack.
 
 .. ----------------------------------------------------------------------------- ..
 
@@ -103,19 +103,19 @@ You can choose the order by selecting one of the values provided (default is 1),
 
 .. ----------------------------------------------------------------------------- ..
 
-ICCC-B
+Refine
 ~~~~~~
 
-Hit the ``ICCC-B`` button to begin the initial cross-correlations. These appear as red lines.
+Hit the ``Refine`` button to begin the initial cross-correlations. These appear as red lines.
 
-We are not using ``ICCC-A`` here, but these are the theoretical arrival times, marked in black.
+We are not using ``Align`` here, but these are the theoretical arrival times, marked in black.
 
 .. ----------------------------------------------------------------------------- ..
 
-MCCC
+Finalize
 ~~~~
 
-Hit ``MCCC`` to run the Multi-Channel cross-correlation. Do not hit ``ICCC-A`` or ``ICCC-B`` again, or all your work will be erased. A warning will pop up to check if you really do want to hit these two buttons if you do click on them.
+Hit ``Finalize`` to run the Multi-Channel cross-correlation. Do not hit ``Align`` or ``Refine`` again, or all your work will be erased. A warning will pop up to check if you really do want to hit these two buttons if you do click on them.
 
 
 .. ----------------------------------------------------------------------------- ..

@@ -799,9 +799,9 @@ Run \code{ttpick/py \textless{}path-to-pkl-file\textgreater{}}. A GUI should pop
 \includegraphics{pick_travel_times.png}
 
 
-\subsection{ICCC-A}
-\label{docfiles/PickingTravelTimes:iccc-a}
-\code{ICCC-A} is only used in the beginning, if you have altered some of the travel time arrivals of the seismograms by pressing \code{t2}, and want to realign the array stack.
+\subsection{Align}
+\label{docfiles/PickingTravelTimes:align}
+\code{Align} is only used in the beginning, if you have altered some of the travel time arrivals of the seismograms by pressing \code{t2}, and want to realign the array stack.
 
 
 \subsection{Get rid of really bad seismograms}
@@ -818,16 +818,16 @@ Remember to save your work periodically once you start picking your travel times
 You can choose the order by selecting one of the values provided (default is 1), and choose the low and high frequencies for bandpassing by clicking on the appropriate start and stop frequency on the lower graph.
 
 
-\subsection{ICCC-B}
-\label{docfiles/PickingTravelTimes:iccc-b}
-Hit the \code{ICCC-B} button to begin the initial cross-correlations. These appear as red lines.
+\subsection{Refine}
+\label{docfiles/PickingTravelTimes:refine}
+Hit the \code{Refine} button to begin the initial cross-correlations. These appear as red lines.
 
-We are not using \code{ICCC-A} here, but these are the theoretical arrival times, marked in black.
+We are not using \code{Align} here, but these are the theoretical arrival times, marked in black.
 
 
-\subsection{MCCC}
-\label{docfiles/PickingTravelTimes:mccc}
-Hit \code{MCCC} to run the Multi-Channel cross-correlation. Do not hit \code{ICCC-A} or \code{ICCC-B} again, or all your work will be erased. A warning will pop up to check if you really do want to hit these two buttons if you do click on them.
+\subsection{Finalize}
+\label{docfiles/PickingTravelTimes:finalize}
+Hit \code{Finalize} to run the Multi-Channel cross-correlation. Do not hit \code{Align} or \code{Refine} again, or all your work will be erased. A warning will pop up to check if you really do want to hit these two buttons if you do click on them.
 
 
 \subsection{Manually pick the arrival times using t2}
@@ -933,7 +933,7 @@ Click on the \code{Plot Stations} button and you will get a graph of all the sta
 On the terminal, cd into the same folder where you sourced the SAC files to run \code{ttpick.py}, after running \code{MCCC} on a pickle file name, for instance, \code{earthquake-event.pkl}, you will get a mcp file named \code{earthquake-event.mcp}.
 
 \item {} 
-Run \code{mccc2pkl.py earthquake-event.mcp} and you will get a file with travel times called \code{earthquake-event.dtp}.
+Run \code{mccc2delay.py earthquake-event.mcp} and you will get a file with travel times called \code{earthquake-event.dtp}.
 
 \item {} 
 Run \code{doplotsta.sh} and you will get a two \code{gif} files of the stations colored by delay times.

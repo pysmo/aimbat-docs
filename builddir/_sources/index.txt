@@ -15,6 +15,7 @@ Contents:
     docfiles/install_dependencies
     docfiles/install_aimbat
     docfiles/gettingData
+    docfiles/sacioAIMBAT
     docfiles/filteringData
     docfiles/analyzingData
     docfiles/parameterConfiguration

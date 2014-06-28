@@ -47,11 +47,11 @@
 \contentsline {section}{\numberline {8.2}Picking Travel Times}{30}{section.8.2}
 \contentsline {subsection}{\numberline {8.2.1}Getting into the right directory}{30}{subsection.8.2.1}
 \contentsline {subsection}{\numberline {8.2.2}Running ttpick.py}{30}{subsection.8.2.2}
-\contentsline {subsection}{\numberline {8.2.3}ICCC-A}{30}{subsection.8.2.3}
+\contentsline {subsection}{\numberline {8.2.3}Align}{30}{subsection.8.2.3}
 \contentsline {subsection}{\numberline {8.2.4}Get rid of really bad seismograms}{30}{subsection.8.2.4}
 \contentsline {subsection}{\numberline {8.2.5}Filtering}{31}{subsection.8.2.5}
-\contentsline {subsection}{\numberline {8.2.6}ICCC-B}{31}{subsection.8.2.6}
-\contentsline {subsection}{\numberline {8.2.7}MCCC}{31}{subsection.8.2.7}
+\contentsline {subsection}{\numberline {8.2.6}Refine}{31}{subsection.8.2.6}
+\contentsline {subsection}{\numberline {8.2.7}Finalize}{31}{subsection.8.2.7}
 \contentsline {subsection}{\numberline {8.2.8}Manually pick the arrival times using t2}{31}{subsection.8.2.8}
 \contentsline {subsection}{\numberline {8.2.9}SACP2 to check for outlier seismograms}{31}{subsection.8.2.9}
 \contentsline {subsection}{\numberline {8.2.10}Go through the badly aligned seismograms and realign the travel times manually}{31}{subsection.8.2.10}
