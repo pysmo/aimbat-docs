@@ -15,7 +15,7 @@ Getting Git
 
 The `latest version of AIMBAT <https://github.com/pysmo>`_ will be on Github, so it would be good to get `Git <https://github.com/>`_ on your computer. This is not strictly necessary, as you could also download it as a zipfile from the `AIMBAT website <http://www.earth.northwestern.edu/~xlou/aimbat.html>`_.
 
-The best way to get Git is to use `Git for Mac <https://mac.github.com/>`_. This is a GUI you can used for your repositories, but if you want to use the command line interface you can also enable it when setting it up.	
+Some users may already have Git installed, but if not, you can download the package installer `here <http://git-scm.com/download/mac>`_. This would allow only command line usage of Git, so if you want to use a GUI, we recommend `Git for Mac <https://mac.github.com/>`_. 
 
 .. ############################################################################ ..
 .. #                                 GITHUB                                   # ..
@@ -79,12 +79,10 @@ Using `iPython <http://ipython.org/>`_ is optional but recommended, as iPython i
 .. #                             ENTHOUGHT CANOPY                             # ..
 .. ############################################################################ ..
 
-Installing Python with Enthought Canopy
----------------------------------------
+Installing Python
+-----------------
 
-`Shaowei Lin <http://www1.i2r.a-star.edu.sg/~lins/codes/python.html>`_ suggested `Enthought Canopy <https://www.enthought.com/store/>`_ to install all the Python packages easily. If you download the free version of Express Enthought Canopy, it gives you everything you need for installing AIMBAT properly. 
-
-If you do not want to use Enthought Canopy, read the rest of this section.
+`Enthought Canopy <https://www.enthought.com/store/>`_ is easy to install. Go to `the website <https://www.enthought.com/store/>`_ and download the free version of Express Enthought Canopy, which will give you the dependencies Numpy, Scipt, and Matplotlib.
 
 .. ############################################################################ ..
 .. #                             ENTHOUGHT CANOPY                             # ..
@@ -100,8 +98,10 @@ If you do not want to use Enthought Canopy, read the rest of this section.
 .. #                       INSTALLING PYTHON - MACPORTS                       # ..
 .. ############################################################################ ..
 
-Installing Python with Macports
--------------------------------
+If you cannot use Enthought Canopy
+----------------------------------
+
+This section describes a possible way to install Python without using Enthough Canopy. It is `not` recommended and may cause problems on some systems, but the authors describe it just in case. 
 
 Usually, Macs already have python installed by default. To check if you have python on your mac, open up terminal, and type ``python``. If python is installed, a console should pop up. If python is not installed, you should see an error message show up. You should download the correct verion for your operating system `here <https://www.python.org/>`_. 
 
@@ -120,11 +120,11 @@ Installing the necessary components
 Inside the terminal, once python is install, type these commands in using sudo mode. Note you will need to enter your admin password.::
 
 	sudo port install python27
-  	sudo port install py27-numpy
-  	sudo port install py27-scipy
-  	sudo port install py27-matplotlib
+  sudo port install py27-numpy
+  sudo port install py27-scipy
+  sudo port install py27-matplotlib
  	sudo port install py27-ipython
-  	sudo port install python_select
+  sudo port install python_select
 
 Installing the last two packages is optional. ``ipython`` is an enhanced interactive python shell. ``python_select`` is used to select default Python version by the following command::
 

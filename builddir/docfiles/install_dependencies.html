@@ -57,7 +57,7 @@
 <div class="section" id="getting-git">
 <h2>2.1. Getting Git<a class="headerlink" href="#getting-git" title="Permalink to this headline">¶</a></h2>
 <p>The <a class="reference external" href="https://github.com/pysmo">latest version of AIMBAT</a> will be on Github, so it would be good to get <a class="reference external" href="https://github.com/">Git</a> on your computer. This is not strictly necessary, as you could also download it as a zipfile from the <a class="reference external" href="http://www.earth.northwestern.edu/~xlou/aimbat.html">AIMBAT website</a>.</p>
-<p>The best way to get Git is to use <a class="reference external" href="https://mac.github.com/">Git for Mac</a>. This is a GUI you can used for your repositories, but if you want to use the command line interface you can also enable it when setting it up.</p>
+<p>Some users may already have Git installed, but if not, you can download the package installer <a class="reference external" href="http://git-scm.com/download/mac">here</a>. This would allow only command line usage of Git, so if you want to use a GUI, we recommend <a class="reference external" href="https://mac.github.com/">Git for Mac</a>.</p>
 </div>
 <div class="section" id="getting-your-operating-system">
 <h2>2.2. Getting your operating system<a class="headerlink" href="#getting-your-operating-system" title="Permalink to this headline">¶</a></h2>
@@ -73,13 +73,13 @@
 * <a class="reference external" href="http://matplotlib.org/">Matplotlib</a></p>
 <p>Using <a class="reference external" href="http://ipython.org/">iPython</a> is optional but recommended, as iPython is an interactive console designed to make</p>
 </div>
-<div class="section" id="installing-python-with-enthought-canopy">
-<h2>2.4. Installing Python with Enthought Canopy<a class="headerlink" href="#installing-python-with-enthought-canopy" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="http://www1.i2r.a-star.edu.sg/~lins/codes/python.html">Shaowei Lin</a> suggested <a class="reference external" href="https://www.enthought.com/store/">Enthought Canopy</a> to install all the Python packages easily. If you download the free version of Express Enthought Canopy, it gives you everything you need for installing AIMBAT properly.</p>
-<p>If you do not want to use Enthought Canopy, read the rest of this section.</p>
+<div class="section" id="installing-python">
+<h2>2.4. Installing Python<a class="headerlink" href="#installing-python" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.enthought.com/store/">Enthought Canopy</a> is easy to install. Go to <a class="reference external" href="https://www.enthought.com/store/">the website</a> and download the free version of Express Enthought Canopy, which will give you the dependencies Numpy, Scipt, and Matplotlib.</p>
 </div>
-<div class="section" id="installing-python-with-macports">
-<h2>2.5. Installing Python with Macports<a class="headerlink" href="#installing-python-with-macports" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="if-you-cannot-use-enthought-canopy">
+<h2>2.5. If you cannot use Enthought Canopy<a class="headerlink" href="#if-you-cannot-use-enthought-canopy" title="Permalink to this headline">¶</a></h2>
+<p>This section describes a possible way to install Python without using Enthough Canopy. It is <cite>not</cite> recommended and may cause problems on some systems, but the authors describe it just in case.</p>
 <p>Usually, Macs already have python installed by default. To check if you have python on your mac, open up terminal, and type <tt class="docutils literal"><span class="pre">python</span></tt>. If python is installed, a console should pop up. If python is not installed, you should see an error message show up. You should download the correct verion for your operating system <a class="reference external" href="https://www.python.org/">here</a>.</p>
 <div class="section" id="getting-macports">
 <h3>2.5.1. Getting Macports<a class="headerlink" href="#getting-macports" title="Permalink to this headline">¶</a></h3>
@@ -88,11 +88,11 @@
 <div class="section" id="installing-the-necessary-components">
 <h3>2.5.2. Installing the necessary components<a class="headerlink" href="#installing-the-necessary-components" title="Permalink to this headline">¶</a></h3>
 <p>Inside the terminal, once python is install, type these commands in using sudo mode. Note you will need to enter your admin password.:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo port install python27
+<div class="highlight-python"><div class="highlight"><pre>      sudo port install python27
 sudo port install py27-numpy
 sudo port install py27-scipy
 sudo port install py27-matplotlib
-sudo port install py27-ipython
+      sudo port install py27-ipython
 sudo port install python_select
 </pre></div>
 </div>
@@ -212,8 +212,8 @@ PATH=/usr/bin:${PATH}
 <li><a class="reference internal" href="#getting-git">2.1. Getting Git</a></li>
 <li><a class="reference internal" href="#getting-your-operating-system">2.2. Getting your operating system</a></li>
 <li><a class="reference internal" href="#python-packages-needed">2.3. Python Packages needed</a></li>
-<li><a class="reference internal" href="#installing-python-with-enthought-canopy">2.4. Installing Python with Enthought Canopy</a></li>
-<li><a class="reference internal" href="#installing-python-with-macports">2.5. Installing Python with Macports</a><ul>
+<li><a class="reference internal" href="#installing-python">2.4. Installing Python</a></li>
+<li><a class="reference internal" href="#if-you-cannot-use-enthought-canopy">2.5. If you cannot use Enthought Canopy</a><ul>
 <li><a class="reference internal" href="#getting-macports">2.5.1. Getting Macports</a></li>
 <li><a class="reference internal" href="#installing-the-necessary-components">2.5.2. Installing the necessary components</a></li>
 </ul>

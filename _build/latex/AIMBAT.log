@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.8)  27 JUN 2014 12:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.8)  28 JUN 2014 09:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -942,7 +942,7 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 
 ]
 Chapter 2.
-<system_preferences.png, id=274, 801.99625pt x 743.77875pt>
+<system_preferences.png, id=275, 801.99625pt x 743.77875pt>
 File: system_preferences.png Graphic file (type png)
 
 <use system_preferences.png>
@@ -970,7 +970,7 @@ File: enthought_as_default.png Graphic file (type png)
 Package pdftex.def Info: enthought_as_default.png used on input line 331.
 (pdftex.def)             Requested size: 469.755pt x 572.32518pt.
  [9]
-<canopy_preferences.png, id=326, 1284.8pt x 803.0pt>
+<canopy_preferences.png, id=327, 1284.8pt x 803.0pt>
 File: canopy_preferences.png Graphic file (type png)
 
 <use canopy_preferences.png>
@@ -980,7 +980,7 @@ File: canopy_preferences.png Graphic file (type png)
  <use canopy_preferences.png>
 Package pdftex.def Info: canopy_preferences.png used on input line 338.
 (pdftex.def)             Requested size: 469.755pt x 293.5888pt.
- [10 <./enthought_as_default.png>] <applications_canopy.png, id=332, 812.03375p
+ [10 <./enthought_as_default.png>] <applications_canopy.png, id=333, 812.03375p
 t x 501.875pt>
 File: applications_canopy.png Graphic file (type png)
 
@@ -991,7 +991,7 @@ File: applications_canopy.png Graphic file (type png)
  <use applications_canopy.png>
 Package pdftex.def Info: applications_canopy.png used on input line 359.
 (pdftex.def)             Requested size: 469.755pt x 290.32956pt.
- [11 <./canopy_preferences.png>] <residue.png, id=343, 672.5125pt x 472.76625pt
+ [11 <./canopy_preferences.png>] <residue.png, id=344, 672.5125pt x 472.76625pt
 >
 File: residue.png Graphic file (type png)
  <use residue.png>
@@ -1002,7 +1002,7 @@ File: residue.png Graphic file (type png)
 <use residue.png>
 Package pdftex.def Info: residue.png used on input line 366.
 (pdftex.def)             Requested size: 469.755pt x 330.23438pt.
- <profile_file.png, id=344, 917.4275pt x 561.09625pt>
+ <profile_file.png, id=345, 917.4275pt x 561.09625pt>
 File: profile_file.png Graphic file (type png)
 
 <use profile_file.png>
@@ -1013,7 +1013,7 @@ File: profile_file.png Graphic file (type png)
 Package pdftex.def Info: profile_file.png used on input line 368.
 (pdftex.def)             Requested size: 469.755pt x 287.30255pt.
  [12 <./applications_canopy.png>]
-<bashrc_file.png, id=351, 1011.78pt x 435.6275pt>
+<bashrc_file.png, id=352, 1011.78pt x 435.6275pt>
 File: bashrc_file.png Graphic file (type png)
  <use bashrc_file.png>
 Package pdftex.def Info: bashrc_file.png used on input line 372.
@@ -1024,7 +1024,7 @@ File: bashrc_file.png Graphic file (type png)
 Package pdftex.def Info: bashrc_file.png used on input line 372.
 (pdftex.def)             Requested size: 469.755pt x 202.25893pt.
  [13 <./residue.png> <./profile_file.png>]
-<bashrc_home.png, id=356, 857.2025pt x 538.01pt>
+<bashrc_home.png, id=357, 857.2025pt x 538.01pt>
 File: bashrc_home.png Graphic file (type png)
  <use bashrc_home.png>
 Package pdftex.def Info: bashrc_home.png used on input line 376.
@@ -1034,7 +1034,7 @@ File: bashrc_home.png Graphic file (type png)
 <use bashrc_home.png>
 Package pdftex.def Info: bashrc_home.png used on input line 376.
 (pdftex.def)             Requested size: 469.755pt x 294.83098pt.
- <profile_home.png, id=357, 865.2325pt x 538.01pt>
+ <profile_home.png, id=358, 865.2325pt x 538.01pt>
 File: profile_home.png Graphic file (type png)
 
 <use profile_home.png>
@@ -1050,7 +1050,7 @@ Package pdftex.def Info: profile_home.png used on input line 378.
 Chapter 3.
 [17] [18]
 Chapter 4.
-<sod_location.png, id=394, 688.5725pt x 339.2675pt>
+<sod_location.png, id=395, 688.5725pt x 339.2675pt>
 File: sod_location.png Graphic file (type png)
  <use sod_location.png>
 Package pdftex.def Info: sod_location.png used on input line 496.
@@ -1063,7 +1063,7 @@ Package pdftex.def Info: sod_location.png used on input line 496.
  [19
 
 ]
-<path_to_sod_bin.png, id=403, 699.61375pt x 353.32pt>
+<path_to_sod_bin.png, id=404, 699.61375pt x 353.32pt>
 File: path_to_sod_bin.png Graphic file (type png)
 
 <use path_to_sod_bin.png>
@@ -1111,7 +1111,7 @@ Underfull \hbox (badness 5533) in paragraph at lines 880--881
 es \T1/pcr/m/n/10 pysmo.aimbat.algiccs \T1/ptm/m/n/10 and
  []
 
-[29] <pick_travel_times.png, id=485, 1793.70125pt x 967.615pt>
+[29] <pick_travel_times.png, id=486, 1793.70125pt x 967.615pt>
 File: pick_travel_times.png Graphic file (type png)
 
 <use pick_travel_times.png>
@@ -1121,7 +1121,7 @@ File: pick_travel_times.png Graphic file (type png)
  <use pick_travel_times.png>
 Package pdftex.def Info: pick_travel_times.png used on input line 897.
 (pdftex.def)             Requested size: 469.755pt x 253.40479pt.
- [30 <./pick_travel_times.png>] [31] <sorting-interface.png, id=505, 1019.81pt 
+ [30 <./pick_travel_times.png>] [31] <sorting-interface.png, id=506, 1019.81pt 
 x 941.5175pt>
 File: sorting-interface.png Graphic file (type png)
 
@@ -1133,7 +1133,7 @@ File: sorting-interface.png Graphic file (type png)
 Package pdftex.def Info: sorting-interface.png used on input line 955.
 (pdftex.def)             Requested size: 469.755pt x 433.69234pt.
 
-<SACP2_popup.png, id=506, 779.91376pt x 953.5625pt>
+<SACP2_popup.png, id=507, 779.91376pt x 953.5625pt>
 File: SACP2_popup.png Graphic file (type png)
  <use SACP2_popup.png>
 Package pdftex.def Info: SACP2_popup.png used on input line 957.
@@ -1144,7 +1144,7 @@ File: SACP2_popup.png Graphic file (type png)
 Package pdftex.def Info: SACP2_popup.png used on input line 957.
 (pdftex.def)             Requested size: 469.755pt x 574.339pt.
  [32 <./sorting-interface.png>] [33 <./SACP2_popup.png>]
-<count_stations.png, id=516, 649.42625pt x 263.98625pt>
+<count_stations.png, id=517, 649.42625pt x 263.98625pt>
 File: count_stations.png Graphic file (type png)
 
 <use count_stations.png>
@@ -1184,13 +1184,13 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1099.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1099.
 
 Package rerunfilecheck Info: File `AIMBAT.out' has not changed.
-(rerunfilecheck)             Checksum: 9ED0067CFFC8620167B90BB716C7A149;2537.
+(rerunfilecheck)             Checksum: 1A3E4CBAAA3FCB689668420B57F7A8ED;2518.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1099.
  ) 
 Here is how much of TeX's memory you used:
  9463 strings out of 493308
- 134906 string characters out of 6137817
- 234168 words of memory out of 5000000
+ 134887 string characters out of 6137817
+ 234149 words of memory out of 5000000
  12488 multiletter control sequences out of 15000+600000
  63612 words of font info for 70 fonts, out of 8000000 for 9000
  958 hyphenation exceptions out of 8191
@@ -1208,10 +1208,10 @@ w/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times
 /utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmbi8a.p
 fb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on AIMBAT.pdf (49 pages, 3904673 bytes).
+Output written on AIMBAT.pdf (49 pages, 3904875 bytes).
 PDF statistics:
- 665 PDF objects out of 1000 (max. 8388607)
- 574 compressed objects within 6 object streams
+ 666 PDF objects out of 1000 (max. 8388607)
+ 575 compressed objects within 6 object streams
  161 named destinations out of 1000 (max. 500000)
  421 words of extra memory for PDF output out of 10000 (max. 10000000)
 
