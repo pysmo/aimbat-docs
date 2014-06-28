@@ -2,6 +2,8 @@
 Getting Data
 ============
 
+The material in this section is `not` needed to install AIMBAT and get it working if you already have the SAC files you want to use AIMBAT on. If you may need to 
+
 There are several ways to obtain seismic data from `IRIS <http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/>`_ to input to AIMBAT. The authors used two ways to do it, and a further list of libraries for obtaining seismic data is provided in the sidebars `here <http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/>`_. 
 
 .. ############################################################################ ..
@@ -14,7 +16,20 @@ Obspy.fdsn for downloading data
 Installing Obspy
 ~~~~~~~~~~~~~~~~
 
-We recommend using Macports to install Obspy as detailed in the `Installation` section `here <https://github.com/obspy/obspy/wiki>`_.
+We recommend using Macports to install Obspy as detailed in the `Installation` section `here <https://github.com/obspy/obspy/wiki>`_. If you have installed Enthough Canopy::
+
+    sudo port install py27-obspy
+
+should do it. If not, installing with `Homebrew <https://github.com/obspy/obspy/wiki/Installation-on-OS-X-using-Homebrew>`_ also seems to work. 
+
+Did the installation work?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If installation has worked, `close the terminal` you used to install Obspy on, and then open it again. Now, open the Python terminal in a new terminal, and type::
+
+    import obspy
+
+If there are no errors, your installation has worked. 
 
 Using Obspy
 ~~~~~~~~~~~
@@ -57,52 +72,7 @@ Once you have it there, get the path to the sod folder's bin and put it in your 
 
 .. image:: sod-images/path_to_sod_bin.png
 
-Inside my home directory's bash profile (you get the by typing `cd`), you put the path to `sod-3.2.3/bin` by adding in either the `bash` or `bash_profile` or `profile` files: 
-
-Downloading Data with SOD
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-:Authors: 
-	`Trevor Bollmann <http://www.earth.northwestern.edu/~trevor/Welcome.html>`_
-
-#. Create a sod recipe and place it in the folder that you would like the data to download to.
-    - :code:`sod -f <recipename>.xml`
-#. Run :code:`sodcut.sh` to cut the seismogram around phase wanted
-    - check model within :code:`cutevseis.sh`
-    - run using :code:`sodcut.sh <name>`
-    - watch :code:`sdir = processed seismograms`
-    - Run over the entire downloaded directory (the files sod downloaded)
-#. Run :code:`sodpkl.sh` (converts `.sac` files to python pickles)
-    - run using :code:`sodpkl.sh [options] <directory>`
-    - output will automatically be zipped
-    - run in DATA directory
-#. Run :code:`ttpick.py` (does travel time picking with plotting)
-    - can use :code:`iccs.py` but it does not have plotting capabilities
-    - run using :code:`ttpick.py [options] <pkl.gz file>`
-    - do this one event at a time
-    - use :code:`sacp2` to look at the stacking of the seismograms
-    - you can sort the seismograms using the :code:`–s` flag
-#. run :code:`getsta.py` (creates a :code:`loc.sta` file)
-    - :code:`getsta.py [options] <pkl.gz files>`
-#. Run EITHER of these: 
-	- FIRST CHOICE	
-    
-    run :code:`mccc2delay.py` (converts mccc delays to actual delays) by doing :code:`mccc2delay.py [option] <.mcp files>`
-    
-    run :code:`getdelay.py` (creates a delay file) by doing `getdelay.py [options] <*.px>`. Can possibly use `doplotsta.sh`, plots all of the events and their station delays
-    
-    Run :code:`evmcdelay.sh`
-    
-  	- SECOND CHOICE
-  	
-    :code:`ttcheck.py` to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.
-#. If you need to remove a station from an event you can use :code:`pklsel.py`
-    - Run using :code:`pklsel.py [pkl file] –d [stnm]` to remove one station
-    - Only works for one event at a time
-#. If you need to filter the data to be able to pick use :code:`evsacbp.sh`
-    - run using :code:`evsacbp.sh [pkl file] bp1 bp2`
-    - Automatically uses two corners
-    - run in the whole downloaded directory (the one with the sac directory)
+Inside my home directory's bash profile (you get the by typing `cd`), you put the path to `sod-3.2.3/bin` by adding in either the `bash` or `bash_profile` or `profile` files.
 
 
 .. ############################################################################ ..

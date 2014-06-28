@@ -1,6 +1,6 @@
-==============================
-Installing Python Dependencies
-==============================
+=======================
+Installing Dependencies
+=======================
 
 Usually, Macs already have python installed by default. To check if you have python on your mac, open up terminal, and do python in the terminal. If python is installed you should see a python console show up, displaying the version number of python. The version number should be at least 2.7 or higher. If python is not installed, you should see an error message show up. However, you may or may not have some necessary packages installed. 
 
@@ -10,10 +10,12 @@ Usually, Macs already have python installed by default. To check if you have pyt
 .. #                                 GITHUB                                   # ..
 .. ############################################################################ ..
 
-Getting Git
------------
+Github
+------
 
-The `latest version of AIMBAT <https://github.com/pysmo>`_ will be on Github, so it would be good to get `Git <https://github.com/>`_ on your computer. This is not strictly necessary, as you could also download it as a zipfile from the `AIMBAT website <http://www.earth.northwestern.edu/~xlou/aimbat.html>`_.
+`Optional but recommended`.
+
+The `latest version of AIMBAT <https://github.com/pysmo>`_ will be on `Github <https://github.com/>`_, so it would be good to get `Git <https://github.com/>`_ on your computer. This is not strictly necessary, as you could also download it as a zipfile from the `AIMBAT website <http://www.earth.northwestern.edu/~xlou/aimbat.html>`_.
 
 Some users may already have Git installed, but if not, you can download the package installer `here <http://git-scm.com/download/mac>`_. This would allow only command line usage of Git, so if you want to use a GUI, we recommend `Git for Mac <https://mac.github.com/>`_. 
 
@@ -51,73 +53,55 @@ On a mac, to find the version of your operating system, first click on the apple
 
 
 
-.. ############################################################################ ..
-.. #                            PYTHON DEPENDENCIES                           # ..
-.. ############################################################################ ..
 
-Python Packages needed
-----------------------
-
-The following are required for AIMBAT
-* `Numpy <http://www.numpy.org/>`_
-* `Scipy <http://www.scipy.org/>`_
-* `Matplotlib <http://matplotlib.org/>`_
-
-
-Using `iPython <http://ipython.org/>`_ is optional but recommended, as iPython is an interactive console designed to make 
 
 .. ############################################################################ ..
 .. #                            PYTHON DEPENDENCIES                           # ..
 .. ############################################################################ ..
 
+Python Dependencies
+-------------------
+
+Required for AIMBAT
+#. `Numpy <http://www.numpy.org/>`_: Used for manipulating numbers and datasets
+#. `Scipy <http://www.scipy.org/>`_: Used for data processing
+#. `Matplotlib <http://matplotlib.org/>`_: Used for the majority of the plots in AIMBAT and the GUI
+
+Optional but recommended
+------------------------
+`iPython <http://ipython.org/>`_: Interactive console for python 
+
+.. ############################################################################ ..
+.. #                            PYTHON DEPENDENCIES                           # ..
+.. ############################################################################ ..
+
 
 
 
 
 
 .. ############################################################################ ..
-.. #                             ENTHOUGHT CANOPY                             # ..
+.. #                       INSTALLING BASIC PYTHON PACKAGES                   # ..
 .. ############################################################################ ..
 
-Installing Python
------------------
+Installing Basic Python Packages
+--------------------------------
+
+Enthought Python
+~~~~~~~~~~~~~~~~
+
+`Strongly recommended`.
 
 `Enthought Canopy <https://www.enthought.com/store/>`_ is easy to install. Go to `the website <https://www.enthought.com/store/>`_ and download the free version of Express Enthought Canopy, which will give you the dependencies Numpy, Scipt, and Matplotlib.
 
-.. ############################################################################ ..
-.. #                             ENTHOUGHT CANOPY                             # ..
-.. ############################################################################ ..
-
-
-
-
-
-
-
-.. ############################################################################ ..
-.. #                       INSTALLING PYTHON - MACPORTS                       # ..
-.. ############################################################################ ..
-
 If you cannot use Enthought Canopy ...
---------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section describes a possible way to install Python without using Enthough Canopy. It is `not` recommended and may cause problems on some systems, but the authors describe it just in case. 
 
-Usually, Macs already have python installed by default. To check if you have python on your mac, open up terminal, and type ``python``. If python is installed, a console should pop up. If python is not installed, you should see an error message show up. You should download the correct verion for your operating system `here <https://www.python.org/>`_. 
+#. Use `Macports <http://guide.macports.org/>`_ to install the necessary python libraries for AIMBAT. If you just upgraded your operating system, you need to `upgrade Macports and re-install the libraries <https://trac. macports.org/wiki/Migration>`_ as well. 
 
-.. -------------------------------------------------------------------------------- ..
-
-Getting Macports
-~~~~~~~~~~~~~~~~
-
-Its best to use `Macports <http://guide.macports.org/>`_ to install the necessary python libraries for AIMBAT. If you just upgraded your operating system, you need to `upgrade Macports and re-install the libraries <https://trac. macports.org/wiki/Migration>`_ as well. 
-
-.. -------------------------------------------------------------------------------- ..
-
-Installing the necessary components
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Inside the terminal, once python is install, type these commands in using sudo mode. Note you will need to enter your admin password.::
+#. Inside the terminal, once python is installed, type these commands in using sudo mode. Note you will need to enter your admin password.::
 
 	sudo port install python27
   sudo port install py27-numpy
@@ -126,35 +110,16 @@ Inside the terminal, once python is install, type these commands in using sudo m
  	sudo port install py27-ipython
   sudo port install python_select
 
-Installing the last two packages is optional. ``ipython`` is an enhanced interactive python shell. ``python_select`` is used to select default Python version by the following command::
+#. Installing the last two packages is optional. ``ipython`` is an enhanced interactive python shell. ``python_select`` is used to select default Python version by the following command::
 
 	port select --set python python27
 
 You need this version, not other versions on your computer, since this is the one that has the libraries AIMBAT needs.
 
+#. The package manager brew caused many problems when tried. If you figured it out properly, please :ref:`contact the authors <authors-contacts>` with instructions~ In general, the authors do not recommend trying to install the packages separately when there are Python versions that will come with all the packages pre-installed already. `Scipy <http://www.scipy.org/install.html>`_ is especially tricky as it relies on Fortran and C as well. The authors of scipy recommend using Enthought Canopy or Anacoda to install it.
 
 .. ############################################################################ ..
-.. #                       INSTALLING PYTHON - MACPORTS                       # ..
-.. ############################################################################ ..
-
-
-
-
-
-
-.. ############################################################################ ..
-.. #                         REGARDING PACKAGE MANAGERS                       # ..
-.. ############################################################################ ..
-
-Regarding Package Managers
---------------------------
-
-The package manager brew caused many problems when tried. If you figured it out properly, please :ref:`contact the authors <authors-contacts>` with instructions~ In general, the authors do not recommend trying to install the packages separately when there are Python versions that will come with all the packages pre-installed already.
-
-`Scipy <http://www.scipy.org/install.html>`_ is especially tricky as it relies on Fortran and C as well. The authors of scipy recommend using Enthought Canopy or Anacoda to install it.
-
-.. ############################################################################ ..
-.. #                         REGARDING PACKAGE MANAGERS                       # ..
+.. #                       INSTALLING BASIC PYTHON PACKAGES                   # ..
 .. ############################################################################ ..
 
 
@@ -165,8 +130,8 @@ The package manager brew caused many problems when tried. If you figured it out 
 .. #                           INSTALLING BASEMAP                             # ..
 .. ############################################################################ ..
 
-Installing Basemap
-------------------
+Installing Basemap (Python dependency)
+--------------------------------------
 
 Disclaimer: Lifted from content written by `this guy <http://blog.bluedackers.com/2012/11/13/installing-basemap-on-mac-os-x-mountain-lion/>`_ with some tweaks. 
 
@@ -209,8 +174,8 @@ Here some common problems and possible resolutions. If your problem is not liste
 
 .. -------------------------------------------------------------------------------- ..
 
-Macport 
-~~~~~~~
+Macports 
+~~~~~~~~
 
 You may run into problems with AIMBAT if your `Macport <http://www.macports.org/>`_ version is not compatible with your operating system version. For example, if you used Macports for OS X 10.8 to install AIMBAT, then upgraded your operating system or OS X 10.9, you may find that AIMBAT no longer works properly. You will need to upgrade Macports to fix this error.
 

@@ -169,14 +169,16 @@ Email: suzan AT earth DOT northwestern DOT edu
 \end{itemize}
 
 
-\chapter{Installing Python Dependencies}
-\label{docfiles/install_dependencies::doc}\label{docfiles/install_dependencies:installing-python-dependencies}
+\chapter{Installing Dependencies}
+\label{docfiles/install_dependencies:installing-dependencies}\label{docfiles/install_dependencies::doc}
 Usually, Macs already have python installed by default. To check if you have python on your mac, open up terminal, and do python in the terminal. If python is installed you should see a python console show up, displaying the version number of python. The version number should be at least 2.7 or higher. If python is not installed, you should see an error message show up. However, you may or may not have some necessary packages installed.
 
 
-\section{Getting Git}
-\label{docfiles/install_dependencies:getting-git}
-The \href{https://github.com/pysmo}{latest version of AIMBAT} will be on Github, so it would be good to get \href{https://github.com/}{Git} on your computer. This is not strictly necessary, as you could also download it as a zipfile from the \href{http://www.earth.northwestern.edu/~xlou/aimbat.html}{AIMBAT website}.
+\section{Github}
+\label{docfiles/install_dependencies:github}
+\emph{Optional but recommended}.
+
+The \href{https://github.com/pysmo}{latest version of AIMBAT} will be on \href{https://github.com/}{Github}, so it would be good to get \href{https://github.com/}{Git} on your computer. This is not strictly necessary, as you could also download it as a zipfile from the \href{http://www.earth.northwestern.edu/~xlou/aimbat.html}{AIMBAT website}.
 
 Some users may already have Git installed, but if not, you can download the package installer \href{http://git-scm.com/download/mac}{here}. This would allow only command line usage of Git, so if you want to use a GUI, we recommend \href{https://mac.github.com/}{Git for Mac}.
 
@@ -190,64 +192,76 @@ On a mac, to find the version of your operating system, first click on the apple
 \includegraphics{system_preferences.png}
 
 
-\section{Python Packages needed}
-\label{docfiles/install_dependencies:python-packages-needed}
-The following are required for AIMBAT
-* \href{http://www.numpy.org/}{Numpy}
-* \href{http://www.scipy.org/}{Scipy}
-* \href{http://matplotlib.org/}{Matplotlib}
-
-Using \href{http://ipython.org/}{iPython} is optional but recommended, as iPython is an interactive console designed to make
+\section{Python Dependencies}
+\label{docfiles/install_dependencies:python-dependencies}
+Required for AIMBAT
+\#. \href{http://www.numpy.org/}{Numpy}: Used for manipulating numbers and datasets
+\#. \href{http://www.scipy.org/}{Scipy}: Used for data processing
+\#. \href{http://matplotlib.org/}{Matplotlib}: Used for the majority of the plots in AIMBAT and the GUI
 
 
-\section{Installing Python}
-\label{docfiles/install_dependencies:installing-python}
+\section{Optional but recommended}
+\label{docfiles/install_dependencies:optional-but-recommended}
+\href{http://ipython.org/}{iPython}: Interactive console for python
+
+
+\section{Installing Basic Python Packages}
+\label{docfiles/install_dependencies:installing-basic-python-packages}
+
+\subsection{Enthought Python}
+\label{docfiles/install_dependencies:enthought-python}
+\emph{Strongly recommended}.
+
 \href{https://www.enthought.com/store/}{Enthought Canopy} is easy to install. Go to \href{https://www.enthought.com/store/}{the website} and download the free version of Express Enthought Canopy, which will give you the dependencies Numpy, Scipt, and Matplotlib.
 
 
-\section{If you cannot use Enthought Canopy ...}
+\subsection{If you cannot use Enthought Canopy ...}
 \label{docfiles/install_dependencies:if-you-cannot-use-enthought-canopy}
 This section describes a possible way to install Python without using Enthough Canopy. It is \emph{not} recommended and may cause problems on some systems, but the authors describe it just in case.
+\begin{enumerate}
+\item {} 
+Use \href{http://guide.macports.org/}{Macports} to install the necessary python libraries for AIMBAT. If you just upgraded your operating system, you need to \href{https://trac.macports.org/wiki/Migration}{upgrade Macports and re-install the libraries} as well.
 
-Usually, Macs already have python installed by default. To check if you have python on your mac, open up terminal, and type \code{python}. If python is installed, a console should pop up. If python is not installed, you should see an error message show up. You should download the correct verion for your operating system \href{https://www.python.org/}{here}.
-
-
-\subsection{Getting Macports}
-\label{docfiles/install_dependencies:getting-macports}
-Its best to use \href{http://guide.macports.org/}{Macports} to install the necessary python libraries for AIMBAT. If you just upgraded your operating system, you need to \href{https://trac.macports.org/wiki/Migration}{upgrade Macports and re-install the libraries} as well.
-
-
-\subsection{Installing the necessary components}
-\label{docfiles/install_dependencies:installing-the-necessary-components}
-Inside the terminal, once python is install, type these commands in using sudo mode. Note you will need to enter your admin password.:
+\item {} 
+Inside the terminal, once python is installed, type these commands in using sudo mode. Note you will need to enter your admin password.:
 
 \begin{Verbatim}[commandchars=\\\{\}]
-      sudo port install python27
-sudo port install py27\PYGZhy{}numpy
-sudo port install py27\PYGZhy{}scipy
-sudo port install py27\PYGZhy{}matplotlib
-      sudo port install py27\PYGZhy{}ipython
-sudo port install python\PYGZus{}select
+sudo port install python27
 \end{Verbatim}
 
+\end{enumerate}
+\begin{quote}
+
+sudo port install py27-numpy
+sudo port install py27-scipy
+sudo port install py27-matplotlib
+\begin{quote}
+
+sudo port install py27-ipython
+\end{quote}
+
+sudo port install python\_select
+\end{quote}
+\begin{enumerate}
+\item {} 
 Installing the last two packages is optional. \code{ipython} is an enhanced interactive python shell. \code{python\_select} is used to select default Python version by the following command:
 
 \begin{Verbatim}[commandchars=\\\{\}]
 port select \PYGZhy{}\PYGZhy{}set python python27
 \end{Verbatim}
 
+\end{enumerate}
+
 You need this version, not other versions on your computer, since this is the one that has the libraries AIMBAT needs.
+\begin{enumerate}
+\item {} 
+The package manager brew caused many problems when tried. If you figured it out properly, please {\hyperref[docfiles/introduction:authors-contacts]{\emph{contact the authors}}} with instructions\textasciitilde{} In general, the authors do not recommend trying to install the packages separately when there are Python versions that will come with all the packages pre-installed already. \href{http://www.scipy.org/install.html}{Scipy} is especially tricky as it relies on Fortran and C as well. The authors of scipy recommend using Enthought Canopy or Anacoda to install it.
+
+\end{enumerate}
 
 
-\section{Regarding Package Managers}
-\label{docfiles/install_dependencies:regarding-package-managers}
-The package manager brew caused many problems when tried. If you figured it out properly, please {\hyperref[docfiles/introduction:authors-contacts]{\emph{contact the authors}}} with instructions\textasciitilde{} In general, the authors do not recommend trying to install the packages separately when there are Python versions that will come with all the packages pre-installed already.
-
-\href{http://www.scipy.org/install.html}{Scipy} is especially tricky as it relies on Fortran and C as well. The authors of scipy recommend using Enthought Canopy or Anacoda to install it.
-
-
-\section{Installing Basemap}
-\label{docfiles/install_dependencies:installing-basemap}
+\section{Installing Basemap (Python dependency)}
+\label{docfiles/install_dependencies:installing-basemap-python-dependency}
 Disclaimer: Lifted from content written by \href{http://blog.bluedackers.com/2012/11/13/installing-basemap-on-mac-os-x-mountain-lion/}{this guy} with some tweaks.
 
 Enthough Python should get you most of the dependencies needed. You do need to get \href{http://trac.osgeo.org/geos/}{Geos} though. The best way to get it is \href{http://matthewcarriere.com/2013/08/05/how-to-install-and-use-homebrew/}{install Homebrew}, and then install \code{gdal}, a package that has \code{Geos} as a dependency. To get \code{gdal}, do:
@@ -287,8 +301,8 @@ and then:
 Here some common problems and possible resolutions. If your problem is not listed here, or you have a suggestion, please {\hyperref[docfiles/introduction:authors-contacts]{\emph{contact the authors}}}.
 
 
-\subsection{Macport}
-\label{docfiles/install_dependencies:macport}
+\subsection{Macports}
+\label{docfiles/install_dependencies:id4}
 You may run into problems with AIMBAT if your \href{http://www.macports.org/}{Macport} version is not compatible with your operating system version. For example, if you used Macports for OS X 10.8 to install AIMBAT, then upgraded your operating system or OS X 10.9, you may find that AIMBAT no longer works properly. You will need to upgrade Macports to fix this error.
 
 Do not uninstall MacPorts unless you know what you are doing, uninstalling MacPorts may get rid of other programs you installed using MacPorts. However, if you are sure you want to do so, see \href{https://guide.macports.org/chunked/installing.macports.uninstalling.html}{here} for instructions.
@@ -462,6 +476,8 @@ If AIMBAT has beenn installed, type from \code{pysmo import aimbat} in a Python 
 
 \chapter{Getting Data}
 \label{docfiles/gettingData:getting-data}\label{docfiles/gettingData::doc}
+The material in this section is \emph{not} needed to install AIMBAT and get it working if you already have the SAC files you want to use AIMBAT on. If you may need to
+
 There are several ways to obtain seismic data from \href{http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/}{IRIS} to input to AIMBAT. The authors used two ways to do it, and a further list of libraries for obtaining seismic data is provided in the sidebars \href{http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/}{here}.
 
 
@@ -470,7 +486,24 @@ There are several ways to obtain seismic data from \href{http://www.iris.edu/dms
 
 \subsection{Installing Obspy}
 \label{docfiles/gettingData:installing-obspy}
-We recommend using Macports to install Obspy as detailed in the \emph{Installation} section \href{https://github.com/obspy/obspy/wiki}{here}.
+We recommend using Macports to install Obspy as detailed in the \emph{Installation} section \href{https://github.com/obspy/obspy/wiki}{here}. If you have installed Enthough Canopy:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+sudo port install py27\PYGZhy{}obspy
+\end{Verbatim}
+
+should do it. If not, installing with \href{https://github.com/obspy/obspy/wiki/Installation-on-OS-X-using-Homebrew}{Homebrew} also seems to work.
+
+
+\subsection{Did the installation work?}
+\label{docfiles/gettingData:did-the-installation-work}
+If installation has worked, \emph{close the terminal} you used to install Obspy on, and then open it again. Now, open the Python terminal in a new terminal, and type:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{obspy}
+\end{Verbatim}
+
+If there are no errors, your installation has worked.
 
 
 \subsection{Using Obspy}
@@ -499,138 +532,7 @@ Once you have it there, get the path to the sod folder's bin and put it in your 
 
 \includegraphics{path_to_sod_bin.png}
 
-Inside my home directory's bash profile (you get the by typing \emph{cd}), you put the path to \emph{sod-3.2.3/bin} by adding in either the \emph{bash} or \emph{bash\_profile} or \emph{profile} files:
-
-
-\subsection{Downloading Data with SOD}
-\label{docfiles/gettingData:downloading-data-with-sod}\begin{quote}\begin{description}
-\item[{Authors}] \leavevmode
-\href{http://www.earth.northwestern.edu/~trevor/Welcome.html}{Trevor Bollmann}
-
-\end{description}\end{quote}
-\begin{enumerate}
-\item {} \begin{description}
-\item[{Create a sod recipe and place it in the folder that you would like the data to download to.}] \leavevmode\begin{itemize}
-\item {} 
-\code{sod -f \textless{}recipename\textgreater{}.xml}
-
-\end{itemize}
-
-\end{description}
-
-\item {} \begin{description}
-\item[{Run \code{sodcut.sh} to cut the seismogram around phase wanted}] \leavevmode\begin{itemize}
-\item {} 
-check model within \code{cutevseis.sh}
-
-\item {} 
-run using \code{sodcut.sh \textless{}name\textgreater{}}
-
-\item {} 
-watch \code{sdir = processed seismograms}
-
-\item {} 
-Run over the entire downloaded directory (the files sod downloaded)
-
-\end{itemize}
-
-\end{description}
-
-\item {} \begin{description}
-\item[{Run \code{sodpkl.sh} (converts \emph{.sac} files to python pickles)}] \leavevmode\begin{itemize}
-\item {} 
-run using \code{sodpkl.sh {[}options{]} \textless{}directory\textgreater{}}
-
-\item {} 
-output will automatically be zipped
-
-\item {} 
-run in DATA directory
-
-\end{itemize}
-
-\end{description}
-
-\item {} \begin{description}
-\item[{Run \code{ttpick.py} (does travel time picking with plotting)}] \leavevmode\begin{itemize}
-\item {} 
-can use \code{iccs.py} but it does not have plotting capabilities
-
-\item {} 
-run using \code{ttpick.py {[}options{]} \textless{}pkl.gz file\textgreater{}}
-
-\item {} 
-do this one event at a time
-
-\item {} 
-use \code{sacp2} to look at the stacking of the seismograms
-
-\item {} 
-you can sort the seismograms using the \code{–s} flag
-
-\end{itemize}
-
-\end{description}
-
-\item {} \begin{description}
-\item[{run \code{getsta.py} (creates a \code{loc.sta} file)}] \leavevmode\begin{itemize}
-\item {} 
-\code{getsta.py {[}options{]} \textless{}pkl.gz files\textgreater{}}
-
-\end{itemize}
-
-\end{description}
-
-\item {} \begin{description}
-\item[{Run EITHER of these:}] \leavevmode\begin{itemize}
-\item {} 
-FIRST CHOICE
-
-\end{itemize}
-
-run \code{mccc2delay.py} (converts mccc delays to actual delays) by doing \code{mccc2delay.py {[}option{]} \textless{}.mcp files\textgreater{}}
-
-run \code{getdelay.py} (creates a delay file) by doing \emph{getdelay.py {[}options{]} \textless{}*.px\textgreater{}}. Can possibly use \emph{doplotsta.sh}, plots all of the events and their station delays
-
-Run \code{evmcdelay.sh}
-\begin{itemize}
-\item {} 
-SECOND CHOICE
-
-\end{itemize}
-
-\code{ttcheck.py} to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.
-
-\end{description}
-
-\item {} \begin{description}
-\item[{If you need to remove a station from an event you can use \code{pklsel.py}}] \leavevmode\begin{itemize}
-\item {} 
-Run using \code{pklsel.py {[}pkl file{]} –d {[}stnm{]}} to remove one station
-
-\item {} 
-Only works for one event at a time
-
-\end{itemize}
-
-\end{description}
-
-\item {} \begin{description}
-\item[{If you need to filter the data to be able to pick use \code{evsacbp.sh}}] \leavevmode\begin{itemize}
-\item {} 
-run using \code{evsacbp.sh {[}pkl file{]} bp1 bp2}
-
-\item {} 
-Automatically uses two corners
-
-\item {} 
-run in the whole downloaded directory (the one with the sac directory)
-
-\end{itemize}
-
-\end{description}
-
-\end{enumerate}
+Inside my home directory's bash profile (you get the by typing \emph{cd}), you put the path to \emph{sod-3.2.3/bin} by adding in either the \emph{bash} or \emph{bash\_profile} or \emph{profile} files.
 
 
 \chapter{Filtering Data}

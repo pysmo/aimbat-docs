@@ -53,15 +53,28 @@
             
   <div class="section" id="getting-data">
 <h1>4. Getting Data<a class="headerlink" href="#getting-data" title="Permalink to this headline">¶</a></h1>
+<p>The material in this section is <cite>not</cite> needed to install AIMBAT and get it working if you already have the SAC files you want to use AIMBAT on. If you may need to</p>
 <p>There are several ways to obtain seismic data from <a class="reference external" href="http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/">IRIS</a> to input to AIMBAT. The authors used two ways to do it, and a further list of libraries for obtaining seismic data is provided in the sidebars <a class="reference external" href="http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/">here</a>.</p>
 <div class="section" id="obspy-fdsn-for-downloading-data">
 <h2>4.1. Obspy.fdsn for downloading data<a class="headerlink" href="#obspy-fdsn-for-downloading-data" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="installing-obspy">
 <h3>4.1.1. Installing Obspy<a class="headerlink" href="#installing-obspy" title="Permalink to this headline">¶</a></h3>
-<p>We recommend using Macports to install Obspy as detailed in the <cite>Installation</cite> section <a class="reference external" href="https://github.com/obspy/obspy/wiki">here</a>.</p>
+<p>We recommend using Macports to install Obspy as detailed in the <cite>Installation</cite> section <a class="reference external" href="https://github.com/obspy/obspy/wiki">here</a>. If you have installed Enthough Canopy:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo port install py27-obspy
+</pre></div>
+</div>
+<p>should do it. If not, installing with <a class="reference external" href="https://github.com/obspy/obspy/wiki/Installation-on-OS-X-using-Homebrew">Homebrew</a> also seems to work.</p>
+</div>
+<div class="section" id="did-the-installation-work">
+<h3>4.1.2. Did the installation work?<a class="headerlink" href="#did-the-installation-work" title="Permalink to this headline">¶</a></h3>
+<p>If installation has worked, <cite>close the terminal</cite> you used to install Obspy on, and then open it again. Now, open the Python terminal in a new terminal, and type:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">obspy</span>
+</pre></div>
+</div>
+<p>If there are no errors, your installation has worked.</p>
 </div>
 <div class="section" id="using-obspy">
-<h3>4.1.2. Using Obspy<a class="headerlink" href="#using-obspy" title="Permalink to this headline">¶</a></h3>
+<h3>4.1.3. Using Obspy<a class="headerlink" href="#using-obspy" title="Permalink to this headline">¶</a></h3>
 <p>Use the <a class="reference external" href="http://docs.obspy.org/packages/obspy.fdsn.html#">Obspy FDSN</a> Web service client for Obspy in Python. Once you have done so, check out the <a class="reference external" href="http://docs.obspy.org/packages/obspy.sac.html">SAC-Input Output</a> libraries for loading the data to Python and saving it as SAC or Pickle files.</p>
 </div>
 </div>
@@ -77,107 +90,7 @@
 <img alt="../_images/sod_location.png" src="../_images/sod_location.png" />
 <p>Once you have it there, get the path to the sod folder&#8217;s bin and put it in your path folder.</p>
 <img alt="../_images/path_to_sod_bin.png" src="../_images/path_to_sod_bin.png" />
-<p>Inside my home directory&#8217;s bash profile (you get the by typing <cite>cd</cite>), you put the path to <cite>sod-3.2.3/bin</cite> by adding in either the <cite>bash</cite> or <cite>bash_profile</cite> or <cite>profile</cite> files:</p>
-</div>
-<div class="section" id="downloading-data-with-sod">
-<h3>4.2.2. Downloading Data with SOD<a class="headerlink" href="#downloading-data-with-sod" title="Permalink to this headline">¶</a></h3>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Authors:</th><td class="field-body"><a class="reference external" href="http://www.earth.northwestern.edu/~trevor/Welcome.html">Trevor Bollmann</a></td>
-</tr>
-</tbody>
-</table>
-<ol class="arabic">
-<li><dl class="first docutils">
-<dt>Create a sod recipe and place it in the folder that you would like the data to download to.</dt>
-<dd><ul class="first last simple">
-<li><tt class="code docutils literal"><span class="pre">sod</span> <span class="pre">-f</span> <span class="pre">&lt;recipename&gt;.xml</span></tt></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Run <tt class="code docutils literal"><span class="pre">sodcut.sh</span></tt> to cut the seismogram around phase wanted</dt>
-<dd><ul class="first last simple">
-<li>check model within <tt class="code docutils literal"><span class="pre">cutevseis.sh</span></tt></li>
-<li>run using <tt class="code docutils literal"><span class="pre">sodcut.sh</span> <span class="pre">&lt;name&gt;</span></tt></li>
-<li>watch <tt class="code docutils literal"><span class="pre">sdir</span> <span class="pre">=</span> <span class="pre">processed</span> <span class="pre">seismograms</span></tt></li>
-<li>Run over the entire downloaded directory (the files sod downloaded)</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Run <tt class="code docutils literal"><span class="pre">sodpkl.sh</span></tt> (converts <cite>.sac</cite> files to python pickles)</dt>
-<dd><ul class="first last simple">
-<li>run using <tt class="code docutils literal"><span class="pre">sodpkl.sh</span> <span class="pre">[options]</span> <span class="pre">&lt;directory&gt;</span></tt></li>
-<li>output will automatically be zipped</li>
-<li>run in DATA directory</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Run <tt class="code docutils literal"><span class="pre">ttpick.py</span></tt> (does travel time picking with plotting)</dt>
-<dd><ul class="first last simple">
-<li>can use <tt class="code docutils literal"><span class="pre">iccs.py</span></tt> but it does not have plotting capabilities</li>
-<li>run using <tt class="code docutils literal"><span class="pre">ttpick.py</span> <span class="pre">[options]</span> <span class="pre">&lt;pkl.gz</span> <span class="pre">file&gt;</span></tt></li>
-<li>do this one event at a time</li>
-<li>use <tt class="code docutils literal"><span class="pre">sacp2</span></tt> to look at the stacking of the seismograms</li>
-<li>you can sort the seismograms using the <tt class="code docutils literal"><span class="pre">–s</span></tt> flag</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>run <tt class="code docutils literal"><span class="pre">getsta.py</span></tt> (creates a <tt class="code docutils literal"><span class="pre">loc.sta</span></tt> file)</dt>
-<dd><ul class="first last simple">
-<li><tt class="code docutils literal"><span class="pre">getsta.py</span> <span class="pre">[options]</span> <span class="pre">&lt;pkl.gz</span> <span class="pre">files&gt;</span></tt></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Run EITHER of these:</dt>
-<dd><blockquote class="first">
-<div><ul class="simple">
-<li>FIRST CHOICE</li>
-</ul>
-</div></blockquote>
-<p>run <tt class="code docutils literal"><span class="pre">mccc2delay.py</span></tt> (converts mccc delays to actual delays) by doing <tt class="code docutils literal"><span class="pre">mccc2delay.py</span> <span class="pre">[option]</span> <span class="pre">&lt;.mcp</span> <span class="pre">files&gt;</span></tt></p>
-<p>run <tt class="code docutils literal"><span class="pre">getdelay.py</span></tt> (creates a delay file) by doing <cite>getdelay.py [options] &lt;*.px&gt;</cite>. Can possibly use <cite>doplotsta.sh</cite>, plots all of the events and their station delays</p>
-<p>Run <tt class="code docutils literal"><span class="pre">evmcdelay.sh</span></tt></p>
-<blockquote>
-<div><ul class="simple">
-<li>SECOND CHOICE</li>
-</ul>
-</div></blockquote>
-<p class="last"><tt class="code docutils literal"><span class="pre">ttcheck.py</span></tt> to compare the delay times of the p and s waves. Should form a nice cloud with the mean value in line with the cloud.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>If you need to remove a station from an event you can use <tt class="code docutils literal"><span class="pre">pklsel.py</span></tt></dt>
-<dd><ul class="first last simple">
-<li>Run using <tt class="code docutils literal"><span class="pre">pklsel.py</span> <span class="pre">[pkl</span> <span class="pre">file]</span> <span class="pre">–d</span> <span class="pre">[stnm]</span></tt> to remove one station</li>
-<li>Only works for one event at a time</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>If you need to filter the data to be able to pick use <tt class="code docutils literal"><span class="pre">evsacbp.sh</span></tt></dt>
-<dd><ul class="first last simple">
-<li>run using <tt class="code docutils literal"><span class="pre">evsacbp.sh</span> <span class="pre">[pkl</span> <span class="pre">file]</span> <span class="pre">bp1</span> <span class="pre">bp2</span></tt></li>
-<li>Automatically uses two corners</li>
-<li>run in the whole downloaded directory (the one with the sac directory)</li>
-</ul>
-</dd>
-</dl>
-</li>
-</ol>
+<p>Inside my home directory&#8217;s bash profile (you get the by typing <cite>cd</cite>), you put the path to <cite>sod-3.2.3/bin</cite> by adding in either the <cite>bash</cite> or <cite>bash_profile</cite> or <cite>profile</cite> files.</p>
 </div>
 </div>
 </div>
@@ -196,12 +109,12 @@
 <li><a class="reference internal" href="#">4. Getting Data</a><ul>
 <li><a class="reference internal" href="#obspy-fdsn-for-downloading-data">4.1. Obspy.fdsn for downloading data</a><ul>
 <li><a class="reference internal" href="#installing-obspy">4.1.1. Installing Obspy</a></li>
-<li><a class="reference internal" href="#using-obspy">4.1.2. Using Obspy</a></li>
+<li><a class="reference internal" href="#did-the-installation-work">4.1.2. Did the installation work?</a></li>
+<li><a class="reference internal" href="#using-obspy">4.1.3. Using Obspy</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#standing-order-for-data">4.2. Standing Order for Data</a><ul>
 <li><a class="reference internal" href="#installing-sod">4.2.1. Installing SOD</a></li>
-<li><a class="reference internal" href="#downloading-data-with-sod">4.2.2. Downloading Data with SOD</a></li>
 </ul>
 </li>
 </ul>
