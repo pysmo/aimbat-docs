@@ -27,10 +27,10 @@ Authors' Contacts
 
 * `Lay Kuan Loh <http://lkloh2410.wordpress.com/>`_ 
 
-  Email: lkloh@cmu.edu
+  Email: lkloh AT cmu DOT edu
 * `Xiaoting Lou <http://www.earth.northwestern.edu/~xlou/Welcome.html>`_
 
-  Email: xlou@u.northwestern.edu
+  Email: xlou AT u DOT northwestern DOT edu
 * `Suzan van der Lee <http://www.earth.northwestern.edu/research/suzan/>`_
 
-  Email: suzan@earth.northwestern.edu
+  Email: suzan AT earth DOT northwestern DOT edu

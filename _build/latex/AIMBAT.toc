@@ -8,7 +8,7 @@
 \contentsline {section}{\numberline {2.2}Getting your operating system}{5}{section.2.2}
 \contentsline {section}{\numberline {2.3}Python Packages needed}{6}{section.2.3}
 \contentsline {section}{\numberline {2.4}Installing Python}{6}{section.2.4}
-\contentsline {section}{\numberline {2.5}If you cannot use Enthought Canopy}{7}{section.2.5}
+\contentsline {section}{\numberline {2.5}If you cannot use Enthought Canopy ...}{7}{section.2.5}
 \contentsline {subsection}{\numberline {2.5.1}Getting Macports}{7}{subsection.2.5.1}
 \contentsline {subsection}{\numberline {2.5.2}Installing the necessary components}{7}{subsection.2.5.2}
 \contentsline {section}{\numberline {2.6}Regarding Package Managers}{7}{section.2.6}

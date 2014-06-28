@@ -98,8 +98,8 @@ Installing Python
 .. #                       INSTALLING PYTHON - MACPORTS                       # ..
 .. ############################################################################ ..
 
-If you cannot use Enthought Canopy
-----------------------------------
+If you cannot use Enthought Canopy ...
+--------------------------------------
 
 This section describes a possible way to install Python without using Enthough Canopy. It is `not` recommended and may cause problems on some systems, but the authors describe it just in case. 
 
