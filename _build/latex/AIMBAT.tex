@@ -14,7 +14,7 @@
 
 
 \title{AIMBAT Documentation}
-\date{July 19, 2014}
+\date{July 20, 2014}
 \release{0.2.1}
 \author{Lay Kuan Loh, Xiaoting Lou, \& Suzan van der Lee}
 \newcommand{\sphinxlogo}{}
@@ -960,6 +960,40 @@ In the AIMBAT repository, \code{cd} into \code{/src/pysmo/unit\_tests} and run:
 \begin{Verbatim}[commandchars=\\\{\}]
 python run\PYGZus{}unit\PYGZus{}tests.py
 \end{Verbatim}
+
+
+\chapter{Updating this manual}
+\label{docfiles/updatingThisManual:updating-this-manual}\label{docfiles/updatingThisManual::doc}
+This is for someone who wants to be a collaborator on AIMBAT only.
+
+To be able to update the manual, download the \href{https://github.com/pysmo/aimbat-docs}{source code} from Github, and install the dependencies.
+
+
+\section{Dependencies}
+\label{docfiles/updatingThisManual:dependencies}\begin{itemize}
+\item {} 
+\href{http://sphinx-doc.org/}{Sphinx}. Download and install from \href{https://pypi.python.org/pypi/Sphinx}{here}. Don't get the Python Wheel version unless you know what you are doing
+
+\item {} 
+\emph{LaTeX}. Download it from \href{http://www.tug.org/mactex/}{here}. Get the package installer.
+
+\item {} 
+A browser. But if you are reading this, you already have it.
+
+\end{itemize}
+
+
+\section{How to update this manual}
+\label{docfiles/updatingThisManual:how-to-update-this-manual}
+On the master branch, cd into the github repository \emph{aimbat-docs \textless{}https://github.com/pysmo/aimbat-docs\textgreater{}} and run:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+sphinx\PYGZhy{}build \PYGZhy{}b html . builddir
+make html
+make latexpdf
+\end{Verbatim}
+
+Now, commit the changes make in github, and push the changes to the master branch. The changes should be visible in the documentation within a few minutes.
 
 
 \chapter{Citations}

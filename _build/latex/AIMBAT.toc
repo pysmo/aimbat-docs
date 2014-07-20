@@ -61,13 +61,14 @@
 \contentsline {subsection}{\numberline {8.4.2}Getting the stations of the seismograms chosen}{34}{subsection.8.4.2}
 \contentsline {subsection}{\numberline {8.4.3}Picking Travel Times does not work}{34}{subsection.8.4.3}
 \contentsline {subsection}{\numberline {8.4.4}Travel Times}{35}{subsection.8.4.4}
-\contentsline {chapter}{\numberline {9}Plot Stations}{37}{chapter.9}
-\contentsline {section}{\numberline {9.1}Plot Stations}{37}{section.9.1}
-\contentsline {section}{\numberline {9.2}Color By Delay Times}{37}{section.9.2}
-\contentsline {subsection}{\numberline {9.2.1}Instructions}{37}{subsection.9.2.1}
-\contentsline {subsection}{\numberline {9.2.2}Learn more about how to compute delay times}{37}{subsection.9.2.2}
+\contentsline {chapter}{\numberline {9}Visualizing Stations on a map}{37}{chapter.9}
+\contentsline {section}{\numberline {9.1}Coloring stations by delay times}{37}{section.9.1}
+\contentsline {section}{\numberline {9.2}Computing delay times}{37}{section.9.2}
 \contentsline {chapter}{\numberline {10}Unit Testing}{39}{chapter.10}
 \contentsline {section}{\numberline {10.1}Running the Tests}{39}{section.10.1}
-\contentsline {chapter}{\numberline {11}Citations}{41}{chapter.11}
-\contentsline {chapter}{\numberline {12}Indices and tables}{43}{chapter.12}
-\contentsline {chapter}{Bibliography}{45}{chapter*.4}
+\contentsline {chapter}{\numberline {11}Updating this manual}{41}{chapter.11}
+\contentsline {section}{\numberline {11.1}Dependencies}{41}{section.11.1}
+\contentsline {section}{\numberline {11.2}How to update this manual}{41}{section.11.2}
+\contentsline {chapter}{\numberline {12}Citations}{43}{chapter.12}
+\contentsline {chapter}{\numberline {13}Indices and tables}{45}{chapter.13}
+\contentsline {chapter}{Bibliography}{47}{chapter*.4}
