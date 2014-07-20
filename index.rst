@@ -22,6 +22,7 @@ Contents:
     docfiles/PickingTravelTimes
     docfiles/VisualizingStations
     docfiles/unitTests
+    docfiles/updatingThisManual
     docfiles/citations
 
 Indices and tables

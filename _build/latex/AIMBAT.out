@@ -29,11 +29,14 @@
 \BOOKMARK [1][-]{section.8.2}{Picking Travel Times}{chapter.8}% 29
 \BOOKMARK [1][-]{section.8.3}{What the Alignments Stand For}{chapter.8}% 30
 \BOOKMARK [1][-]{section.8.4}{Post Processing}{chapter.8}% 31
-\BOOKMARK [0][-]{chapter.9}{Plot Stations}{}% 32
-\BOOKMARK [1][-]{section.9.1}{Plot Stations}{chapter.9}% 33
-\BOOKMARK [1][-]{section.9.2}{Color By Delay Times}{chapter.9}% 34
+\BOOKMARK [0][-]{chapter.9}{Visualizing Stations on a map}{}% 32
+\BOOKMARK [1][-]{section.9.1}{Coloring stations by delay times}{chapter.9}% 33
+\BOOKMARK [1][-]{section.9.2}{Computing delay times}{chapter.9}% 34
 \BOOKMARK [0][-]{chapter.10}{Unit Testing}{}% 35
 \BOOKMARK [1][-]{section.10.1}{Running the Tests}{chapter.10}% 36
-\BOOKMARK [0][-]{chapter.11}{Citations}{}% 37
-\BOOKMARK [0][-]{chapter.12}{Indices and tables}{}% 38
-\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 39
+\BOOKMARK [0][-]{chapter.11}{Updating this manual}{}% 37
+\BOOKMARK [1][-]{section.11.1}{Dependencies}{chapter.11}% 38
+\BOOKMARK [1][-]{section.11.2}{How to update this manual}{chapter.11}% 39
+\BOOKMARK [0][-]{chapter.12}{Citations}{}% 40
+\BOOKMARK [0][-]{chapter.13}{Indices and tables}{}% 41
+\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 42
