@@ -1,33 +1,9 @@
-=============
-Plot Stations
-=============
+=============================
+Visualizing Stations on a map
+=============================
 
-.. ############################################################################ ..
-.. #                             PLOT STATIONS                                # ..
-.. ############################################################################ ..
-
-Plot Stations
--------------
-
-Click on the ``Plot Stations`` button and you will get a graph of all the stations for the set you are using. Stations used are the red circles, and deleted stations not used in the cross-correlation are the black triangles.
-
-.. image::plot-stations/basemap_stations.png
-
-.. ############################################################################ ..
-.. #                             PLOT STATIONS                                # ..
-.. ############################################################################ ..
-
-
-
-.. ############################################################################ ..
-.. #                          COLOR BY DELAY TIMES                            # ..
-.. ############################################################################ ..
-
-Color By Delay Times
---------------------
-
-Instructions
-~~~~~~~~~~~~
+Coloring stations by delay times
+--------------------------------
 
 * On the terminal, cd into the same folder where you sourced the SAC files to run ``ttpick.py``, after running ``MCCC`` on a pickle file name, for instance, ``earthquake-event.pkl``, you will get a mcp file named ``earthquake-event.mcp``. 
 
@@ -37,12 +13,8 @@ Instructions
 
 .. image::plot-stations/delay_times.png
 
-Learn more about how to compute delay times
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Computing delay times
+---------------------
 
 The equation used to compute delays is explained here [BulandChapMan1983]_. 
 
-
-.. ############################################################################ ..
-.. #                           COLOR BY DELAY TIMES                           # ..
-.. ############################################################################ ..
