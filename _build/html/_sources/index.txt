@@ -20,7 +20,7 @@ Contents:
     docfiles/analyzingData
     docfiles/parameterConfiguration
     docfiles/PickingTravelTimes
-    docfiles/PlotStations
+    docfiles/VisualizingStations
     docfiles/unitTests
     docfiles/citations
 

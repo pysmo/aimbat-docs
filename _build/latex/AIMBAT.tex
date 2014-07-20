@@ -14,7 +14,7 @@
 
 
 \title{AIMBAT Documentation}
-\date{June 28, 2014}
+\date{July 19, 2014}
 \release{0.2.1}
 \author{Lay Kuan Loh, Xiaoting Lou, \& Suzan van der Lee}
 \newcommand{\sphinxlogo}{}
@@ -401,6 +401,8 @@ AIMBAT is released as a sub-package of pysmo in the name of \code{pysmo.aimbat} 
 
 We are working on a new release of AIMBAT, available on \href{https://github.com/pysmo}{Github}. We are adding more features to make using AIMBAT more convenient, and fixing some bugs in the old code. Download \href{https://github.com/pysmo/aimbat}{pysmo.aimbat} and \href{https://github.com/pysmo/sac}{pysmo.sac} from Github. You will now have two folders called \code{aimbat} and \code{sac} respectively.
 
+You may want to download \href{https://github.com/pysmo/data-example}{example code} to run AIMBAT on, as well.
+
 
 \section{Where to install the packages}
 \label{docfiles/install_aimbat:where-to-install-the-packages}
@@ -461,17 +463,25 @@ sudo python setup.py install
 
 to install the \code{src} directory.
 
-Add \code{\textless{}path-to-folder\textgreater{}/aimbat/scripts} to environment variable \code{PATH} in a shells start-up file for command line execution of the scripts.
-\begin{description}
-\item[{Bash Shell Users:}] \leavevmode
-\code{export PATH=\$PATH:\textless{}path-to-folder\textgreater{}/aimbat/scripts} in \code{.bashrc} files.
+Add \code{\textless{}path-to-folder\textgreater{}/aimbat/scripts} to environment variable \code{PATH} in a shells start-up file for command line execution of the scripts. Inside the \code{.bashrc} file, add the lines
 
-\item[{C Shell Users:}] \leavevmode
-\code{setenv PATH=\$PATH:\textless{}path-to-folder\textgreater{}/aimbat/scripts} in \code{.bashrc} files.
+Bash Shell Users:
 
-\end{description}
+\begin{Verbatim}[commandchars=\\\{\}]
+export PATH=\PYGZdl{}PATH:\PYGZlt{}path\PYGZhy{}to\PYGZhy{}folder\PYGZgt{}/aimbat/scripts
+export PATH=\PYGZdl{}PATH:\PYGZlt{}path\PYGZhy{}to\PYGZhy{}folder\PYGZgt{}/aimbat/additional\PYGZhy{}processing\PYGZhy{}scripts
+\end{Verbatim}
 
-If AIMBAT has beenn installed, type from \code{pysmo import aimbat} in a Python shell, and no errors should appear.
+C Shell Users:
+\begin{quote}
+
+setenv PATH=\$PATH:\textless{}path-to-folder\textgreater{}/aimbat/scripts
+setenv PATH=\$PATH:\textless{}path-to-folder\textgreater{}/aimbat/additional-processing-scripts
+\end{quote}
+
+If AIMBAT has beenn installed, type \code{from pysmo import aimbat} in a Python shell, and no errors should appear.
+
+If you have added the scripts right, typing part of the name of the script in the terminal should be sufficient to allow the system autocomplete the name.
 
 
 \chapter{Getting Data}
@@ -916,19 +926,11 @@ Comment out the other backends!
 If one of the seismograms being picked does not fit completely within the green (computer) window, nad you hit \emph{ICCC-A} or \emph{ICCC-B}, you will get an error message complaining about the exact seismogram which is too short. Deselect it.
 
 
-\chapter{Plot Stations}
-\label{docfiles/PlotStations:plot-stations}\label{docfiles/PlotStations::doc}
+\chapter{Visualizing Stations on a map}
+\label{docfiles/VisualizingStations:visualizing-stations-on-a-map}\label{docfiles/VisualizingStations::doc}
 
-\section{Plot Stations}
-\label{docfiles/PlotStations:id1}
-Click on the \code{Plot Stations} button and you will get a graph of all the stations for the set you are using. Stations used are the red circles, and deleted stations not used in the cross-correlation are the black triangles.
-
-
-\section{Color By Delay Times}
-\label{docfiles/PlotStations:color-by-delay-times}
-
-\subsection{Instructions}
-\label{docfiles/PlotStations:instructions}\begin{itemize}
+\section{Coloring stations by delay times}
+\label{docfiles/VisualizingStations:coloring-stations-by-delay-times}\begin{itemize}
 \item {} 
 On the terminal, cd into the same folder where you sourced the SAC files to run \code{ttpick.py}, after running \code{MCCC} on a pickle file name, for instance, \code{earthquake-event.pkl}, you will get a mcp file named \code{earthquake-event.mcp}.
 
@@ -941,8 +943,8 @@ Run \code{doplotsta.sh} and you will get a two \code{gif} files of the stations 
 \end{itemize}
 
 
-\subsection{Learn more about how to compute delay times}
-\label{docfiles/PlotStations:learn-more-about-how-to-compute-delay-times}
+\section{Computing delay times}
+\label{docfiles/VisualizingStations:computing-delay-times}
 The equation used to compute delays is explained here {\hyperref[docfiles/citations:bulandchapman1983]{{[}BulandChapMan1983{]}}}.
 
 

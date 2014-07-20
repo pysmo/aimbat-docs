@@ -11,7 +11,9 @@ Getting the Packages
 
 AIMBAT is released as a sub-package of pysmo in the name of ``pysmo.aimbat`` along with another sub-package ``pysmo.sac``. The latest stable release of AIMBAT is available for download at the `official project webpage <http://www.earth.northwestern.edu/~xlou/aimbat.html>`_. 
 
-We are working on a new release of AIMBAT, available on `Github <https://github.com/pysmo>`_. We are adding more features to make using AIMBAT more convenient, and fixing some bugs in the old code. Download `pysmo.aimbat <https://github.com/pysmo/aimbat>`_ and `pysmo.sac <https://github.com/pysmo/sac>`_ from Github. You will now have two folders called ``aimbat`` and ``sac`` respectively. 
+We are working on a new release of AIMBAT, available on `Github <https://github.com/pysmo>`_. We are adding more features to make using AIMBAT more convenient, and fixing some bugs in the old code. Download `pysmo.aimbat <https://github.com/pysmo/aimbat>`_ and `pysmo.sac <https://github.com/pysmo/sac>`_ from Github. You will now have two folders called ``aimbat`` and ``sac`` respectively.
+
+You may want to download `example code <https://github.com/pysmo/data-example>`_ to run AIMBAT on, as well. 
 
 .. ############################################################################ ..
 .. #                          GETTING THE PACKAGES                            # ..
@@ -97,15 +99,22 @@ cd into the directory the ``aimbat`` package was placed in, and type::
 
 to install the :code:`src` directory.
 
-Add ``<path-to-folder>/aimbat/scripts`` to environment variable ``PATH`` in a shells start-up file for command line execution of the scripts.
+Add ``<path-to-folder>/aimbat/scripts`` to environment variable ``PATH`` in a shells start-up file for command line execution of the scripts. Inside the :code:`.bashrc` file, add the lines
 
-Bash Shell Users:
-	:code:`export PATH=$PATH:<path-to-folder>/aimbat/scripts` in :code:`.bashrc` files.
+Bash Shell Users::
+	
+	export PATH=$PATH:<path-to-folder>/aimbat/scripts 
+	export PATH=$PATH:<path-to-folder>/aimbat/additional-processing-scripts
 
 C Shell Users:
-	:code:`setenv PATH=$PATH:<path-to-folder>/aimbat/scripts` in :code:`.bashrc` files.
+	
+	setenv PATH=$PATH:<path-to-folder>/aimbat/scripts
+	setenv PATH=$PATH:<path-to-folder>/aimbat/additional-processing-scripts
 
-If AIMBAT has beenn installed, type from ``pysmo import aimbat`` in a Python shell, and no errors should appear.
+
+If AIMBAT has beenn installed, type ``from pysmo import aimbat`` in a Python shell, and no errors should appear.
+
+If you have added the scripts right, typing part of the name of the script in the terminal should be sufficient to allow the system autocomplete the name. 
 
 
 .. ############################################################################ ..

@@ -75,6 +75,8 @@ Once you have it there, get the path to the sod folder's bin and put it in your 
 Inside my home directory's bash profile (you get the by typing `cd`), you put the path to `sod-3.2.3/bin` by adding in either the `bash` or `bash_profile` or `profile` files.
 
 
+
+
 .. ############################################################################ ..
 .. #                        STANDING ORDER FOR DATA                           # ..
 .. ############################################################################ ..

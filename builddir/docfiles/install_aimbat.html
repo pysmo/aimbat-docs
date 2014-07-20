@@ -27,7 +27,7 @@
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="AIMBAT 0.2.1 documentation" href="../index.html" />
     <link rel="next" title="4. Getting Data" href="gettingData.html" />
-    <link rel="prev" title="2. Installing Python Dependencies" href="install_dependencies.html" /> 
+    <link rel="prev" title="2. Installing Dependencies" href="install_dependencies.html" /> 
   </head>
   <body>
     <div class="related">
@@ -40,7 +40,7 @@
           <a href="gettingData.html" title="4. Getting Data"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="install_dependencies.html" title="2. Installing Python Dependencies"
+          <a href="install_dependencies.html" title="2. Installing Dependencies"
              accesskey="P">previous</a> |</li>
         <li><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
       </ul>
@@ -57,6 +57,7 @@
 <h2>3.1. Getting the Packages<a class="headerlink" href="#getting-the-packages" title="Permalink to this headline">¶</a></h2>
 <p>AIMBAT is released as a sub-package of pysmo in the name of <tt class="docutils literal"><span class="pre">pysmo.aimbat</span></tt> along with another sub-package <tt class="docutils literal"><span class="pre">pysmo.sac</span></tt>. The latest stable release of AIMBAT is available for download at the <a class="reference external" href="http://www.earth.northwestern.edu/~xlou/aimbat.html">official project webpage</a>.</p>
 <p>We are working on a new release of AIMBAT, available on <a class="reference external" href="https://github.com/pysmo">Github</a>. We are adding more features to make using AIMBAT more convenient, and fixing some bugs in the old code. Download <a class="reference external" href="https://github.com/pysmo/aimbat">pysmo.aimbat</a> and <a class="reference external" href="https://github.com/pysmo/sac">pysmo.sac</a> from Github. You will now have two folders called <tt class="docutils literal"><span class="pre">aimbat</span></tt> and <tt class="docutils literal"><span class="pre">sac</span></tt> respectively.</p>
+<p>You may want to download <a class="reference external" href="https://github.com/pysmo/data-example">example code</a> to run AIMBAT on, as well.</p>
 </div>
 <div class="section" id="where-to-install-the-packages">
 <h2>3.2. Where to install the packages<a class="headerlink" href="#where-to-install-the-packages" title="Permalink to this headline">¶</a></h2>
@@ -101,14 +102,18 @@ sudo python setup.py install
 </pre></div>
 </div>
 <p>to install the <tt class="code docutils literal"><span class="pre">src</span></tt> directory.</p>
-<p>Add <tt class="docutils literal"><span class="pre">&lt;path-to-folder&gt;/aimbat/scripts</span></tt> to environment variable <tt class="docutils literal"><span class="pre">PATH</span></tt> in a shells start-up file for command line execution of the scripts.</p>
-<dl class="docutils">
-<dt>Bash Shell Users:</dt>
-<dd><tt class="code docutils literal"><span class="pre">export</span> <span class="pre">PATH=$PATH:&lt;path-to-folder&gt;/aimbat/scripts</span></tt> in <tt class="code docutils literal"><span class="pre">.bashrc</span></tt> files.</dd>
-<dt>C Shell Users:</dt>
-<dd><tt class="code docutils literal"><span class="pre">setenv</span> <span class="pre">PATH=$PATH:&lt;path-to-folder&gt;/aimbat/scripts</span></tt> in <tt class="code docutils literal"><span class="pre">.bashrc</span></tt> files.</dd>
-</dl>
-<p>If AIMBAT has beenn installed, type from <tt class="docutils literal"><span class="pre">pysmo</span> <span class="pre">import</span> <span class="pre">aimbat</span></tt> in a Python shell, and no errors should appear.</p>
+<p>Add <tt class="docutils literal"><span class="pre">&lt;path-to-folder&gt;/aimbat/scripts</span></tt> to environment variable <tt class="docutils literal"><span class="pre">PATH</span></tt> in a shells start-up file for command line execution of the scripts. Inside the <tt class="code docutils literal"><span class="pre">.bashrc</span></tt> file, add the lines</p>
+<p>Bash Shell Users:</p>
+<div class="highlight-python"><div class="highlight"><pre>export PATH=$PATH:&lt;path-to-folder&gt;/aimbat/scripts
+export PATH=$PATH:&lt;path-to-folder&gt;/aimbat/additional-processing-scripts
+</pre></div>
+</div>
+<p>C Shell Users:</p>
+<blockquote>
+<div>setenv PATH=$PATH:&lt;path-to-folder&gt;/aimbat/scripts
+setenv PATH=$PATH:&lt;path-to-folder&gt;/aimbat/additional-processing-scripts</div></blockquote>
+<p>If AIMBAT has beenn installed, type <tt class="docutils literal"><span class="pre">from</span> <span class="pre">pysmo</span> <span class="pre">import</span> <span class="pre">aimbat</span></tt> in a Python shell, and no errors should appear.</p>
+<p>If you have added the scripts right, typing part of the name of the script in the terminal should be sufficient to allow the system autocomplete the name.</p>
 </div>
 </div>
 </div>
@@ -142,7 +147,7 @@ sudo python setup.py install
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="install_dependencies.html"
-                        title="previous chapter">2. Installing Python Dependencies</a></p>
+                        title="previous chapter">2. Installing Dependencies</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="gettingData.html"
                         title="next chapter">4. Getting Data</a></p>
@@ -178,7 +183,7 @@ sudo python setup.py install
           <a href="gettingData.html" title="4. Getting Data"
              >next</a> |</li>
         <li class="right" >
-          <a href="install_dependencies.html" title="2. Installing Python Dependencies"
+          <a href="install_dependencies.html" title="2. Installing Dependencies"
              >previous</a> |</li>
         <li><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
       </ul>
