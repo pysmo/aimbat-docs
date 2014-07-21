@@ -76,8 +76,8 @@ The Python class <tt class="docutils literal"><span class="pre">sacfile</span></
 </div>
 <div class="section" id="python-pickle-for-sac-files">
 <h2>9.2. Python Pickle for SAC Files<a class="headerlink" href="#python-pickle-for-sac-files" title="Permalink to this headline">¶</a></h2>
-<p>The texttt{pysmo.sacio} module converts SAC files to <tt class="docutils literal"><span class="pre">sacfile</span></tt> objects. Any modification of the objects are instantly written to files. In data processing, the user may want to abandon changes made earlier, which brings the need of a buffer for the <tt class="docutils literal"><span class="pre">sacfile</span></tt> objects.</p>
-<p>The <tt class="docutils literal"><span class="pre">SacDataHdrs</span></tt> class in the <tt class="docutils literal"><span class="pre">pysmo.aimbat.sacpickle</span></tt> module is written on top of <tt class="docutils literal"><span class="pre">pysmo.sacio</span></tt> to serves this purpose by reading a SAC file and returning a texttt{sacdh} object that is very similar of the <tt class="docutils literal"><span class="pre">sacfile</span></tt> object. Essentially, the <tt class="docutils literal"><span class="pre">sacdh</span></tt> object is a copy of the the texttt{sacfile} object in the memory, except that SAC headers &#8216;t0-t9&#8217;, &#8216;user0-user9&#8217;, &#8216;kuser0-kuser2&#8217; are saved in three Python lists.</p>
+<p>The <tt class="docutils literal"><span class="pre">pysmo.sacio</span></tt> module converts SAC files to <tt class="docutils literal"><span class="pre">sacfile</span></tt> objects. Any modification of the objects are instantly written to files. In data processing, the user may want to abandon changes made earlier, which brings the need of a buffer for the <tt class="docutils literal"><span class="pre">sacfile</span></tt> objects.</p>
+<p>The <tt class="docutils literal"><span class="pre">SacDataHdrs</span></tt> class in the <tt class="docutils literal"><span class="pre">pysmo.aimbat.sacpickle</span></tt> module is written on top of <tt class="docutils literal"><span class="pre">pysmo.sacio</span></tt> to serves this purpose by reading a SAC file and returning a <tt class="docutils literal"><span class="pre">sacdh</span></tt> object that is very similar of the <tt class="docutils literal"><span class="pre">sacfile</span></tt> object. Essentially, the <tt class="docutils literal"><span class="pre">sacdh</span></tt> object is a copy of the the <tt class="docutils literal"><span class="pre">sacfile</span></tt> object in the memory, except that SAC headers &#8216;t0-t9&#8217;, &#8216;user0-user9&#8217;, &#8216;kuser0-kuser2&#8217; are saved in three Python lists.</p>
 <p>A <tt class="docutils literal"><span class="pre">gsac</span></tt> object of the <tt class="docutils literal"><span class="pre">SacGroup</span></tt> class consists of a group of <tt class="docutils literal"><span class="pre">sacdh</span></tt> objects from event-based SAC data files, earthquake hypocenter information and station locations.
 An additional step is required to save changes in the <tt class="docutils literal"><span class="pre">gsac</span></tt> object to files.</p>
 <p>In order to avoid frequent SAC file I/O, the <tt class="docutils literal"><span class="pre">pickle/cPickle</span></tt> module is used for serializing and de-serializing the <tt class="docutils literal"><span class="pre">gsac</span></tt> object structure. Thus the data processing efficiency is improved because reading and writing of SAC files are done only once each before and after data processing. Script <tt class="docutils literal"><span class="pre">sac2pkl.py</span></tt> does the conversions between SAC files and Python pickles.</p>
@@ -109,6 +109,52 @@ print sacpickle.\_\_doc\_\_
 </div>
 <p>and also the documentation on <a class="reference external" href="http://docs.python.org/library/pickle.html">pickle</a> for more information about the Python data structure, pickling and unpickling.</p>
 </div>
+<div class="section" id="sac-plotting-and-phase-picking">
+<h2>9.3. SAC Plotting and Phase Picking<a class="headerlink" href="#sac-plotting-and-phase-picking" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/help-sacplot.png" src="../_images/help-sacplot.png" />
+<p>SAC plotting and phase picking functionalities are replicated and enhanced based on the GUI neutral widgets (such as Button and SpanSelector) and the event (keyboard and mouse events such as <tt class="docutils literal"><span class="pre">key\_press\_event</span></tt> and <tt class="docutils literal"><span class="pre">mouse\_motion\_event</span></tt> handling API of Matplotlib.</p>
+<p>They are implemented in two modules <tt class="docutils literal"><span class="pre">pysmo.aimbat.plotphase</span></tt> and <tt class="docutils literal"><span class="pre">pysmo.aimbat.pickphase</span></tt>, which are used by corresponding scripts <tt class="docutils literal"><span class="pre">sacplot.py</span></tt> and <tt class="docutils literal"><span class="pre">sacppk.py</span></tt> executable at command line. Their help messages are displayed in the figures below.</p>
+<img alt="../_images/help-sacppk.png" src="../_images/help-sacppk.png" />
+<img alt="../_images/prog-egplot.png" src="../_images/prog-egplot.png" />
+<div class="section" id="sac-plotting">
+<h3>9.3.1. SAC Plotting<a class="headerlink" href="#sac-plotting" title="Permalink to this headline">¶</a></h3>
+<p>Options &#8220;-i, -z, -d, -a, and -b&#8221; of <tt class="docutils literal"><span class="pre">sacplot.py</span></tt> set the seismogram plotting baseline as file index, zero, epicentral distance in degrees, azimuth, and back-azimuth, respectively.
+The user can run <tt class="docutils literal"><span class="pre">sacplot.py</span></tt> directly with the options, or run individual scripts
+<tt class="docutils literal"><span class="pre">sacp1.py</span></tt>, <tt class="docutils literal"><span class="pre">sacp2.py</span></tt>, <tt class="docutils literal"><span class="pre">sacprs.py</span></tt>, <tt class="docutils literal"><span class="pre">sacpaz.py</span></tt>, and <tt class="docutils literal"><span class="pre">sacpbaz.py</span></tt> which preset the baseline options and plot seismograms in SAC p1 style, p2 style, record section, and relative to azimuth and back-azimuth. The following commands are equivalent:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">sacplot</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">i</span><span class="p">,</span> <span class="n">sacp1</span><span class="o">.</span><span class="n">py</span>
+<span class="n">sacplot</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">z</span><span class="p">,</span> <span class="n">sacp2</span><span class="o">.</span><span class="n">py</span>
+<span class="n">sacplot</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">d</span><span class="p">,</span> <span class="n">sacprs</span><span class="o">.</span><span class="n">py</span>
+<span class="n">sacplot</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">a</span><span class="p">,</span> <span class="n">sacpaz</span><span class="o">.</span><span class="n">py</span>
+<span class="n">sacplot</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">b</span><span class="p">,</span> <span class="n">sacpbaz</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Input data files need to be supplied to the scripts in the form of either a list of SAC files or a pickle file which includes multiple SAC files. For example, a <tt class="docutils literal"><span class="pre">bhz.pkl</span></tt> file is generated from 22 vertical component seismograms <tt class="docutils literal"><span class="pre">TA.[1-K]*Z</span></tt> by running:</p>
+<div class="highlight-python"><div class="highlight"><pre>sac2pkl.py TA.[1-K]*BHZ -o bhz.pkl -d0.025
+</pre></div>
+</div>
+<p>in the data example directory <tt class="docutils literal"><span class="pre">&lt;example-event-dir&gt;</span></tt>. Then the two commands are equivalent:</p>
+<div class="highlight-python"><div class="highlight"><pre>sacp1.py TA.[1-K]*Z
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-python"><div class="highlight"><pre>sacp1.py bhz.pkl
+</pre></div>
+</div>
+<p>For large number of seismograms, the pickle file is suggested because of faster loading.</p>
+<p>Besides using the standard <tt class="docutils literal"><span class="pre">sacplot.py</span></tt> script, the user can modify its <tt class="docutils literal"><span class="pre">getAxes</span></tt> function in your own script to customize figure size and axes attributes. Script <tt class="docutils literal"><span class="pre">egplot.py</span></tt> is such an example in which SAC p1, p2 styles and record section plotting are drawn in three axes in the same figure canvas. Run:</p>
+<div class="highlight-python"><div class="highlight"><pre>egplot.py TA.[1-K]*Z  -f1 -C
+</pre></div>
+</div>
+<p>at command line to produce the figure below.</p>
+<p>..image:: SACdataAccess/egplot.png</p>
+<p>The &#8220;-C&#8221; option uses random color for each seismogram.
+The &#8220;-f1&#8221; option fills the positive signals of waveform with less transparency.
+In the script, &#8220;opts.ynorm&#8221; sets the waveform normalization and &#8220;opts.reltime=0&#8221; sets the time axis relative to time pick t0.</p>
+<p>An improvement over SAC is that the program outputs the filename when the seismogram is clicked on by the mouse. This is enabled by the event handling API and is mostly introduced for use in SAC p2 style plotting when seismograms are plotted on top of each other. It is especially useful when a large number of seismograms create difficulties in labeling.</p>
+<p>Another improvement is easier window zooming enabled by the SpanSelector widget and the event handling API. Select a time span by mouse clicking and dragging to zoom in a waveform section.
+Press the &#8216;z&#8217; key to zoom out to the previous time range.</p>
+</div>
+</div>
 </div>
 
 
@@ -129,6 +175,10 @@ print sacpickle.\_\_doc\_\_
 </ul>
 </li>
 <li><a class="reference internal" href="#python-pickle-for-sac-files">9.2. Python Pickle for SAC Files</a></li>
+<li><a class="reference internal" href="#sac-plotting-and-phase-picking">9.3. SAC Plotting and Phase Picking</a><ul>
+<li><a class="reference internal" href="#sac-plotting">9.3.1. SAC Plotting</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

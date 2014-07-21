@@ -53,9 +53,9 @@ Add the following codes to write the resampled seismogram to file ``TA.109C.\_\_
 Python Pickle for SAC Files
 ---------------------------
 
-The \texttt{pysmo.sacio} module converts SAC files to ``sacfile`` objects. Any modification of the objects are instantly written to files. In data processing, the user may want to abandon changes made earlier, which brings the need of a buffer for the ``sacfile`` objects.
+The ``pysmo.sacio`` module converts SAC files to ``sacfile`` objects. Any modification of the objects are instantly written to files. In data processing, the user may want to abandon changes made earlier, which brings the need of a buffer for the ``sacfile`` objects.
 
-The ``SacDataHdrs`` class in the ``pysmo.aimbat.sacpickle`` module is written on top of ``pysmo.sacio`` to serves this purpose by reading a SAC file and returning a \texttt{sacdh} object that is very similar of the ``sacfile`` object. Essentially, the ``sacdh`` object is a copy of the the \texttt{sacfile} object in the memory, except that SAC headers 't0-t9', 'user0-user9', 'kuser0-kuser2' are saved in three Python lists.
+The ``SacDataHdrs`` class in the ``pysmo.aimbat.sacpickle`` module is written on top of ``pysmo.sacio`` to serves this purpose by reading a SAC file and returning a ``sacdh`` object that is very similar of the ``sacfile`` object. Essentially, the ``sacdh`` object is a copy of the the ``sacfile`` object in the memory, except that SAC headers 't0-t9', 'user0-user9', 'kuser0-kuser2' are saved in three Python lists.
 
 A ``gsac`` object of the ``SacGroup`` class consists of a group of ``sacdh`` objects from event-based SAC data files, earthquake hypocenter information and station locations.
 An additional step is required to save changes in the ``gsac`` object to files.
@@ -105,11 +105,73 @@ and also the documentation on `pickle <http://docs.python.org/library/pickle.htm
 
 
 
+.. ############################################################################ ..
+.. #                        SAC PLOTTING AND PHASE PICKING                    # ..
+.. ############################################################################ ..
+
+SAC Plotting and Phase Picking
+------------------------------
+
+.. image:: SACdataAccess/help-sacplot.png
+
+SAC plotting and phase picking functionalities are replicated and enhanced based on the GUI neutral widgets (such as Button and SpanSelector) and the event (keyboard and mouse events such as ``key\_press\_event`` and ``mouse\_motion\_event`` handling API of Matplotlib.
+
+They are implemented in two modules ``pysmo.aimbat.plotphase`` and ``pysmo.aimbat.pickphase``, which are used by corresponding scripts ``sacplot.py`` and ``sacppk.py`` executable at command line. Their help messages are displayed in the figures below.
 
 
+.. image:: SACdataAccess/help-sacppk.png
+
+.. image:: SACdataAccess/prog-egplot.png
 
 
+SAC Plotting
+~~~~~~~~~~~~
 
+Options "-i, -z, -d, -a, and -b" of ``sacplot.py`` set the seismogram plotting baseline as file index, zero, epicentral distance in degrees, azimuth, and back-azimuth, respectively. 
+The user can run ``sacplot.py`` directly with the options, or run individual scripts
+``sacp1.py``, ``sacp2.py``, ``sacprs.py``, ``sacpaz.py``, and ``sacpbaz.py`` which preset the baseline options and plot seismograms in SAC p1 style, p2 style, record section, and relative to azimuth and back-azimuth. The following commands are equivalent::
+
+	sacplot.py -i, sacp1.py
+	sacplot.py -z, sacp2.py
+	sacplot.py -d, sacprs.py
+	sacplot.py -a, sacpaz.py
+	sacplot.py -b, sacpbaz.py
+
+Input data files need to be supplied to the scripts in the form of either a list of SAC files or a pickle file which includes multiple SAC files. For example, a ``bhz.pkl`` file is generated from 22 vertical component seismograms ``TA.[1-K]*Z`` by running::
+
+	sac2pkl.py TA.[1-K]*BHZ -o bhz.pkl -d0.025
+
+in the data example directory ``<example-event-dir>``. Then the two commands are equivalent::
+
+	sacp1.py TA.[1-K]*Z
+
+or::
+
+	sacp1.py bhz.pkl
+
+For large number of seismograms, the pickle file is suggested because of faster loading.
+
+Besides using the standard ``sacplot.py`` script, the user can modify its ``getAxes`` function in your own script to customize figure size and axes attributes. Script ``egplot.py`` is such an example in which SAC p1, p2 styles and record section plotting are drawn in three axes in the same figure canvas. Run::
+
+	egplot.py TA.[1-K]*Z  -f1 -C
+
+at command line to produce the figure below.
+
+..image:: SACdataAccess/egplot.png
+
+The "-C" option uses random color for each seismogram.
+The "-f1" option fills the positive signals of waveform with less transparency.  
+In the script, "opts.ynorm" sets the waveform normalization and "opts.reltime=0" sets the time axis relative to time pick t0.
+
+An improvement over SAC is that the program outputs the filename when the seismogram is clicked on by the mouse. This is enabled by the event handling API and is mostly introduced for use in SAC p2 style plotting when seismograms are plotted on top of each other. It is especially useful when a large number of seismograms create difficulties in labeling.
+
+Another improvement is easier window zooming enabled by the SpanSelector widget and the event handling API. Select a time span by mouse clicking and dragging to zoom in a waveform section.
+Press the 'z' key to zoom out to the previous time range.
+
+
+.. ############################################################################ ..
+.. #                        SAC PLOTTING AND PHASE PICKING                    # ..
+.. ############################################################################ ..
 
 
 
