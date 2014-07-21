@@ -72,6 +72,14 @@ Once you have it there, get the path to the sod folder's bin and put it in your 
 
 Inside my home directory's bash profile (you get the by typing `cd`), you put the path to `sod-3.2.3/bin` by adding in either the `bash` or `bash_profile` or `profile` files.
 
+Example SOD recipe
+~~~~~~~~~~~~~~~~~~
+
+Inside the repository `data-example <https://github.com/pysmo/data-example>`_, there is a folder `sod_requests`. The file within it called `sod_request.xml`, which is available `here <https://github.com/pysmo/data-example/blob/master/sod_requests/sod_request.xml>`_, is an example of a sod request recipe that will download data from IRIS. To run it, cd into the folder containing `sod_request.xml`, and do::
+
+	sod sod_request.xml
+
+Downloading the data (output as SAC files) may take a while. This receipt filters the data, and outputs the folders `processedSeismograms` and `seismograms`, which container the filtered and unfiltered data.  
 
 
 

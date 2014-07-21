@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  20 JUL 2014 20:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  20 JUL 2014 20:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -899,7 +899,7 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 68.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 69.
  [1
 
 ])
@@ -1079,124 +1079,124 @@ File: path_to_sod_bin.png Graphic file (type png)
  <use path_to_sod_bin.png>
 Package pdftex.def Info: path_to_sod_bin.png used on input line 546.
 (pdftex.def)             Requested size: 469.755pt x 237.24072pt.
- [20 <./sod_location.png> <./path_to_sod_bin.png>]
-Chapter 5.
-[21
+ [20 <./sod_location.png> <./path_to_sod_bin.png>] [21] [22
 
-] [22
+]
+Chapter 5.
+[23] [24
 
 ]
 Chapter 6.
-[23] [24
+[25] [26
 
 ]
 Chapter 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 654--655
+Underfull \hbox (badness 10000) in paragraph at lines 665--666
 []\T1/ptm/m/n/10 Visit these pages for an [][]ex-pla-na-tion of the back-end[][
 ] and \T1/ptm/m/it/10 how to cus-tomize it
  []
 
-[25] [26
+[27] [28
 
 ]
 Chapter 8.
 
-Overfull \hbox (64.65689pt too wide) in paragraph at lines 716--793
+Overfull \hbox (64.65689pt too wide) in paragraph at lines 727--804
 [] 
  []
 
 
-Underfull \hbox (badness 5533) in paragraph at lines 795--796
+Underfull \hbox (badness 5533) in paragraph at lines 806--807
 []\T1/ptm/m/n/10 The ICCS and MCCC al-go-rithms are im-ple-mented in two mod-ul
 es \T1/pcr/m/n/10 pysmo.aimbat.algiccs \T1/ptm/m/n/10 and
  []
 
-[27] <pick_travel_times.png, id=488, 1793.70125pt x 967.615pt>
+[29] <pick_travel_times.png, id=499, 1793.70125pt x 967.615pt>
 File: pick_travel_times.png Graphic file (type png)
 
 <use pick_travel_times.png>
-Package pdftex.def Info: pick_travel_times.png used on input line 812.
+Package pdftex.def Info: pick_travel_times.png used on input line 823.
 (pdftex.def)             Requested size: 1793.6969pt x 967.61266pt.
 File: pick_travel_times.png Graphic file (type png)
  <use pick_travel_times.png>
-Package pdftex.def Info: pick_travel_times.png used on input line 812.
+Package pdftex.def Info: pick_travel_times.png used on input line 823.
 (pdftex.def)             Requested size: 469.755pt x 253.40479pt.
- [28 <./pick_travel_times.png>] [29] <sorting-interface.png, id=508, 1019.81pt 
+ [30 <./pick_travel_times.png>] [31] <sorting-interface.png, id=519, 1019.81pt 
 x 941.5175pt>
 File: sorting-interface.png Graphic file (type png)
 
 <use sorting-interface.png>
-Package pdftex.def Info: sorting-interface.png used on input line 870.
+Package pdftex.def Info: sorting-interface.png used on input line 881.
 (pdftex.def)             Requested size: 1019.80751pt x 941.51521pt.
 File: sorting-interface.png Graphic file (type png)
  <use sorting-interface.png>
-Package pdftex.def Info: sorting-interface.png used on input line 870.
+Package pdftex.def Info: sorting-interface.png used on input line 881.
 (pdftex.def)             Requested size: 469.755pt x 433.69234pt.
 
-<SACP2_popup.png, id=509, 779.91376pt x 953.5625pt>
+<SACP2_popup.png, id=520, 779.91376pt x 953.5625pt>
 File: SACP2_popup.png Graphic file (type png)
  <use SACP2_popup.png>
-Package pdftex.def Info: SACP2_popup.png used on input line 872.
+Package pdftex.def Info: SACP2_popup.png used on input line 883.
 (pdftex.def)             Requested size: 779.91187pt x 953.56018pt.
 File: SACP2_popup.png Graphic file (type png)
 
 <use SACP2_popup.png>
-Package pdftex.def Info: SACP2_popup.png used on input line 872.
+Package pdftex.def Info: SACP2_popup.png used on input line 883.
 (pdftex.def)             Requested size: 469.755pt x 574.339pt.
- [30 <./sorting-interface.png>] [31 <./SACP2_popup.png>]
-<count_stations.png, id=518, 649.42625pt x 263.98625pt>
+ [32 <./sorting-interface.png>] [33 <./SACP2_popup.png>]
+<count_stations.png, id=530, 649.42625pt x 263.98625pt>
 File: count_stations.png Graphic file (type png)
 
 <use count_stations.png>
-Package pdftex.def Info: count_stations.png used on input line 909.
+Package pdftex.def Info: count_stations.png used on input line 920.
 (pdftex.def)             Requested size: 649.42467pt x 263.9856pt.
 File: count_stations.png Graphic file (type png)
  <use count_stations.png>
-Package pdftex.def Info: count_stations.png used on input line 909.
+Package pdftex.def Info: count_stations.png used on input line 920.
 (pdftex.def)             Requested size: 469.755pt x 190.95613pt.
- [32 <./count_stations.png>]
-[33] [34
-
-]
-Chapter 9.
+ [34 <./count_stations.png>]
 [35] [36
 
 ]
-Chapter 10.
+Chapter 9.
 [37] [38
 
 ]
-Chapter 11.
+Chapter 10.
 [39] [40
 
 ]
-Chapter 12.
+Chapter 11.
 [41] [42
 
 ]
-Chapter 13.
+Chapter 12.
 [43] [44
 
+]
+Chapter 13.
+[45] [46
+
 ] (./AIMBAT.ind)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1040.
- [45
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1051.
+ [47
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1040.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1051.
  (./AIMBAT.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1040.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1040.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1051.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1051.
 
 Package rerunfilecheck Info: File `AIMBAT.out' has not changed.
 (rerunfilecheck)             Checksum: 007EA2279E319FA5FF430A72F6DA23C5;2744.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1040.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1051.
  ) 
 Here is how much of TeX's memory you used:
- 9457 strings out of 493117
- 134948 string characters out of 6135433
- 234811 words of memory out of 5000000
- 12494 multiletter control sequences out of 15000+600000
+ 9461 strings out of 493117
+ 135019 string characters out of 6135433
+ 234864 words of memory out of 5000000
+ 12495 multiletter control sequences out of 15000+600000
  60223 words of font info for 66 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  37i,12n,49p,1022b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1212,10 +1212,10 @@ pe1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/ur
 w/helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times
 /utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pf
 b></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on AIMBAT.pdf (49 pages, 3898569 bytes).
+Output written on AIMBAT.pdf (51 pages, 3900389 bytes).
 PDF statistics:
- 675 PDF objects out of 1000 (max. 8388607)
- 585 compressed objects within 6 object streams
- 158 named destinations out of 1000 (max. 500000)
+ 686 PDF objects out of 1000 (max. 8388607)
+ 594 compressed objects within 6 object streams
+ 161 named destinations out of 1000 (max. 500000)
  445 words of extra memory for PDF output out of 10000 (max. 10000000)
 

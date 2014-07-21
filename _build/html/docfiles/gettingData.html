@@ -91,6 +91,14 @@
 <img alt="../_images/path_to_sod_bin.png" src="../_images/path_to_sod_bin.png" />
 <p>Inside my home directory&#8217;s bash profile (you get the by typing <cite>cd</cite>), you put the path to <cite>sod-3.2.3/bin</cite> by adding in either the <cite>bash</cite> or <cite>bash_profile</cite> or <cite>profile</cite> files.</p>
 </div>
+<div class="section" id="example-sod-recipe">
+<h3>4.2.2. Example SOD recipe<a class="headerlink" href="#example-sod-recipe" title="Permalink to this headline">¶</a></h3>
+<p>Inside the repository <a class="reference external" href="https://github.com/pysmo/data-example">data-example</a>, there is a folder <cite>sod_requests</cite>. The file within it called <cite>sod_request.xml</cite>, which is available <a class="reference external" href="https://github.com/pysmo/data-example/blob/master/sod_requests/sod_request.xml">here</a>, is an example of a sod request recipe that will download data from IRIS. To run it, cd into the folder containing <cite>sod_request.xml</cite>, and do:</p>
+<div class="highlight-python"><div class="highlight"><pre>sod sod_request.xml
+</pre></div>
+</div>
+<p>Downloading the data (output as SAC files) may take a while. This receipt filters the data, and outputs the folders <cite>processedSeismograms</cite> and <cite>seismograms</cite>, which container the filtered and unfiltered data.</p>
+</div>
 </div>
 </div>
 
@@ -114,6 +122,7 @@
 </li>
 <li><a class="reference internal" href="#standing-order-for-data">4.2. Standing Order for Data</a><ul>
 <li><a class="reference internal" href="#installing-sod">4.2.1. Installing SOD</a></li>
+<li><a class="reference internal" href="#example-sod-recipe">4.2.2. Example SOD recipe</a></li>
 </ul>
 </li>
 </ul>

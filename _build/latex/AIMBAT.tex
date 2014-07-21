@@ -548,6 +548,17 @@ Once you have it there, get the path to the sod folder's bin and put it in your 
 Inside my home directory's bash profile (you get the by typing \emph{cd}), you put the path to \emph{sod-3.2.3/bin} by adding in either the \emph{bash} or \emph{bash\_profile} or \emph{profile} files.
 
 
+\subsection{Example SOD recipe}
+\label{docfiles/gettingData:example-sod-recipe}
+Inside the repository \href{https://github.com/pysmo/data-example}{data-example}, there is a folder \emph{sod\_requests}. The file within it called \emph{sod\_request.xml}, which is available \href{https://github.com/pysmo/data-example/blob/master/sod\_requests/sod\_request.xml}{here}, is an example of a sod request recipe that will download data from IRIS. To run it, cd into the folder containing \emph{sod\_request.xml}, and do:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+sod sod\PYGZus{}request.xml
+\end{Verbatim}
+
+Downloading the data (output as SAC files) may take a while. This receipt filters the data, and outputs the folders \emph{processedSeismograms} and \emph{seismograms}, which container the filtered and unfiltered data.
+
+
 \chapter{Filtering Data}
 \label{docfiles/filteringData::doc}\label{docfiles/filteringData:filtering-data}
 There are several options for filtering data. \href{http://www.iris.edu/files/sac-manual/}{SAC} offers several ways to filter data, which are not discussed here. You could also do so when downloading data using SOD. Alternatively, you could filter data in AIMBAT.
