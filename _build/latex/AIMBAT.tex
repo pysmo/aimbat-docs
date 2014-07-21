@@ -599,6 +599,24 @@ sod sod\PYGZus{}request.xml
 Downloading the data (output as SAC files) may take a while. This receipt filters the data, and outputs the folders \emph{processedSeismograms} and \emph{seismograms}, which container the filtered and unfiltered data.
 
 
+\chapter{SAC Input/Output procedues for AIMBAT}
+\label{docfiles/sacioAIMBAT:sac-input-output-procedues-for-aimbat}\label{docfiles/sacioAIMBAT::doc}
+Once you have downloaded
+
+
+\section{Converting from SAC to PKL files}
+\label{docfiles/sacioAIMBAT:converting-from-sac-to-pkl-files}
+Place the SAC files you want to convert to a pickle (PKL) file into the same folder. Suppose for instance, they are BHZ channels. Note that the SAC files must be of the same channel. cd into that folder, and run:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+sac2pkl.py \PYGZhy{}s *.BHZ.sac
+\end{Verbatim}
+
+The output should be a PKL file in the same folder as the sac files.
+
+\includegraphics{sac_to_pkl_conversion.png}
+
+
 \chapter{Filtering Data}
 \label{docfiles/filteringData::doc}\label{docfiles/filteringData:filtering-data}
 There are several options for filtering data. \href{http://www.iris.edu/files/sac-manual/}{SAC} offers several ways to filter data, which are not discussed here. You could also do so when downloading data using SOD. Alternatively, you could filter data in AIMBAT.
@@ -731,118 +749,279 @@ file \code{ttdefaults.conf} in the directory where AIMBAT is installed
 
 Python scripts in the \code{\textless{}pkg-install-dir\textgreater{}/pysmo-aimbat-0.1.2/scripts} can be executed from the command line. The command line arguments are parsed by the optparse module to improve the scripts' exibility. If conflicts existed, the command line options override the default parameters given in the configuration file \code{ttdefaults.conf}. Run the scripts with the \code{-h} option for the usage messages.
 
-+==============================+===============================================================+
-\textbar{} ttdefaults.conf              \textbar{} Description                                                   \textbar{}
-+==============================+===============================================================+
-\textbar{} {[}sacplot{]}                    \textbar{}                                                                       \textbar{}
-+------------------------------+---------------------------------------------------------------+
-\textbar{} colorwave = blue             \textbar{} Color of waveform                                             \textbar{}
-+------------------------------+---------------------------------------------------------------+
-\textbar{} colorwavedel = gray          \textbar{} Color of waveform which is deselected                         \textbar{}
-+------------------------------+---------------------------------------------------------------+
-\textbar{} colortwfill = green          \textbar{} Color of time window fill                                     \textbar{}
-+------------------------------+---------------------------------------------------------------+
-\textbar{} colortwsele = red            \textbar{} Color of time window selection                                \textbar{}
-+------------------------------+---------------------------------------------------------------+
-\textbar{} alphatwfill = 0.2            \textbar{} Transparency of time window fill                              \textbar{}
-+------------------------------+---------------------------------------------------------------+
-\textbar{} alphatwsele = 0.6            \textbar{} Transparency of time window selection                         \textbar{}
-+------------------------------+---------------------------------------------------------------+
-\textbar{} npick = 6                            \textbar{} Number of time picks (plot picks: t0-t5)                      \textbar{}
-+------------------------------+---------------------------------------------------------------+
-\textbar{} pickcolors = kmrcgyb         \textbar{} Colors of time picks                                          \textbar{}
-+------------------------------+---------------------------------------------------------------+
-\textbar{} pickstyles = -- :            \textbar{} Line styles of time picks (use second one if ran out of color)\textbar{}
-+------------------------------+---------------------------------------------------------------+
-\textbar{} figsize = 8 10                   \textbar{} Figure size for \emph{plotphase.py}                                \textbar{}
-+------------------------------+---------------------------------------------------------------+
-\textbar{} rectseis = 0.1 0.06 0.76 0.9 \textbar{} Axes rectangle size within the figure                         \textbar{}
-+------------------------------+---------------------------------------------------------------+
-\textbar{} minspan = 5                      \textbar{} Minimum sample points for SpanSelector to select time window  \textbar{}
-+------------------------------+---------------------------------------------------------------+
-{\color{red}\bfseries{}\textbar{}}srate = -1                        \textbar{} Sample rate for loading SAC data.                             \textbar{}
-\textbar{}                              \textbar{} Read from first file if srate \textless{} 0                             \textbar{}
-+------------------------------+---------------------------------------------------------------+
 
-+=================================+==================================================+
-\textbar{} {[}sachdrs{]}                       \textbar{}                                                  \textbar{}
-+=================================+==================================================+
-\textbar{} twhdrs = user8        user9         \textbar{} SAC headers for time window beginning and ending \textbar{}
-+---------------------------------+--------------------------------------------------+
-\textbar{} ichdrs = t0 t1 t2                           \textbar{} SAC headers for ICCS time picks                  \textbar{}
-+---------------------------------+--------------------------------------------------+
-\textbar{} mchdrs = t2 t3                              \textbar{} SAC headers for MCCC input and output time picks \textbar{}
-+---------------------------------+--------------------------------------------------+
-\textbar{} hdrsel = kuser0                         \textbar{}  SAC header for seismogram selection status      \textbar{}
-+---------------------------------+--------------------------------------------------+
-\textbar{} qfactors = ccc snr coh              \textbar{} Quality factors: cross-correlation coefficient,  \textbar{}
-\textbar{}                                 \textbar{} signal-to-noise ratio, time domain coherence     \textbar{}
-+---------------------------------+--------------------------------------------------+
-\textbar{} qheaders = user0 user1 user2    \textbar{} SAC Headers for quality factors                  \textbar{}
-+---------------------------------+--------------------------------------------------+
-\textbar{} qweights = 0.3333 0.3333 0.3333 \textbar{} Weights for quality factors                      \textbar{}
-+---------------------------------+--------------------------------------------------+
+\subsection{Example of AIMBAT configuration file \emph{ttdefaults.conf}}
+\label{docfiles/parameterConfiguration:example-of-aimbat-configuration-file-ttdefaults-conf}
+\begin{tabulary}{\linewidth}{|L|L|}
+\hline
+\textsf{\relax 
+ttdefaults.conf
+} & \textsf{\relax 
+Description
+}\\
+\hline
+{[}sacplot{]}
+ & \\
 
-+=========================+=====================================================================+
-\textbar{} {[}iccs{]} or Align/Refine \textbar{}                                                                      \textbar{}
-+=========================+=====================================================================+
-\textbar{} srate = -1                      \textbar{} Sample rate for loading SAC data. Read from first file if srate \textless{} 0 \textbar{}
-+-------------------------+---------------------------------------------------------------------+
-\textbar{} xcorr\_modu = xcorrf90   \textbar{} Module for calculating cross-correlation:                           \textbar{}
-\textbar{}                         \textbar{} xcorr for Numpy or xcorrf90 for Fortran                             \textbar{}
-+-------------------------+---------------------------------------------------------------------+
-\textbar{} xcorr\_func = xcorr\_fast \textbar{} Function for calculating cross-correlation                          \textbar{}
-+-------------------------+---------------------------------------------------------------------+
-\textbar{} shift = 10                      \textbar{} Sample shift for running coarse cross-correlation                   \textbar{}
-+-------------------------+---------------------------------------------------------------------+
-\textbar{} maxiter = 10                \textbar{} Maximum number of iteration                                         \textbar{}
-+-------------------------+---------------------------------------------------------------------+
-\textbar{} convepsi = 0.001            \textbar{} Convergence criterion: epsilon                                      \textbar{}
-+-------------------------+---------------------------------------------------------------------+
-{\color{red}\bfseries{}\textbar{}}convtype = coef          \textbar{} Type of convergence criterion: coef for correlation coefficient,    \textbar{}
-\textbar{}                         \textbar{}  or resi for residual                                               \textbar{}
-+-------------------------+---------------------------------------------------------------------+
-\textbar{} stackwgt = coef                 \textbar{} Weight each trace when calculating array stack                      \textbar{}
-+-------------------------+---------------------------------------------------------------------+
-\textbar{} fstack = fstack.sac     \textbar{} SAC file name for the array stack                                   \textbar{}
-+-------------------------+---------------------------------------------------------------------+
+colorwave = blue
+ & 
+Color of waveform
+\\
 
-+===========================+=====================================================================+
-\textbar{} {[}mccc{]} or Finalize            \textbar{}                                                                     \textbar{}
-+===========================+=====================================================================+
-\textbar{} srate = -1                            \textbar{} Sample rate for loading SAC data. Read from first file if srate \textless{} 0 \textbar{}
-+---------------------------+---------------------------------------------------------------------+
-\textbar{} ofilename = mc                        \textbar{} Output file name of MCCC.                                           \textbar{}
-+---------------------------+---------------------------------------------------------------------+
-{\color{red}\bfseries{}\textbar{}xcorr\_modu = xcorrf90      \textbar{} Module for calculating cross-correlation:                           \textbar{}
-\textbar{}                           \textbar{} xcorr for Numpy or xcorrf90 for Fortran                             \textbar{}
-+---------------------------+---------------------------------------------------------------------+
-\textbar{} xcorr\_func = xcorr\_faster     \textbar{} Function for calculating cross-correlation                          \textbar{}
-+---------------------------+---------------------------------------------------------------------+
-\textbar{} shift = 10                            \textbar{} Sample shift for running coarse cross-correlation                   \textbar{}
-+---------------------------+---------------------------------------------------------------------+
-\textbar{} extraweight = 1000        \textbar{} Weight for the zero-mean equation in MCCC weighted lsqr solution    \textbar{}
-+---------------------------+---------------------------------------------------------------------+
-\textbar{} lsqr = nowe                   \textbar{} Type of lsqr solution: no weight                                    \textbar{}
-+---------------------------+---------------------------------------------------------------------+
-\textbar{} \#lsqr = lnco                          \textbar{} Type of lsqr solution: weighted by correlation coefficient,         \textbar{}
-\textbar{}                           \textbar{} solved by lapack                                                    \textbar{}
-+---------------------------+---------------------------------------------------------------------+
-\textbar{} \#lsqr = lnre                          \textbar{} Type of lsqr solution: weighted by residual, solved by lapack       \textbar{}
-+---------------------------+---------------------------------------------------------------------+
-\textbar{} rcfile = .mcccrc                      \textbar{} Configuration file for MCCC parameters (deprecated)                 \textbar{}
-+---------------------------+---------------------------------------------------------------------+
-\textbar{} evlist = event.list           \textbar{} File for event hypocenter and origin time (deprecated)              s\textbar{}}
-+---------------------------+---------------------------------------------------------------------+
+colorwavedel = gray
+ & 
+Color of waveform which is deselected
+\\
 
-+=====================+============+
-\textbar{} {[}signal{]}                    \textbar{}            \textbar{}
-+=====================+============+
-\textbar{} tapertype = hanning \textbar{} Taper type \textbar{}
-+---------------------+------------+
-\textbar{} taperwidth = 0.1        \textbar{} Taper width\textbar{}
-+---------------------+------------+
+colortwfill = green
+ & 
+Color of time window fill
+\\
 
+colortwsele = red
+ & 
+Color of time window selection
+\\
+
+alphatwfill = 0.2
+ & 
+Transparency of time window fill
+\\
+
+alphatwsele = 0.6
+ & 
+Transparency of time window selection
+\\
+
+npick = 6
+ & 
+Number of time picks (plot picks: t0-t5)
+\\
+
+pickcolors = kmrcgyb
+ & 
+Colors of time picks
+\\
+
+pickstyles
+ & 
+Line styles of time picks (use second one if ran out of color)
+\\
+
+figsize = 8 10
+ & 
+Figure size for \emph{plotphase.py}
+\\
+
+rectseis = 0.1 0.06 0.76 0.9
+ & 
+Axes rectangle size within the figure
+\\
+
+minspan = 5
+ & 
+Minimum sample points for SpanSelector to select time window
+\\
+
+srate = -1
+ & 
+Sample rate for loading SAC data.
+Read from first file if srate \textless{} 0
+\\
+\hline\end{tabulary}
+
+
+\begin{tabulary}{\linewidth}{|L|L|}
+\hline
+ \multicolumn{2}{|l|}{\textsf{\relax 
+{[}sachdrs{]}
+}}\\
+\hline
+twhdrs = user8 user9
+ & 
+SAC headers for time window beginning and ending
+\\
+
+ichdrs = t0 t1 t2
+ & 
+SAC headers for ICCS time picks
+\\
+
+mchdrs = t2 t3
+ & 
+SAC headers for MCCC input and output time picks
+\\
+
+hdrsel = kuser0
+ & 
+SAC header for seismogram selection status
+\\
+
+qfactors = ccc snr coh
+ & 
+Quality factors: cross-correlation coefficient,
+signal-to-noise ratio, time domain coherence
+\\
+
+qheaders = user0 user1 user2
+ & 
+SAC Headers for quality factors
+\\
+
+qweights = 0.3333 0.3333 0.3333
+ & 
+Weights for quality factors
+\\
+\hline\end{tabulary}
+
+
+\begin{tabular}{|p{0.475\linewidth}|p{0.475\linewidth}|}
+\hline
+\textsf{\relax 
+{[}iccs{]} or Align/Refine
+} & \textsf{\relax }\\
+\hline
+srate = -1
+ & 
+Sample rate for loading SAC data. Read from first file if srate \textless{} 0
+\\
+
+xcorr\_modu = xcorrf90
+ & 
+Module for calculating cross-correlation:
+xcorr for Numpy or xcorrf90 for Fortran
+\\
+
+xcorr\_func = xcorr\_fast
+ & 
+Function for calculating cross-correlation
+\\
+
+shift = 10
+ & 
+Sample shift for running coarse cross-correlation
+\\
+
+maxiter = 10
+ & 
+Maximum number of iteration
+\\
+
+convepsi = 0.001
+ & 
+Convergence criterion: epsilon
+\\
+
+convtype = coef
+ & \begin{description}
+\item[{Type of convergence criterion: coef for correlation coefficient,}] \leavevmode
+or resi for residual
+
+\end{description}
+\\
+
+stackwgt = coef
+ & 
+Weight each trace when calculating array stack
+\\
+
+fstack = fstack.sac
+ & 
+SAC file name for the array stack
+\\
+\hline\end{tabular}
+
+
+\begin{tabulary}{\linewidth}{|L|L|}
+\hline
+\textsf{\relax 
+{[}mccc{]}
+} & \textsf{\relax }\\
+\hline
+srate = -1
+ & 
+Sample rate for loading SAC data.
+Read from first file if srate \(< 0\)
+\\
+
+ofilename = mc
+ & 
+Output file name of MCCC.
+\\
+
+xcorr\_modu = xcorrf90
+ & 
+Module for calculating cross-correlation:
+xcorr for Numpy or xcorrf90 for Fortran
+\\
+
+xcorr\_func = xcorr\_faster
+ & 
+Function for calculating cross-correlation
+\\
+
+shift = 10
+ & 
+Sample shift for running coarse cross-correlation
+\\
+
+extraweight = 1000
+ & 
+Weight for the zero-mean equation in MCCC weighted lsqr solution
+\\
+
+lsqr = nowe
+ & 
+Type of lsqr solution: no weight
+\\
+
+\#lsqr = lnco
+ & 
+Type of lsqr solution: weighted by correlation coefficient,
+solved by lapack
+\\
+
+\#lsqr = lnre
+ & 
+Type of lsqr solution: weighted by residual, solved by lapack
+\\
+
+rcfile = .mcccrc
+ & 
+Configuration file for MCCC parameters (deprecated)
+\\
+
+evlist = event.list
+ & 
+File for event hypocenter and origin time (deprecated)
+\\
+\hline\end{tabulary}
+
+
+\begin{tabulary}{\linewidth}{|L|L|}
+\hline
+\textsf{\relax 
+signal
+} & \textsf{\relax }\\
+\hline
+tapertype = hanning
+ & 
+Taper type
+\\
+
+taperwidth = 0.1
+ & 
+Taper width
+\\
+\hline\end{tabulary}
+
+
+
+\chapter{SAC Data Access}
+\label{docfiles/SACdataAccess:sac-data-access}\label{docfiles/SACdataAccess::doc}
+
+\section{Python Object for SAC File}
+\label{docfiles/SACdataAccess:python-object-for-sac-file}
 
 \chapter{Measuring Teleseismic Body Wave Arrival Times}
 \label{docfiles/PickingTravelTimes::doc}\label{docfiles/PickingTravelTimes:measuring-teleseismic-body-wave-arrival-times}
