@@ -22,13 +22,9 @@ The GUI of AIMBAT uses the following to support interactive plotting:
 #. `GUI neutral widgets <http://matplotlib.org/api/widgets_api.html>`_
 #. `GUI neutral event handling API (Application Programming Interface) <http://matplotlib.org/users/event_handling.html>`_
 
-Examples given in this documentation are using the default toolkit ``Tk`` and backend ``TkAgg``. 
+AIMBAT uses the default toolkit ``Tk`` and backend ``TkAgg``. 
 
 Visit these pages for an `explanation of the backend <http://matplotlib.org/faq/usage_faq.html#what-is-a-backend>`_ and `how to customize it <http://matplotlib.org/users/customizing.html#customizing-matplotlib>`.
-
-**Put the following line in you ``matplotlibrc`` file:**::
-
-	backend : TkAgg #Agg rendering to a Tk canvas
 
 .. ############################################################################ ..
 .. #                           MATPLOTLIB BACKEND                             # ..

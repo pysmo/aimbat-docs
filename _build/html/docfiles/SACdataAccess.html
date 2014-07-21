@@ -55,6 +55,24 @@
 <h1>9. SAC Data Access<a class="headerlink" href="#sac-data-access" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="python-object-for-sac-file">
 <h2>9.1. Python Object for SAC File<a class="headerlink" href="#python-object-for-sac-file" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">pysmo.sac</span></tt> package is developed to read and write individual SAC files.
+The Python class <tt class="docutils literal"><span class="pre">sacfile</span></tt> of module <tt class="docutils literal"><span class="pre">sacio</span></tt> opens a SAC file and returns an object including data and all SAC header variables as its attributes. Modifications of object attributes are saved to file. It is written purely in Python so that it also runs with <a class="reference external" href="http://www.jython.org">Jython</a>.</p>
+<div class="section" id="egsac-py">
+<h3>9.1.1. <cite>egsac.py</cite><a class="headerlink" href="#egsac-py" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">&lt;pkg-install-dir&gt;/aimbat/scripts/egsac.py</span></tt> script gives a simple example to read, resample and plot a seismogram using pysmo, Scipy and Matplotlib. You can type the codes in a Python/iPython shell, or run as a script in the data example directory <cite>&lt;pkg-install-dir&gt;/data-example/example_pkl_files/Event_2011.09.15.19.31.04.080</cite>.</p>
+<img alt="../_images/prog-egsac.png" src="../_images/prog-egsac.png" />
+</div>
+<div class="section" id="resampling-seismograms">
+<h3>9.1.2. Resampling Seismograms<a class="headerlink" href="#resampling-seismograms" title="Permalink to this headline">¶</a></h3>
+<p>In this example, a SAC file named <cite>TA.109C.__.BHZ.sac</cite> is read in as a sacfile object. The time array is calculated from SAC headers.  The data array is resampled from interval 0.025 to 2.0 seconds using Scipy&#8217;s signalprocessing module.</p>
+<p>Add the following codes to write the resampled seismogram to file <cite>TA.109C.__.BHZ.sac</cite>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">sacobj</span><span class="o">.</span><span class="n">delta</span> <span class="o">=</span> <span class="n">deltanew</span>
+<span class="n">sacobj</span><span class="o">.</span><span class="n">npts</span> <span class="o">=</span> <span class="n">nptsnew</span>
+<span class="n">sacobj</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">y2</span>
+</pre></div>
+</div>
+<img alt="../_images/egsac-109c.pdf" src="../_images/egsac-109c.pdf" />
+</div>
 </div>
 </div>
 
@@ -70,7 +88,11 @@
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">9. SAC Data Access</a><ul>
-<li><a class="reference internal" href="#python-object-for-sac-file">9.1. Python Object for SAC File</a></li>
+<li><a class="reference internal" href="#python-object-for-sac-file">9.1. Python Object for SAC File</a><ul>
+<li><a class="reference internal" href="#egsac-py">9.1.1. <cite>egsac.py</cite></a></li>
+<li><a class="reference internal" href="#resampling-seismograms">9.1.2. Resampling Seismograms</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

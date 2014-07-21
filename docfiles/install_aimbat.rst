@@ -128,7 +128,7 @@ If you have added the scripts right, typing part of the name of the script in th
 Example Data
 ------------
 
-Get the repository `data-example <https://github.com/pysmo/data-example>`_ from Github. There is some example code inside `data-example/example_pkl_files` that will be needed for later. 
+Get the repository `data-example <https://github.com/pysmo/data-example>`_ from Github. There is some example code inside `data-example/example_pkl_files` that will be needed for later demonstrations. 
 
 
 
