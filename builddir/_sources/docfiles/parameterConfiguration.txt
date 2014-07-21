@@ -56,6 +56,9 @@ Other parameters for the package can be set up by a configuration file ``ttdefau
 
 Python scripts in the ``<pkg-install-dir>/pysmo-aimbat-0.1.2/scripts`` can be executed from the command line. The command line arguments are parsed by the optparse module to improve the scripts' exibility. If conflicts existed, the command line options override the default parameters given in the configuration file ``ttdefaults.conf``. Run the scripts with the ``-h`` option for the usage messages.
 
+Example of AIMBAT configuration file `ttdefaults.conf`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 +==============================+===============================================================+
 | ttdefaults.conf              | Description                                                   |
 +==============================+===============================================================+
@@ -90,7 +93,7 @@ Python scripts in the ``<pkg-install-dir>/pysmo-aimbat-0.1.2/scripts`` can be ex
 +------------------------------+---------------------------------------------------------------+
 
 +=================================+==================================================+
-| [sachdrs]                       |                                                  |
+| [sachdrs]                                                                          |
 +=================================+==================================================+
 | twhdrs = user8 	user9	      | SAC headers for time window beginning and ending |
 +---------------------------------+--------------------------------------------------+
@@ -109,7 +112,7 @@ Python scripts in the ``<pkg-install-dir>/pysmo-aimbat-0.1.2/scripts`` can be ex
 +---------------------------------+--------------------------------------------------+
 
 +=========================+=====================================================================+
-| [iccs] or Align/Refine |                                                                      |
+| [iccs] or Align/Refine                                                                        |
 +=========================+=====================================================================+
 | srate = -1 		 	  | Sample rate for loading SAC data. Read from first file if srate < 0 |
 +-------------------------+---------------------------------------------------------------------+
@@ -133,7 +136,7 @@ Python scripts in the ``<pkg-install-dir>/pysmo-aimbat-0.1.2/scripts`` can be ex
 +-------------------------+---------------------------------------------------------------------+
 
 +===========================+=====================================================================+
-| [mccc] or Finalize		|                                                                     |
+| [mccc] or Finalize		                                                                      |
 +===========================+=====================================================================+
 | srate = -1 				| Sample rate for loading SAC data. Read from first file if srate < 0 |
 +---------------------------+---------------------------------------------------------------------+
@@ -160,20 +163,13 @@ Python scripts in the ``<pkg-install-dir>/pysmo-aimbat-0.1.2/scripts`` can be ex
 | evlist = event.list		| File for event hypocenter and origin time (deprecated)              s|
 +---------------------------+---------------------------------------------------------------------+
 
-+=====================+============+
-| [signal] 		      |            |
++---------------------+------------+
+| [signal] 		                   |
 +=====================+============+
 | tapertype = hanning | Taper type |
 +---------------------+------------+
 | taperwidth = 0.1	  | Taper width|
 +---------------------+------------+
-
-
-
-
-
-
-
 
 .. ############################################################################ ..
 .. #                           CONFIGURATION FILE                             # ..
