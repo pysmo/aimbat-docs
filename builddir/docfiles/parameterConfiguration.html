@@ -86,6 +86,55 @@
 <h3>8.2.1. Example of AIMBAT configuration file <cite>ttdefaults.conf</cite><a class="headerlink" href="#example-of-aimbat-configuration-file-ttdefaults-conf" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">[mccc]</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>srate = -1</td>
+<td>Sample rate for loading SAC data.
+Read from first file if srate <span class="math">\(&lt; 0\)</span></td>
+</tr>
+<tr class="row-odd"><td>ofilename = mc</td>
+<td>Output file name of MCCC.</td>
+</tr>
+<tr class="row-even"><td>xcorr_modu = xcorrf90</td>
+<td>Module for calculating cross-correlation:
+xcorr for Numpy or xcorrf90 for Fortran</td>
+</tr>
+<tr class="row-odd"><td>xcorr_func = xcorr_faster</td>
+<td>Function for calculating cross-correlation</td>
+</tr>
+<tr class="row-even"><td>shift = 10</td>
+<td>Sample shift for running coarse cross-correlation</td>
+</tr>
+<tr class="row-odd"><td>extraweight = 1000</td>
+<td>Weight for the zero-mean equation in MCCC weighted lsqr solution</td>
+</tr>
+<tr class="row-even"><td>lsqr = nowe</td>
+<td>Type of lsqr solution: no weight</td>
+</tr>
+<tr class="row-odd"><td>#lsqr = lnco</td>
+<td>Type of lsqr solution: weighted by correlation coefficient,
+solved by lapack</td>
+</tr>
+<tr class="row-even"><td>#lsqr = lnre</td>
+<td>Type of lsqr solution: weighted by residual, solved by lapack</td>
+</tr>
+<tr class="row-odd"><td>rcfile = .mcccrc</td>
+<td>Configuration file for MCCC parameters (deprecated)</td>
+</tr>
+<tr class="row-even"><td>evlist = event.list</td>
+<td>File for event hypocenter and origin time (deprecated)</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
 <col width="62%" />
 <col width="38%" />
 </colgroup>

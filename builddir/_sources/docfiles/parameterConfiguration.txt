@@ -112,7 +112,7 @@ Example of AIMBAT configuration file `ttdefaults.conf`
 +---------------------------------+--------------------------------------------------+
 
 +-------------------------+---------------------------------------------------------------------+
-| [iccs] or Align/Refine                                                                        |
+| [iccs] or Align/Refine  |                                                                     |
 +=========================+=====================================================================+
 | srate = -1 		 	  | Sample rate for loading SAC data. Read from first file if srate < 0 |
 +-------------------------+---------------------------------------------------------------------+
@@ -138,7 +138,7 @@ Example of AIMBAT configuration file `ttdefaults.conf`
 +---------------------------+------------------------------------------------------------------+
 | [mccc]                    |                                                                  |
 +===========================+==================================================================+
-| srate = -1 			    | Sample rate for loading SAC data.                                |        
+| srate = -1                | Sample rate for loading SAC data.                                |        
 |                           | Read from first file if srate :math:`< 0`                        |
 +---------------------------+------------------------------------------------------------------+
 | ofilename = mc            | Output file name of MCCC.                                        |
@@ -161,7 +161,7 @@ Example of AIMBAT configuration file `ttdefaults.conf`
 +---------------------------+------------------------------------------------------------------+
 | rcfile = .mcccrc          | Configuration file for MCCC parameters (deprecated)              |
 +---------------------------+------------------------------------------------------------------+
-| evlist = event.list		| File for event hypocenter and origin time (deprecated)           |
+| evlist = event.list       | File for event hypocenter and origin time (deprecated)           |
 +---------------------------+------------------------------------------------------------------+
 
 +---------------------+-------------+
