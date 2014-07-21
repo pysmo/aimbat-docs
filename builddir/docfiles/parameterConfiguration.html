@@ -86,6 +86,51 @@
 <h3>8.2.1. Example of AIMBAT configuration file <cite>ttdefaults.conf</cite><a class="headerlink" href="#example-of-aimbat-configuration-file-ttdefaults-conf" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">[iccs] or Align/Refine</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>srate = -1</td>
+<td>Sample rate for loading SAC data. Read from first file if srate &lt; 0</td>
+</tr>
+<tr class="row-odd"><td>xcorr_modu = xcorrf90</td>
+<td>Module for calculating cross-correlation:
+xcorr for Numpy or xcorrf90 for Fortran</td>
+</tr>
+<tr class="row-even"><td>xcorr_func = xcorr_fast</td>
+<td>Function for calculating cross-correlation</td>
+</tr>
+<tr class="row-odd"><td>shift = 10</td>
+<td>Sample shift for running coarse cross-correlation</td>
+</tr>
+<tr class="row-even"><td>maxiter = 10</td>
+<td>Maximum number of iteration</td>
+</tr>
+<tr class="row-odd"><td>convepsi = 0.001</td>
+<td>Convergence criterion: epsilon</td>
+</tr>
+<tr class="row-even"><td>convtype = coef</td>
+<td><dl class="first last docutils">
+<dt>Type of convergence criterion: coef for correlation coefficient,</dt>
+<dd>or resi for residual</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td>stackwgt = coef</td>
+<td>Weight each trace when calculating array stack</td>
+</tr>
+<tr class="row-even"><td>fstack = fstack.sac</td>
+<td>SAC file name for the array stack</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
 <col width="29%" />
 <col width="71%" />
 </colgroup>

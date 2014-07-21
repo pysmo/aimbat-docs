@@ -114,23 +114,23 @@ Example of AIMBAT configuration file `ttdefaults.conf`
 +-------------------------+---------------------------------------------------------------------+
 | [iccs] or Align/Refine  |                                                                     |
 +=========================+=====================================================================+
-| srate = -1 		 	  | Sample rate for loading SAC data. Read from first file if srate < 0 |
+| srate = -1              | Sample rate for loading SAC data. Read from first file if srate < 0 |
 +-------------------------+---------------------------------------------------------------------+
 | xcorr_modu = xcorrf90   | Module for calculating cross-correlation:                           |
 |                         | xcorr for Numpy or xcorrf90 for Fortran                             |
 +-------------------------+---------------------------------------------------------------------+
 | xcorr_func = xcorr_fast | Function for calculating cross-correlation                          |
 +-------------------------+---------------------------------------------------------------------+
-| shift = 10			  | Sample shift for running coarse cross-correlation                   |
+| shift = 10              | Sample shift for running coarse cross-correlation                   |
 +-------------------------+---------------------------------------------------------------------+
-| maxiter = 10		      | Maximum number of iteration                                         |
+| maxiter = 10            | Maximum number of iteration                                         |
 +-------------------------+---------------------------------------------------------------------+
-| convepsi = 0.001	      | Convergence criterion: epsilon                                      |
+| convepsi = 0.001        | Convergence criterion: epsilon                                      |
 +-------------------------+---------------------------------------------------------------------+
 |convtype = coef    	  | Type of convergence criterion: coef for correlation coefficient,    |
 |                         |  or resi for residual                                               |
 +-------------------------+---------------------------------------------------------------------+
-| stackwgt = coef		  | Weight each trace when calculating array stack                      |
+| stackwgt = coef         | Weight each trace when calculating array stack                      |
 +-------------------------+---------------------------------------------------------------------+
 | fstack = fstack.sac     | SAC file name for the array stack                                   |
 +-------------------------+---------------------------------------------------------------------+
