@@ -86,6 +86,190 @@
 <h3>8.2.1. Example of AIMBAT configuration file <cite>ttdefaults.conf</cite><a class="headerlink" href="#example-of-aimbat-configuration-file-ttdefaults-conf" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
+<col width="32%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">ttdefaults.conf</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>[sacplot]</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>colorwave = blue</td>
+<td>Color of waveform</td>
+</tr>
+<tr class="row-even"><td>colorwavedel = gray</td>
+<td>Color of waveform which is deselected</td>
+</tr>
+<tr class="row-odd"><td>colortwfill = green</td>
+<td>Color of time window fill</td>
+</tr>
+<tr class="row-even"><td>colortwsele = red</td>
+<td>Color of time window selection</td>
+</tr>
+<tr class="row-odd"><td>alphatwfill = 0.2</td>
+<td>Transparency of time window fill</td>
+</tr>
+<tr class="row-even"><td>alphatwsele = 0.6</td>
+<td>Transparency of time window selection</td>
+</tr>
+<tr class="row-odd"><td>npick = 6</td>
+<td>Number of time picks (plot picks: t0-t5)</td>
+</tr>
+<tr class="row-even"><td>pickcolors = kmrcgyb</td>
+<td>Colors of time picks</td>
+</tr>
+<tr class="row-odd"><td>pickstyles</td>
+<td>Line styles of time picks (use second one if ran out of color)</td>
+</tr>
+<tr class="row-even"><td>figsize = 8 10</td>
+<td>Figure size for <cite>plotphase.py</cite></td>
+</tr>
+<tr class="row-odd"><td>rectseis = 0.1 0.06 0.76 0.9</td>
+<td>Axes rectangle size within the figure</td>
+</tr>
+<tr class="row-even"><td>minspan = 5</td>
+<td>Minimum sample points for SpanSelector to select time window</td>
+</tr>
+<tr class="row-odd"><td>srate = -1</td>
+<td>Sample rate for loading SAC data.
+Read from first file if srate &lt; 0</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">[sachdrs]</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>twhdrs = user8 user9</td>
+<td>SAC headers for time window beginning and ending</td>
+</tr>
+<tr class="row-odd"><td>ichdrs = t0 t1 t2</td>
+<td>SAC headers for ICCS time picks</td>
+</tr>
+<tr class="row-even"><td>mchdrs = t2 t3</td>
+<td>SAC headers for MCCC input and output time picks</td>
+</tr>
+<tr class="row-odd"><td>hdrsel = kuser0</td>
+<td>SAC header for seismogram selection status</td>
+</tr>
+<tr class="row-even"><td>qfactors = ccc snr coh</td>
+<td>Quality factors: cross-correlation coefficient,
+signal-to-noise ratio, time domain coherence</td>
+</tr>
+<tr class="row-odd"><td>qheaders = user0 user1 user2</td>
+<td>SAC Headers for quality factors</td>
+</tr>
+<tr class="row-even"><td>qweights = 0.3333 0.3333 0.3333</td>
+<td>Weights for quality factors</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">[iccs] or Align/Refine</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>srate = -1</td>
+<td>Sample rate for loading SAC data. Read from first file if srate &lt; 0</td>
+</tr>
+<tr class="row-odd"><td>xcorr_modu = xcorrf90</td>
+<td>Module for calculating cross-correlation:
+xcorr for Numpy or xcorrf90 for Fortran</td>
+</tr>
+<tr class="row-even"><td>xcorr_func = xcorr_fast</td>
+<td>Function for calculating cross-correlation</td>
+</tr>
+<tr class="row-odd"><td>shift = 10</td>
+<td>Sample shift for running coarse cross-correlation</td>
+</tr>
+<tr class="row-even"><td>maxiter = 10</td>
+<td>Maximum number of iteration</td>
+</tr>
+<tr class="row-odd"><td>convepsi = 0.001</td>
+<td>Convergence criterion: epsilon</td>
+</tr>
+<tr class="row-even"><td>convtype = coef</td>
+<td><dl class="first last docutils">
+<dt>Type of convergence criterion: coef for correlation coefficient,</dt>
+<dd>or resi for residual</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td>stackwgt = coef</td>
+<td>Weight each trace when calculating array stack</td>
+</tr>
+<tr class="row-even"><td>fstack = fstack.sac</td>
+<td>SAC file name for the array stack</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">[mccc]</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>srate = -1</td>
+<td>Sample rate for loading SAC data.
+Read from first file if srate <span class="math">\(&lt; 0\)</span></td>
+</tr>
+<tr class="row-odd"><td>ofilename = mc</td>
+<td>Output file name of MCCC.</td>
+</tr>
+<tr class="row-even"><td>xcorr_modu = xcorrf90</td>
+<td>Module for calculating cross-correlation:
+xcorr for Numpy or xcorrf90 for Fortran</td>
+</tr>
+<tr class="row-odd"><td>xcorr_func = xcorr_faster</td>
+<td>Function for calculating cross-correlation</td>
+</tr>
+<tr class="row-even"><td>shift = 10</td>
+<td>Sample shift for running coarse cross-correlation</td>
+</tr>
+<tr class="row-odd"><td>extraweight = 1000</td>
+<td>Weight for the zero-mean equation in MCCC weighted lsqr solution</td>
+</tr>
+<tr class="row-even"><td>lsqr = nowe</td>
+<td>Type of lsqr solution: no weight</td>
+</tr>
+<tr class="row-odd"><td>#lsqr = lnco</td>
+<td>Type of lsqr solution: weighted by correlation coefficient,
+solved by lapack</td>
+</tr>
+<tr class="row-even"><td>#lsqr = lnre</td>
+<td>Type of lsqr solution: weighted by residual, solved by lapack</td>
+</tr>
+<tr class="row-odd"><td>rcfile = .mcccrc</td>
+<td>Configuration file for MCCC parameters (deprecated)</td>
+</tr>
+<tr class="row-even"><td>evlist = event.list</td>
+<td>File for event hypocenter and origin time (deprecated)</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
 <col width="62%" />
 <col width="38%" />
 </colgroup>

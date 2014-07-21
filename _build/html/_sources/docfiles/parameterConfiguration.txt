@@ -62,7 +62,7 @@ Example of AIMBAT configuration file `ttdefaults.conf`
 +------------------------------+---------------------------------------------------------------+
 | ttdefaults.conf              | Description                                                   |
 +==============================+===============================================================+
-| [sacplot]                    |	                                                 	       |
+| [sacplot]                    |                                                               |
 +------------------------------+---------------------------------------------------------------+
 | colorwave = blue             | Color of waveform                                             |
 +------------------------------+---------------------------------------------------------------+
@@ -76,34 +76,34 @@ Example of AIMBAT configuration file `ttdefaults.conf`
 +------------------------------+---------------------------------------------------------------+
 | alphatwsele = 0.6            | Transparency of time window selection                         |
 +------------------------------+---------------------------------------------------------------+
-| npick = 6		               | Number of time picks (plot picks: t0-t5)                      |
+| npick = 6                    | Number of time picks (plot picks: t0-t5)                      |
 +------------------------------+---------------------------------------------------------------+
 | pickcolors = kmrcgyb         | Colors of time picks                                          |
 +------------------------------+---------------------------------------------------------------+
-| pickstyles                  | Line styles of time picks (use second one if ran out of color)|
+| pickstyles                   | Line styles of time picks (use second one if ran out of color)|
 +------------------------------+---------------------------------------------------------------+
-| figsize = 8 10	           | Figure size for `plotphase.py`                                |
+| figsize = 8 10               | Figure size for `plotphase.py`                                |
 +------------------------------+---------------------------------------------------------------+
 | rectseis = 0.1 0.06 0.76 0.9 | Axes rectangle size within the figure                         |
 +------------------------------+---------------------------------------------------------------+
-| minspan = 5 		           | Minimum sample points for SpanSelector to select time window  |
+| minspan = 5                  | Minimum sample points for SpanSelector to select time window  |
 +------------------------------+---------------------------------------------------------------+
-|srate = -1 		           | Sample rate for loading SAC data.                             |
+|srate = -1                    | Sample rate for loading SAC data.                             |
 |                              | Read from first file if srate < 0                             | 
 +------------------------------+---------------------------------------------------------------+
 
 +---------------------------------+--------------------------------------------------+
 | [sachdrs]                                                                          |
 +=================================+==================================================+
-| twhdrs = user8 	user9	      | SAC headers for time window beginning and ending |
+| twhdrs = user8 user9            | SAC headers for time window beginning and ending |
 +---------------------------------+--------------------------------------------------+
-| ichdrs = t0 t1 t2			      | SAC headers for ICCS time picks                  |
+| ichdrs = t0 t1 t2               | SAC headers for ICCS time picks                  |
 +---------------------------------+--------------------------------------------------+
-| mchdrs = t2 t3			      | SAC headers for MCCC input and output time picks |
+| mchdrs = t2 t3                  | SAC headers for MCCC input and output time picks |
 +---------------------------------+--------------------------------------------------+
-| hdrsel = kuser0	      		  |  SAC header for seismogram selection status      |
+| hdrsel = kuser0                 |  SAC header for seismogram selection status      |
 +---------------------------------+--------------------------------------------------+
-| qfactors = ccc snr coh	      | Quality factors: cross-correlation coefficient,  |
+| qfactors = ccc snr coh          | Quality factors: cross-correlation coefficient,  |
 |                                 | signal-to-noise ratio, time domain coherence     |
 +---------------------------------+--------------------------------------------------+
 | qheaders = user0 user1 user2    | SAC Headers for quality factors                  |
@@ -112,25 +112,25 @@ Example of AIMBAT configuration file `ttdefaults.conf`
 +---------------------------------+--------------------------------------------------+
 
 +-------------------------+---------------------------------------------------------------------+
-| [iccs] or Align/Refine                                                                        |
+| [iccs] or Align/Refine  |                                                                     |
 +=========================+=====================================================================+
-| srate = -1 		 	  | Sample rate for loading SAC data. Read from first file if srate < 0 |
+| srate = -1              | Sample rate for loading SAC data. Read from first file if srate < 0 |
 +-------------------------+---------------------------------------------------------------------+
 | xcorr_modu = xcorrf90   | Module for calculating cross-correlation:                           |
 |                         | xcorr for Numpy or xcorrf90 for Fortran                             |
 +-------------------------+---------------------------------------------------------------------+
 | xcorr_func = xcorr_fast | Function for calculating cross-correlation                          |
 +-------------------------+---------------------------------------------------------------------+
-| shift = 10			  | Sample shift for running coarse cross-correlation                   |
+| shift = 10              | Sample shift for running coarse cross-correlation                   |
 +-------------------------+---------------------------------------------------------------------+
-| maxiter = 10		      | Maximum number of iteration                                         |
+| maxiter = 10            | Maximum number of iteration                                         |
 +-------------------------+---------------------------------------------------------------------+
-| convepsi = 0.001	      | Convergence criterion: epsilon                                      |
+| convepsi = 0.001        | Convergence criterion: epsilon                                      |
 +-------------------------+---------------------------------------------------------------------+
 |convtype = coef    	  | Type of convergence criterion: coef for correlation coefficient,    |
 |                         |  or resi for residual                                               |
 +-------------------------+---------------------------------------------------------------------+
-| stackwgt = coef		  | Weight each trace when calculating array stack                      |
+| stackwgt = coef         | Weight each trace when calculating array stack                      |
 +-------------------------+---------------------------------------------------------------------+
 | fstack = fstack.sac     | SAC file name for the array stack                                   |
 +-------------------------+---------------------------------------------------------------------+
@@ -138,7 +138,7 @@ Example of AIMBAT configuration file `ttdefaults.conf`
 +---------------------------+------------------------------------------------------------------+
 | [mccc]                    |                                                                  |
 +===========================+==================================================================+
-| srate = -1 			    | Sample rate for loading SAC data.                                |        
+| srate = -1                | Sample rate for loading SAC data.                                |        
 |                           | Read from first file if srate :math:`< 0`                        |
 +---------------------------+------------------------------------------------------------------+
 | ofilename = mc            | Output file name of MCCC.                                        |
@@ -161,7 +161,7 @@ Example of AIMBAT configuration file `ttdefaults.conf`
 +---------------------------+------------------------------------------------------------------+
 | rcfile = .mcccrc          | Configuration file for MCCC parameters (deprecated)              |
 +---------------------------+------------------------------------------------------------------+
-| evlist = event.list		| File for event hypocenter and origin time (deprecated)           |
+| evlist = event.list       | File for event hypocenter and origin time (deprecated)           |
 +---------------------------+------------------------------------------------------------------+
 
 +---------------------+-------------+
