@@ -95,15 +95,15 @@ Example of AIMBAT configuration file `ttdefaults.conf`
 +---------------------------------+--------------------------------------------------+
 | [sachdrs]                                                                          |
 +=================================+==================================================+
-| twhdrs = user8 	user9	      | SAC headers for time window beginning and ending |
+| twhdrs = user8 user9            | SAC headers for time window beginning and ending |
 +---------------------------------+--------------------------------------------------+
-| ichdrs = t0 t1 t2			      | SAC headers for ICCS time picks                  |
+| ichdrs = t0 t1 t2               | SAC headers for ICCS time picks                  |
 +---------------------------------+--------------------------------------------------+
-| mchdrs = t2 t3			      | SAC headers for MCCC input and output time picks |
+| mchdrs = t2 t3                  | SAC headers for MCCC input and output time picks |
 +---------------------------------+--------------------------------------------------+
-| hdrsel = kuser0	      		  |  SAC header for seismogram selection status      |
+| hdrsel = kuser0                 |  SAC header for seismogram selection status      |
 +---------------------------------+--------------------------------------------------+
-| qfactors = ccc snr coh	      | Quality factors: cross-correlation coefficient,  |
+| qfactors = ccc snr coh          | Quality factors: cross-correlation coefficient,  |
 |                                 | signal-to-noise ratio, time domain coherence     |
 +---------------------------------+--------------------------------------------------+
 | qheaders = user0 user1 user2    | SAC Headers for quality factors                  |

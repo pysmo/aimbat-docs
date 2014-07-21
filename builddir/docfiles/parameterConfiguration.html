@@ -86,6 +86,40 @@
 <h3>8.2.1. Example of AIMBAT configuration file <cite>ttdefaults.conf</cite><a class="headerlink" href="#example-of-aimbat-configuration-file-ttdefaults-conf" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">[sachdrs]</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>twhdrs = user8 user9</td>
+<td>SAC headers for time window beginning and ending</td>
+</tr>
+<tr class="row-odd"><td>ichdrs = t0 t1 t2</td>
+<td>SAC headers for ICCS time picks</td>
+</tr>
+<tr class="row-even"><td>mchdrs = t2 t3</td>
+<td>SAC headers for MCCC input and output time picks</td>
+</tr>
+<tr class="row-odd"><td>hdrsel = kuser0</td>
+<td>SAC header for seismogram selection status</td>
+</tr>
+<tr class="row-even"><td>qfactors = ccc snr coh</td>
+<td>Quality factors: cross-correlation coefficient,
+signal-to-noise ratio, time domain coherence</td>
+</tr>
+<tr class="row-odd"><td>qheaders = user0 user1 user2</td>
+<td>SAC Headers for quality factors</td>
+</tr>
+<tr class="row-even"><td>qweights = 0.3333 0.3333 0.3333</td>
+<td>Weights for quality factors</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
 <col width="27%" />
 <col width="73%" />
 </colgroup>
