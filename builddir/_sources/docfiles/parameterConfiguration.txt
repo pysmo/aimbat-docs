@@ -62,7 +62,7 @@ Example of AIMBAT configuration file `ttdefaults.conf`
 +------------------------------+---------------------------------------------------------------+
 | ttdefaults.conf              | Description                                                   |
 +==============================+===============================================================+
-| [sacplot]                    |	                                                 	       |
+| [sacplot]                    |                                                               |
 +------------------------------+---------------------------------------------------------------+
 | colorwave = blue             | Color of waveform                                             |
 +------------------------------+---------------------------------------------------------------+
@@ -76,19 +76,19 @@ Example of AIMBAT configuration file `ttdefaults.conf`
 +------------------------------+---------------------------------------------------------------+
 | alphatwsele = 0.6            | Transparency of time window selection                         |
 +------------------------------+---------------------------------------------------------------+
-| npick = 6		               | Number of time picks (plot picks: t0-t5)                      |
+| npick = 6                    | Number of time picks (plot picks: t0-t5)                      |
 +------------------------------+---------------------------------------------------------------+
 | pickcolors = kmrcgyb         | Colors of time picks                                          |
 +------------------------------+---------------------------------------------------------------+
-| pickstyles                  | Line styles of time picks (use second one if ran out of color)|
+| pickstyles                   | Line styles of time picks (use second one if ran out of color)|
 +------------------------------+---------------------------------------------------------------+
-| figsize = 8 10	           | Figure size for `plotphase.py`                                |
+| figsize = 8 10               | Figure size for `plotphase.py`                                |
 +------------------------------+---------------------------------------------------------------+
 | rectseis = 0.1 0.06 0.76 0.9 | Axes rectangle size within the figure                         |
 +------------------------------+---------------------------------------------------------------+
-| minspan = 5 		           | Minimum sample points for SpanSelector to select time window  |
+| minspan = 5                  | Minimum sample points for SpanSelector to select time window  |
 +------------------------------+---------------------------------------------------------------+
-|srate = -1 		           | Sample rate for loading SAC data.                             |
+|srate = -1                    | Sample rate for loading SAC data.                             |
 |                              | Read from first file if srate < 0                             | 
 +------------------------------+---------------------------------------------------------------+
 
