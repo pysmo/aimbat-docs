@@ -64,6 +64,21 @@
 <div class="section" id="computing-delay-times">
 <h2>9.2. Computing delay times<a class="headerlink" href="#computing-delay-times" title="Permalink to this headline">¶</a></h2>
 <p>The equation used to compute delays is explained here <a class="reference internal" href="citations.html#bulandchapman1983" id="id1">[BulandChapMan1983]</a>.</p>
+<p>You can get some example data to test this out by downloading the Github repository <a class="reference external" href="https://github.com/pysmo/data-example">data-example</a>. Now, cd into the folder <cite>example_pkl_files</cite>, which has several mcp files containing the results of picking travel wave arrival times on a set of seismograms.</p>
+<p>Run <cite>getsta.py</cite> on the PKL file to get the file <cite>loc.sta</cite> containing the station locations. For example, in <cite>data-example/example_pkl_files</cite> type:</p>
+<div class="highlight-python"><div class="highlight"><pre>getsta.py 20120101.05275598.bhz.pkl
+</pre></div>
+</div>
+<p>This will output a file, <cite>loc.py</cite>.</p>
+<p>Next, run <cite>mccc2delay.py</cite> to convert the MCCC delays into actual delays. For example, in <cite>data-example/example_pkl_files</cite> type:</p>
+<div class="highlight-python"><div class="highlight"><pre>mccc2delay.py 20120101.05275598.bhz.pkl
+</pre></div>
+</div>
+<p>You will get a <cite>.px</cite> file.</p>
+<p>To plot the stations colored by delay times, run <cite>doplotsta.sh &lt;file-name&gt;.px</cite>. For example, in <cite>data-example/example_pkl_files</cite> type:</p>
+<div class="highlight-python"><div class="highlight"><pre>doplotsta.sh 20120101.05275598.px
+</pre></div>
+</div>
 </div>
 </div>
 

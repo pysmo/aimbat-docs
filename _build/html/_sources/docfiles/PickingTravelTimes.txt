@@ -70,6 +70,12 @@ Running ttpick.py
 
 Run ``ttpick/py <path-to-pkl-file>``. A GUI should pop up if you successfully ran it. Note that if you click on the buttons, they will not work until you move the mouse off them; this is a problem we are hoping to fix.
 
+You can get some example data to test this out by downloading the Github repository `data-example <https://github.com/pysmo/data-example>`_. Now, cd into the folder `example_pkl_files`, which has several pickle files for seismic events. Type::
+
+    ttpick.py 20110915.19310408.bhz.pkl
+
+and a python GUI should pop up. 
+
 .. image:: pickingTravelTimes-images/pick_travel_times.png
 
 .. ----------------------------------------------------------------------------- ..

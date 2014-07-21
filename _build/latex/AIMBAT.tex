@@ -183,6 +183,20 @@ The \href{https://github.com/pysmo}{latest version of AIMBAT} will be on \href{h
 Some users may already have Git installed, but if not, you can download the package installer \href{http://git-scm.com/download/mac}{here}. This would allow only command line usage of Git, so if you want to use a GUI, we recommend \href{https://mac.github.com/}{Git for Mac}.
 
 
+\section{Macports}
+\label{docfiles/install_dependencies:macports}
+\href{http://www.macports.org/}{Macports} will be needed to install some python packages. Download the package installer \href{http://www.macports.org/install.php}{here}.
+
+
+\section{Homebrew}
+\label{docfiles/install_dependencies:homebrew}
+\href{http://brew.sh/}{Homebrew} will be needed to install some python packages. Get it by typing in your terminal:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+brew install wget
+\end{Verbatim}
+
+
 \section{Getting your operating system}
 \label{docfiles/install_dependencies:getting-your-operating-system}
 We assume that most users of AIMBAT will be using macs. If our assumptions are wrong, please {\hyperref[docfiles/introduction:authors-contacts]{\emph{contact the authors}}}, and if there is sufficient interest we will construct documentation for installations on other operating systems as well.
@@ -199,8 +213,38 @@ Required for AIMBAT
 \#. \href{http://www.scipy.org/}{Scipy}: Used for data processing
 \#. \href{http://matplotlib.org/}{Matplotlib}: Used for the majority of the plots in AIMBAT and the GUI
 
+To check if you have python already, open the terminal and type \code{python}. If a console pops up, it should display the version of python you have. If not, the terminal will output:
 
-\section{Optional but recommended}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGZhy{}bash: python: command not found
+\end{Verbatim}
+
+If python is installed, you next need to check if the required packages are there. Open the python console by typing in the terminal:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{python}
+\end{Verbatim}
+
+Now, type:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{numpy}
+\PYG{k+kn}{import} \PYG{n+nn}{scipy}
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib}
+\end{Verbatim}
+
+If any of the packages are missing (e.g. scipy not installed), the python console will output an error:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+Traceback (most recent call last):
+File \PYGZdq{}\PYGZlt{}stdin\PYGZgt{}\PYGZdq{}, line 1, in \PYGZlt{}module\PYGZgt{}
+ImportError: No module named scipy
+\end{Verbatim}
+
+Otherwise, the python console will simply show that it is ready for the next command.
+
+
+\subsection{Optional but recommended}
 \label{docfiles/install_dependencies:optional-but-recommended}
 \href{http://ipython.org/}{iPython}: Interactive console for python
 
@@ -270,13 +314,7 @@ Enthough Python should get you most of the dependencies needed. You do need to g
 brew install gdal
 \end{Verbatim}
 
-Now install Basemap. Download it \href{http://sourceforge.net/projects/matplotlib/files/matplotlib-toolkits/}{here}. Unzip the package and cd into the unzipped package. Export the directory where \code{Geos} was installed:
-
-\begin{Verbatim}[commandchars=\\\{\}]
-export GEOS\PYGZus{}DIR=/usr/local/Cellar/geos/3.4.2/
-\end{Verbatim}
-
-And install Basemap:
+Now install Basemap. Download it \href{https://pypi.python.org/pypi/basemap}{here}. Unzip the package and cd into the unzipped package. To install basemap, do:
 
 \begin{Verbatim}[commandchars=\\\{\}]
 sudo python setup.py build
@@ -302,7 +340,7 @@ Here some common problems and possible resolutions. If your problem is not liste
 
 
 \subsection{Macports}
-\label{docfiles/install_dependencies:id4}
+\label{docfiles/install_dependencies:id8}
 You may run into problems with AIMBAT if your \href{http://www.macports.org/}{Macport} version is not compatible with your operating system version. For example, if you used Macports for OS X 10.8 to install AIMBAT, then upgraded your operating system or OS X 10.9, you may find that AIMBAT no longer works properly. You will need to upgrade Macports to fix this error.
 
 Do not uninstall MacPorts unless you know what you are doing, uninstalling MacPorts may get rid of other programs you installed using MacPorts. However, if you are sure you want to do so, see \href{https://guide.macports.org/chunked/installing.macports.uninstalling.html}{here} for instructions.
@@ -526,6 +564,8 @@ Use the \href{http://docs.obspy.org/packages/obspy.fdsn.html\#}{Obspy FDSN} Web 
 
 \section{Standing Order for Data}
 \label{docfiles/gettingData:standing-order-for-data}
+Note: NOT needed for AIMBAT, but important to know about as it is a commonly used package for downloading seismic data with the user's specifications. Although Obspy also offers was to download seismic data from IRIS, SOD allows for better fine-tuning of data obtained.
+
 From the \href{http://www.seis.sc.edu/index.html}{SOD} website:
 \begin{quote}
 
@@ -820,6 +860,14 @@ In the terminal, cd into the directory with all the \code{pkl} files you want to
 \label{docfiles/PickingTravelTimes:running-ttpick-py}
 Run \code{ttpick/py \textless{}path-to-pkl-file\textgreater{}}. A GUI should pop up if you successfully ran it. Note that if you click on the buttons, they will not work until you move the mouse off them; this is a problem we are hoping to fix.
 
+You can get some example data to test this out by downloading the Github repository \href{https://github.com/pysmo/data-example}{data-example}. Now, cd into the folder \emph{example\_pkl\_files}, which has several pickle files for seismic events. Type:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+ttpick.py 20110915.19310408.bhz.pkl
+\end{Verbatim}
+
+and a python GUI should pop up.
+
 \includegraphics{pick_travel_times.png}
 
 
@@ -961,6 +1009,30 @@ Run \code{doplotsta.sh} and you will get a two \code{gif} files of the stations 
 \label{docfiles/VisualizingStations:computing-delay-times}
 The equation used to compute delays is explained here {\hyperref[docfiles/citations:bulandchapman1983]{{[}BulandChapMan1983{]}}}.
 
+You can get some example data to test this out by downloading the Github repository \href{https://github.com/pysmo/data-example}{data-example}. Now, cd into the folder \emph{example\_pkl\_files}, which has several mcp files containing the results of picking travel wave arrival times on a set of seismograms.
+
+Run \emph{getsta.py} on the PKL file to get the file \emph{loc.sta} containing the station locations. For example, in \emph{data-example/example\_pkl\_files} type:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+getsta.py 20120101.05275598.bhz.pkl
+\end{Verbatim}
+
+This will output a file, \emph{loc.py}.
+
+Next, run \emph{mccc2delay.py} to convert the MCCC delays into actual delays. For example, in \emph{data-example/example\_pkl\_files} type:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+mccc2delay.py 20120101.05275598.bhz.pkl
+\end{Verbatim}
+
+You will get a \emph{.px} file.
+
+To plot the stations colored by delay times, run \emph{doplotsta.sh \textless{}file-name\textgreater{}.px}. For example, in \emph{data-example/example\_pkl\_files} type:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+doplotsta.sh 20120101.05275598.px
+\end{Verbatim}
+
 
 \chapter{Unit Testing}
 \label{docfiles/unitTests:unit-testing}\label{docfiles/unitTests::doc}
@@ -1006,6 +1078,8 @@ sphinx\PYGZhy{}build \PYGZhy{}b html . builddir
 make html
 make latexpdf
 \end{Verbatim}
+
+The two commands builds the html for the webpage, while the last command makes a pdf version of the online documentation.
 
 Now, commit the changes make in github, and push the changes to the master branch. The changes should be visible in the documentation within a few minutes.
 

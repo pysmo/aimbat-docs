@@ -25,10 +25,37 @@ Some users may already have Git installed, but if not, you can download the pack
 
 
 
+.. ############################################################################ ..
+.. #                                 MACPORTS                                 # ..
+.. ############################################################################ ..
+
+Macports
+--------
+
+`Macports <http://www.macports.org/>`_ will be needed to install some python packages. Download the package installer `here <http://www.macports.org/install.php>`_.
+
+
+.. ############################################################################ ..
+.. #                                 MACPORTS                                 # ..
+.. ############################################################################ ..
 
 
 
+.. ############################################################################ ..
+.. #                                HOMEBREW                                  # ..
+.. ############################################################################ ..
 
+Homebrew
+--------
+
+`Homebrew <http://brew.sh/>`_ will be needed to install some python packages. Get it by typing in your terminal::
+
+  brew install wget
+
+
+.. ############################################################################ ..
+.. #                                HOMEBREW                                  # ..
+.. ############################################################################ ..
 
 
 .. ############################################################################ ..
@@ -67,8 +94,30 @@ Required for AIMBAT
 #. `Scipy <http://www.scipy.org/>`_: Used for data processing
 #. `Matplotlib <http://matplotlib.org/>`_: Used for the majority of the plots in AIMBAT and the GUI
 
+To check if you have python already, open the terminal and type ``python``. If a console pops up, it should display the version of python you have. If not, the terminal will output::
+
+  -bash: python: command not found
+
+If python is installed, you next need to check if the required packages are there. Open the python console by typing in the terminal::
+
+  python
+
+Now, type::
+
+  import numpy
+  import scipy
+  import matplotlib
+
+If any of the packages are missing (e.g. scipy not installed), the python console will output an error::
+
+  Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  ImportError: No module named scipy
+
+Otherwise, the python console will simply show that it is ready for the next command. 
+
 Optional but recommended
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 `iPython <http://ipython.org/>`_: Interactive console for python 
 
 .. ############################################################################ ..
@@ -139,11 +188,7 @@ Enthough Python should get you most of the dependencies needed. You do need to g
 
   brew install gdal
 
-Now install Basemap. Download it `here <http://sourceforge.net/projects/matplotlib/files/matplotlib-toolkits/>`_. Unzip the package and cd into the unzipped package. Export the directory where ``Geos`` was installed::
-
-  export GEOS_DIR=/usr/local/Cellar/geos/3.4.2/
-
-And install Basemap::
+Now install Basemap. Download it `here <https://pypi.python.org/pypi/basemap>`_. Unzip the package and cd into the unzipped package. To install basemap, do::
 
   sudo python setup.py build
   sudo python setup.py install

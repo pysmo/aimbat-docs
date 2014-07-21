@@ -53,6 +53,8 @@ Use the `Obspy FDSN <http://docs.obspy.org/packages/obspy.fdsn.html#>`_ Web serv
 Standing Order for Data
 -----------------------
 
+Note: NOT needed for AIMBAT, but important to know about as it is a commonly used package for downloading seismic data with the user's specifications. Although Obspy also offers was to download seismic data from IRIS, SOD allows for better fine-tuning of data obtained. 
+
 From the `SOD <http://www.seis.sc.edu/index.html>`_ website:
 
     Standing Order for Data, is a framework to define rules to select seismic events, stations, and data. It then allows you to apply processing to the events, stations, and data and currently contains a large set of rules that allow you to select with great precision in these items. The processes mainly consist of simple data transformation and retrieval, but SOD defines hooks to allow you to cleanly insert your own processing steps, either written in Java or an external program.
