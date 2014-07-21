@@ -2,7 +2,7 @@
 Updating this manual
 ====================
 
-This is for someone who wants to be a collaborator on AIMBAT only.
+This is for someone who wants to be a collaborator on AIMBAT only. This is NOT necessary for anyone who only wants to use AIMBAT. AIMBAT will work fine if you do not install the dependencies listed here. 
 
 To be able to update the manual, download the `source code <https://github.com/pysmo/aimbat-docs>`_ from Github, and install the dependencies.
 

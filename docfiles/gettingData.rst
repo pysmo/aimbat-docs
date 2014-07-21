@@ -2,8 +2,6 @@
 Getting Data
 ============
 
-The material in this section is `not` needed to install AIMBAT and get it working if you already have the SAC files you want to use AIMBAT on. If you may need to 
-
 There are several ways to obtain seismic data from `IRIS <http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/>`_ to input to AIMBAT. The authors used two ways to do it, and a further list of libraries for obtaining seismic data is provided in the sidebars `here <http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/>`_. 
 
 .. ############################################################################ ..
