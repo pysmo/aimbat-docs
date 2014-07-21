@@ -80,7 +80,7 @@ Example of AIMBAT configuration file `ttdefaults.conf`
 +------------------------------+---------------------------------------------------------------+
 | pickcolors = kmrcgyb         | Colors of time picks                                          |
 +------------------------------+---------------------------------------------------------------+
-| pickstyles = -- :            | Line styles of time picks (use second one if ran out of color)|
+| pickstyles                  | Line styles of time picks (use second one if ran out of color)|
 +------------------------------+---------------------------------------------------------------+
 | figsize = 8 10	           | Figure size for `plotphase.py`                                |
 +------------------------------+---------------------------------------------------------------+
@@ -164,7 +164,7 @@ Example of AIMBAT configuration file `ttdefaults.conf`
 +---------------------------+---------------------------------------------------------------------+
 
 +---------------------+-------------+
-| signal 		                    |
+| signal              |             |
 +=====================+=============+
 | tapertype = hanning | Taper type  |
 +---------------------+-------------+
