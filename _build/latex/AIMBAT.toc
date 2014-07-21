@@ -28,6 +28,7 @@
 \contentsline {section}{\numberline {3.3}Building the Pysmo Packages}{17}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Building pysmo.sac}{18}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Installing pysmo.aimbat}{18}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Example Data}{18}{section.3.4}
 \contentsline {chapter}{\numberline {4}Getting Data}{19}{chapter.4}
 \contentsline {section}{\numberline {4.1}Obspy.fdsn for downloading data}{19}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Installing Obspy}{19}{subsection.4.1.1}
@@ -35,40 +36,40 @@
 \contentsline {subsection}{\numberline {4.1.3}Using Obspy}{19}{subsection.4.1.3}
 \contentsline {section}{\numberline {4.2}Standing Order for Data}{19}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Installing SOD}{20}{subsection.4.2.1}
-\contentsline {chapter}{\numberline {5}Filtering Data}{23}{chapter.5}
-\contentsline {section}{\numberline {5.1}Filtering GUI}{23}{section.5.1}
-\contentsline {section}{\numberline {5.2}Saving Options}{23}{section.5.2}
-\contentsline {chapter}{\numberline {6}Analyzing Data}{25}{chapter.6}
-\contentsline {section}{\numberline {6.1}Seismic Analysis Code (SAC)}{25}{section.6.1}
-\contentsline {chapter}{\numberline {7}Parameter Configuration}{27}{chapter.7}
-\contentsline {section}{\numberline {7.1}Backend}{27}{section.7.1}
-\contentsline {chapter}{\numberline {8}Measuring Teleseismic Body Wave Arrival Times}{29}{chapter.8}
-\contentsline {section}{\numberline {8.1}Automated Phase Alignment}{29}{section.8.1}
-\contentsline {section}{\numberline {8.2}Picking Travel Times}{30}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Getting into the right directory}{30}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}Running ttpick.py}{30}{subsection.8.2.2}
-\contentsline {subsection}{\numberline {8.2.3}Align}{30}{subsection.8.2.3}
-\contentsline {subsection}{\numberline {8.2.4}Get rid of really bad seismograms}{30}{subsection.8.2.4}
-\contentsline {subsection}{\numberline {8.2.5}Filtering}{31}{subsection.8.2.5}
-\contentsline {subsection}{\numberline {8.2.6}Refine}{31}{subsection.8.2.6}
-\contentsline {subsection}{\numberline {8.2.7}Finalize}{31}{subsection.8.2.7}
-\contentsline {subsection}{\numberline {8.2.8}Manually pick the arrival times using t2}{31}{subsection.8.2.8}
-\contentsline {subsection}{\numberline {8.2.9}SACP2 to check for outlier seismograms}{31}{subsection.8.2.9}
-\contentsline {subsection}{\numberline {8.2.10}Go through the badly aligned seismograms and realign the travel times manually}{31}{subsection.8.2.10}
-\contentsline {section}{\numberline {8.3}What the Alignments Stand For}{34}{section.8.3}
-\contentsline {section}{\numberline {8.4}Post Processing}{34}{section.8.4}
-\contentsline {subsection}{\numberline {8.4.1}Getting the output}{34}{subsection.8.4.1}
-\contentsline {subsection}{\numberline {8.4.2}Getting the stations of the seismograms chosen}{34}{subsection.8.4.2}
-\contentsline {subsection}{\numberline {8.4.3}Picking Travel Times does not work}{34}{subsection.8.4.3}
-\contentsline {subsection}{\numberline {8.4.4}Travel Times}{35}{subsection.8.4.4}
-\contentsline {chapter}{\numberline {9}Visualizing Stations on a map}{37}{chapter.9}
-\contentsline {section}{\numberline {9.1}Coloring stations by delay times}{37}{section.9.1}
-\contentsline {section}{\numberline {9.2}Computing delay times}{37}{section.9.2}
-\contentsline {chapter}{\numberline {10}Unit Testing}{39}{chapter.10}
-\contentsline {section}{\numberline {10.1}Running the Tests}{39}{section.10.1}
-\contentsline {chapter}{\numberline {11}Updating this manual}{41}{chapter.11}
-\contentsline {section}{\numberline {11.1}Dependencies}{41}{section.11.1}
-\contentsline {section}{\numberline {11.2}How to update this manual}{41}{section.11.2}
-\contentsline {chapter}{\numberline {12}Citations}{43}{chapter.12}
-\contentsline {chapter}{\numberline {13}Indices and tables}{45}{chapter.13}
-\contentsline {chapter}{Bibliography}{47}{chapter*.4}
+\contentsline {chapter}{\numberline {5}Filtering Data}{21}{chapter.5}
+\contentsline {section}{\numberline {5.1}Filtering GUI}{21}{section.5.1}
+\contentsline {section}{\numberline {5.2}Saving Options}{21}{section.5.2}
+\contentsline {chapter}{\numberline {6}Analyzing Data}{23}{chapter.6}
+\contentsline {section}{\numberline {6.1}Seismic Analysis Code (SAC)}{23}{section.6.1}
+\contentsline {chapter}{\numberline {7}Parameter Configuration}{25}{chapter.7}
+\contentsline {section}{\numberline {7.1}Backend}{25}{section.7.1}
+\contentsline {chapter}{\numberline {8}Measuring Teleseismic Body Wave Arrival Times}{27}{chapter.8}
+\contentsline {section}{\numberline {8.1}Automated Phase Alignment}{27}{section.8.1}
+\contentsline {section}{\numberline {8.2}Picking Travel Times}{28}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Getting into the right directory}{28}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Running ttpick.py}{28}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {8.2.3}Align}{28}{subsection.8.2.3}
+\contentsline {subsection}{\numberline {8.2.4}Get rid of really bad seismograms}{28}{subsection.8.2.4}
+\contentsline {subsection}{\numberline {8.2.5}Filtering}{29}{subsection.8.2.5}
+\contentsline {subsection}{\numberline {8.2.6}Refine}{29}{subsection.8.2.6}
+\contentsline {subsection}{\numberline {8.2.7}Finalize}{29}{subsection.8.2.7}
+\contentsline {subsection}{\numberline {8.2.8}Manually pick the arrival times using t2}{29}{subsection.8.2.8}
+\contentsline {subsection}{\numberline {8.2.9}SACP2 to check for outlier seismograms}{29}{subsection.8.2.9}
+\contentsline {subsection}{\numberline {8.2.10}Go through the badly aligned seismograms and realign the travel times manually}{29}{subsection.8.2.10}
+\contentsline {section}{\numberline {8.3}What the Alignments Stand For}{32}{section.8.3}
+\contentsline {section}{\numberline {8.4}Post Processing}{32}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}Getting the output}{32}{subsection.8.4.1}
+\contentsline {subsection}{\numberline {8.4.2}Getting the stations of the seismograms chosen}{32}{subsection.8.4.2}
+\contentsline {subsection}{\numberline {8.4.3}Picking Travel Times does not work}{32}{subsection.8.4.3}
+\contentsline {subsection}{\numberline {8.4.4}Travel Times}{33}{subsection.8.4.4}
+\contentsline {chapter}{\numberline {9}Visualizing Stations on a map}{35}{chapter.9}
+\contentsline {section}{\numberline {9.1}Coloring stations by delay times}{35}{section.9.1}
+\contentsline {section}{\numberline {9.2}Computing delay times}{35}{section.9.2}
+\contentsline {chapter}{\numberline {10}Unit Testing}{37}{chapter.10}
+\contentsline {section}{\numberline {10.1}Running the Tests}{37}{section.10.1}
+\contentsline {chapter}{\numberline {11}Updating this manual}{39}{chapter.11}
+\contentsline {section}{\numberline {11.1}Dependencies}{39}{section.11.1}
+\contentsline {section}{\numberline {11.2}How to update this manual}{39}{section.11.2}
+\contentsline {chapter}{\numberline {12}Citations}{41}{chapter.12}
+\contentsline {chapter}{\numberline {13}Indices and tables}{43}{chapter.13}
+\contentsline {chapter}{Bibliography}{45}{chapter*.4}
