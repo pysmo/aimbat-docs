@@ -135,33 +135,34 @@ Example of AIMBAT configuration file `ttdefaults.conf`
 | fstack = fstack.sac     | SAC file name for the array stack                                   |
 +-------------------------+---------------------------------------------------------------------+
 
-+---------------------------+---------------------------------------------------------------------+
-| [mccc] or Finalize		                                                                      |
-+===========================+=====================================================================+
-| srate = -1 				| Sample rate for loading SAC data. Read from first file if srate < 0 |
-+---------------------------+---------------------------------------------------------------------+
-| ofilename = mc			| Output file name of MCCC.                                           |
-+---------------------------+---------------------------------------------------------------------+
-|xcorr_modu = xcorrf90	    | Module for calculating cross-correlation:                           |
-|                           | xcorr for Numpy or xcorrf90 for Fortran                             |
-+---------------------------+---------------------------------------------------------------------+
-| xcorr_func = xcorr_faster	| Function for calculating cross-correlation                          |
-+---------------------------+---------------------------------------------------------------------+
-| shift = 10				| Sample shift for running coarse cross-correlation                   |
-+---------------------------+---------------------------------------------------------------------+
-| extraweight = 1000        | Weight for the zero-mean equation in MCCC weighted lsqr solution    |
-+---------------------------+---------------------------------------------------------------------+
-| lsqr = nowe		    	| Type of lsqr solution: no weight                                    |
-+---------------------------+---------------------------------------------------------------------+
-| #lsqr = lnco				| Type of lsqr solution: weighted by correlation coefficient,         |
-|                           | solved by lapack                                                    |
-+---------------------------+---------------------------------------------------------------------+
-| #lsqr = lnre				| Type of lsqr solution: weighted by residual, solved by lapack       |
-+---------------------------+---------------------------------------------------------------------+
-| rcfile = .mcccrc			| Configuration file for MCCC parameters (deprecated)                 |
-+---------------------------+---------------------------------------------------------------------+
-| evlist = event.list		| File for event hypocenter and origin time (deprecated)              s|
-+---------------------------+---------------------------------------------------------------------+
++---------------------------+------------------------------------------------------------------+
+| [mccc]                    |                                                                  |
++===========================+==================================================================+
+| srate = -1 			    | Sample rate for loading SAC data.                                |        
+|                           | Read from first file if srate :math:`< 0`                        |
++---------------------------+------------------------------------------------------------------+
+| ofilename = mc            | Output file name of MCCC.                                        |
++---------------------------+------------------------------------------------------------------+
+| xcorr_modu = xcorrf90	    | Module for calculating cross-correlation:                        |
+|                           | xcorr for Numpy or xcorrf90 for Fortran                          |
++---------------------------+------------------------------------------------------------------+
+| xcorr_func = xcorr_faster | Function for calculating cross-correlation                       |
++---------------------------+------------------------------------------------------------------+
+| shift = 10                | Sample shift for running coarse cross-correlation                |
++---------------------------+------------------------------------------------------------------+
+| extraweight = 1000        | Weight for the zero-mean equation in MCCC weighted lsqr solution |
++---------------------------+------------------------------------------------------------------+
+| lsqr = nowe               | Type of lsqr solution: no weight                                 |
++---------------------------+------------------------------------------------------------------+
+| #lsqr = lnco              | Type of lsqr solution: weighted by correlation coefficient,      |
+|                           | solved by lapack                                                 |
++---------------------------+------------------------------------------------------------------+
+| #lsqr = lnre              | Type of lsqr solution: weighted by residual, solved by lapack    |
++---------------------------+------------------------------------------------------------------+
+| rcfile = .mcccrc          | Configuration file for MCCC parameters (deprecated)              |
++---------------------------+------------------------------------------------------------------+
+| evlist = event.list		| File for event hypocenter and origin time (deprecated)           |
++---------------------------+------------------------------------------------------------------+
 
 +---------------------+-------------+
 | signal              |             |
