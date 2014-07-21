@@ -155,6 +155,51 @@ In the script, &#8220;opts.ynorm&#8221; sets the waveform normalization and &#82
 Press the &#8216;z&#8217; key to zoom out to the previous time range.</p>
 </div>
 </div>
+<div class="section" id="sac-phase-picking">
+<h2>9.4. SAC Phase Picking<a class="headerlink" href="#sac-phase-picking" title="Permalink to this headline">¶</a></h2>
+<p>SAC plotting (<tt class="docutils literal"><span class="pre">pysmo.aimbat.plotphase</span></tt>) does not involve change in data files but phase picking (<tt class="docutils literal"><span class="pre">pysmo.aimbat.pickphase</span></tt>) does. A GUI is built for user to interactively pick phase arrival times. The figure below is an example screen shot running:</p>
+<div class="highlight-python"><div class="highlight"><pre>sacppk.py 20110915.19310408.bhz.pkl -w
+</pre></div>
+</div>
+<p>in the data example directory <tt class="docutils literal"><span class="pre">&lt;example-event-dir&gt;</span></tt>.</p>
+<p>Following SAC convention, the user can set a time pick by pressing the &#8216;t&#8217; key and number keys &#8216;0-9&#8217;. The x location of the mouse position is saved to corresponding SAC headers &#8216;t0-t9&#8217;.
+Time window zooming in <tt class="docutils literal"><span class="pre">pysmo.aimbat.pickphase</span></tt> is implemented in the same way as in <tt class="docutils literal"><span class="pre">pysmo.aimbat.plotphase</span></tt> to replace SAC&#8217;s combination of the &#8216;x&#8217; key and mouse click.
+Zooming out key is set to &#8216;z&#8217; because the &#8216;o&#8217; key is used for another purpose by Matplotlib.
+The filename printing out by mouse clicking feature is also available in <tt class="docutils literal"><span class="pre">pysmo.aimbat.pickphase</span></tt>.</p>
+<p>A major improvement over SAC is picking a time window in addition to time picks.
+Pressing the &#8216;w&#8217; key to save the current time axis range to two user-defined SAC header variables. A transparent green span is plotted within the time window, show in the figure below.</p>
+<p>..image:: SACdataAccess/sacppk.png</p>
+<p>Another major improvement involves quality control with convenient operations to (de)select seismograms. In the GUI in above, there are two divisions of selected and deleted seismograms.
+Selected seismograms with a positive trace number are displayed with blue wiggles, while deleted seismograms with negative trace numbers are plotted in gray. The user can simply click on a certain seismogram to switch the selection status, either to exclude it or bring it back for inclusion. The trace selection status is stored in a user-defined SAC header variable.</p>
+<p>In SAC, command <tt class="docutils literal"><span class="pre">ppk</span> <span class="pre">p</span> <span class="pre">10</span></tt> plots 10 seismograms on each page. Pressing the &#8216;b&#8217; and &#8216;n&#8217; keys to navigate through pages. The number of seismograms plotted on each page is controlled by command line option:</p>
+<div class="highlight-python"><div class="highlight"><pre>-m maxsel maxdel
+</pre></div>
+</div>
+<p>for <tt class="docutils literal"><span class="pre">sacppk.py</span></tt>. The <tt class="docutils literal"><span class="pre">Prev</span></tt> and <tt class="docutils literal"><span class="pre">Next</span></tt> Buttons are for page navigation and the <tt class="docutils literal"><span class="pre">Save</span></tt> Button saves the change in time picks and time window to files. The default values for maxsel and maxdel are 25 and 5, which means a maximum of 30 seismograms on each page.</p>
+<p>In the figure displayed, there are 26 seismograms on the first page because only 1 seismogram is deleted. On the next page, there are 30 selected seismograms. To plot 50 seismograms on each page, run:</p>
+<div class="highlight-python"><div class="highlight"><pre>sacppk.py 20110915.19310408.bhz.pkl -w -m 45 5
+</pre></div>
+</div>
+<p>and there would be 4 total pages and 13 seismograms on the last page.</p>
+<p>To plot seismograms relative to time pick t0 and fill the positive and negative wiggles of waveform, run:</p>
+<div class="highlight-python"><div class="highlight"><pre>sacppk.py 20110915.19310408.bhz.pkl -w -r0 -f1
+</pre></div>
+</div>
+<p>To sort seismograms by epicentral distance in increase and decrease orders, run:</p>
+<div class="highlight-python"><div class="highlight"><pre>sacppk.py 20110915.19310408.bhz.pkl -w -sdist
+sacppk.py 20110915.19310408.bhz.pkl -w -sdist-
+</pre></div>
+</div>
+<p>Sorting by azimuth and back-azimuth is similar:</p>
+<div class="highlight-python"><div class="highlight"><pre>sacppk.py 20110915.19310408.bhz.pkl -w -saz
+sacppk.py 20110915.19310408.bhz.pkl -w -sbaz
+</pre></div>
+</div>
+<p>The help message of the <tt class="docutils literal"><span class="pre">iccs.py</span></tt> script is shown below:</p>
+<img alt="../_images/help-iccs.png" src="../_images/help-iccs.png" />
+<p>The help message of the <tt class="docutils literal"><span class="pre">mccs.py</span></tt> script is shown below:</p>
+<img alt="../_images/help-mccc.png" src="../_images/help-mccc.png" />
+</div>
 </div>
 
 
@@ -179,6 +224,7 @@ Press the &#8216;z&#8217; key to zoom out to the previous time range.</p>
 <li><a class="reference internal" href="#sac-plotting">9.3.1. SAC Plotting</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#sac-phase-picking">9.4. SAC Phase Picking</a></li>
 </ul>
 </li>
 </ul>

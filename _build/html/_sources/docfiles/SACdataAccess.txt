@@ -178,5 +178,72 @@ Press the 'z' key to zoom out to the previous time range.
 
 
 
+.. ############################################################################ ..
+.. #                              SAC PHASE PICKING                           # ..
+.. ############################################################################ ..
+
+SAC Phase Picking
+-----------------
+
+SAC plotting (``pysmo.aimbat.plotphase``) does not involve change in data files but phase picking (``pysmo.aimbat.pickphase``) does. A GUI is built for user to interactively pick phase arrival times. The figure below is an example screen shot running::
+
+	sacppk.py 20110915.19310408.bhz.pkl -w
+
+in the data example directory ``<example-event-dir>``.
+
+
+Following SAC convention, the user can set a time pick by pressing the 't' key and number keys '0-9'. The x location of the mouse position is saved to corresponding SAC headers 't0-t9'. 
+Time window zooming in ``pysmo.aimbat.pickphase`` is implemented in the same way as in ``pysmo.aimbat.plotphase`` to replace SAC's combination of the 'x' key and mouse click. 
+Zooming out key is set to 'z' because the 'o' key is used for another purpose by Matplotlib.
+The filename printing out by mouse clicking feature is also available in ``pysmo.aimbat.pickphase``.
+
+A major improvement over SAC is picking a time window in addition to time picks.
+Pressing the 'w' key to save the current time axis range to two user-defined SAC header variables. A transparent green span is plotted within the time window, show in the figure below.
+
+..image:: SACdataAccess/sacppk.png
+
+Another major improvement involves quality control with convenient operations to (de)select seismograms. In the GUI in above, there are two divisions of selected and deleted seismograms. 
+Selected seismograms with a positive trace number are displayed with blue wiggles, while deleted seismograms with negative trace numbers are plotted in gray. The user can simply click on a certain seismogram to switch the selection status, either to exclude it or bring it back for inclusion. The trace selection status is stored in a user-defined SAC header variable.
+
+In SAC, command ``ppk p 10`` plots 10 seismograms on each page. Pressing the 'b' and 'n' keys to navigate through pages. The number of seismograms plotted on each page is controlled by command line option::
+
+	-m maxsel maxdel 
+
+for ``sacppk.py``. The ``Prev`` and ``Next`` Buttons are for page navigation and the ``Save`` Button saves the change in time picks and time window to files. The default values for maxsel and maxdel are 25 and 5, which means a maximum of 30 seismograms on each page. 
+
+In the figure displayed, there are 26 seismograms on the first page because only 1 seismogram is deleted. On the next page, there are 30 selected seismograms. To plot 50 seismograms on each page, run::
+
+	sacppk.py 20110915.19310408.bhz.pkl -w -m 45 5
+
+and there would be 4 total pages and 13 seismograms on the last page.
+
+To plot seismograms relative to time pick t0 and fill the positive and negative wiggles of waveform, run::
+
+	sacppk.py 20110915.19310408.bhz.pkl -w -r0 -f1
+
+To sort seismograms by epicentral distance in increase and decrease orders, run::
+
+	sacppk.py 20110915.19310408.bhz.pkl -w -sdist
+	sacppk.py 20110915.19310408.bhz.pkl -w -sdist-
+
+
+Sorting by azimuth and back-azimuth is similar::
+
+	sacppk.py 20110915.19310408.bhz.pkl -w -saz
+	sacppk.py 20110915.19310408.bhz.pkl -w -sbaz
+
+The help message of the ``iccs.py`` script is shown below:
+
+.. image:: SACdataAccess/help-iccs.png
+
+The help message of the ``mccs.py`` script is shown below:
+
+.. image:: SACdataAccess/help-mccc.png
+
+
+.. ############################################################################ ..
+.. #                              SAC PHASE PICKING                           # ..
+.. ############################################################################ ..
+
 
 

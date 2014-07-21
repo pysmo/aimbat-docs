@@ -217,11 +217,9 @@ In the figure displayed, there are 26 seismograms on the first page because only
 
 and there would be 4 total pages and 13 seismograms on the last page.
 
-To plot seismograms relative to time pick t0 and fill the positive and negative wiggles of waveform, run
+To plot seismograms relative to time pick t0 and fill the positive and negative wiggles of waveform, run::
 
-\begin{lyxcode}
-sacppk.py 20110915.19310408.bhz.pkl -w -r0 -f1
-\end{lyxcode}
+	sacppk.py 20110915.19310408.bhz.pkl -w -r0 -f1
 
 To sort seismograms by epicentral distance in increase and decrease orders, run::
 
@@ -236,11 +234,11 @@ Sorting by azimuth and back-azimuth is similar::
 
 The help message of the ``iccs.py`` script is shown below:
 
-.. image:: SACdataAccess/help-iccs.png}
+.. image:: SACdataAccess/help-iccs.png
 
 The help message of the ``mccs.py`` script is shown below:
 
-.. image:: SACdataAccess/igs/help-mccc.png
+.. image:: SACdataAccess/help-mccc.png
 
 
 .. ############################################################################ ..
