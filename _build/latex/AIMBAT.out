@@ -26,19 +26,20 @@
 \BOOKMARK [1][-]{section.6.1}{Seismic Analysis Code \(SAC\)}{chapter.6}% 26
 \BOOKMARK [0][-]{chapter.7}{Parameter Configuration}{}% 27
 \BOOKMARK [1][-]{section.7.1}{Backend}{chapter.7}% 28
-\BOOKMARK [0][-]{chapter.8}{Measuring Teleseismic Body Wave Arrival Times}{}% 29
-\BOOKMARK [1][-]{section.8.1}{Automated Phase Alignment}{chapter.8}% 30
-\BOOKMARK [1][-]{section.8.2}{Picking Travel Times}{chapter.8}% 31
-\BOOKMARK [1][-]{section.8.3}{What the Alignments Stand For}{chapter.8}% 32
-\BOOKMARK [1][-]{section.8.4}{Post Processing}{chapter.8}% 33
-\BOOKMARK [0][-]{chapter.9}{Visualizing Stations on a map}{}% 34
-\BOOKMARK [1][-]{section.9.1}{Coloring stations by delay times}{chapter.9}% 35
-\BOOKMARK [1][-]{section.9.2}{Computing delay times}{chapter.9}% 36
-\BOOKMARK [0][-]{chapter.10}{Unit Testing}{}% 37
-\BOOKMARK [1][-]{section.10.1}{Running the Tests}{chapter.10}% 38
-\BOOKMARK [0][-]{chapter.11}{Updating this manual}{}% 39
-\BOOKMARK [1][-]{section.11.1}{Dependencies}{chapter.11}% 40
-\BOOKMARK [1][-]{section.11.2}{How to update this manual}{chapter.11}% 41
-\BOOKMARK [0][-]{chapter.12}{Citations}{}% 42
-\BOOKMARK [0][-]{chapter.13}{Indices and tables}{}% 43
-\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 44
+\BOOKMARK [1][-]{section.7.2}{Configuration File}{chapter.7}% 29
+\BOOKMARK [0][-]{chapter.8}{Measuring Teleseismic Body Wave Arrival Times}{}% 30
+\BOOKMARK [1][-]{section.8.1}{Automated Phase Alignment}{chapter.8}% 31
+\BOOKMARK [1][-]{section.8.2}{Picking Travel Times}{chapter.8}% 32
+\BOOKMARK [1][-]{section.8.3}{What the Alignments Stand For}{chapter.8}% 33
+\BOOKMARK [1][-]{section.8.4}{Post Processing}{chapter.8}% 34
+\BOOKMARK [0][-]{chapter.9}{Visualizing Stations on a map}{}% 35
+\BOOKMARK [1][-]{section.9.1}{Coloring stations by delay times}{chapter.9}% 36
+\BOOKMARK [1][-]{section.9.2}{Computing delay times}{chapter.9}% 37
+\BOOKMARK [0][-]{chapter.10}{Unit Testing}{}% 38
+\BOOKMARK [1][-]{section.10.1}{Running the Tests}{chapter.10}% 39
+\BOOKMARK [0][-]{chapter.11}{Updating this manual}{}% 40
+\BOOKMARK [1][-]{section.11.1}{Dependencies}{chapter.11}% 41
+\BOOKMARK [1][-]{section.11.2}{How to update this manual}{chapter.11}% 42
+\BOOKMARK [0][-]{chapter.12}{Citations}{}% 43
+\BOOKMARK [0][-]{chapter.13}{Indices and tables}{}% 44
+\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 45

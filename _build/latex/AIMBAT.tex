@@ -14,7 +14,7 @@
 
 
 \title{AIMBAT Documentation}
-\date{July 20, 2014}
+\date{July 21, 2014}
 \release{0.2.1}
 \author{Lay Kuan Loh, Xiaoting Lou, \& Suzan van der Lee}
 \newcommand{\sphinxlogo}{}
@@ -710,6 +710,9 @@ Visit these pages for an \href{http://matplotlib.org/faq/usage\_faq.html\#what-i
 backend : TkAgg \PYGZsh{}Agg rendering to a Tk canvas
 \end{Verbatim}
 
+
+\section{Configuration File}
+\label{docfiles/parameterConfiguration:configuration-file}
 Other parameters for the package can be set up by a configuration file \code{ttdefaults.conf}, which is interpreted by the module ConfigParser. This configuration file is searched in the following order:
 \begin{enumerate}
 \item {} 
@@ -727,6 +730,118 @@ file \code{ttdefaults.conf} in the directory where AIMBAT is installed
 \end{enumerate}
 
 Python scripts in the \code{\textless{}pkg-install-dir\textgreater{}/pysmo-aimbat-0.1.2/scripts} can be executed from the command line. The command line arguments are parsed by the optparse module to improve the scripts' exibility. If conflicts existed, the command line options override the default parameters given in the configuration file \code{ttdefaults.conf}. Run the scripts with the \code{-h} option for the usage messages.
+
++==============================+===============================================================+
+\textbar{} ttdefaults.conf              \textbar{} Description                                                   \textbar{}
++==============================+===============================================================+
+\textbar{} {[}sacplot{]}                    \textbar{}                                                                       \textbar{}
++------------------------------+---------------------------------------------------------------+
+\textbar{} colorwave = blue             \textbar{} Color of waveform                                             \textbar{}
++------------------------------+---------------------------------------------------------------+
+\textbar{} colorwavedel = gray          \textbar{} Color of waveform which is deselected                         \textbar{}
++------------------------------+---------------------------------------------------------------+
+\textbar{} colortwfill = green          \textbar{} Color of time window fill                                     \textbar{}
++------------------------------+---------------------------------------------------------------+
+\textbar{} colortwsele = red            \textbar{} Color of time window selection                                \textbar{}
++------------------------------+---------------------------------------------------------------+
+\textbar{} alphatwfill = 0.2            \textbar{} Transparency of time window fill                              \textbar{}
++------------------------------+---------------------------------------------------------------+
+\textbar{} alphatwsele = 0.6            \textbar{} Transparency of time window selection                         \textbar{}
++------------------------------+---------------------------------------------------------------+
+\textbar{} npick = 6                            \textbar{} Number of time picks (plot picks: t0-t5)                      \textbar{}
++------------------------------+---------------------------------------------------------------+
+\textbar{} pickcolors = kmrcgyb         \textbar{} Colors of time picks                                          \textbar{}
++------------------------------+---------------------------------------------------------------+
+\textbar{} pickstyles = -- :            \textbar{} Line styles of time picks (use second one if ran out of color)\textbar{}
++------------------------------+---------------------------------------------------------------+
+\textbar{} figsize = 8 10                   \textbar{} Figure size for \emph{plotphase.py}                                \textbar{}
++------------------------------+---------------------------------------------------------------+
+\textbar{} rectseis = 0.1 0.06 0.76 0.9 \textbar{} Axes rectangle size within the figure                         \textbar{}
++------------------------------+---------------------------------------------------------------+
+\textbar{} minspan = 5                      \textbar{} Minimum sample points for SpanSelector to select time window  \textbar{}
++------------------------------+---------------------------------------------------------------+
+{\color{red}\bfseries{}\textbar{}}srate = -1                        \textbar{} Sample rate for loading SAC data.                             \textbar{}
+\textbar{}                              \textbar{} Read from first file if srate \textless{} 0                             \textbar{}
++------------------------------+---------------------------------------------------------------+
+
++=================================+==================================================+
+\textbar{} {[}sachdrs{]}                       \textbar{}                                                  \textbar{}
++=================================+==================================================+
+\textbar{} twhdrs = user8        user9         \textbar{} SAC headers for time window beginning and ending \textbar{}
++---------------------------------+--------------------------------------------------+
+\textbar{} ichdrs = t0 t1 t2                           \textbar{} SAC headers for ICCS time picks                  \textbar{}
++---------------------------------+--------------------------------------------------+
+\textbar{} mchdrs = t2 t3                              \textbar{} SAC headers for MCCC input and output time picks \textbar{}
++---------------------------------+--------------------------------------------------+
+\textbar{} hdrsel = kuser0                         \textbar{}  SAC header for seismogram selection status      \textbar{}
++---------------------------------+--------------------------------------------------+
+\textbar{} qfactors = ccc snr coh              \textbar{} Quality factors: cross-correlation coefficient,  \textbar{}
+\textbar{}                                 \textbar{} signal-to-noise ratio, time domain coherence     \textbar{}
++---------------------------------+--------------------------------------------------+
+\textbar{} qheaders = user0 user1 user2    \textbar{} SAC Headers for quality factors                  \textbar{}
++---------------------------------+--------------------------------------------------+
+\textbar{} qweights = 0.3333 0.3333 0.3333 \textbar{} Weights for quality factors                      \textbar{}
++---------------------------------+--------------------------------------------------+
+
++=========================+=====================================================================+
+\textbar{} {[}iccs{]} or Align/Refine \textbar{}                                                                      \textbar{}
++=========================+=====================================================================+
+\textbar{} srate = -1                      \textbar{} Sample rate for loading SAC data. Read from first file if srate \textless{} 0 \textbar{}
++-------------------------+---------------------------------------------------------------------+
+\textbar{} xcorr\_modu = xcorrf90   \textbar{} Module for calculating cross-correlation:                           \textbar{}
+\textbar{}                         \textbar{} xcorr for Numpy or xcorrf90 for Fortran                             \textbar{}
++-------------------------+---------------------------------------------------------------------+
+\textbar{} xcorr\_func = xcorr\_fast \textbar{} Function for calculating cross-correlation                          \textbar{}
++-------------------------+---------------------------------------------------------------------+
+\textbar{} shift = 10                      \textbar{} Sample shift for running coarse cross-correlation                   \textbar{}
++-------------------------+---------------------------------------------------------------------+
+\textbar{} maxiter = 10                \textbar{} Maximum number of iteration                                         \textbar{}
++-------------------------+---------------------------------------------------------------------+
+\textbar{} convepsi = 0.001            \textbar{} Convergence criterion: epsilon                                      \textbar{}
++-------------------------+---------------------------------------------------------------------+
+{\color{red}\bfseries{}\textbar{}}convtype = coef          \textbar{} Type of convergence criterion: coef for correlation coefficient,    \textbar{}
+\textbar{}                         \textbar{}  or resi for residual                                               \textbar{}
++-------------------------+---------------------------------------------------------------------+
+\textbar{} stackwgt = coef                 \textbar{} Weight each trace when calculating array stack                      \textbar{}
++-------------------------+---------------------------------------------------------------------+
+\textbar{} fstack = fstack.sac     \textbar{} SAC file name for the array stack                                   \textbar{}
++-------------------------+---------------------------------------------------------------------+
+
++===========================+=====================================================================+
+\textbar{} {[}mccc{]} or Finalize            \textbar{}                                                                     \textbar{}
++===========================+=====================================================================+
+\textbar{} srate = -1                            \textbar{} Sample rate for loading SAC data. Read from first file if srate \textless{} 0 \textbar{}
++---------------------------+---------------------------------------------------------------------+
+\textbar{} ofilename = mc                        \textbar{} Output file name of MCCC.                                           \textbar{}
++---------------------------+---------------------------------------------------------------------+
+{\color{red}\bfseries{}\textbar{}xcorr\_modu = xcorrf90      \textbar{} Module for calculating cross-correlation:                           \textbar{}
+\textbar{}                           \textbar{} xcorr for Numpy or xcorrf90 for Fortran                             \textbar{}
++---------------------------+---------------------------------------------------------------------+
+\textbar{} xcorr\_func = xcorr\_faster     \textbar{} Function for calculating cross-correlation                          \textbar{}
++---------------------------+---------------------------------------------------------------------+
+\textbar{} shift = 10                            \textbar{} Sample shift for running coarse cross-correlation                   \textbar{}
++---------------------------+---------------------------------------------------------------------+
+\textbar{} extraweight = 1000        \textbar{} Weight for the zero-mean equation in MCCC weighted lsqr solution    \textbar{}
++---------------------------+---------------------------------------------------------------------+
+\textbar{} lsqr = nowe                   \textbar{} Type of lsqr solution: no weight                                    \textbar{}
++---------------------------+---------------------------------------------------------------------+
+\textbar{} \#lsqr = lnco                          \textbar{} Type of lsqr solution: weighted by correlation coefficient,         \textbar{}
+\textbar{}                           \textbar{} solved by lapack                                                    \textbar{}
++---------------------------+---------------------------------------------------------------------+
+\textbar{} \#lsqr = lnre                          \textbar{} Type of lsqr solution: weighted by residual, solved by lapack       \textbar{}
++---------------------------+---------------------------------------------------------------------+
+\textbar{} rcfile = .mcccrc                      \textbar{} Configuration file for MCCC parameters (deprecated)                 \textbar{}
++---------------------------+---------------------------------------------------------------------+
+\textbar{} evlist = event.list           \textbar{} File for event hypocenter and origin time (deprecated)              s\textbar{}}
++---------------------------+---------------------------------------------------------------------+
+
++=====================+============+
+\textbar{} {[}signal{]}                    \textbar{}            \textbar{}
++=====================+============+
+\textbar{} tapertype = hanning \textbar{} Taper type \textbar{}
++---------------------+------------+
+\textbar{} taperwidth = 0.1        \textbar{} Taper width\textbar{}
++---------------------+------------+
 
 
 \chapter{Measuring Teleseismic Body Wave Arrival Times}
