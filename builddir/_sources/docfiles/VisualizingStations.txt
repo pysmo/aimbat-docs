@@ -32,6 +32,10 @@ Next, run `mccc2delay.py` to convert the MCCC delays into actual delays. For exa
 
 You will get a `.px` file. 
 
+To create a delay file, run::
+
+	getdelay.py 20120101.05275598.bhz.pkl
+
 To plot the stations colored by delay times, run `doplotsta.sh <file-name>.px`. For example, in `data-example/example_pkl_files` type::
 
 	doplotsta.sh 20120101.05275598.px
