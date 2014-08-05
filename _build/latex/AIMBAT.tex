@@ -173,6 +173,8 @@ Email: suzan AT earth DOT northwestern DOT edu
 \label{docfiles/install_dependencies:installing-dependencies}\label{docfiles/install_dependencies::doc}
 Usually, Macs already have python installed by default. To check if you have python on your mac, open up terminal, and do python in the terminal. If python is installed you should see a python console show up, displaying the version number of python. The version number should be at least 2.7 or higher. If python is not installed, you should see an error message show up. However, you may or may not have some necessary packages installed.
 
+HELLO WORLD
+
 
 \section{Github}
 \label{docfiles/install_dependencies:github}
@@ -627,6 +629,19 @@ sac2pkl.py \PYGZhy{}s *.BHZ.sac
 The output should be a PKL file in the same folder as the sac files.
 
 \includegraphics{sac_to_pkl_conversion.png}
+
+
+\section{Converting from PKL to SAC files}
+\label{docfiles/sacioAIMBAT:converting-from-pkl-to-sac-files}
+cd into the folder containing the PKL file that you wish to convert into SAC files, and run:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+sac2pkl.py \PYGZhy{}\PYGZhy{}p2s \PYGZlt{}name\PYGZhy{}of\PYGZhy{}file\PYGZgt{}.pkl
+\end{Verbatim}
+
+The SAC files contained within will output into the same folder as the PKL file is stored in,
+
+\includegraphics{pkl_to_sac_conversion.png}
 
 
 \chapter{Filtering Data}
