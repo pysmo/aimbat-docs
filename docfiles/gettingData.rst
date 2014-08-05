@@ -2,6 +2,8 @@
 Getting Data
 ============
 
+Note: Not necessary if you already have your own set ways of obtaining data. This section is added for completion. 
+
 There are several ways to obtain seismic data from `IRIS <http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/>`_ to input to AIMBAT. The authors used two ways to do it, and a further list of libraries for obtaining seismic data is provided in the sidebars `here <http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/>`_. 
 
 .. ############################################################################ ..

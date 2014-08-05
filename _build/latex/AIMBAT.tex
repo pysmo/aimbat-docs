@@ -14,7 +14,7 @@
 
 
 \title{AIMBAT Documentation}
-\date{July 21, 2014}
+\date{August 05, 2014}
 \release{0.2.1}
 \author{Lay Kuan Loh, Xiaoting Lou, \& Suzan van der Lee}
 \newcommand{\sphinxlogo}{}
@@ -193,7 +193,7 @@ Some users may already have Git installed, but if not, you can download the pack
 \href{http://brew.sh/}{Homebrew} will be needed to install some python packages. Get it by typing in your terminal:
 
 \begin{Verbatim}[commandchars=\\\{\}]
-brew install wget
+ruby \PYGZhy{}e \PYGZdq{}\PYGZdl{}(curl \PYGZhy{}fsSL https://raw.github.com/Homebrew/homebrew/go/install)\PYGZdq{}
 \end{Verbatim}
 
 
@@ -529,6 +529,8 @@ Get the repository \href{https://github.com/pysmo/data-example}{data-example} fr
 
 \chapter{Getting Data}
 \label{docfiles/gettingData:getting-data}\label{docfiles/gettingData::doc}
+Note: Not necessary if you already have your own set ways of obtaining data. This section is added for completion.
+
 There are several ways to obtain seismic data from \href{http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/}{IRIS} to input to AIMBAT. The authors used two ways to do it, and a further list of libraries for obtaining seismic data is provided in the sidebars \href{http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/}{here}.
 
 
@@ -1528,6 +1530,12 @@ mccc2delay.py 20120101.05275598.bhz.pkl
 \end{Verbatim}
 
 You will get a \emph{.px} file.
+
+To create a delay file, run:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+getdelay.py 20120101.05275598.bhz.pkl
+\end{Verbatim}
 
 To plot the stations colored by delay times, run \emph{doplotsta.sh \textless{}file-name\textgreater{}.px}. For example, in \emph{data-example/example\_pkl\_files} type:
 

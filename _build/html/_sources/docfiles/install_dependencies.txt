@@ -50,7 +50,7 @@ Homebrew
 
 `Homebrew <http://brew.sh/>`_ will be needed to install some python packages. Get it by typing in your terminal::
 
-  brew install wget
+  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 
 .. ############################################################################ ..

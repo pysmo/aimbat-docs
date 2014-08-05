@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  21 JUL 2014 15:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  5 AUG 2014 10:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1061,22 +1061,22 @@ Chapter 4.
 File: sod_location.png Graphic file (type png)
 
 <use sod_location.png>
-Package pdftex.def Info: sod_location.png used on input line 582.
+Package pdftex.def Info: sod_location.png used on input line 584.
 (pdftex.def)             Requested size: 688.5708pt x 339.26666pt.
 File: sod_location.png Graphic file (type png)
  <use sod_location.png>
-Package pdftex.def Info: sod_location.png used on input line 582.
+Package pdftex.def Info: sod_location.png used on input line 584.
 (pdftex.def)             Requested size: 469.755pt x 231.45465pt.
 
 <path_to_sod_bin.png, id=474, 699.61375pt x 353.32pt>
 File: path_to_sod_bin.png Graphic file (type png)
 
 <use path_to_sod_bin.png>
-Package pdftex.def Info: path_to_sod_bin.png used on input line 586.
+Package pdftex.def Info: path_to_sod_bin.png used on input line 588.
 (pdftex.def)             Requested size: 699.61205pt x 353.31914pt.
 File: path_to_sod_bin.png Graphic file (type png)
  <use path_to_sod_bin.png>
-Package pdftex.def Info: path_to_sod_bin.png used on input line 586.
+Package pdftex.def Info: path_to_sod_bin.png used on input line 588.
 (pdftex.def)             Requested size: 469.755pt x 237.24072pt.
  [20 <./sod_location.png>]
 [21 <./path_to_sod_bin.png>] [22
@@ -1087,11 +1087,11 @@ Chapter 5.
 File: sac_to_pkl_conversion.png Graphic file (type png)
 
 <use sac_to_pkl_conversion.png>
-Package pdftex.def Info: sac_to_pkl_conversion.png used on input line 617.
+Package pdftex.def Info: sac_to_pkl_conversion.png used on input line 619.
 (pdftex.def)             Requested size: 684.55582pt x 204.76448pt.
 File: sac_to_pkl_conversion.png Graphic file (type png)
  <use sac_to_pkl_conversion.png>
-Package pdftex.def Info: sac_to_pkl_conversion.png used on input line 617.
+Package pdftex.def Info: sac_to_pkl_conversion.png used on input line 619.
 (pdftex.def)             Requested size: 469.755pt x 140.51624pt.
  [23 <./sac_to_pkl_conversion.png>] [24
 
@@ -1106,22 +1106,22 @@ Chapter 7.
 ]
 Chapter 8.
 
-Underfull \hbox (badness 10000) in paragraph at lines 723--724
+Underfull \hbox (badness 10000) in paragraph at lines 725--726
 []\T1/ptm/m/n/10 Visit these pages for an [][]ex-pla-na-tion of the back-end[][
 ] and \T1/ptm/m/it/10 how to cus-tomize it
  []
 
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 747.
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 749.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 747.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 749.
 [29]
-Overfull \hbox (44.50095pt too wide) in paragraph at lines 911--913
+Overfull \hbox (44.50095pt too wide) in paragraph at lines 913--915
 []
  []
 
 
-Overfull \hbox (1.71796pt too wide) in paragraph at lines 872--927
+Overfull \hbox (1.71796pt too wide) in paragraph at lines 874--929
 [][] 
  []
 
@@ -1130,25 +1130,25 @@ Overfull \hbox (1.71796pt too wide) in paragraph at lines 872--927
 ]
 Chapter 9.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1025--1026
+Underfull \hbox (badness 10000) in paragraph at lines 1027--1028
 \T1/ptm/m/n/10 The \T1/pcr/m/n/10 <pkg-install-dir>/aimbat/scripts/egsac.py \T1
 /ptm/m/n/10 script gives a sim-ple ex-am-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1025--1026
+Underfull \hbox (badness 10000) in paragraph at lines 1027--1028
 \T1/ptm/m/n/10 ple to read, re-sam-ple and plot a seis-mo-gram us-ing pysmo, Sc
 ipy and Mat-plotlib. You can
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1025--1026
+Underfull \hbox (badness 10000) in paragraph at lines 1027--1028
 \T1/ptm/m/n/10 type the codes in a Python/iPython shell, or run as a script in 
 the data ex-am-ple di-rec-tory
  []
 
 
-Overfull \hbox (0.745pt too wide) in paragraph at lines 1025--1026
+Overfull \hbox (0.745pt too wide) in paragraph at lines 1027--1028
 \T1/pcr/m/n/10 <pkg-install-dir>/data-example/example_pkl_files/Event_2011.09.1
 5.19.31.04.080\T1/ptm/m/n/10 ,
  []
@@ -1156,86 +1156,86 @@ Overfull \hbox (0.745pt too wide) in paragraph at lines 1025--1026
 <prog-egsac.png, id=552, 731.73375pt x 778.91pt>
 File: prog-egsac.png Graphic file (type png)
  <use prog-egsac.png>
-Package pdftex.def Info: prog-egsac.png used on input line 1027.
+Package pdftex.def Info: prog-egsac.png used on input line 1029.
 (pdftex.def)             Requested size: 731.73196pt x 778.90811pt.
 File: prog-egsac.png Graphic file (type png)
 
 <use prog-egsac.png>
-Package pdftex.def Info: prog-egsac.png used on input line 1027.
+Package pdftex.def Info: prog-egsac.png used on input line 1029.
 (pdftex.def)             Requested size: 469.755pt x 500.04578pt.
  [33] <egsac-109c.png, id=560, 1214.5375pt x 407.5225pt>
 File: egsac-109c.png Graphic file (type png)
 
 <use egsac-109c.png>
-Package pdftex.def Info: egsac-109c.png used on input line 1042.
+Package pdftex.def Info: egsac-109c.png used on input line 1044.
 (pdftex.def)             Requested size: 1214.53455pt x 407.5215pt.
 File: egsac-109c.png Graphic file (type png)
  <use egsac-109c.png>
-Package pdftex.def Info: egsac-109c.png used on input line 1042.
+Package pdftex.def Info: egsac-109c.png used on input line 1044.
 (pdftex.def)             Requested size: 469.755pt x 157.61485pt.
  [34 <./prog-egsac.png>] [35 <./egsac-109c.png>] <help-sacplot.png, id=571, 855
 .195pt x 829.0975pt>
 File: help-sacplot.png Graphic file (type png)
 
 <use help-sacplot.png>
-Package pdftex.def Info: help-sacplot.png used on input line 1101.
+Package pdftex.def Info: help-sacplot.png used on input line 1103.
 (pdftex.def)             Requested size: 855.19293pt x 829.09549pt.
 File: help-sacplot.png Graphic file (type png)
  <use help-sacplot.png>
-Package pdftex.def Info: help-sacplot.png used on input line 1101.
+Package pdftex.def Info: help-sacplot.png used on input line 1103.
 (pdftex.def)             Requested size: 469.755pt x 455.41045pt.
  [36 <./help-sacplot.png>]
 <help-sacppk.png, id=576, 845.1575pt x 806.01125pt>
 File: help-sacppk.png Graphic file (type png)
  <use help-sacppk.png>
-Package pdftex.def Info: help-sacppk.png used on input line 1107.
+Package pdftex.def Info: help-sacppk.png used on input line 1109.
 (pdftex.def)             Requested size: 845.15544pt x 806.00928pt.
 File: help-sacppk.png Graphic file (type png)
 
 <use help-sacppk.png>
-Package pdftex.def Info: help-sacppk.png used on input line 1107.
+Package pdftex.def Info: help-sacppk.png used on input line 1109.
 (pdftex.def)             Requested size: 469.755pt x 448.00566pt.
  <prog-egplot.png, id=577, 788.9475pt x 895.345pt>
 File: prog-egplot.png Graphic file (type png)
 
 <use prog-egplot.png>
-Package pdftex.def Info: prog-egplot.png used on input line 1109.
+Package pdftex.def Info: prog-egplot.png used on input line 1111.
 (pdftex.def)             Requested size: 788.94556pt x 895.34282pt.
 File: prog-egplot.png Graphic file (type png)
  <use prog-egplot.png>
-Package pdftex.def Info: prog-egplot.png used on input line 1109.
+Package pdftex.def Info: prog-egplot.png used on input line 1111.
 (pdftex.def)             Requested size: 469.755pt x 533.09894pt.
  [37 <./help-sacppk.png>] [38 <./prog-egplot.png>] [39] <help-iccs.png, id=592,
  841.1425pt x 653.44125pt>
 File: help-iccs.png Graphic file (type png)
 
 <use help-iccs.png>
-Package pdftex.def Info: help-iccs.png used on input line 1227.
+Package pdftex.def Info: help-iccs.png used on input line 1229.
 (pdftex.def)             Requested size: 841.14046pt x 653.43965pt.
 File: help-iccs.png Graphic file (type png)
  <use help-iccs.png>
-Package pdftex.def Info: help-iccs.png used on input line 1227.
+Package pdftex.def Info: help-iccs.png used on input line 1229.
 (pdftex.def)             Requested size: 469.755pt x 364.92754pt.
  [40]
 <help-mccc.png, id=597, 832.10875pt x 680.5425pt>
 File: help-mccc.png Graphic file (type png)
  <use help-mccc.png>
-Package pdftex.def Info: help-mccc.png used on input line 1231.
+Package pdftex.def Info: help-mccc.png used on input line 1233.
 (pdftex.def)             Requested size: 832.10672pt x 680.54083pt.
 File: help-mccc.png Graphic file (type png)
 
 <use help-mccc.png>
-Package pdftex.def Info: help-mccc.png used on input line 1231.
+Package pdftex.def Info: help-mccc.png used on input line 1233.
 (pdftex.def)             Requested size: 469.755pt x 384.1957pt.
  [41 <./help-iccs.png>] [42 <./help-mccc.png>]
 Chapter 10.
 
-Overfull \hbox (64.65689pt too wide) in paragraph at lines 1269--1346
+Overfull \hbox (64.65689pt too wide) in paragraph at lines 1271--1348
 [] 
  []
 
 
-Underfull \hbox (badness 5533) in paragraph at lines 1348--1349
+Underfull \hbox (badness 5533) in paragraph at lines 1350--1351
 []\T1/ptm/m/n/10 The ICCS and MCCC al-go-rithms are im-ple-mented in two mod-ul
 es \T1/pcr/m/n/10 pysmo.aimbat.algiccs \T1/ptm/m/n/10 and
  []
@@ -1246,44 +1246,44 @@ es \T1/pcr/m/n/10 pysmo.aimbat.algiccs \T1/ptm/m/n/10 and
 File: pick_travel_times.png Graphic file (type png)
 
 <use pick_travel_times.png>
-Package pdftex.def Info: pick_travel_times.png used on input line 1373.
+Package pdftex.def Info: pick_travel_times.png used on input line 1375.
 (pdftex.def)             Requested size: 1793.6969pt x 967.61266pt.
 File: pick_travel_times.png Graphic file (type png)
  <use pick_travel_times.png>
-Package pdftex.def Info: pick_travel_times.png used on input line 1373.
+Package pdftex.def Info: pick_travel_times.png used on input line 1375.
 (pdftex.def)             Requested size: 469.755pt x 253.40479pt.
  [44 <./pick_travel_times.png>] [45] <sorting-interface.png, id=643, 1019.81pt 
 x 941.5175pt>
 File: sorting-interface.png Graphic file (type png)
 
 <use sorting-interface.png>
-Package pdftex.def Info: sorting-interface.png used on input line 1431.
+Package pdftex.def Info: sorting-interface.png used on input line 1433.
 (pdftex.def)             Requested size: 1019.80751pt x 941.51521pt.
 File: sorting-interface.png Graphic file (type png)
  <use sorting-interface.png>
-Package pdftex.def Info: sorting-interface.png used on input line 1431.
+Package pdftex.def Info: sorting-interface.png used on input line 1433.
 (pdftex.def)             Requested size: 469.755pt x 433.69234pt.
 
 <SACP2_popup.png, id=644, 779.91376pt x 953.5625pt>
 File: SACP2_popup.png Graphic file (type png)
  <use SACP2_popup.png>
-Package pdftex.def Info: SACP2_popup.png used on input line 1433.
+Package pdftex.def Info: SACP2_popup.png used on input line 1435.
 (pdftex.def)             Requested size: 779.91187pt x 953.56018pt.
 File: SACP2_popup.png Graphic file (type png)
 
 <use SACP2_popup.png>
-Package pdftex.def Info: SACP2_popup.png used on input line 1433.
+Package pdftex.def Info: SACP2_popup.png used on input line 1435.
 (pdftex.def)             Requested size: 469.755pt x 574.339pt.
  [46 <./sorting-interface.png>] [47 <./SACP2_popup.png>]
 <count_stations.png, id=654, 649.42625pt x 263.98625pt>
 File: count_stations.png Graphic file (type png)
 
 <use count_stations.png>
-Package pdftex.def Info: count_stations.png used on input line 1470.
+Package pdftex.def Info: count_stations.png used on input line 1472.
 (pdftex.def)             Requested size: 649.42467pt x 263.9856pt.
 File: count_stations.png Graphic file (type png)
  <use count_stations.png>
-Package pdftex.def Info: count_stations.png used on input line 1470.
+Package pdftex.def Info: count_stations.png used on input line 1472.
 (pdftex.def)             Requested size: 469.755pt x 190.95613pt.
  [48 <./count_stations.png>]
 [49] [50
@@ -1309,23 +1309,23 @@ Chapter 15.
 [59] [60
 
 ] (./AIMBAT.ind)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1627.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1635.
  [61
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1627.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1635.
  (./AIMBAT.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1627.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1627.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1635.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1635.
 
 Package rerunfilecheck Info: File `AIMBAT.out' has not changed.
 (rerunfilecheck)             Checksum: 715907829F279CB098D4D25B1B545D9E;3353.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1627.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1635.
  ) 
 Here is how much of TeX's memory you used:
  9562 strings out of 493117
  137031 string characters out of 6135433
- 240747 words of memory out of 5000000
+ 240749 words of memory out of 5000000
  12558 multiletter control sequences out of 15000+600000
  63079 words of font info for 68 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
@@ -1343,7 +1343,7 @@ ts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
 helvetic/uhvr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/u
 tmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
 </usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on AIMBAT.pdf (65 pages, 4504220 bytes).
+Output written on AIMBAT.pdf (65 pages, 4504422 bytes).
 PDF statistics:
  821 PDF objects out of 1000 (max. 8388607)
  704 compressed objects within 8 object streams
