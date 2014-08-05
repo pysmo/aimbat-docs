@@ -105,7 +105,7 @@ Bash Shell Users::
 	
 	export PATH=$PATH:<path-to-folder>/aimbat/scripts 
 
-C Shell Users:
+C Shell Users::
 	
 	setenv PATH=$PATH:<path-to-folder>/aimbat/scripts
 
