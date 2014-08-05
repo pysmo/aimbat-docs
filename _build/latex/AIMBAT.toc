@@ -79,8 +79,6 @@
 \contentsline {subsection}{\numberline {10.4.3}Picking Travel Times does not work}{48}{subsection.10.4.3}
 \contentsline {subsection}{\numberline {10.4.4}Travel Times}{49}{subsection.10.4.4}
 \contentsline {chapter}{\numberline {11}Visualizing Stations on a map}{51}{chapter.11}
-\contentsline {section}{\numberline {11.1}Coloring stations by delay times}{51}{section.11.1}
-\contentsline {section}{\numberline {11.2}Computing delay times}{51}{section.11.2}
 \contentsline {chapter}{\numberline {12}Unit Testing}{53}{chapter.12}
 \contentsline {section}{\numberline {12.1}Running the Tests}{53}{section.12.1}
 \contentsline {chapter}{\numberline {13}Updating this manual}{55}{chapter.13}

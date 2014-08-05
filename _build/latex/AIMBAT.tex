@@ -1517,54 +1517,15 @@ If one of the seismograms being picked does not fit completely within the green 
 
 \chapter{Visualizing Stations on a map}
 \label{docfiles/VisualizingStations:visualizing-stations-on-a-map}\label{docfiles/VisualizingStations::doc}
-
-\section{Coloring stations by delay times}
-\label{docfiles/VisualizingStations:coloring-stations-by-delay-times}\begin{itemize}
-\item {} 
-On the terminal, cd into the same folder where you sourced the SAC files to run \code{ttpick.py}, after running \code{MCCC} on a pickle file name, for instance, \code{earthquake-event.pkl}, you will get a mcp file named \code{earthquake-event.mcp}.
-
-\item {} 
-Run \code{mccc2delay.py earthquake-event.mcp} and you will get a file with travel times called \code{earthquake-event.dtp}.
-
-\item {} 
-Run \code{doplotsta.sh} and you will get a two \code{gif} files of the stations colored by delay times.
-
-\end{itemize}
-
-
-\section{Computing delay times}
-\label{docfiles/VisualizingStations:computing-delay-times}
-The equation used to compute delays is explained here {\hyperref[docfiles/citations:bulandchapman1983]{{[}BulandChapMan1983{]}}}.
-
-You can get some example data to test this out by downloading the Github repository \href{https://github.com/pysmo/data-example}{data-example}. Now, cd into the folder \emph{example\_pkl\_files}, which has several mcp files containing the results of picking travel wave arrival times on a set of seismograms.
-
-Run \emph{getsta.py} on the PKL file to get the file \emph{loc.sta} containing the station locations. For example, in \emph{data-example/example\_pkl\_files} type:
+After running:
 
 \begin{Verbatim}[commandchars=\\\{\}]
-getsta.py 20120101.05275598.bhz.pkl
+ttpick.py \PYGZlt{}sac\PYGZhy{}files\PYGZgt{}
 \end{Verbatim}
 
-This will output a file, \emph{loc.py}.
+Red dots represent circles used for computing delay times; black triangles represent discarded stations. Click on a dot to get the station name.
 
-Next, run \emph{mccc2delay.py} to convert the MCCC delays into actual delays. For example, in \emph{data-example/example\_pkl\_files} type:
-
-\begin{Verbatim}[commandchars=\\\{\}]
-mccc2delay.py 20120101.05275598.bhz.pkl
-\end{Verbatim}
-
-You will get a \emph{.px} file.
-
-To create a delay file, run:
-
-\begin{Verbatim}[commandchars=\\\{\}]
-getdelay.py 20120101.05275598.bhz.pkl
-\end{Verbatim}
-
-To plot the stations colored by delay times, run \emph{doplotsta.sh \textless{}file-name\textgreater{}.px}. For example, in \emph{data-example/example\_pkl\_files} type:
-
-\begin{Verbatim}[commandchars=\\\{\}]
-doplotsta.sh 20120101.05275598.px
-\end{Verbatim}
+\includegraphics{basemap_stations.png}
 
 
 \chapter{Unit Testing}
