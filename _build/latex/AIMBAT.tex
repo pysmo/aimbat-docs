@@ -478,15 +478,27 @@ sudo python setup.py build
 sudo python setup.py install
 \end{Verbatim}
 
-If you successfully installed the sac module, in the python console, this should happen after you type \code{from pysmo import sac}
+If you successfully installed the sac module, in the python console, this should happen after you type:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{pysmo} \PYG{k+kn}{import} \PYG{n}{sac}
+\end{Verbatim}
 
 
 \subsection{Installing pysmo.aimbat}
 \label{docfiles/install_aimbat:installing-pysmo-aimbat}
-Three sub-directories are included in the \code{aimbat} directory
-* \code{example}: Example SAC files
-* \code{scripts}: Python scripts to run at the command line
-* \code{src}: Python modules to install
+Three sub-directories are included in the \code{aimbat} directory:
+\begin{itemize}
+\item {} 
+\code{example}: Example SAC files
+
+\item {} 
+\code{scripts}: Python scripts to run at the command line
+
+\item {} 
+\code{src}: Python modules to install
+
+\end{itemize}
 
 The core cross-correlation functions are written in both Python/Numpy (\code{xcorr.py}) and Fortran (\code{xcorr.f90}). Therefore, we need to use Numpy’s \code{Distutils} module for enhanced support of Fortran extension. The usage is similar to the standard Disutils.
 

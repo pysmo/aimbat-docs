@@ -76,17 +76,20 @@ Python module ``Distutils`` is used to write a setup.py script to build, distrib
 
 .. image::install-aimbat-images/site_package_location.png
 
-If you successfully installed the sac module, in the python console, this should happen after you type :code:`from pysmo import sac`
+If you successfully installed the sac module, in the python console, this should happen after you type::
+	
+	from pysmo import sac
 
 .. image::install-aimbat-images/sac_installed.png
 
 Installing pysmo.aimbat
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Three sub-directories are included in the ``aimbat`` directory
-* ``example``: Example SAC files
-* ``scripts``: Python scripts to run at the command line
-* ``src``: Python modules to install
+Three sub-directories are included in the ``aimbat`` directory:
+
+- ``example``: Example SAC files
+- ``scripts``: Python scripts to run at the command line
+- ``src``: Python modules to install
 
 The core cross-correlation functions are written in both Python/Numpy (``xcorr.py``) and Fortran (``xcorr.f90``). Therefore, we need to use Numpy’s ``Distutils`` module for enhanced support of Fortran extension. The usage is similar to the standard Disutils.
 

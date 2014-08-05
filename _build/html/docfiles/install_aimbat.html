@@ -86,14 +86,19 @@
 sudo python setup.py install
 </pre></div>
 </div>
-<p>If you successfully installed the sac module, in the python console, this should happen after you type <tt class="code docutils literal"><span class="pre">from</span> <span class="pre">pysmo</span> <span class="pre">import</span> <span class="pre">sac</span></tt></p>
+<p>If you successfully installed the sac module, in the python console, this should happen after you type:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">pysmo</span> <span class="kn">import</span> <span class="n">sac</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="installing-pysmo-aimbat">
 <h3>3.3.2. Installing pysmo.aimbat<a class="headerlink" href="#installing-pysmo-aimbat" title="Permalink to this headline">¶</a></h3>
-<p>Three sub-directories are included in the <tt class="docutils literal"><span class="pre">aimbat</span></tt> directory
-* <tt class="docutils literal"><span class="pre">example</span></tt>: Example SAC files
-* <tt class="docutils literal"><span class="pre">scripts</span></tt>: Python scripts to run at the command line
-* <tt class="docutils literal"><span class="pre">src</span></tt>: Python modules to install</p>
+<p>Three sub-directories are included in the <tt class="docutils literal"><span class="pre">aimbat</span></tt> directory:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">example</span></tt>: Example SAC files</li>
+<li><tt class="docutils literal"><span class="pre">scripts</span></tt>: Python scripts to run at the command line</li>
+<li><tt class="docutils literal"><span class="pre">src</span></tt>: Python modules to install</li>
+</ul>
 <p>The core cross-correlation functions are written in both Python/Numpy (<tt class="docutils literal"><span class="pre">xcorr.py</span></tt>) and Fortran (<tt class="docutils literal"><span class="pre">xcorr.f90</span></tt>). Therefore, we need to use Numpy’s <tt class="docutils literal"><span class="pre">Distutils</span></tt> module for enhanced support of Fortran extension. The usage is similar to the standard Disutils.</p>
 <p>Note that some sort of Fortran compiler must already be installed first. Specify them in place of gfortran in the following commands.</p>
 <p>cd into the directory the <tt class="docutils literal"><span class="pre">aimbat</span></tt> package was placed in, and type:</p>
