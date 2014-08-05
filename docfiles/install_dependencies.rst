@@ -4,8 +4,6 @@ Installing Dependencies
 
 Usually, Macs already have python installed by default. To check if you have python on your mac, open up terminal, and do python in the terminal. If python is installed you should see a python console show up, displaying the version number of python. The version number should be at least 2.7 or higher. If python is not installed, you should see an error message show up. However, you may or may not have some necessary packages installed. 
 
-HELLO WORLD
-
 .. ############################################################################ ..
 .. #                                 GITHUB                                   # ..
 .. ############################################################################ ..
