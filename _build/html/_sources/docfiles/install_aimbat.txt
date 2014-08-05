@@ -104,13 +104,10 @@ Add ``<path-to-folder>/aimbat/scripts`` to environment variable ``PATH`` in a sh
 Bash Shell Users::
 	
 	export PATH=$PATH:<path-to-folder>/aimbat/scripts 
-	export PATH=$PATH:<path-to-folder>/aimbat/additional-processing-scripts
 
 C Shell Users:
 	
 	setenv PATH=$PATH:<path-to-folder>/aimbat/scripts
-	setenv PATH=$PATH:<path-to-folder>/aimbat/additional-processing-scripts
-
 
 If AIMBAT has beenn installed, type ``from pysmo import aimbat`` in a Python shell, and no errors should appear.
 
