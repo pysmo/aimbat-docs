@@ -14,6 +14,7 @@ Contents:
     docfiles/introduction
     docfiles/install_dependencies
     docfiles/install_aimbat
+    docfiles/upgrading_aimbat
     docfiles/gettingData
     docfiles/sacioAIMBAT
     docfiles/filteringData

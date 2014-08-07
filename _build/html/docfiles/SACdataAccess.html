@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>9. SAC Data Access &mdash; AIMBAT 0.2.1 documentation</title>
+    <title>10. SAC Data Access &mdash; AIMBAT 0.2.1 documentation</title>
     
     <link rel="stylesheet" href="../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -26,8 +26,8 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="AIMBAT 0.2.1 documentation" href="../index.html" />
-    <link rel="next" title="10. Measuring Teleseismic Body Wave Arrival Times" href="PickingTravelTimes.html" />
-    <link rel="prev" title="8. Parameter Configuration" href="parameterConfiguration.html" /> 
+    <link rel="next" title="11. Measuring Teleseismic Body Wave Arrival Times" href="PickingTravelTimes.html" />
+    <link rel="prev" title="9. Parameter Configuration" href="parameterConfiguration.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,10 +37,10 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="PickingTravelTimes.html" title="10. Measuring Teleseismic Body Wave Arrival Times"
+          <a href="PickingTravelTimes.html" title="11. Measuring Teleseismic Body Wave Arrival Times"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="parameterConfiguration.html" title="8. Parameter Configuration"
+          <a href="parameterConfiguration.html" title="9. Parameter Configuration"
              accesskey="P">previous</a> |</li>
         <li><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
       </ul>
@@ -52,18 +52,18 @@
           <div class="body">
             
   <div class="section" id="sac-data-access">
-<h1>9. SAC Data Access<a class="headerlink" href="#sac-data-access" title="Permalink to this headline">¶</a></h1>
+<h1>10. SAC Data Access<a class="headerlink" href="#sac-data-access" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="python-object-for-sac-file">
-<h2>9.1. Python Object for SAC File<a class="headerlink" href="#python-object-for-sac-file" title="Permalink to this headline">¶</a></h2>
+<h2>10.1. Python Object for SAC File<a class="headerlink" href="#python-object-for-sac-file" title="Permalink to this headline">¶</a></h2>
 <p>The <tt class="docutils literal"><span class="pre">pysmo.sac</span></tt> package is developed to read and write individual SAC files.
 The Python class <tt class="docutils literal"><span class="pre">sacfile</span></tt> of module <tt class="docutils literal"><span class="pre">sacio</span></tt> opens a SAC file and returns an object including data and all SAC header variables as its attributes. Modifications of object attributes are saved to file. It is written purely in Python so that it also runs with <a class="reference external" href="http://www.jython.org">Jython</a>.</p>
 <div class="section" id="egsac-py">
-<h3>9.1.1. <cite>egsac.py</cite><a class="headerlink" href="#egsac-py" title="Permalink to this headline">¶</a></h3>
+<h3>10.1.1. <cite>egsac.py</cite><a class="headerlink" href="#egsac-py" title="Permalink to this headline">¶</a></h3>
 <p>The <tt class="docutils literal"><span class="pre">&lt;pkg-install-dir&gt;/aimbat/scripts/egsac.py</span></tt> script gives a simple example to read, resample and plot a seismogram using pysmo, Scipy and Matplotlib. You can type the codes in a Python/iPython shell, or run as a script in the data example directory <tt class="docutils literal"><span class="pre">&lt;pkg-install-dir&gt;/data-example/example_pkl_files/Event_2011.09.15.19.31.04.080</span></tt>, hereafter refered to as <cite>&lt;example-event-dir&gt;</cite>.</p>
 <img alt="../_images/prog-egsac.png" src="../_images/prog-egsac.png" />
 </div>
 <div class="section" id="resampling-seismograms">
-<h3>9.1.2. Resampling Seismograms<a class="headerlink" href="#resampling-seismograms" title="Permalink to this headline">¶</a></h3>
+<h3>10.1.2. Resampling Seismograms<a class="headerlink" href="#resampling-seismograms" title="Permalink to this headline">¶</a></h3>
 <p>In this example, a SAC file named <tt class="docutils literal"><span class="pre">TA.109C.\_\_.BHZ.sac</span></tt> is read in as a sacfile object. The time array is calculated from SAC headers.  The data array is resampled from interval 0.025 to 2.0 seconds using Scipy&#8217;s signalprocessing module.</p>
 <p>Add the following codes to write the resampled seismogram to file <tt class="docutils literal"><span class="pre">TA.109C.\_\_.BHZ.sac</span></tt>:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">sacobj</span><span class="o">.</span><span class="n">delta</span> <span class="o">=</span> <span class="n">deltanew</span>
@@ -75,7 +75,7 @@ The Python class <tt class="docutils literal"><span class="pre">sacfile</span></
 </div>
 </div>
 <div class="section" id="python-pickle-for-sac-files">
-<h2>9.2. Python Pickle for SAC Files<a class="headerlink" href="#python-pickle-for-sac-files" title="Permalink to this headline">¶</a></h2>
+<h2>10.2. Python Pickle for SAC Files<a class="headerlink" href="#python-pickle-for-sac-files" title="Permalink to this headline">¶</a></h2>
 <p>The <tt class="docutils literal"><span class="pre">pysmo.sacio</span></tt> module converts SAC files to <tt class="docutils literal"><span class="pre">sacfile</span></tt> objects. Any modification of the objects are instantly written to files. In data processing, the user may want to abandon changes made earlier, which brings the need of a buffer for the <tt class="docutils literal"><span class="pre">sacfile</span></tt> objects.</p>
 <p>The <tt class="docutils literal"><span class="pre">SacDataHdrs</span></tt> class in the <tt class="docutils literal"><span class="pre">pysmo.aimbat.sacpickle</span></tt> module is written on top of <tt class="docutils literal"><span class="pre">pysmo.sacio</span></tt> to serves this purpose by reading a SAC file and returning a <tt class="docutils literal"><span class="pre">sacdh</span></tt> object that is very similar of the <tt class="docutils literal"><span class="pre">sacfile</span></tt> object. Essentially, the <tt class="docutils literal"><span class="pre">sacdh</span></tt> object is a copy of the the <tt class="docutils literal"><span class="pre">sacfile</span></tt> object in the memory, except that SAC headers &#8216;t0-t9&#8217;, &#8216;user0-user9&#8217;, &#8216;kuser0-kuser2&#8217; are saved in three Python lists.</p>
 <p>A <tt class="docutils literal"><span class="pre">gsac</span></tt> object of the <tt class="docutils literal"><span class="pre">SacGroup</span></tt> class consists of a group of <tt class="docutils literal"><span class="pre">sacdh</span></tt> objects from event-based SAC data files, earthquake hypocenter information and station locations.
@@ -110,14 +110,14 @@ print sacpickle.\_\_doc\_\_
 <p>and also the documentation on <a class="reference external" href="http://docs.python.org/library/pickle.html">pickle</a> for more information about the Python data structure, pickling and unpickling.</p>
 </div>
 <div class="section" id="sac-plotting-and-phase-picking">
-<h2>9.3. SAC Plotting and Phase Picking<a class="headerlink" href="#sac-plotting-and-phase-picking" title="Permalink to this headline">¶</a></h2>
+<h2>10.3. SAC Plotting and Phase Picking<a class="headerlink" href="#sac-plotting-and-phase-picking" title="Permalink to this headline">¶</a></h2>
 <img alt="../_images/help-sacplot.png" src="../_images/help-sacplot.png" />
 <p>SAC plotting and phase picking functionalities are replicated and enhanced based on the GUI neutral widgets (such as Button and SpanSelector) and the event (keyboard and mouse events such as <tt class="docutils literal"><span class="pre">key\_press\_event</span></tt> and <tt class="docutils literal"><span class="pre">mouse\_motion\_event</span></tt> handling API of Matplotlib.</p>
 <p>They are implemented in two modules <tt class="docutils literal"><span class="pre">pysmo.aimbat.plotphase</span></tt> and <tt class="docutils literal"><span class="pre">pysmo.aimbat.pickphase</span></tt>, which are used by corresponding scripts <tt class="docutils literal"><span class="pre">sacplot.py</span></tt> and <tt class="docutils literal"><span class="pre">sacppk.py</span></tt> executable at command line. Their help messages are displayed in the figures below.</p>
 <img alt="../_images/help-sacppk.png" src="../_images/help-sacppk.png" />
 <img alt="../_images/prog-egplot.png" src="../_images/prog-egplot.png" />
 <div class="section" id="sac-plotting">
-<h3>9.3.1. SAC Plotting<a class="headerlink" href="#sac-plotting" title="Permalink to this headline">¶</a></h3>
+<h3>10.3.1. SAC Plotting<a class="headerlink" href="#sac-plotting" title="Permalink to this headline">¶</a></h3>
 <p>Options &#8220;-i, -z, -d, -a, and -b&#8221; of <tt class="docutils literal"><span class="pre">sacplot.py</span></tt> set the seismogram plotting baseline as file index, zero, epicentral distance in degrees, azimuth, and back-azimuth, respectively.
 The user can run <tt class="docutils literal"><span class="pre">sacplot.py</span></tt> directly with the options, or run individual scripts
 <tt class="docutils literal"><span class="pre">sacp1.py</span></tt>, <tt class="docutils literal"><span class="pre">sacp2.py</span></tt>, <tt class="docutils literal"><span class="pre">sacprs.py</span></tt>, <tt class="docutils literal"><span class="pre">sacpaz.py</span></tt>, and <tt class="docutils literal"><span class="pre">sacpbaz.py</span></tt> which preset the baseline options and plot seismograms in SAC p1 style, p2 style, record section, and relative to azimuth and back-azimuth. The following commands are equivalent:</p>
@@ -156,7 +156,7 @@ Press the &#8216;z&#8217; key to zoom out to the previous time range.</p>
 </div>
 </div>
 <div class="section" id="sac-phase-picking">
-<h2>9.4. SAC Phase Picking<a class="headerlink" href="#sac-phase-picking" title="Permalink to this headline">¶</a></h2>
+<h2>10.4. SAC Phase Picking<a class="headerlink" href="#sac-phase-picking" title="Permalink to this headline">¶</a></h2>
 <p>SAC plotting (<tt class="docutils literal"><span class="pre">pysmo.aimbat.plotphase</span></tt>) does not involve change in data files but phase picking (<tt class="docutils literal"><span class="pre">pysmo.aimbat.pickphase</span></tt>) does. A GUI is built for user to interactively pick phase arrival times. The figure below is an example screen shot running:</p>
 <div class="highlight-python"><div class="highlight"><pre>sacppk.py 20110915.19310408.bhz.pkl -w
 </pre></div>
@@ -213,28 +213,28 @@ sacppk.py 20110915.19310408.bhz.pkl -w -sbaz
             </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">9. SAC Data Access</a><ul>
-<li><a class="reference internal" href="#python-object-for-sac-file">9.1. Python Object for SAC File</a><ul>
-<li><a class="reference internal" href="#egsac-py">9.1.1. <cite>egsac.py</cite></a></li>
-<li><a class="reference internal" href="#resampling-seismograms">9.1.2. Resampling Seismograms</a></li>
+<li><a class="reference internal" href="#">10. SAC Data Access</a><ul>
+<li><a class="reference internal" href="#python-object-for-sac-file">10.1. Python Object for SAC File</a><ul>
+<li><a class="reference internal" href="#egsac-py">10.1.1. <cite>egsac.py</cite></a></li>
+<li><a class="reference internal" href="#resampling-seismograms">10.1.2. Resampling Seismograms</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#python-pickle-for-sac-files">9.2. Python Pickle for SAC Files</a></li>
-<li><a class="reference internal" href="#sac-plotting-and-phase-picking">9.3. SAC Plotting and Phase Picking</a><ul>
-<li><a class="reference internal" href="#sac-plotting">9.3.1. SAC Plotting</a></li>
+<li><a class="reference internal" href="#python-pickle-for-sac-files">10.2. Python Pickle for SAC Files</a></li>
+<li><a class="reference internal" href="#sac-plotting-and-phase-picking">10.3. SAC Plotting and Phase Picking</a><ul>
+<li><a class="reference internal" href="#sac-plotting">10.3.1. SAC Plotting</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#sac-phase-picking">9.4. SAC Phase Picking</a></li>
+<li><a class="reference internal" href="#sac-phase-picking">10.4. SAC Phase Picking</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="parameterConfiguration.html"
-                        title="previous chapter">8. Parameter Configuration</a></p>
+                        title="previous chapter">9. Parameter Configuration</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="PickingTravelTimes.html"
-                        title="next chapter">10. Measuring Teleseismic Body Wave Arrival Times</a></p>
+                        title="next chapter">11. Measuring Teleseismic Body Wave Arrival Times</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../_sources/docfiles/SACdataAccess.txt"
@@ -264,10 +264,10 @@ sacppk.py 20110915.19310408.bhz.pkl -w -sbaz
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="PickingTravelTimes.html" title="10. Measuring Teleseismic Body Wave Arrival Times"
+          <a href="PickingTravelTimes.html" title="11. Measuring Teleseismic Body Wave Arrival Times"
              >next</a> |</li>
         <li class="right" >
-          <a href="parameterConfiguration.html" title="8. Parameter Configuration"
+          <a href="parameterConfiguration.html" title="9. Parameter Configuration"
              >previous</a> |</li>
         <li><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
       </ul>

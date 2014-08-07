@@ -87,6 +87,31 @@ Align
 
 .. ----------------------------------------------------------------------------- ..
 
+Selecting a time window around the arrival of interest
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: pickingTravelTimes-images/selecting-time-window-highlight.png
+
+Hit the ``Align`` button and use ``t2`` to select the arrival time. Now press ``Sync``. Use the mouse to select the desired time window on the seismogram on the array stack. Press ``Sync`` again.
+
+.. image:: pickingTravelTimes-images/selected-time-window-t2.png
+
+Next, set the mouse over the seismogram and press the `w` key. If the new time window has been saved, a message noting the new size of the time window should be printed in the terminal.
+
+.. image:: pickingTravelTimes-images/saved-smaller-time-window.png
+
+The entire width of the $x$-axis is now colored green and will be stored as the time window to use for the cross-correlations. Click the ``Save Headers Only`` button. 
+
+Quit the GUI and restart it, and you will see that your new, changed time window is preserved in green in the array stack. 
+
+.. image:: pickingTravelTimes-images/before-refine-reduced-time-window.png
+
+Now press ``refine`` and all the seismograms will align with the smaller time window.
+
+.. image:: pickingTravelTimes-images/after-refine-reduced-time-window.png
+
+.. ----------------------------------------------------------------------------- ..
+
 Get rid of really bad seismograms 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
