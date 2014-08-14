@@ -18,7 +18,7 @@ to write the `t0` value for seach SAC file into the `user7` variable.
 
 #. Bundle the SAC files into a PKL file and run ``ttpick.py`` on it to pick the arrival times. The relative arrival times (relative to the average arrival time) is given in the second column (``mccc delay``) of the resultant mcp file. 
 
-.. image:: delay-times/mcp_output
+.. image:: delay-times/mcp_output.png
 
 The average arrival time is found at the bottom of the mcp file. To find the absolute arrival time for a station, add the value of its ``mccc delay`` in the correponding second column to the average arrival time. 
 

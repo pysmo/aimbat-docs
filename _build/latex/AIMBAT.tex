@@ -1623,6 +1623,42 @@ Red dots represent circles used for computing delay times; black triangles repre
 \includegraphics{basemap_stations.png}
 
 
+\chapter{Computing Delay Times}
+\label{docfiles/computing_delay_times:computing-delay-times}\label{docfiles/computing_delay_times::doc}
+Note: Not relevant to the functionality of AIMBAT, but added in case users want to compute delay times.
+
+You will need \href{http://www.seis.sc.edu/software/TauP/}{TauP} for this.
+\begin{enumerate}
+\item {} 
+After getting all your SAC data files you want to run AIMBAT on, run \code{taup\_setsac} to set t0 according to event and station locations. For instance, inside the folder \code{Event\_2011.09.15.19.31.04.080} in the \href{https://github.com/pysmo/data-example}{data-examples} folder, run:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+taup\PYGZus{}setsac \PYGZhy{}ph S\PYGZhy{}7 *.BHZ
+\end{Verbatim}
+
+\end{enumerate}
+
+\includegraphics{taup_command.png}
+
+to write the \emph{t0} value for seach SAC file into the \emph{user7} variable.
+
+\includegraphics{sac_after_taup.png}
+\begin{enumerate}
+\item {} 
+Bundle the SAC files into a PKL file and run \code{ttpick.py} on it to pick the arrival times. The relative arrival times (relative to the average arrival time) is given in the second column (\code{mccc delay}) of the resultant mcp file.
+
+\end{enumerate}
+
+\includegraphics{mcp_output.png}
+
+The average arrival time is found at the bottom of the mcp file. To find the absolute arrival time for a station, add the value of its \code{mccc delay} in the correponding second column to the average arrival time.
+\begin{enumerate}
+\item {} 
+To find the delay time, subtract the \emph{t0} value obtained from running \emph{taup} from the actual arrival time, obtained earlier by adding the average arrival time and the mccc delay time in the mcp file.
+
+\end{enumerate}
+
+
 \chapter{Unit Testing}
 \label{docfiles/unitTests:unit-testing}\label{docfiles/unitTests::doc}
 This section is mainly for those who which to make tweaks to AIMBAT themselves. We have added some unit tests to AIMBAT to ensure its robustness. See the \href{https://docs.python.org/2/library/unittest.html}{Python Unit Testing Framework} for more details.

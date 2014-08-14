@@ -23,6 +23,7 @@ Contents:
     docfiles/SACdataAccess
     docfiles/PickingTravelTimes
     docfiles/VisualizingStations
+    docfiles/computing_delay_times
     docfiles/unitTests
     docfiles/updatingThisManual
     docfiles/citations

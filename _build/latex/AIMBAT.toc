@@ -83,11 +83,12 @@
 \contentsline {subsection}{\numberline {11.4.3}Picking Travel Times does not work}{54}{subsection.11.4.3}
 \contentsline {subsection}{\numberline {11.4.4}Travel Times}{55}{subsection.11.4.4}
 \contentsline {chapter}{\numberline {12}Visualizing Stations on a map}{57}{chapter.12}
-\contentsline {chapter}{\numberline {13}Unit Testing}{59}{chapter.13}
-\contentsline {section}{\numberline {13.1}Running the Tests}{59}{section.13.1}
-\contentsline {chapter}{\numberline {14}Updating this manual}{61}{chapter.14}
-\contentsline {section}{\numberline {14.1}Dependencies}{61}{section.14.1}
-\contentsline {section}{\numberline {14.2}How to update this manual}{61}{section.14.2}
-\contentsline {chapter}{\numberline {15}Citations}{63}{chapter.15}
-\contentsline {chapter}{\numberline {16}Indices and tables}{65}{chapter.16}
-\contentsline {chapter}{Bibliography}{67}{chapter*.4}
+\contentsline {chapter}{\numberline {13}Computing Delay Times}{59}{chapter.13}
+\contentsline {chapter}{\numberline {14}Unit Testing}{63}{chapter.14}
+\contentsline {section}{\numberline {14.1}Running the Tests}{63}{section.14.1}
+\contentsline {chapter}{\numberline {15}Updating this manual}{65}{chapter.15}
+\contentsline {section}{\numberline {15.1}Dependencies}{65}{section.15.1}
+\contentsline {section}{\numberline {15.2}How to update this manual}{65}{section.15.2}
+\contentsline {chapter}{\numberline {16}Citations}{67}{chapter.16}
+\contentsline {chapter}{\numberline {17}Indices and tables}{69}{chapter.17}
+\contentsline {chapter}{Bibliography}{71}{chapter*.4}
