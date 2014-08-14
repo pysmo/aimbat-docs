@@ -1644,6 +1644,7 @@ to write the \emph{t0} value for seach SAC file into the \emph{user7} variable.
 
 \includegraphics{sac_after_taup.png}
 \begin{enumerate}
+\setcounter{enumi}{1}
 \item {} 
 Bundle the SAC files into a PKL file and run \code{ttpick.py} on it to pick the arrival times. The relative arrival times (relative to the average arrival time) is given in the second column (\code{mccc delay}) of the resultant mcp file.
 
@@ -1653,6 +1654,7 @@ Bundle the SAC files into a PKL file and run \code{ttpick.py} on it to pick the 
 
 The average arrival time is found at the bottom of the mcp file. To find the absolute arrival time for a station, add the value of its \code{mccc delay} in the correponding second column to the average arrival time.
 \begin{enumerate}
+\setcounter{enumi}{2}
 \item {} 
 To find the delay time, subtract the \emph{t0} value obtained from running \emph{taup} from the actual arrival time, obtained earlier by adding the average arrival time and the mccc delay time in the mcp file.
 

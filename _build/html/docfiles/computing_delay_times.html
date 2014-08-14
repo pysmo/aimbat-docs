@@ -65,12 +65,12 @@
 <img alt="../_images/taup_command.png" src="../_images/taup_command.png" />
 <p>to write the <cite>t0</cite> value for seach SAC file into the <cite>user7</cite> variable.</p>
 <img alt="../_images/sac_after_taup.png" src="../_images/sac_after_taup.png" />
-<ol class="arabic simple">
+<ol class="arabic simple" start="2">
 <li>Bundle the SAC files into a PKL file and run <tt class="docutils literal"><span class="pre">ttpick.py</span></tt> on it to pick the arrival times. The relative arrival times (relative to the average arrival time) is given in the second column (<tt class="docutils literal"><span class="pre">mccc</span> <span class="pre">delay</span></tt>) of the resultant mcp file.</li>
 </ol>
 <img alt="../_images/mcp_output.png" src="../_images/mcp_output.png" />
 <p>The average arrival time is found at the bottom of the mcp file. To find the absolute arrival time for a station, add the value of its <tt class="docutils literal"><span class="pre">mccc</span> <span class="pre">delay</span></tt> in the correponding second column to the average arrival time.</p>
-<ol class="arabic simple">
+<ol class="arabic simple" start="3">
 <li>To find the delay time, subtract the <cite>t0</cite> value obtained from running <cite>taup</cite> from the actual arrival time, obtained earlier by adding the average arrival time and the mccc delay time in the mcp file.</li>
 </ol>
 </div>
