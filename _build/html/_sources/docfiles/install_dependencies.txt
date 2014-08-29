@@ -134,15 +134,18 @@ Optional but recommended
 Installing Basic Python Packages
 --------------------------------
 
+Regular Python Installation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you do not have python on your computer (i.e. no python console comes up when you type ``python`` in the terminal), you can install the regular python from the `official python website <https://www.python.org/>`_, which comes bundled with matplotlib, scipy, and numpy. 
+
 Enthought Python
 ~~~~~~~~~~~~~~~~
 
-`Strongly recommended`.
-
 `Enthought Canopy <https://www.enthought.com/store/>`_ is easy to install. Go to `the website <https://www.enthought.com/store/>`_ and download the free version of Express Enthought Canopy, which will give you the dependencies Numpy, Scipt, and Matplotlib.
 
-If you cannot use Enthought Canopy ...
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+If you current python version does not have the required dependencies...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This section describes a possible way to install Python without using Enthough Canopy. It is `not` recommended and may cause problems on some systems, but the authors describe it just in case. 
 

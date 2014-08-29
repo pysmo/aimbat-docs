@@ -14,7 +14,7 @@
 
 
 \title{AIMBAT Documentation}
-\date{August 14, 2014}
+\date{August 29, 2014}
 \release{0.2.1}
 \author{Lay Kuan Loh, Xiaoting Lou, \& Suzan van der Lee}
 \newcommand{\sphinxlogo}{}
@@ -252,15 +252,18 @@ Otherwise, the python console will simply show that it is ready for the next com
 \section{Installing Basic Python Packages}
 \label{docfiles/install_dependencies:installing-basic-python-packages}
 
+\subsection{Regular Python Installation}
+\label{docfiles/install_dependencies:regular-python-installation}
+If you do not have python on your computer (i.e. no python console comes up when you type \code{python} in the terminal), you can install the regular python from the \href{https://www.python.org/}{official python website}, which comes bundled with matplotlib, scipy, and numpy.
+
+
 \subsection{Enthought Python}
 \label{docfiles/install_dependencies:enthought-python}
-\emph{Strongly recommended}.
-
 \href{https://www.enthought.com/store/}{Enthought Canopy} is easy to install. Go to \href{https://www.enthought.com/store/}{the website} and download the free version of Express Enthought Canopy, which will give you the dependencies Numpy, Scipt, and Matplotlib.
 
 
-\subsection{If you cannot use Enthought Canopy ...}
-\label{docfiles/install_dependencies:if-you-cannot-use-enthought-canopy}
+\subsection{If you current python version does not have the required dependencies...}
+\label{docfiles/install_dependencies:if-you-current-python-version-does-not-have-the-required-dependencies}
 This section describes a possible way to install Python without using Enthough Canopy. It is \emph{not} recommended and may cause problems on some systems, but the authors describe it just in case.
 \begin{enumerate}
 \item {} 
@@ -1582,6 +1585,10 @@ T4: Zoom in
 \label{docfiles/PickingTravelTimes:getting-the-output}
 In the same folder as the initial PKL file you ran \code{ttpick.py} on, you can find the output list with extension \code{\textless{}event name\textgreater{}.mcp}, which contains the travel time arrivals.
 
+\includegraphics{output_list.png}
+
+\emph{mccc delay{}`} is \emph{t3{}`+average arrival times, and {}`t0\_times} are the theoretical arrival times. \emph{delay\_times} are obtained by taking \$t3-t0\$.
+
 
 \subsection{Getting the stations of the seismograms chosen}
 \label{docfiles/PickingTravelTimes:getting-the-stations-of-the-seismograms-chosen}
@@ -1621,44 +1628,6 @@ ttpick.py \PYGZlt{}sac\PYGZhy{}files\PYGZgt{}
 Red dots represent circles used for computing delay times; black triangles represent discarded stations. Click on a dot to get the station name.
 
 \includegraphics{basemap_stations.png}
-
-
-\chapter{Computing Delay Times}
-\label{docfiles/computing_delay_times:computing-delay-times}\label{docfiles/computing_delay_times::doc}
-Note: Not relevant to the functionality of AIMBAT, but added in case users want to compute delay times.
-
-You will need \href{http://www.seis.sc.edu/software/TauP/}{TauP} for this.
-\begin{enumerate}
-\item {} 
-After getting all your SAC data files you want to run AIMBAT on, run \code{taup\_setsac} to set t0 according to event and station locations. For instance, inside the folder \code{Event\_2011.09.15.19.31.04.080} in the \href{https://github.com/pysmo/data-example}{data-examples} folder, run:
-
-\begin{Verbatim}[commandchars=\\\{\}]
-taup\PYGZus{}setsac \PYGZhy{}ph S\PYGZhy{}7 *.BHZ
-\end{Verbatim}
-
-\end{enumerate}
-
-\includegraphics{taup_command.png}
-
-to write the \emph{t0} value for seach SAC file into the \emph{user7} variable.
-
-\includegraphics{sac_after_taup.png}
-\begin{enumerate}
-\setcounter{enumi}{1}
-\item {} 
-Bundle the SAC files into a PKL file and run \code{ttpick.py} on it to pick the arrival times. The relative arrival times (relative to the average arrival time) is given in the second column (\code{mccc delay}) of the resultant mcp file.
-
-\end{enumerate}
-
-\includegraphics{mcp_output.png}
-
-The average arrival time is found at the bottom of the mcp file. To find the absolute arrival time for a station, add the value of its \code{mccc delay} in the correponding second column to the average arrival time.
-\begin{enumerate}
-\setcounter{enumi}{2}
-\item {} 
-To find the delay time, subtract the \emph{t0} value obtained from running \emph{taup} from the actual arrival time, obtained earlier by adding the average arrival time and the mccc delay time in the mcp file.
-
-\end{enumerate}
 
 
 \chapter{Unit Testing}

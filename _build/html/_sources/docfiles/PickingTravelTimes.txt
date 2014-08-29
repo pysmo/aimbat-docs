@@ -243,7 +243,7 @@ In the same folder as the initial PKL file you ran ``ttpick.py`` on, you can fin
 
 .. image:: pickingTravelTimes-images/output_list.png
 
-	Output List
+`mccc delay`` is `t3`+average arrival times, and `t0_times` are the theoretical arrival times. `delay_times` are obtained by taking $t3-t0$. 
 
 .. ----------------------------------------------------------------------------- ..
 
