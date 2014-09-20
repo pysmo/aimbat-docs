@@ -45,7 +45,7 @@
 \contentsline {section}{\numberline {5.2}Standing Order for Data}{21}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Installing SOD}{22}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Example SOD recipe}{23}{subsection.5.2.2}
-\contentsline {chapter}{\numberline {6}SAC Input/Output procedues for AIMBAT}{25}{chapter.6}
+\contentsline {chapter}{\numberline {6}SAC Input/Output procedures for AIMBAT}{25}{chapter.6}
 \contentsline {section}{\numberline {6.1}Converting from SAC to PKL files}{25}{section.6.1}
 \contentsline {section}{\numberline {6.2}Converting from PKL to SAC files}{25}{section.6.2}
 \contentsline {chapter}{\numberline {7}Filtering Data}{27}{chapter.7}

@@ -24,7 +24,7 @@
 \BOOKMARK [0][-]{chapter.5}{Getting Data}{}% 24
 \BOOKMARK [1][-]{section.5.1}{Obspy.fdsn for downloading data}{chapter.5}% 25
 \BOOKMARK [1][-]{section.5.2}{Standing Order for Data}{chapter.5}% 26
-\BOOKMARK [0][-]{chapter.6}{SAC Input/Output procedues for AIMBAT}{}% 27
+\BOOKMARK [0][-]{chapter.6}{SAC Input/Output procedures for AIMBAT}{}% 27
 \BOOKMARK [1][-]{section.6.1}{Converting from SAC to PKL files}{chapter.6}% 28
 \BOOKMARK [1][-]{section.6.2}{Converting from PKL to SAC files}{chapter.6}% 29
 \BOOKMARK [0][-]{chapter.7}{Filtering Data}{}% 30

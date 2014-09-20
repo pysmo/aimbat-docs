@@ -1,6 +1,6 @@
-=====================================
-SAC Input/Output procedues for AIMBAT
-=====================================
+======================================
+SAC Input/Output procedures for AIMBAT
+======================================
 
 Once you have downloaded 
 
@@ -33,6 +33,8 @@ The output should be a PKL file in the same folder as the sac files.
 
 Converting from PKL to SAC files
 --------------------------------
+
+Note: Not available for `aimbat-stable`.
 
 cd into the folder containing the PKL file that you wish to convert into SAC files, and run::
 
