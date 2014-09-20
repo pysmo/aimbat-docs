@@ -4,25 +4,27 @@
 \contentsline {section}{\numberline {1.2}Associated Documents}{3}{section.1.2}
 \contentsline {section}{\numberline {1.3}Authors' Contacts}{3}{section.1.3}
 \contentsline {chapter}{\numberline {2}Installing Dependencies}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}Github}{5}{section.2.1}
-\contentsline {section}{\numberline {2.2}Macports}{5}{section.2.2}
-\contentsline {section}{\numberline {2.3}Homebrew}{5}{section.2.3}
-\contentsline {section}{\numberline {2.4}Getting your operating system}{5}{section.2.4}
-\contentsline {section}{\numberline {2.5}Python Dependencies}{6}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Optional but recommended}{7}{subsection.2.5.1}
-\contentsline {section}{\numberline {2.6}Installing Basic Python Packages}{7}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Regular Python Installation}{7}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Enthought Python}{7}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {2.6.3}If you current python version does not have the required dependencies...}{7}{subsection.2.6.3}
-\contentsline {section}{\numberline {2.7}Installing Basemap (Python dependency)}{8}{section.2.7}
-\contentsline {section}{\numberline {2.8}Possible Issues}{8}{section.2.8}
-\contentsline {subsection}{\numberline {2.8.1}Macports}{8}{subsection.2.8.1}
-\contentsline {subsection}{\numberline {2.8.2}Installing Python with Pip}{8}{subsection.2.8.2}
-\contentsline {subsection}{\numberline {2.8.3}Setting the Python Path to the scripts}{9}{subsection.2.8.3}
-\contentsline {subsection}{\numberline {2.8.4}Terminal Commands stop working}{9}{subsection.2.8.4}
-\contentsline {subsection}{\numberline {2.8.5}Installing Enthought Canopy}{9}{subsection.2.8.5}
-\contentsline {subsection}{\numberline {2.8.6}Uninstalling Enthought Canopy}{10}{subsection.2.8.6}
-\contentsline {subsection}{\numberline {2.8.7}Path to python files not found}{12}{subsection.2.8.7}
+\contentsline {section}{\numberline {2.1}Which Version of AIMBAT?}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Github}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}Macports}{5}{section.2.3}
+\contentsline {section}{\numberline {2.4}Homebrew}{5}{section.2.4}
+\contentsline {section}{\numberline {2.5}Getting your operating system}{6}{section.2.5}
+\contentsline {section}{\numberline {2.6}Python Dependencies}{6}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Optional but recommended}{7}{subsection.2.6.1}
+\contentsline {section}{\numberline {2.7}Installing Basic Python Packages}{7}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Regular Python Installation}{7}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Enthought Python}{7}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}If you current python version does not have the required dependencies...}{7}{subsection.2.7.3}
+\contentsline {section}{\numberline {2.8}Installing Obspy}{8}{section.2.8}
+\contentsline {section}{\numberline {2.9}Installing Basemap (Python dependency)}{8}{section.2.9}
+\contentsline {section}{\numberline {2.10}Possible Issues}{8}{section.2.10}
+\contentsline {subsection}{\numberline {2.10.1}Macports}{9}{subsection.2.10.1}
+\contentsline {subsection}{\numberline {2.10.2}Installing Python with Pip}{9}{subsection.2.10.2}
+\contentsline {subsection}{\numberline {2.10.3}Setting the Python Path to the scripts}{9}{subsection.2.10.3}
+\contentsline {subsection}{\numberline {2.10.4}Terminal Commands stop working}{9}{subsection.2.10.4}
+\contentsline {subsection}{\numberline {2.10.5}Installing Enthought Canopy}{9}{subsection.2.10.5}
+\contentsline {subsection}{\numberline {2.10.6}Uninstalling Enthought Canopy}{10}{subsection.2.10.6}
+\contentsline {subsection}{\numberline {2.10.7}Path to python files not found}{12}{subsection.2.10.7}
 \contentsline {chapter}{\numberline {3}Installing AIMBAT}{17}{chapter.3}
 \contentsline {section}{\numberline {3.1}Getting the Packages}{17}{section.3.1}
 \contentsline {section}{\numberline {3.2}Where to install the packages}{17}{section.3.2}
@@ -80,9 +82,10 @@
 \contentsline {section}{\numberline {11.3}What the Alignments Stand For}{54}{section.11.3}
 \contentsline {section}{\numberline {11.4}Post Processing}{54}{section.11.4}
 \contentsline {subsection}{\numberline {11.4.1}Getting the output}{54}{subsection.11.4.1}
-\contentsline {subsection}{\numberline {11.4.2}Getting the stations of the seismograms chosen}{54}{subsection.11.4.2}
-\contentsline {subsection}{\numberline {11.4.3}Picking Travel Times does not work}{55}{subsection.11.4.3}
-\contentsline {subsection}{\numberline {11.4.4}Travel Times}{55}{subsection.11.4.4}
+\contentsline {subsection}{\numberline {11.4.2}Disclaimer about delay times}{54}{subsection.11.4.2}
+\contentsline {subsection}{\numberline {11.4.3}Getting the stations of the seismograms chosen}{54}{subsection.11.4.3}
+\contentsline {subsection}{\numberline {11.4.4}Picking Travel Times does not work}{55}{subsection.11.4.4}
+\contentsline {subsection}{\numberline {11.4.5}Travel Times}{55}{subsection.11.4.5}
 \contentsline {chapter}{\numberline {12}Visualizing Stations on a map}{57}{chapter.12}
 \contentsline {chapter}{\numberline {13}Unit Testing}{59}{chapter.13}
 \contentsline {section}{\numberline {13.1}Running the Tests}{59}{section.13.1}

@@ -245,6 +245,11 @@ In the same folder as the initial PKL file you ran ``ttpick.py`` on, you can fin
 
 `mccc delay`` is `t3`+average arrival times, and `t0_times` are the theoretical arrival times. `delay_times` are obtained by taking $t3-t0$. 
 
+Disclaimer about delay times
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+`t0` depends on hypocenter location, origin time and reference model. We compute the delay time by finding `t3-t0`, but it does not have elliptic, topological, or crust corrections. 
+
 .. ----------------------------------------------------------------------------- ..
 
 Getting the stations of the seismograms chosen

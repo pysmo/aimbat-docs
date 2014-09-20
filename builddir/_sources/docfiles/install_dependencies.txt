@@ -5,6 +5,28 @@ Installing Dependencies
 Usually, Macs already have python installed by default. To check if you have python on your mac, open up terminal, and do python in the terminal. If python is installed you should see a python console show up, displaying the version number of python. The version number should be at least 2.7 or higher. If python is not installed, you should see an error message show up. However, you may or may not have some necessary packages installed. 
 
 .. ############################################################################ ..
+.. #                            WHICH VERSION                                 # ..
+.. ############################################################################ ..
+
+Which Version of AIMBAT?
+------------------------
+
+As AIMBAT uses several python dependencies, some of which are not critical to the primary function of picking travel-wave arrival times, `aimbat-stable <https://github.com/pysmo/aimbat-stable>`_ is recommended for users who do want to install `obspy <https://github.com/obspy/obspy/wiki>`_ and `basemap <http://matplotlib.org/basemap/>`_, as they can sometimes be tricky to install. 
+
+The `enhanced version <https://github.com/pysmo/aimbat>`_ also allows for plotting the station locations on a map, converting pickle files into sac files, and running unit tests, which are relevant only to developers.
+
+.. ############################################################################ ..
+.. #                            WHICH VERSION                                 # ..
+.. ############################################################################ ..
+
+
+
+
+
+
+
+
+.. ############################################################################ ..
 .. #                                 GITHUB                                   # ..
 .. ############################################################################ ..
 
@@ -175,6 +197,13 @@ You need this version, not other versions on your computer, since this is the on
 
 
 
+Installing Obspy
+----------------
+
+Note: Not necessary for `aimbat-stable`.
+
+See instructions :ref:`here <installing-obspy>`.
+
 
 .. ############################################################################ ..
 .. #                           INSTALLING BASEMAP                             # ..
@@ -182,6 +211,8 @@ You need this version, not other versions on your computer, since this is the on
 
 Installing Basemap (Python dependency)
 --------------------------------------
+
+Note: Not necessary for `aimbat-stable`.
 
 Disclaimer: Lifted from content written by `this guy <http://blog.bluedackers.com/2012/11/13/installing-basemap-on-mac-os-x-mountain-lion/>`_ with some tweaks. 
 

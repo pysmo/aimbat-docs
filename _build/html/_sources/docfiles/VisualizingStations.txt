@@ -2,6 +2,8 @@
 Visualizing Stations on a map
 =============================
 
+Note: NOT available in `aimbat-stable`.
+
 After running::
 
 	ttpick.py <sac-files>

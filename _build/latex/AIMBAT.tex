@@ -14,7 +14,7 @@
 
 
 \title{AIMBAT Documentation}
-\date{August 29, 2014}
+\date{September 20, 2014}
 \release{0.2.1}
 \author{Lay Kuan Loh, Xiaoting Lou, \& Suzan van der Lee}
 \newcommand{\sphinxlogo}{}
@@ -154,17 +154,17 @@ The AIMBAT software package is distributed under the \href{http://www.gnu.org/li
 \item {} 
 \href{http://lkloh2410.wordpress.com/}{Lay Kuan Loh}
 
-Email: lkloh AT cmu DOT edu
+Email: lloh at ece.cmu.edu
 
 \item {} 
 \href{http://www.earth.northwestern.edu/~xlou/Welcome.html}{Xiaoting Lou}
 
-Email: xlou AT u DOT northwestern DOT edu
+Email: xlou at u.northwestern.edu
 
 \item {} 
 \href{http://www.earth.northwestern.edu/research/suzan/}{Suzan van der Lee}
 
-Email: suzan AT earth DOT northwestern DOT edu
+Email: suzan at earth.northwestern.edu
 
 \end{itemize}
 
@@ -172,6 +172,13 @@ Email: suzan AT earth DOT northwestern DOT edu
 \chapter{Installing Dependencies}
 \label{docfiles/install_dependencies:installing-dependencies}\label{docfiles/install_dependencies::doc}
 Usually, Macs already have python installed by default. To check if you have python on your mac, open up terminal, and do python in the terminal. If python is installed you should see a python console show up, displaying the version number of python. The version number should be at least 2.7 or higher. If python is not installed, you should see an error message show up. However, you may or may not have some necessary packages installed.
+
+
+\section{Which Version of AIMBAT?}
+\label{docfiles/install_dependencies:which-version-of-aimbat}
+As AIMBAT uses several python dependencies, some of which are not critical to the primary function of picking travel-wave arrival times, \href{https://github.com/pysmo/aimbat-stable}{aimbat-stable} is recommended for users who do want to install \href{https://github.com/obspy/obspy/wiki}{obspy} and \href{http://matplotlib.org/basemap/}{basemap}, as they can sometimes be tricky to install.
+
+The \href{https://github.com/pysmo/aimbat}{enhanced version} also allows for plotting the station locations on a map, converting pickle files into sac files, and running unit tests, which are relevant only to developers.
 
 
 \section{Github}
@@ -307,8 +314,17 @@ The package manager brew caused many problems when tried. If you figured it out 
 \end{enumerate}
 
 
+\section{Installing Obspy}
+\label{docfiles/install_dependencies:installing-obspy}
+Note: Not necessary for \emph{aimbat-stable}.
+
+See instructions \emph{here}.
+
+
 \section{Installing Basemap (Python dependency)}
 \label{docfiles/install_dependencies:installing-basemap-python-dependency}
+Note: Not necessary for \emph{aimbat-stable}.
+
 Disclaimer: Lifted from content written by \href{http://blog.bluedackers.com/2012/11/13/installing-basemap-on-mac-os-x-mountain-lion/}{this guy} with some tweaks.
 
 Enthough Python should get you most of the dependencies needed. You do need to get \href{http://trac.osgeo.org/geos/}{Geos} though. The best way to get it is \href{http://matthewcarriere.com/2013/08/05/how-to-install-and-use-homebrew/}{install Homebrew}, and then install \code{gdal}, a package that has \code{Geos} as a dependency. To get \code{gdal}, do:
@@ -1590,6 +1606,11 @@ In the same folder as the initial PKL file you ran \code{ttpick.py} on, you can 
 \emph{mccc delay{}`} is \emph{t3{}`+average arrival times, and {}`t0\_times} are the theoretical arrival times. \emph{delay\_times} are obtained by taking \$t3-t0\$.
 
 
+\subsection{Disclaimer about delay times}
+\label{docfiles/PickingTravelTimes:disclaimer-about-delay-times}
+\emph{t0} depends on hypocenter location, origin time and reference model. We compute the delay time by finding \emph{t3-t0}, but it does not have elliptic, topological, or crust corrections.
+
+
 \subsection{Getting the stations of the seismograms chosen}
 \label{docfiles/PickingTravelTimes:getting-the-stations-of-the-seismograms-chosen}
 Run \code{getsta.py} in the additional scripts (not on Github for now). It gives the unique list of stations where the seismograms came from. You need to run it with the list of all \code{pkl} files chosen after you saved to. You so this \code{./getsta.py *.pkl}.
@@ -1619,6 +1640,8 @@ If one of the seismograms being picked does not fit completely within the green 
 
 \chapter{Visualizing Stations on a map}
 \label{docfiles/VisualizingStations:visualizing-stations-on-a-map}\label{docfiles/VisualizingStations::doc}
+Note: NOT available in \emph{aimbat-stable}.
+
 After running:
 
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -1632,6 +1655,8 @@ Red dots represent circles used for computing delay times; black triangles repre
 
 \chapter{Unit Testing}
 \label{docfiles/unitTests:unit-testing}\label{docfiles/unitTests::doc}
+Note: NOT available in \emph{aimbat-stable}.
+
 This section is mainly for those who which to make tweaks to AIMBAT themselves. We have added some unit tests to AIMBAT to ensure its robustness. See the \href{https://docs.python.org/2/library/unittest.html}{Python Unit Testing Framework} for more details.
 
 

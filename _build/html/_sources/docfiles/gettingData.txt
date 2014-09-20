@@ -13,6 +13,8 @@ There are several ways to obtain seismic data from `IRIS <http://www.iris.edu/dm
 Obspy.fdsn for downloading data
 -------------------------------
 
+.. _installing-obspy:
+
 Installing Obspy
 ~~~~~~~~~~~~~~~~
 

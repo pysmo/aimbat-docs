@@ -54,31 +54,36 @@
   <div class="section" id="installing-dependencies">
 <h1>2. Installing Dependencies<a class="headerlink" href="#installing-dependencies" title="Permalink to this headline">¶</a></h1>
 <p>Usually, Macs already have python installed by default. To check if you have python on your mac, open up terminal, and do python in the terminal. If python is installed you should see a python console show up, displaying the version number of python. The version number should be at least 2.7 or higher. If python is not installed, you should see an error message show up. However, you may or may not have some necessary packages installed.</p>
+<div class="section" id="which-version-of-aimbat">
+<h2>2.1. Which Version of AIMBAT?<a class="headerlink" href="#which-version-of-aimbat" title="Permalink to this headline">¶</a></h2>
+<p>As AIMBAT uses several python dependencies, some of which are not critical to the primary function of picking travel-wave arrival times, <a class="reference external" href="https://github.com/pysmo/aimbat-stable">aimbat-stable</a> is recommended for users who do want to install <a class="reference external" href="https://github.com/obspy/obspy/wiki">obspy</a> and <a class="reference external" href="http://matplotlib.org/basemap/">basemap</a>, as they can sometimes be tricky to install.</p>
+<p>The <a class="reference external" href="https://github.com/pysmo/aimbat">enhanced version</a> also allows for plotting the station locations on a map, converting pickle files into sac files, and running unit tests, which are relevant only to developers.</p>
+</div>
 <div class="section" id="github">
-<h2>2.1. Github<a class="headerlink" href="#github" title="Permalink to this headline">¶</a></h2>
+<h2>2.2. Github<a class="headerlink" href="#github" title="Permalink to this headline">¶</a></h2>
 <p><cite>Optional but recommended</cite>.</p>
 <p>The <a class="reference external" href="https://github.com/pysmo">latest version of AIMBAT</a> will be on <a class="reference external" href="https://github.com/">Github</a>, so it would be good to get <a class="reference external" href="https://github.com/">Git</a> on your computer. This is not strictly necessary, as you could also download it as a zipfile from the <a class="reference external" href="http://www.earth.northwestern.edu/~xlou/aimbat.html">AIMBAT website</a>.</p>
 <p>Some users may already have Git installed, but if not, you can download the package installer <a class="reference external" href="http://git-scm.com/download/mac">here</a>. This would allow only command line usage of Git, so if you want to use a GUI, we recommend <a class="reference external" href="https://mac.github.com/">Git for Mac</a>.</p>
 </div>
 <div class="section" id="macports">
-<h2>2.2. Macports<a class="headerlink" href="#macports" title="Permalink to this headline">¶</a></h2>
+<h2>2.3. Macports<a class="headerlink" href="#macports" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www.macports.org/">Macports</a> will be needed to install some python packages. Download the package installer <a class="reference external" href="http://www.macports.org/install.php">here</a>.</p>
 </div>
 <div class="section" id="homebrew">
-<h2>2.3. Homebrew<a class="headerlink" href="#homebrew" title="Permalink to this headline">¶</a></h2>
+<h2>2.4. Homebrew<a class="headerlink" href="#homebrew" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://brew.sh/">Homebrew</a> will be needed to install some python packages. Get it by typing in your terminal:</p>
 <div class="highlight-python"><div class="highlight"><pre>ruby -e &quot;$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)&quot;
 </pre></div>
 </div>
 </div>
 <div class="section" id="getting-your-operating-system">
-<h2>2.4. Getting your operating system<a class="headerlink" href="#getting-your-operating-system" title="Permalink to this headline">¶</a></h2>
+<h2>2.5. Getting your operating system<a class="headerlink" href="#getting-your-operating-system" title="Permalink to this headline">¶</a></h2>
 <p>We assume that most users of AIMBAT will be using macs. If our assumptions are wrong, please <a class="reference internal" href="introduction.html#authors-contacts"><em>contact the authors</em></a>, and if there is sufficient interest we will construct documentation for installations on other operating systems as well.</p>
 <p>On a mac, to find the version of your operating system, first click on the apple icon on the top bar of your desktop, go to <tt class="docutils literal"><span class="pre">System</span> <span class="pre">Preferences</span></tt>, and click on <tt class="docutils literal"><span class="pre">Startup</span> <span class="pre">Disk</span></tt>. The operating system version should then be displayed.</p>
 <img alt="../_images/system_preferences.png" src="../_images/system_preferences.png" />
 </div>
 <div class="section" id="python-dependencies">
-<h2>2.5. Python Dependencies<a class="headerlink" href="#python-dependencies" title="Permalink to this headline">¶</a></h2>
+<h2>2.6. Python Dependencies<a class="headerlink" href="#python-dependencies" title="Permalink to this headline">¶</a></h2>
 <p>Required for AIMBAT
 #. <a class="reference external" href="http://www.numpy.org/">Numpy</a>: Used for manipulating numbers and datasets
 #. <a class="reference external" href="http://www.scipy.org/">Scipy</a>: Used for data processing
@@ -105,22 +110,22 @@ ImportError: No module named scipy
 </div>
 <p>Otherwise, the python console will simply show that it is ready for the next command.</p>
 <div class="section" id="optional-but-recommended">
-<h3>2.5.1. Optional but recommended<a class="headerlink" href="#optional-but-recommended" title="Permalink to this headline">¶</a></h3>
+<h3>2.6.1. Optional but recommended<a class="headerlink" href="#optional-but-recommended" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="http://ipython.org/">iPython</a>: Interactive console for python</p>
 </div>
 </div>
 <div class="section" id="installing-basic-python-packages">
-<h2>2.6. Installing Basic Python Packages<a class="headerlink" href="#installing-basic-python-packages" title="Permalink to this headline">¶</a></h2>
+<h2>2.7. Installing Basic Python Packages<a class="headerlink" href="#installing-basic-python-packages" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="regular-python-installation">
-<h3>2.6.1. Regular Python Installation<a class="headerlink" href="#regular-python-installation" title="Permalink to this headline">¶</a></h3>
+<h3>2.7.1. Regular Python Installation<a class="headerlink" href="#regular-python-installation" title="Permalink to this headline">¶</a></h3>
 <p>If you do not have python on your computer (i.e. no python console comes up when you type <tt class="docutils literal"><span class="pre">python</span></tt> in the terminal), you can install the regular python from the <a class="reference external" href="https://www.python.org/">official python website</a>, which comes bundled with matplotlib, scipy, and numpy.</p>
 </div>
 <div class="section" id="enthought-python">
-<h3>2.6.2. Enthought Python<a class="headerlink" href="#enthought-python" title="Permalink to this headline">¶</a></h3>
+<h3>2.7.2. Enthought Python<a class="headerlink" href="#enthought-python" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://www.enthought.com/store/">Enthought Canopy</a> is easy to install. Go to <a class="reference external" href="https://www.enthought.com/store/">the website</a> and download the free version of Express Enthought Canopy, which will give you the dependencies Numpy, Scipt, and Matplotlib.</p>
 </div>
 <div class="section" id="if-you-current-python-version-does-not-have-the-required-dependencies">
-<h3>2.6.3. If you current python version does not have the required dependencies...<a class="headerlink" href="#if-you-current-python-version-does-not-have-the-required-dependencies" title="Permalink to this headline">¶</a></h3>
+<h3>2.7.3. If you current python version does not have the required dependencies...<a class="headerlink" href="#if-you-current-python-version-does-not-have-the-required-dependencies" title="Permalink to this headline">¶</a></h3>
 <p>This section describes a possible way to install Python without using Enthough Canopy. It is <cite>not</cite> recommended and may cause problems on some systems, but the authors describe it just in case.</p>
 <ol class="arabic">
 <li><p class="first">Use <a class="reference external" href="http://guide.macports.org/">Macports</a> to install the necessary python libraries for AIMBAT. If you just upgraded your operating system, you need to <a class="reference external" href="https://trac.macports.org/wiki/Migration">upgrade Macports and re-install the libraries</a> as well.</p>
@@ -152,8 +157,14 @@ sudo port install py27-matplotlib</p>
 </ol>
 </div>
 </div>
+<div class="section" id="installing-obspy">
+<h2>2.8. Installing Obspy<a class="headerlink" href="#installing-obspy" title="Permalink to this headline">¶</a></h2>
+<p>Note: Not necessary for <cite>aimbat-stable</cite>.</p>
+<p>See instructions <em class="xref std std-ref">here</em>.</p>
+</div>
 <div class="section" id="installing-basemap-python-dependency">
-<h2>2.7. Installing Basemap (Python dependency)<a class="headerlink" href="#installing-basemap-python-dependency" title="Permalink to this headline">¶</a></h2>
+<h2>2.9. Installing Basemap (Python dependency)<a class="headerlink" href="#installing-basemap-python-dependency" title="Permalink to this headline">¶</a></h2>
+<p>Note: Not necessary for <cite>aimbat-stable</cite>.</p>
 <p>Disclaimer: Lifted from content written by <a class="reference external" href="http://blog.bluedackers.com/2012/11/13/installing-basemap-on-mac-os-x-mountain-lion/">this guy</a> with some tweaks.</p>
 <p>Enthough Python should get you most of the dependencies needed. You do need to get <a class="reference external" href="http://trac.osgeo.org/geos/">Geos</a> though. The best way to get it is <a class="reference external" href="http://matthewcarriere.com/2013/08/05/how-to-install-and-use-homebrew/">install Homebrew</a>, and then install <tt class="docutils literal"><span class="pre">gdal</span></tt>, a package that has <tt class="docutils literal"><span class="pre">Geos</span></tt> as a dependency. To get <tt class="docutils literal"><span class="pre">gdal</span></tt>, do:</p>
 <div class="highlight-python"><div class="highlight"><pre>brew install gdal
@@ -174,19 +185,19 @@ sudo python setup.py install
 </div>
 </div>
 <div class="section" id="possible-issues">
-<h2>2.8. Possible Issues<a class="headerlink" href="#possible-issues" title="Permalink to this headline">¶</a></h2>
+<h2>2.10. Possible Issues<a class="headerlink" href="#possible-issues" title="Permalink to this headline">¶</a></h2>
 <p>Here some common problems and possible resolutions. If your problem is not listed here, or you have a suggestion, please <a class="reference internal" href="introduction.html#authors-contacts"><em>contact the authors</em></a>.</p>
 <div class="section" id="id8">
-<h3>2.8.1. Macports<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<h3>2.10.1. Macports<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <p>You may run into problems with AIMBAT if your <a class="reference external" href="http://www.macports.org/">Macport</a> version is not compatible with your operating system version. For example, if you used Macports for OS X 10.8 to install AIMBAT, then upgraded your operating system or OS X 10.9, you may find that AIMBAT no longer works properly. You will need to upgrade Macports to fix this error.</p>
 <p>Do not uninstall MacPorts unless you know what you are doing, uninstalling MacPorts may get rid of other programs you installed using MacPorts. However, if you are sure you want to do so, see <a class="reference external" href="https://guide.macports.org/chunked/installing.macports.uninstalling.html">here</a> for instructions.</p>
 </div>
 <div class="section" id="installing-python-with-pip">
-<h3>2.8.2. Installing Python with Pip<a class="headerlink" href="#installing-python-with-pip" title="Permalink to this headline">¶</a></h3>
+<h3>2.10.2. Installing Python with Pip<a class="headerlink" href="#installing-python-with-pip" title="Permalink to this headline">¶</a></h3>
 <p>Be careful with the operating system. For OS X 10.9 and above, Python 2.7 is not fully compatible and there may be problems installing python with Pip. Best to use Enthought Canopy or Python 3 with OS X 10.9.</p>
 </div>
 <div class="section" id="setting-the-python-path-to-the-scripts">
-<h3>2.8.3. Setting the Python Path to the scripts<a class="headerlink" href="#setting-the-python-path-to-the-scripts" title="Permalink to this headline">¶</a></h3>
+<h3>2.10.3. Setting the Python Path to the scripts<a class="headerlink" href="#setting-the-python-path-to-the-scripts" title="Permalink to this headline">¶</a></h3>
 <p>You are asked to add the path to the AIMBAT scripts in your file. To do that, you add them to the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> file. There are other files you could add it to that work as well, such as the <tt class="docutils literal"><span class="pre">.profile</span></tt> or <tt class="docutils literal"><span class="pre">.bash_profile</span></tt> files. You can see the files by opening the terminal and doing <tt class="docutils literal"><span class="pre">ls</span> <span class="pre">-a</span></tt> to see all the hidden files, and open then by doing <tt class="docutils literal"><span class="pre">vi</span> <span class="pre">.bashrc</span></tt> in vim, for instance.
 To ensure you can open a script, you need to add:</p>
 <div class="highlight-python"><div class="highlight"><pre>export PATH=$PATH:&lt;path-to-folder-with-scripts&gt;
@@ -196,7 +207,7 @@ export PYTHONPATH=$PYTHONPATH:&lt;path-to-folder-with-scripts&gt;
 <p>to the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> file. We recommend adding the paths to the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> file.</p>
 </div>
 <div class="section" id="terminal-commands-stop-working">
-<h3>2.8.4. Terminal Commands stop working<a class="headerlink" href="#terminal-commands-stop-working" title="Permalink to this headline">¶</a></h3>
+<h3>2.10.4. Terminal Commands stop working<a class="headerlink" href="#terminal-commands-stop-working" title="Permalink to this headline">¶</a></h3>
 <p>If ever the terminal commands such as ls stop working in the terminal, it could be that something went wrong with a path in the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> or <tt class="docutils literal"><span class="pre">.profile</span></tt> files. If that happens you may not be able to open them in vim as that command would have stopped working as well. Instead, in the terminal, you do:</p>
 <div class="highlight-python"><div class="highlight"><pre>PATH=/bin:${PATH}
 PATH=/usr/bin:${PATH}
@@ -205,12 +216,12 @@ PATH=/usr/bin:${PATH}
 <p>And that should allow the commands to start working again. Figure out what you did wrong and remove that command.</p>
 </div>
 <div class="section" id="installing-enthought-canopy">
-<h3>2.8.5. Installing Enthought Canopy<a class="headerlink" href="#installing-enthought-canopy" title="Permalink to this headline">¶</a></h3>
+<h3>2.10.5. Installing Enthought Canopy<a class="headerlink" href="#installing-enthought-canopy" title="Permalink to this headline">¶</a></h3>
 <p>Occasionally, Enthought Canopy may not open the default setup environment after you downloaded and tried to install it. If this happens, open the Canopy package, go to &#8220;Preferences&#8221;, and select Canopy as your default environment.</p>
 <img alt="../_images/enthought_as_default.png" src="../_images/enthought_as_default.png" />
 </div>
 <div class="section" id="uninstalling-enthought-canopy">
-<h3>2.8.6. Uninstalling Enthought Canopy<a class="headerlink" href="#uninstalling-enthought-canopy" title="Permalink to this headline">¶</a></h3>
+<h3>2.10.6. Uninstalling Enthought Canopy<a class="headerlink" href="#uninstalling-enthought-canopy" title="Permalink to this headline">¶</a></h3>
 <p>The official Enthought gives suggestions on uninstalling <a class="reference external" href="https://guide.macports.org/chunked/installing.macports.uninstalling.html">here</a>.</p>
 <img alt="../_images/canopy_preferences.png" src="../_images/canopy_preferences.png" />
 <p>STEPS:</p>
@@ -224,7 +235,7 @@ PATH=/usr/bin:${PATH}
 <img alt="../_images/applications_canopy.png" src="../_images/applications_canopy.png" />
 </div>
 <div class="section" id="path-to-python-files-not-found">
-<h3>2.8.7. Path to python files not found<a class="headerlink" href="#path-to-python-files-not-found" title="Permalink to this headline">¶</a></h3>
+<h3>2.10.7. Path to python files not found<a class="headerlink" href="#path-to-python-files-not-found" title="Permalink to this headline">¶</a></h3>
 <p>After adding the path to your directory with scripts in <tt class="docutils literal"><span class="pre">.bashrc</span></tt>, you still need to source the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> files in <tt class="docutils literal"><span class="pre">.profile</span></tt>, or the system may not find the directory. See here for more <a class="reference external" href="http://publib.boulder.ibm.com/infocenter/pseries/v5r3/index.jsp?topic=/com.ibm.aix.baseadmn/doc/baseadmndita/prof_file.htm">details</a> to see how the profile file is sourced. Note that this one will override the file in <cite>/etc/profile</cite>.</p>
 <img alt="../_images/residue.png" src="../_images/residue.png" />
 <img alt="../_images/profile_file.png" src="../_images/profile_file.png" />
@@ -249,29 +260,31 @@ PATH=/usr/bin:${PATH}
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">2. Installing Dependencies</a><ul>
-<li><a class="reference internal" href="#github">2.1. Github</a></li>
-<li><a class="reference internal" href="#macports">2.2. Macports</a></li>
-<li><a class="reference internal" href="#homebrew">2.3. Homebrew</a></li>
-<li><a class="reference internal" href="#getting-your-operating-system">2.4. Getting your operating system</a></li>
-<li><a class="reference internal" href="#python-dependencies">2.5. Python Dependencies</a><ul>
-<li><a class="reference internal" href="#optional-but-recommended">2.5.1. Optional but recommended</a></li>
+<li><a class="reference internal" href="#which-version-of-aimbat">2.1. Which Version of AIMBAT?</a></li>
+<li><a class="reference internal" href="#github">2.2. Github</a></li>
+<li><a class="reference internal" href="#macports">2.3. Macports</a></li>
+<li><a class="reference internal" href="#homebrew">2.4. Homebrew</a></li>
+<li><a class="reference internal" href="#getting-your-operating-system">2.5. Getting your operating system</a></li>
+<li><a class="reference internal" href="#python-dependencies">2.6. Python Dependencies</a><ul>
+<li><a class="reference internal" href="#optional-but-recommended">2.6.1. Optional but recommended</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#installing-basic-python-packages">2.6. Installing Basic Python Packages</a><ul>
-<li><a class="reference internal" href="#regular-python-installation">2.6.1. Regular Python Installation</a></li>
-<li><a class="reference internal" href="#enthought-python">2.6.2. Enthought Python</a></li>
-<li><a class="reference internal" href="#if-you-current-python-version-does-not-have-the-required-dependencies">2.6.3. If you current python version does not have the required dependencies...</a></li>
+<li><a class="reference internal" href="#installing-basic-python-packages">2.7. Installing Basic Python Packages</a><ul>
+<li><a class="reference internal" href="#regular-python-installation">2.7.1. Regular Python Installation</a></li>
+<li><a class="reference internal" href="#enthought-python">2.7.2. Enthought Python</a></li>
+<li><a class="reference internal" href="#if-you-current-python-version-does-not-have-the-required-dependencies">2.7.3. If you current python version does not have the required dependencies...</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#installing-basemap-python-dependency">2.7. Installing Basemap (Python dependency)</a></li>
-<li><a class="reference internal" href="#possible-issues">2.8. Possible Issues</a><ul>
-<li><a class="reference internal" href="#id8">2.8.1. Macports</a></li>
-<li><a class="reference internal" href="#installing-python-with-pip">2.8.2. Installing Python with Pip</a></li>
-<li><a class="reference internal" href="#setting-the-python-path-to-the-scripts">2.8.3. Setting the Python Path to the scripts</a></li>
-<li><a class="reference internal" href="#terminal-commands-stop-working">2.8.4. Terminal Commands stop working</a></li>
-<li><a class="reference internal" href="#installing-enthought-canopy">2.8.5. Installing Enthought Canopy</a></li>
-<li><a class="reference internal" href="#uninstalling-enthought-canopy">2.8.6. Uninstalling Enthought Canopy</a></li>
-<li><a class="reference internal" href="#path-to-python-files-not-found">2.8.7. Path to python files not found</a></li>
+<li><a class="reference internal" href="#installing-obspy">2.8. Installing Obspy</a></li>
+<li><a class="reference internal" href="#installing-basemap-python-dependency">2.9. Installing Basemap (Python dependency)</a></li>
+<li><a class="reference internal" href="#possible-issues">2.10. Possible Issues</a><ul>
+<li><a class="reference internal" href="#id8">2.10.1. Macports</a></li>
+<li><a class="reference internal" href="#installing-python-with-pip">2.10.2. Installing Python with Pip</a></li>
+<li><a class="reference internal" href="#setting-the-python-path-to-the-scripts">2.10.3. Setting the Python Path to the scripts</a></li>
+<li><a class="reference internal" href="#terminal-commands-stop-working">2.10.4. Terminal Commands stop working</a></li>
+<li><a class="reference internal" href="#installing-enthought-canopy">2.10.5. Installing Enthought Canopy</a></li>
+<li><a class="reference internal" href="#uninstalling-enthought-canopy">2.10.6. Uninstalling Enthought Canopy</a></li>
+<li><a class="reference internal" href="#path-to-python-files-not-found">2.10.7. Path to python files not found</a></li>
 </ul>
 </li>
 </ul>

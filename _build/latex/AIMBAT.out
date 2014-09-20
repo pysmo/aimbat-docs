@@ -3,52 +3,54 @@
 \BOOKMARK [1][-]{section.1.2}{Associated Documents}{chapter.1}% 3
 \BOOKMARK [1][-]{section.1.3}{Authors' Contacts}{chapter.1}% 4
 \BOOKMARK [0][-]{chapter.2}{Installing Dependencies}{}% 5
-\BOOKMARK [1][-]{section.2.1}{Github}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.2}{Macports}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.3}{Homebrew}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.4}{Getting your operating system}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.5}{Python Dependencies}{chapter.2}% 10
-\BOOKMARK [1][-]{section.2.6}{Installing Basic Python Packages}{chapter.2}% 11
-\BOOKMARK [1][-]{section.2.7}{Installing Basemap \(Python dependency\)}{chapter.2}% 12
-\BOOKMARK [1][-]{section.2.8}{Possible Issues}{chapter.2}% 13
-\BOOKMARK [0][-]{chapter.3}{Installing AIMBAT}{}% 14
-\BOOKMARK [1][-]{section.3.1}{Getting the Packages}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.2}{Where to install the packages}{chapter.3}% 16
-\BOOKMARK [1][-]{section.3.3}{Building the Pysmo Packages}{chapter.3}% 17
-\BOOKMARK [1][-]{section.3.4}{Example Data}{chapter.3}% 18
-\BOOKMARK [0][-]{chapter.4}{Upgrading AIMBAT}{}% 19
-\BOOKMARK [1][-]{section.4.1}{Getting the latest version}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.2}{Possible Issues}{chapter.4}% 21
-\BOOKMARK [0][-]{chapter.5}{Getting Data}{}% 22
-\BOOKMARK [1][-]{section.5.1}{Obspy.fdsn for downloading data}{chapter.5}% 23
-\BOOKMARK [1][-]{section.5.2}{Standing Order for Data}{chapter.5}% 24
-\BOOKMARK [0][-]{chapter.6}{SAC Input/Output procedues for AIMBAT}{}% 25
-\BOOKMARK [1][-]{section.6.1}{Converting from SAC to PKL files}{chapter.6}% 26
-\BOOKMARK [1][-]{section.6.2}{Converting from PKL to SAC files}{chapter.6}% 27
-\BOOKMARK [0][-]{chapter.7}{Filtering Data}{}% 28
-\BOOKMARK [1][-]{section.7.1}{Filtering GUI}{chapter.7}% 29
-\BOOKMARK [1][-]{section.7.2}{Saving Options}{chapter.7}% 30
-\BOOKMARK [0][-]{chapter.8}{Analyzing Data}{}% 31
-\BOOKMARK [1][-]{section.8.1}{Seismic Analysis Code \(SAC\)}{chapter.8}% 32
-\BOOKMARK [0][-]{chapter.9}{Parameter Configuration}{}% 33
-\BOOKMARK [1][-]{section.9.1}{Backend}{chapter.9}% 34
-\BOOKMARK [1][-]{section.9.2}{Configuration File}{chapter.9}% 35
-\BOOKMARK [0][-]{chapter.10}{SAC Data Access}{}% 36
-\BOOKMARK [1][-]{section.10.1}{Python Object for SAC File}{chapter.10}% 37
-\BOOKMARK [1][-]{section.10.2}{Python Pickle for SAC Files}{chapter.10}% 38
-\BOOKMARK [1][-]{section.10.3}{SAC Plotting and Phase Picking}{chapter.10}% 39
-\BOOKMARK [1][-]{section.10.4}{SAC Phase Picking}{chapter.10}% 40
-\BOOKMARK [0][-]{chapter.11}{Measuring Teleseismic Body Wave Arrival Times}{}% 41
-\BOOKMARK [1][-]{section.11.1}{Automated Phase Alignment}{chapter.11}% 42
-\BOOKMARK [1][-]{section.11.2}{Picking Travel Times}{chapter.11}% 43
-\BOOKMARK [1][-]{section.11.3}{What the Alignments Stand For}{chapter.11}% 44
-\BOOKMARK [1][-]{section.11.4}{Post Processing}{chapter.11}% 45
-\BOOKMARK [0][-]{chapter.12}{Visualizing Stations on a map}{}% 46
-\BOOKMARK [0][-]{chapter.13}{Unit Testing}{}% 47
-\BOOKMARK [1][-]{section.13.1}{Running the Tests}{chapter.13}% 48
-\BOOKMARK [0][-]{chapter.14}{Updating this manual}{}% 49
-\BOOKMARK [1][-]{section.14.1}{Dependencies}{chapter.14}% 50
-\BOOKMARK [1][-]{section.14.2}{How to update this manual}{chapter.14}% 51
-\BOOKMARK [0][-]{chapter.15}{Citations}{}% 52
-\BOOKMARK [0][-]{chapter.16}{Indices and tables}{}% 53
-\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 54
+\BOOKMARK [1][-]{section.2.1}{Which Version of AIMBAT?}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{Github}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.3}{Macports}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.4}{Homebrew}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.5}{Getting your operating system}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.6}{Python Dependencies}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.7}{Installing Basic Python Packages}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.8}{Installing Obspy}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.9}{Installing Basemap \(Python dependency\)}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.10}{Possible Issues}{chapter.2}% 15
+\BOOKMARK [0][-]{chapter.3}{Installing AIMBAT}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Getting the Packages}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Where to install the packages}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.3}{Building the Pysmo Packages}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.4}{Example Data}{chapter.3}% 20
+\BOOKMARK [0][-]{chapter.4}{Upgrading AIMBAT}{}% 21
+\BOOKMARK [1][-]{section.4.1}{Getting the latest version}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.2}{Possible Issues}{chapter.4}% 23
+\BOOKMARK [0][-]{chapter.5}{Getting Data}{}% 24
+\BOOKMARK [1][-]{section.5.1}{Obspy.fdsn for downloading data}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.2}{Standing Order for Data}{chapter.5}% 26
+\BOOKMARK [0][-]{chapter.6}{SAC Input/Output procedues for AIMBAT}{}% 27
+\BOOKMARK [1][-]{section.6.1}{Converting from SAC to PKL files}{chapter.6}% 28
+\BOOKMARK [1][-]{section.6.2}{Converting from PKL to SAC files}{chapter.6}% 29
+\BOOKMARK [0][-]{chapter.7}{Filtering Data}{}% 30
+\BOOKMARK [1][-]{section.7.1}{Filtering GUI}{chapter.7}% 31
+\BOOKMARK [1][-]{section.7.2}{Saving Options}{chapter.7}% 32
+\BOOKMARK [0][-]{chapter.8}{Analyzing Data}{}% 33
+\BOOKMARK [1][-]{section.8.1}{Seismic Analysis Code \(SAC\)}{chapter.8}% 34
+\BOOKMARK [0][-]{chapter.9}{Parameter Configuration}{}% 35
+\BOOKMARK [1][-]{section.9.1}{Backend}{chapter.9}% 36
+\BOOKMARK [1][-]{section.9.2}{Configuration File}{chapter.9}% 37
+\BOOKMARK [0][-]{chapter.10}{SAC Data Access}{}% 38
+\BOOKMARK [1][-]{section.10.1}{Python Object for SAC File}{chapter.10}% 39
+\BOOKMARK [1][-]{section.10.2}{Python Pickle for SAC Files}{chapter.10}% 40
+\BOOKMARK [1][-]{section.10.3}{SAC Plotting and Phase Picking}{chapter.10}% 41
+\BOOKMARK [1][-]{section.10.4}{SAC Phase Picking}{chapter.10}% 42
+\BOOKMARK [0][-]{chapter.11}{Measuring Teleseismic Body Wave Arrival Times}{}% 43
+\BOOKMARK [1][-]{section.11.1}{Automated Phase Alignment}{chapter.11}% 44
+\BOOKMARK [1][-]{section.11.2}{Picking Travel Times}{chapter.11}% 45
+\BOOKMARK [1][-]{section.11.3}{What the Alignments Stand For}{chapter.11}% 46
+\BOOKMARK [1][-]{section.11.4}{Post Processing}{chapter.11}% 47
+\BOOKMARK [0][-]{chapter.12}{Visualizing Stations on a map}{}% 48
+\BOOKMARK [0][-]{chapter.13}{Unit Testing}{}% 49
+\BOOKMARK [1][-]{section.13.1}{Running the Tests}{chapter.13}% 50
+\BOOKMARK [0][-]{chapter.14}{Updating this manual}{}% 51
+\BOOKMARK [1][-]{section.14.1}{Dependencies}{chapter.14}% 52
+\BOOKMARK [1][-]{section.14.2}{How to update this manual}{chapter.14}% 53
+\BOOKMARK [0][-]{chapter.15}{Citations}{}% 54
+\BOOKMARK [0][-]{chapter.16}{Indices and tables}{}% 55
+\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 56
