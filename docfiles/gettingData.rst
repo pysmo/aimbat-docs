@@ -2,7 +2,7 @@
 Getting Data
 ============
 
-Note: Not necessary if you already have your own set ways of obtaining data. This section is added for completion. 
+Note: Not necessary if you already have your own set ways of obtaining data. This section is added for completeness. 
 
 There are several ways to obtain seismic data from `IRIS <http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/>`_ to input to AIMBAT. The authors used two ways to do it, and a further list of libraries for obtaining seismic data is provided in the sidebars `here <http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/>`_. 
 
@@ -16,7 +16,7 @@ Obspy.fdsn for downloading data
 Installing Obspy
 ~~~~~~~~~~~~~~~~
 
-We recommend using Macports to install Obspy as detailed in the `Installation` section `here <https://github.com/obspy/obspy/wiki>`_. If you have installed Enthough Canopy::
+We recommend using Macports to install Obspy as detailed in the `Installation` section `here <https://github.com/obspy/obspy/wiki>`_. If you have installed Enthought Canopy::
 
     sudo port install py27-obspy
 
