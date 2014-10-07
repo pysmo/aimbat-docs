@@ -14,7 +14,7 @@
 
 
 \title{AIMBAT Documentation}
-\date{October 06, 2014}
+\date{October 07, 2014}
 \release{0.2.1}
 \author{Lay Kuan Loh, Xiaoting Lou, \& Suzan van der Lee}
 \newcommand{\sphinxlogo}{}
@@ -395,13 +395,35 @@ and then:
 \end{Verbatim}
 
 
+\section{Fortran}
+\label{docfiles/install_dependencies:fortran}\begin{description}
+\item[{GFortran must be installed for AIMBAT. Note that f90 or f77 are also acceptable.}] \leavevmode
+To check if you already have Gfortran, in the terminal type:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{gfortran} \PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{n}{version}
+\end{Verbatim}
+
+\end{description}
+
+Which will print out the version number you have, if it is already install.
+
+If GFortran is not installed, the terminal will respond with:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGZhy{}bash: gfortran: command not found
+\end{Verbatim}
+
+GFortran is available \href{https://gcc.gnu.org/wiki/GFortranBinaries}{here}. Be sure to get the correct version for your operating system.
+
+
 \section{Possible Issues}
 \label{docfiles/install_dependencies:possible-issues}
 Here some common problems and possible resolutions. If your problem is not listed here, or you have a suggestion, please {\hyperref[docfiles/introduction:authors-contacts]{\emph{contact the authors}}}.
 
 
 \subsection{Macports}
-\label{docfiles/install_dependencies:id8}
+\label{docfiles/install_dependencies:id9}
 You may run into problems with AIMBAT if your \href{http://www.macports.org/}{Macport} version is not compatible with your operating system version. For example, if you used Macports for OS X 10.8 to install AIMBAT, then upgraded your operating system or OS X 10.9, you may find that AIMBAT no longer works properly. You will need to upgrade Macports to fix this error.
 
 Do not uninstall MacPorts unless you know what you are doing, uninstalling MacPorts may get rid of other programs you installed using MacPorts. However, if you are sure you want to do so, see \href{https://guide.macports.org/chunked/installing.macports.uninstalling.html}{here} for instructions.
