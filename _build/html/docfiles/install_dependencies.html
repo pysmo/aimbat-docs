@@ -211,20 +211,37 @@ sudo python setup.py install
 </pre></div>
 </div>
 </div>
+<div class="section" id="fortran">
+<h2>2.7. Fortran<a class="headerlink" href="#fortran" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>GFortran must be installed for AIMBAT. Note that f90 or f77 are also acceptable.</dt>
+<dd><p class="first">To check if you already have Gfortran, in the terminal type:</p>
+<div class="last highlight-python"><div class="highlight"><pre><span class="n">gfortran</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>Which will print out the version number you have, if it is already install.</p>
+<p>If GFortran is not installed, the terminal will respond with:</p>
+<div class="highlight-python"><div class="highlight"><pre>-bash: gfortran: command not found
+</pre></div>
+</div>
+<p>GFortran is available <a class="reference external" href="https://gcc.gnu.org/wiki/GFortranBinaries">here</a>. Be sure to get the correct version for your operating system.</p>
+</div>
 <div class="section" id="possible-issues">
-<h2>2.7. Possible Issues<a class="headerlink" href="#possible-issues" title="Permalink to this headline">¶</a></h2>
+<h2>2.8. Possible Issues<a class="headerlink" href="#possible-issues" title="Permalink to this headline">¶</a></h2>
 <p>Here some common problems and possible resolutions. If your problem is not listed here, or you have a suggestion, please <a class="reference internal" href="introduction.html#authors-contacts"><em>contact the authors</em></a>.</p>
-<div class="section" id="id8">
-<h3>2.7.1. Macports<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id9">
+<h3>2.8.1. Macports<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <p>You may run into problems with AIMBAT if your <a class="reference external" href="http://www.macports.org/">Macport</a> version is not compatible with your operating system version. For example, if you used Macports for OS X 10.8 to install AIMBAT, then upgraded your operating system or OS X 10.9, you may find that AIMBAT no longer works properly. You will need to upgrade Macports to fix this error.</p>
 <p>Do not uninstall MacPorts unless you know what you are doing, uninstalling MacPorts may get rid of other programs you installed using MacPorts. However, if you are sure you want to do so, see <a class="reference external" href="https://guide.macports.org/chunked/installing.macports.uninstalling.html">here</a> for instructions.</p>
 </div>
 <div class="section" id="installing-python-with-pip">
-<h3>2.7.2. Installing Python with Pip<a class="headerlink" href="#installing-python-with-pip" title="Permalink to this headline">¶</a></h3>
+<h3>2.8.2. Installing Python with Pip<a class="headerlink" href="#installing-python-with-pip" title="Permalink to this headline">¶</a></h3>
 <p>Be careful with the operating system. For OS X 10.9 and above, Python 2.7 is not fully compatible and there may be problems installing python with Pip. Best to use Enthought Canopy or Python 3 with OS X 10.9.</p>
 </div>
 <div class="section" id="setting-the-python-path-to-the-scripts">
-<h3>2.7.3. Setting the Python Path to the scripts<a class="headerlink" href="#setting-the-python-path-to-the-scripts" title="Permalink to this headline">¶</a></h3>
+<h3>2.8.3. Setting the Python Path to the scripts<a class="headerlink" href="#setting-the-python-path-to-the-scripts" title="Permalink to this headline">¶</a></h3>
 <p>You are asked to add the path to the AIMBAT scripts in your file. To do that, you add them to the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> file. There are other files you could add it to that work as well, such as the <tt class="docutils literal"><span class="pre">.profile</span></tt> or <tt class="docutils literal"><span class="pre">.bash_profile</span></tt> files. You can see the files by opening the terminal and doing <tt class="docutils literal"><span class="pre">ls</span> <span class="pre">-a</span></tt> to see all the hidden files, and open then by doing <tt class="docutils literal"><span class="pre">vi</span> <span class="pre">.bashrc</span></tt> in vim, for instance.
 To ensure you can open a script, you need to add:</p>
 <div class="highlight-python"><div class="highlight"><pre>export PATH=$PATH:&lt;path-to-folder-with-scripts&gt;
@@ -234,7 +251,7 @@ export PYTHONPATH=$PYTHONPATH:&lt;path-to-folder-with-scripts&gt;
 <p>to the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> file. We recommend adding the paths to the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> file.</p>
 </div>
 <div class="section" id="terminal-commands-stop-working">
-<h3>2.7.4. Terminal Commands stop working<a class="headerlink" href="#terminal-commands-stop-working" title="Permalink to this headline">¶</a></h3>
+<h3>2.8.4. Terminal Commands stop working<a class="headerlink" href="#terminal-commands-stop-working" title="Permalink to this headline">¶</a></h3>
 <p>If ever the terminal commands such as ls stop working in the terminal, it could be that something went wrong with a path in the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> or <tt class="docutils literal"><span class="pre">.profile</span></tt> files. If that happens you may not be able to open them in vim as that command would have stopped working as well. Instead, in the terminal, you do:</p>
 <div class="highlight-python"><div class="highlight"><pre>PATH=/bin:${PATH}
 PATH=/usr/bin:${PATH}
@@ -243,12 +260,12 @@ PATH=/usr/bin:${PATH}
 <p>And that should allow the commands to start working again. Figure out what you did wrong and remove that command.</p>
 </div>
 <div class="section" id="installing-enthought-canopy">
-<h3>2.7.5. Installing Enthought Canopy<a class="headerlink" href="#installing-enthought-canopy" title="Permalink to this headline">¶</a></h3>
+<h3>2.8.5. Installing Enthought Canopy<a class="headerlink" href="#installing-enthought-canopy" title="Permalink to this headline">¶</a></h3>
 <p>Occasionally, Enthought Canopy may not open the default setup environment after you downloaded and tried to install it. If this happens, open the Canopy package, go to &#8220;Preferences&#8221;, and select Canopy as your default environment.</p>
 <img alt="../_images/enthought_as_default.png" src="../_images/enthought_as_default.png" />
 </div>
 <div class="section" id="uninstalling-enthought-canopy">
-<h3>2.7.6. Uninstalling Enthought Canopy<a class="headerlink" href="#uninstalling-enthought-canopy" title="Permalink to this headline">¶</a></h3>
+<h3>2.8.6. Uninstalling Enthought Canopy<a class="headerlink" href="#uninstalling-enthought-canopy" title="Permalink to this headline">¶</a></h3>
 <p>The official Enthought gives suggestions on uninstalling <a class="reference external" href="https://guide.macports.org/chunked/installing.macports.uninstalling.html">here</a>.</p>
 <img alt="../_images/canopy_preferences.png" src="../_images/canopy_preferences.png" />
 <p>STEPS:</p>
@@ -262,7 +279,7 @@ PATH=/usr/bin:${PATH}
 <img alt="../_images/applications_canopy.png" src="../_images/applications_canopy.png" />
 </div>
 <div class="section" id="path-to-python-files-not-found">
-<h3>2.7.7. Path to python files not found<a class="headerlink" href="#path-to-python-files-not-found" title="Permalink to this headline">¶</a></h3>
+<h3>2.8.7. Path to python files not found<a class="headerlink" href="#path-to-python-files-not-found" title="Permalink to this headline">¶</a></h3>
 <p>After adding the path to your directory with scripts in <tt class="docutils literal"><span class="pre">.bashrc</span></tt>, you still need to source the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> files in <tt class="docutils literal"><span class="pre">.profile</span></tt>, or the system may not find the directory. See here for more <a class="reference external" href="http://publib.boulder.ibm.com/infocenter/pseries/v5r3/index.jsp?topic=/com.ibm.aix.baseadmn/doc/baseadmndita/prof_file.htm">details</a> to see how the profile file is sourced. Note that this one will override the file in <cite>/etc/profile</cite>.</p>
 <img alt="../_images/residue.png" src="../_images/residue.png" />
 <img alt="../_images/profile_file.png" src="../_images/profile_file.png" />
@@ -298,14 +315,15 @@ PATH=/usr/bin:${PATH}
 </ul>
 </li>
 <li><a class="reference internal" href="#installing-basemap-without-macports">2.6. Installing Basemap without MacPorts</a></li>
-<li><a class="reference internal" href="#possible-issues">2.7. Possible Issues</a><ul>
-<li><a class="reference internal" href="#id8">2.7.1. Macports</a></li>
-<li><a class="reference internal" href="#installing-python-with-pip">2.7.2. Installing Python with Pip</a></li>
-<li><a class="reference internal" href="#setting-the-python-path-to-the-scripts">2.7.3. Setting the Python Path to the scripts</a></li>
-<li><a class="reference internal" href="#terminal-commands-stop-working">2.7.4. Terminal Commands stop working</a></li>
-<li><a class="reference internal" href="#installing-enthought-canopy">2.7.5. Installing Enthought Canopy</a></li>
-<li><a class="reference internal" href="#uninstalling-enthought-canopy">2.7.6. Uninstalling Enthought Canopy</a></li>
-<li><a class="reference internal" href="#path-to-python-files-not-found">2.7.7. Path to python files not found</a></li>
+<li><a class="reference internal" href="#fortran">2.7. Fortran</a></li>
+<li><a class="reference internal" href="#possible-issues">2.8. Possible Issues</a><ul>
+<li><a class="reference internal" href="#id9">2.8.1. Macports</a></li>
+<li><a class="reference internal" href="#installing-python-with-pip">2.8.2. Installing Python with Pip</a></li>
+<li><a class="reference internal" href="#setting-the-python-path-to-the-scripts">2.8.3. Setting the Python Path to the scripts</a></li>
+<li><a class="reference internal" href="#terminal-commands-stop-working">2.8.4. Terminal Commands stop working</a></li>
+<li><a class="reference internal" href="#installing-enthought-canopy">2.8.5. Installing Enthought Canopy</a></li>
+<li><a class="reference internal" href="#uninstalling-enthought-canopy">2.8.6. Uninstalling Enthought Canopy</a></li>
+<li><a class="reference internal" href="#path-to-python-files-not-found">2.8.7. Path to python files not found</a></li>
 </ul>
 </li>
 </ul>

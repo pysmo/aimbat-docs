@@ -269,6 +269,34 @@ and then::
 
 
 .. ############################################################################ ..
+.. #                                 GFORTRAN                                 # ..
+.. ############################################################################ ..
+
+Fortran
+-------
+
+GFortran must be installed for AIMBAT. Note that f90 or f77 are also acceptable.
+ To check if you already have Gfortran, in the terminal type::
+
+  gfortran --version
+
+Which will print out the version number you have, if it is already install. 
+
+If GFortran is not installed, the terminal will respond with::
+
+  -bash: gfortran: command not found
+
+GFortran is available `here <https://gcc.gnu.org/wiki/GFortranBinaries>`_. Be sure to get the correct version for your operating system. 
+
+
+.. ############################################################################ ..
+.. #                                 GFORTRAN                                 # ..
+.. ############################################################################ ..
+
+
+
+
+.. ############################################################################ ..
 .. #                              POSSIBLE ISSUES                             # ..
 .. ############################################################################ ..
 
