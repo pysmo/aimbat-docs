@@ -116,43 +116,11 @@ If MacPorts is not installed, you should see the terminal complain that ``port``
 
   -bash: port: command not found
 
-To get MacPorts, download the package installer `here <http://www.macports.org/install.php>`_ and follow the instructions to install it. 
+To get MacPorts, download the package installer `here <http://www.macports.org/install.php>`_ and follow the instructions to install it. Be sure to get the right version of MacPorts for your operating system. 
 
 
 .. ############################################################################ ..
 .. #                                 MACPORTS                                 # ..
-.. ############################################################################ ..
-
-
-
-
-
-
-.. ############################################################################ ..
-.. #                                 PYTHON                                   # ..
-.. ############################################################################ ..
-
-Python
-------
-
-AIMBAT requires python 2.7 and above to run. Note that Python is usually installed by default on Mac computers. 
-
-If Python is already installed, open the terminal and type::
-
-  python --version
-
-And the terminal will output the version number installed, for example::
-  
-  Python 2.7.8
-
-If Python is not installed, the terminal will output::
-
-  -bash: python: command not found
-
-To get Python, download the the 2.7 version's package installer `here <https://www.python.org/downloads/>`_, from the official Python website. 
-
-.. ############################################################################ ..
-.. #                                 PYTHON                                   # ..
 .. ############################################################################ ..
 
 
@@ -165,24 +133,71 @@ To get Python, download the the 2.7 version's package installer `here <https://w
 .. #                            PYTHON DEPENDENCIES                           # ..
 .. ############################################################################ ..
 
-Python Dependencies
--------------------
+Python and its Dependencies
+---------------------------
+
+AIMBAT requires python 2.7 and above to run. Note that Python is usually installed by default on Mac computers. 
 
 AIMBAT requires the following packages to run:
 #. `Numpy <http://www.numpy.org/>`_: Used for manipulating numbers and datasets
 #. `Scipy <http://www.scipy.org/>`_: Used for data processing
 #. `Matplotlib <http://matplotlib.org/>`_: Used for the majority of the plots in AIMBAT and the GUI
-#. Basemap
+#. `Basemap <http://matplotlib.org/basemap/>`_: Used for plotting world maps
 
+Checking if Python is installed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Open the terminal and type::
 
-Now, type::
+  python --version
+
+If Python is installed, the terminal will output the version number installed, for example::
+  
+  Python 2.7.8
+
+If Python is not installed, the terminal will output::
+
+  -bash: python: command not found
+
+If Python is not installed
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Inside the terminal, once python is installed, type these commands in using sudo mode. Note you will need to enter your admin password.::
+
+  sudo port install py27
+  sudo port install py27-numpy
+  sudo port install py27-scipy
+  sudo port install py27-matplotlib
+  sudo port install py27-matplotlib-basemap
+  sudo port install py27-ipython
+  sudo port install python_select
+
+Installing the last two packages is optional. ``ipython`` is an enhanced interactive python shell. ``python_select`` is used to select default Python version by the following command::
+
+  port select --set python python27
+
+If Python is already installed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If Python is already installed, first check if you have the four required dependencies. Open up the Python console by typing::
+
+  python
+
+in the terminal. You should see something like this as output::
+
+  Python 2.7.8 (default, Oct  3 2014, 02:34:26) 
+  [GCC 4.2.1 Compatible Apple LLVM 5.1 (clang-503.0.40)] on darwin
+  Type "help", "copyright", "credits" or "license" for more information.
+  >>> 
+
+Now, check if the packages have been installed properly by typing the following in::
 
   import numpy
   import scipy
   import matplotlib
+  from mpl_toolkits.basemap import Basemap
 
-If any of the packages are missing (e.g. scipy not installed), the python console will output an error::
+If any of the packages are missing (e.g. scipy not installed), the python console will output an error, for instance::
 
   Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -190,29 +205,20 @@ If any of the packages are missing (e.g. scipy not installed), the python consol
 
 Otherwise, the python console will simply show that it is ready for the next command. 
 
-If you current python version does not have the required dependencies...
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This section describes a possible way to install Python without using Enthough Canopy. It is `not` recommended and may cause problems on some systems, but the authors describe it just in case. 
-
-#. Use `Macports <http://guide.macports.org/>`_ to install the necessary python libraries for AIMBAT. If you just upgraded your operating system, you need to `upgrade Macports and re-install the libraries <https://trac. macports.org/wiki/Migration>`_ as well. 
-
-#. Inside the terminal, once python is installed, type these commands in using sudo mode. Note you will need to enter your admin password.::
+If any of the packages are missing, you can choose to install it by whatever means you are most comfortable with. We provide one possible way to do so using MacPorts below. In the terminal, type::
 
   sudo port install py27
+
+to get the python version installed in `opt/local/bin` where MacPort installs everything to. Select to use this version of Python by typing::
+
+  sudo port install python_select
+
+Now, install the missing packages by doing::
+
   sudo port install py27-numpy
   sudo port install py27-scipy
   sudo port install py27-matplotlib
- 	sudo port install py27-ipython
-  sudo port install python_select
-
-#. Installing the last two packages is optional. ``ipython`` is an enhanced interactive python shell. ``python_select`` is used to select default Python version by the following command::
-
-	port select --set python python27
-
-You need this version, not other versions on your computer, since this is the one that has the libraries AIMBAT needs.
-
-#. The package manager brew caused many problems when tried. If you figured it out properly, please :ref:`contact the authors <authors-contacts>` with instructions~ In general, the authors do not recommend trying to install the packages separately when there are Python versions that will come with all the packages pre-installed already. `Scipy <http://www.scipy.org/install.html>`_ is especially tricky as it relies on Fortran and C as well. The authors of scipy recommend using Enthought Canopy or Anacoda to install it.
+  sudo port install py27-matplotlib-basemap
 
 .. ############################################################################ ..
 .. #                       INSTALLING BASIC PYTHON PACKAGES                   # ..
@@ -221,22 +227,20 @@ You need this version, not other versions on your computer, since this is the on
 
 
 
-Installing Obspy
-----------------
-
-Note: Not necessary for `aimbat-stable`.
-
-See instructions :ref:`here <installing-obspy>`.
 
 
 .. ############################################################################ ..
 .. #                           INSTALLING BASEMAP                             # ..
 .. ############################################################################ ..
 
-Installing Basemap (Python dependency)
---------------------------------------
+Installing Basemap without MacPorts
+-----------------------------------
 
-Note: Not necessary for `aimbat-stable`.
+If you have already installed Basemap, which means that::
+
+  from mpl_toolkits.basemap import Basemap
+
+comes out without an error in the Python console, you can skip this section. This is for users who do not want to use the MacPorts version of Python which has been installed to `/opt/local/bin`. We anticipate that users who installed the official version of Python from the `Python website <https://www.python.org/>`_ may possible find this section useful. 
 
 Disclaimer: Lifted from content written by `this guy <http://blog.bluedackers.com/2012/11/13/installing-basemap-on-mac-os-x-mountain-lion/>`_ with some tweaks. 
 

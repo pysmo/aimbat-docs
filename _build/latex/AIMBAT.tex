@@ -14,7 +14,7 @@
 
 
 \title{AIMBAT Documentation}
-\date{September 20, 2014}
+\date{October 06, 2014}
 \release{0.2.1}
 \author{Lay Kuan Loh, Xiaoting Lou, \& Suzan van der Lee}
 \newcommand{\sphinxlogo}{}
@@ -114,6 +114,8 @@
 \def\PYGZrb{]}
 \makeatother
 
+\renewcommand\PYGZsq{\textquotesingle}
+
 \begin{document}
 
 \maketitle
@@ -171,7 +173,18 @@ Email: suzan at earth.northwestern.edu
 
 \chapter{Installing Dependencies}
 \label{docfiles/install_dependencies:installing-dependencies}\label{docfiles/install_dependencies::doc}
-Usually, Macs already have python installed by default. To check if you have python on your mac, open up terminal, and do python in the terminal. If python is installed you should see a python console show up, displaying the version number of python. The version number should be at least 2.7 or higher. If python is not installed, you should see an error message show up. However, you may or may not have some necessary packages installed.
+AIMBAT is build on top of \href{https://www.python.org/}{standard Python}, and uses several extra Python libraries as well. This page guides the user through checking if the required libraries are already install on the computer they want to install AIMBAT in, and how to get them if not.
+
+To install AIMBAT, you will need sudo/root privileges for the computer you are installing it on.
+
+
+\section{Getting your operating system}
+\label{docfiles/install_dependencies:getting-your-operating-system}
+We assume that most users of AIMBAT will be using Macs. If our assumptions are wrong, please {\hyperref[docfiles/introduction:authors-contacts]{\emph{contact the authors}}}, and if there is sufficient interest we will test and write documentation for installations on other operating systems as well.
+
+On a mac, to find the version of your operating system, first click on the apple icon on the top bar of your desktop, go to \code{System Preferences}, and click on \code{Startup Disk}. The operating system version should then be displayed.
+
+\includegraphics{system_preferences.png}
 
 
 \section{Which Version of AIMBAT?}
@@ -185,62 +198,134 @@ The \href{https://github.com/pysmo/aimbat}{enhanced version} also allows for plo
 \label{docfiles/install_dependencies:github}
 \emph{Optional but recommended}.
 
-The \href{https://github.com/pysmo}{latest version of AIMBAT} will be on \href{https://github.com/}{Github}, so it would be good to get \href{https://github.com/}{Git} on your computer. This is not strictly necessary, as you could also download it as a zipfile from the \href{http://www.earth.northwestern.edu/~xlou/aimbat.html}{AIMBAT website}.
+The \href{https://github.com/pysmo}{latest version of AIMBAT} will be on \href{https://github.com/}{Github}, so it would be good to get \href{https://github.com/}{GitHub} on your computer. This is not strictly necessary, as you could also download it as a zipfile from the \href{http://www.earth.northwestern.edu/~xlou/aimbat.html}{AIMBAT website}.
 
-Some users may already have Git installed, but if not, you can download the package installer \href{http://git-scm.com/download/mac}{here}. This would allow only command line usage of Git, so if you want to use a GUI, we recommend \href{https://mac.github.com/}{Git for Mac}.
-
-
-\section{Macports}
-\label{docfiles/install_dependencies:macports}
-\href{http://www.macports.org/}{Macports} will be needed to install some python packages. Download the package installer \href{http://www.macports.org/install.php}{here}.
-
-
-\section{Homebrew}
-\label{docfiles/install_dependencies:homebrew}
-\href{http://brew.sh/}{Homebrew} will be needed to install some python packages. Get it by typing in your terminal:
+To check if you already have \href{https://github.com/}{Github} installed, open the terminal and type:
 
 \begin{Verbatim}[commandchars=\\\{\}]
-ruby \PYGZhy{}e \PYGZdq{}\PYGZdl{}(curl \PYGZhy{}fsSL https://raw.github.com/Homebrew/homebrew/go/install)\PYGZdq{}
+\PYG{n}{git} \PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{n}{version}
 \end{Verbatim}
 
+If GitHub is installed, the terminal should output a line describing the version number of GitHub installed on the computer, such as:
 
-\section{Getting your operating system}
-\label{docfiles/install_dependencies:getting-your-operating-system}
-We assume that most users of AIMBAT will be using macs. If our assumptions are wrong, please {\hyperref[docfiles/introduction:authors-contacts]{\emph{contact the authors}}}, and if there is sufficient interest we will construct documentation for installations on other operating systems as well.
+\begin{Verbatim}[commandchars=\\\{\}]
+git version 1.8.5.2 (Apple Git\PYGZhy{}48)
+\end{Verbatim}
 
-On a mac, to find the version of your operating system, first click on the apple icon on the top bar of your desktop, go to \code{System Preferences}, and click on \code{Startup Disk}. The operating system version should then be displayed.
+If GitHub is not installed, the terminal will respond by telling you that it is not possible to issue this command:
 
-\includegraphics{system_preferences.png}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGZhy{}bash: git: command not found
+\end{Verbatim}
+
+To install GitHub, download the package installer \href{http://git-scm.com/download/mac}{here}. This would allow only command line usage of Git, so if you want to use a GUI, we recommend \href{https://mac.github.com/}{Git for Mac}.
 
 
-\section{Python Dependencies}
-\label{docfiles/install_dependencies:python-dependencies}
-Required for AIMBAT
+\section{MacPorts}
+\label{docfiles/install_dependencies:macports}
+\href{http://www.macports.org/}{MacPorts} is a package management system that will be needed to install some python libraries.
+
+To check if MacPorts is installed already, in the terminal, type:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+port version
+\end{Verbatim}
+
+If MacPorts is installed, you should see the terminal output the version number, for instance:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+Version: 2.3.0
+\end{Verbatim}
+
+If MacPorts is not installed, you should see the terminal complain that \code{port} is not a valid command:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGZhy{}bash: port: command not found
+\end{Verbatim}
+
+To get MacPorts, download the package installer \href{http://www.macports.org/install.php}{here} and follow the instructions to install it. Be sure to get the right version of MacPorts for your operating system.
+
+
+\section{Python and its Dependencies}
+\label{docfiles/install_dependencies:python-and-its-dependencies}
+AIMBAT requires python 2.7 and above to run. Note that Python is usually installed by default on Mac computers.
+
+AIMBAT requires the following packages to run:
 \#. \href{http://www.numpy.org/}{Numpy}: Used for manipulating numbers and datasets
 \#. \href{http://www.scipy.org/}{Scipy}: Used for data processing
 \#. \href{http://matplotlib.org/}{Matplotlib}: Used for the majority of the plots in AIMBAT and the GUI
+\#. \href{http://matplotlib.org/basemap/}{Basemap}: Used for plotting world maps
 
-To check if you have python already, open the terminal and type \code{python}. If a console pops up, it should display the version of python you have. If not, the terminal will output:
+
+\subsection{Checking if Python is installed}
+\label{docfiles/install_dependencies:checking-if-python-is-installed}
+Open the terminal and type:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{python} \PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{n}{version}
+\end{Verbatim}
+
+If Python is installed, the terminal will output the version number installed, for example:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+Python 2.7.8
+\end{Verbatim}
+
+If Python is not installed, the terminal will output:
 
 \begin{Verbatim}[commandchars=\\\{\}]
 \PYGZhy{}bash: python: command not found
 \end{Verbatim}
 
-If python is installed, you next need to check if the required packages are there. Open the python console by typing in the terminal:
+
+\subsection{If Python is not installed}
+\label{docfiles/install_dependencies:if-python-is-not-installed}
+Inside the terminal, once python is installed, type these commands in using sudo mode. Note you will need to enter your admin password.:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+sudo port install py27
+sudo port install py27\PYGZhy{}numpy
+sudo port install py27\PYGZhy{}scipy
+sudo port install py27\PYGZhy{}matplotlib
+sudo port install py27\PYGZhy{}matplotlib\PYGZhy{}basemap
+sudo port install py27\PYGZhy{}ipython
+sudo port install python\PYGZus{}select
+\end{Verbatim}
+
+Installing the last two packages is optional. \code{ipython} is an enhanced interactive python shell. \code{python\_select} is used to select default Python version by the following command:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+port select \PYGZhy{}\PYGZhy{}set python python27
+\end{Verbatim}
+
+
+\subsection{If Python is already installed}
+\label{docfiles/install_dependencies:if-python-is-already-installed}
+If Python is already installed, first check if you have the four required dependencies. Open up the Python console by typing:
 
 \begin{Verbatim}[commandchars=\\\{\}]
 \PYG{n}{python}
 \end{Verbatim}
 
-Now, type:
+in the terminal. You should see something like this as output:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+Python 2.7.8 (default, Oct  3 2014, 02:34:26)
+[GCC 4.2.1 Compatible Apple LLVM 5.1 (clang\PYGZhy{}503.0.40)] on darwin
+Type \PYGZdq{}help\PYGZdq{}, \PYGZdq{}copyright\PYGZdq{}, \PYGZdq{}credits\PYGZdq{} or \PYGZdq{}license\PYGZdq{} for more information.
+\PYGZgt{}\PYGZgt{}\PYGZgt{}
+\end{Verbatim}
+
+Now, check if the packages have been installed properly by typing the following in:
 
 \begin{Verbatim}[commandchars=\\\{\}]
 \PYG{k+kn}{import} \PYG{n+nn}{numpy}
 \PYG{k+kn}{import} \PYG{n+nn}{scipy}
 \PYG{k+kn}{import} \PYG{n+nn}{matplotlib}
+\PYG{k+kn}{from} \PYG{n+nn}{mpl\PYGZus{}toolkits.basemap} \PYG{k+kn}{import} \PYG{n}{Basemap}
 \end{Verbatim}
 
-If any of the packages are missing (e.g. scipy not installed), the python console will output an error:
+If any of the packages are missing (e.g. scipy not installed), the python console will output an error, for instance:
 
 \begin{Verbatim}[commandchars=\\\{\}]
 Traceback (most recent call last):
@@ -250,80 +335,37 @@ ImportError: No module named scipy
 
 Otherwise, the python console will simply show that it is ready for the next command.
 
-
-\subsection{Optional but recommended}
-\label{docfiles/install_dependencies:optional-but-recommended}
-\href{http://ipython.org/}{iPython}: Interactive console for python
-
-
-\section{Installing Basic Python Packages}
-\label{docfiles/install_dependencies:installing-basic-python-packages}
-
-\subsection{Regular Python Installation}
-\label{docfiles/install_dependencies:regular-python-installation}
-If you do not have python on your computer (i.e. no python console comes up when you type \code{python} in the terminal), you can install the regular python from the \href{https://www.python.org/}{official python website}, which comes bundled with matplotlib, scipy, and numpy.
-
-
-\subsection{Enthought Python}
-\label{docfiles/install_dependencies:enthought-python}
-\href{https://www.enthought.com/store/}{Enthought Canopy} is easy to install. Go to \href{https://www.enthought.com/store/}{the website} and download the free version of Express Enthought Canopy, which will give you the dependencies Numpy, Scipt, and Matplotlib.
-
-
-\subsection{If you current python version does not have the required dependencies...}
-\label{docfiles/install_dependencies:if-you-current-python-version-does-not-have-the-required-dependencies}
-This section describes a possible way to install Python without using Enthough Canopy. It is \emph{not} recommended and may cause problems on some systems, but the authors describe it just in case.
-\begin{enumerate}
-\item {} 
-Use \href{http://guide.macports.org/}{Macports} to install the necessary python libraries for AIMBAT. If you just upgraded your operating system, you need to \href{https://trac.macports.org/wiki/Migration}{upgrade Macports and re-install the libraries} as well.
-
-\item {} 
-Inside the terminal, once python is installed, type these commands in using sudo mode. Note you will need to enter your admin password.:
+If any of the packages are missing, you can choose to install it by whatever means you are most comfortable with. We provide one possible way to do so using MacPorts below. In the terminal, type:
 
 \begin{Verbatim}[commandchars=\\\{\}]
-sudo port install python27
+sudo port install py27
 \end{Verbatim}
 
-\end{enumerate}
-\begin{quote}
-
-sudo port install py27-numpy
-sudo port install py27-scipy
-sudo port install py27-matplotlib
-\begin{quote}
-
-sudo port install py27-ipython
-\end{quote}
-
-sudo port install python\_select
-\end{quote}
-\begin{enumerate}
-\item {} 
-Installing the last two packages is optional. \code{ipython} is an enhanced interactive python shell. \code{python\_select} is used to select default Python version by the following command:
+to get the python version installed in \emph{opt/local/bin} where MacPort installs everything to. Select to use this version of Python by typing:
 
 \begin{Verbatim}[commandchars=\\\{\}]
-port select \PYGZhy{}\PYGZhy{}set python python27
+sudo port install python\PYGZus{}select
 \end{Verbatim}
 
-\end{enumerate}
+Now, install the missing packages by doing:
 
-You need this version, not other versions on your computer, since this is the one that has the libraries AIMBAT needs.
-\begin{enumerate}
-\item {} 
-The package manager brew caused many problems when tried. If you figured it out properly, please {\hyperref[docfiles/introduction:authors-contacts]{\emph{contact the authors}}} with instructions\textasciitilde{} In general, the authors do not recommend trying to install the packages separately when there are Python versions that will come with all the packages pre-installed already. \href{http://www.scipy.org/install.html}{Scipy} is especially tricky as it relies on Fortran and C as well. The authors of scipy recommend using Enthought Canopy or Anacoda to install it.
-
-\end{enumerate}
-
-
-\section{Installing Obspy}
-\label{docfiles/install_dependencies:installing-obspy}
-Note: Not necessary for \emph{aimbat-stable}.
-
-See instructions \emph{here}.
+\begin{Verbatim}[commandchars=\\\{\}]
+sudo port install py27\PYGZhy{}numpy
+sudo port install py27\PYGZhy{}scipy
+sudo port install py27\PYGZhy{}matplotlib
+sudo port install py27\PYGZhy{}matplotlib\PYGZhy{}basemap
+\end{Verbatim}
 
 
-\section{Installing Basemap (Python dependency)}
-\label{docfiles/install_dependencies:installing-basemap-python-dependency}
-Note: Not necessary for \emph{aimbat-stable}.
+\section{Installing Basemap without MacPorts}
+\label{docfiles/install_dependencies:installing-basemap-without-macports}
+If you have already installed Basemap, which means that:
+
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{mpl\PYGZus{}toolkits.basemap} \PYG{k+kn}{import} \PYG{n}{Basemap}
+\end{Verbatim}
+
+comes out without an error in the Python console, you can skip this section. This is for users who do not want to use the MacPorts version of Python which has been installed to \emph{/opt/local/bin}. We anticipate that users who installed the official version of Python from the \href{https://www.python.org/}{Python website} may possible find this section useful.
 
 Disclaimer: Lifted from content written by \href{http://blog.bluedackers.com/2012/11/13/installing-basemap-on-mac-os-x-mountain-lion/}{this guy} with some tweaks.
 
@@ -610,7 +652,7 @@ Now, reinstall the new version of AIMBAT.
 
 \chapter{Getting Data}
 \label{docfiles/gettingData:getting-data}\label{docfiles/gettingData::doc}
-Note: Not necessary if you already have your own set ways of obtaining data. This section is added for completion.
+Note: Not necessary if you already have your own set ways of obtaining data. This section is added for completeness.
 
 There are several ways to obtain seismic data from \href{http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/}{IRIS} to input to AIMBAT. The authors used two ways to do it, and a further list of libraries for obtaining seismic data is provided in the sidebars \href{http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/}{here}.
 
@@ -620,7 +662,7 @@ There are several ways to obtain seismic data from \href{http://www.iris.edu/dms
 
 \subsection{Installing Obspy}
 \label{docfiles/gettingData:installing-obspy}
-We recommend using Macports to install Obspy as detailed in the \emph{Installation} section \href{https://github.com/obspy/obspy/wiki}{here}. If you have installed Enthough Canopy:
+We recommend using Macports to install Obspy as detailed in the \emph{Installation} section \href{https://github.com/obspy/obspy/wiki}{here}. If you have installed Enthought Canopy:
 
 \begin{Verbatim}[commandchars=\\\{\}]
 sudo port install py27\PYGZhy{}obspy
