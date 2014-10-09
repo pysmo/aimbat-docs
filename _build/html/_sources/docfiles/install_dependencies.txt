@@ -139,6 +139,7 @@ Python and its Dependencies
 AIMBAT requires python 2.7 and above to run. Note that Python is usually installed by default on Mac computers. 
 
 AIMBAT requires the following packages to run:
+
 #. `Numpy <http://www.numpy.org/>`_: Used for manipulating numbers and datasets
 #. `Scipy <http://www.scipy.org/>`_: Used for data processing
 #. `Matplotlib <http://matplotlib.org/>`_: Used for the majority of the plots in AIMBAT and the GUI
@@ -209,7 +210,7 @@ If any of the packages are missing, you can choose to install it by whatever mea
 
   sudo port install py27
 
-to get the python version installed in `opt/local/bin` where MacPort installs everything to. Select to use this version of Python by typing::
+to get the python version installed in ``opt/local/bin`` where MacPort installs everything to. Select to use this version of Python by typing::
 
   sudo port install python_select
 
@@ -240,7 +241,7 @@ If you have already installed Basemap, which means that::
 
   from mpl_toolkits.basemap import Basemap
 
-comes out without an error in the Python console, you can skip this section. This is for users who do not want to use the MacPorts version of Python which has been installed to `/opt/local/bin`. We anticipate that users who installed the official version of Python from the `Python website <https://www.python.org/>`_ may possible find this section useful. 
+comes out without an error in the Python console, you can skip this section. This is for users who do not want to use the MacPorts version of Python which has been installed to ``/opt/local/bin``. We anticipate that users who installed the official version of Python from the `Python website <https://www.python.org/>`_ may possible find this section useful. 
 
 Disclaimer: Lifted from content written by `this guy <http://blog.bluedackers.com/2012/11/13/installing-basemap-on-mac-os-x-mountain-lion/>`_ with some tweaks. 
 
@@ -345,34 +346,6 @@ If ever the terminal commands such as ls stop working in the terminal, it could 
   PATH=/usr/bin:${PATH}
 
 And that should allow the commands to start working again. Figure out what you did wrong and remove that command.
-
-.. -------------------------------------------------------------------------------- ..
-
-Installing Enthought Canopy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Occasionally, Enthought Canopy may not open the default setup environment after you downloaded and tried to install it. If this happens, open the Canopy package, go to "Preferences", and select Canopy as your default environment.
-
-.. image:: installing-images/enthought_as_default.png
-
-.. -------------------------------------------------------------------------------- ..
-
-Uninstalling Enthought Canopy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The official Enthought gives suggestions on uninstalling `here <https://guide.macports.org/chunked/installing.macports.uninstalling.html>`_.
-
-.. image:: installing-images/canopy_preferences.png
-
-STEPS:
-
-#. From the Canopy preferences menu, unset Canopy as your default Python.
-#. For each Canopy user, delete the following directory which contains that user’s "System" and "User" virtual environment subdirections.
-#. Delete Canopy from the Applications folder.
-#. Clean up the hidden files. Delete anything referencing Canopy or Enthought in the hidden files, as evidence by referencing ``ls -a`` in your home directory. Check the ``.bashrc`` and ``.profile`` directories first. If Enthought is not completely gone, this happens if you call Python.
-#. (Optional). Keep doing ``which python`` and cleaning the python files that show up, until ``which python`` gives you nothing when you type it in the terminal.
-
-.. image:: installing-images/applications_canopy.png
 
 .. -------------------------------------------------------------------------------- ..
 

@@ -104,11 +104,13 @@
 <div class="section" id="python-and-its-dependencies">
 <h2>2.5. Python and its Dependencies<a class="headerlink" href="#python-and-its-dependencies" title="Permalink to this headline">¶</a></h2>
 <p>AIMBAT requires python 2.7 and above to run. Note that Python is usually installed by default on Mac computers.</p>
-<p>AIMBAT requires the following packages to run:
-#. <a class="reference external" href="http://www.numpy.org/">Numpy</a>: Used for manipulating numbers and datasets
-#. <a class="reference external" href="http://www.scipy.org/">Scipy</a>: Used for data processing
-#. <a class="reference external" href="http://matplotlib.org/">Matplotlib</a>: Used for the majority of the plots in AIMBAT and the GUI
-#. <a class="reference external" href="http://matplotlib.org/basemap/">Basemap</a>: Used for plotting world maps</p>
+<p>AIMBAT requires the following packages to run:</p>
+<ol class="arabic simple">
+<li><a class="reference external" href="http://www.numpy.org/">Numpy</a>: Used for manipulating numbers and datasets</li>
+<li><a class="reference external" href="http://www.scipy.org/">Scipy</a>: Used for data processing</li>
+<li><a class="reference external" href="http://matplotlib.org/">Matplotlib</a>: Used for the majority of the plots in AIMBAT and the GUI</li>
+<li><a class="reference external" href="http://matplotlib.org/basemap/">Basemap</a>: Used for plotting world maps</li>
+</ol>
 <div class="section" id="checking-if-python-is-installed">
 <h3>2.5.1. Checking if Python is installed<a class="headerlink" href="#checking-if-python-is-installed" title="Permalink to this headline">¶</a></h3>
 <p>Open the terminal and type:</p>
@@ -172,7 +174,7 @@ ImportError: No module named scipy
 <div class="highlight-python"><div class="highlight"><pre>sudo port install py27
 </pre></div>
 </div>
-<p>to get the python version installed in <cite>opt/local/bin</cite> where MacPort installs everything to. Select to use this version of Python by typing:</p>
+<p>to get the python version installed in <tt class="docutils literal"><span class="pre">opt/local/bin</span></tt> where MacPort installs everything to. Select to use this version of Python by typing:</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo port install python_select
 </pre></div>
 </div>
@@ -191,7 +193,7 @@ sudo port install py27-matplotlib-basemap
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">mpl_toolkits.basemap</span> <span class="kn">import</span> <span class="n">Basemap</span>
 </pre></div>
 </div>
-<p>comes out without an error in the Python console, you can skip this section. This is for users who do not want to use the MacPorts version of Python which has been installed to <cite>/opt/local/bin</cite>. We anticipate that users who installed the official version of Python from the <a class="reference external" href="https://www.python.org/">Python website</a> may possible find this section useful.</p>
+<p>comes out without an error in the Python console, you can skip this section. This is for users who do not want to use the MacPorts version of Python which has been installed to <tt class="docutils literal"><span class="pre">/opt/local/bin</span></tt>. We anticipate that users who installed the official version of Python from the <a class="reference external" href="https://www.python.org/">Python website</a> may possible find this section useful.</p>
 <p>Disclaimer: Lifted from content written by <a class="reference external" href="http://blog.bluedackers.com/2012/11/13/installing-basemap-on-mac-os-x-mountain-lion/">this guy</a> with some tweaks.</p>
 <p>Enthough Python should get you most of the dependencies needed. You do need to get <a class="reference external" href="http://trac.osgeo.org/geos/">Geos</a> though. The best way to get it is <a class="reference external" href="http://matthewcarriere.com/2013/08/05/how-to-install-and-use-homebrew/">install Homebrew</a>, and then install <tt class="docutils literal"><span class="pre">gdal</span></tt>, a package that has <tt class="docutils literal"><span class="pre">Geos</span></tt> as a dependency. To get <tt class="docutils literal"><span class="pre">gdal</span></tt>, do:</p>
 <div class="highlight-python"><div class="highlight"><pre>brew install gdal
@@ -259,27 +261,8 @@ PATH=/usr/bin:${PATH}
 </div>
 <p>And that should allow the commands to start working again. Figure out what you did wrong and remove that command.</p>
 </div>
-<div class="section" id="installing-enthought-canopy">
-<h3>2.8.5. Installing Enthought Canopy<a class="headerlink" href="#installing-enthought-canopy" title="Permalink to this headline">¶</a></h3>
-<p>Occasionally, Enthought Canopy may not open the default setup environment after you downloaded and tried to install it. If this happens, open the Canopy package, go to &#8220;Preferences&#8221;, and select Canopy as your default environment.</p>
-<img alt="../_images/enthought_as_default.png" src="../_images/enthought_as_default.png" />
-</div>
-<div class="section" id="uninstalling-enthought-canopy">
-<h3>2.8.6. Uninstalling Enthought Canopy<a class="headerlink" href="#uninstalling-enthought-canopy" title="Permalink to this headline">¶</a></h3>
-<p>The official Enthought gives suggestions on uninstalling <a class="reference external" href="https://guide.macports.org/chunked/installing.macports.uninstalling.html">here</a>.</p>
-<img alt="../_images/canopy_preferences.png" src="../_images/canopy_preferences.png" />
-<p>STEPS:</p>
-<ol class="arabic simple">
-<li>From the Canopy preferences menu, unset Canopy as your default Python.</li>
-<li>For each Canopy user, delete the following directory which contains that user’s &#8220;System&#8221; and &#8220;User&#8221; virtual environment subdirections.</li>
-<li>Delete Canopy from the Applications folder.</li>
-<li>Clean up the hidden files. Delete anything referencing Canopy or Enthought in the hidden files, as evidence by referencing <tt class="docutils literal"><span class="pre">ls</span> <span class="pre">-a</span></tt> in your home directory. Check the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> and <tt class="docutils literal"><span class="pre">.profile</span></tt> directories first. If Enthought is not completely gone, this happens if you call Python.</li>
-<li>(Optional). Keep doing <tt class="docutils literal"><span class="pre">which</span> <span class="pre">python</span></tt> and cleaning the python files that show up, until <tt class="docutils literal"><span class="pre">which</span> <span class="pre">python</span></tt> gives you nothing when you type it in the terminal.</li>
-</ol>
-<img alt="../_images/applications_canopy.png" src="../_images/applications_canopy.png" />
-</div>
 <div class="section" id="path-to-python-files-not-found">
-<h3>2.8.7. Path to python files not found<a class="headerlink" href="#path-to-python-files-not-found" title="Permalink to this headline">¶</a></h3>
+<h3>2.8.5. Path to python files not found<a class="headerlink" href="#path-to-python-files-not-found" title="Permalink to this headline">¶</a></h3>
 <p>After adding the path to your directory with scripts in <tt class="docutils literal"><span class="pre">.bashrc</span></tt>, you still need to source the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> files in <tt class="docutils literal"><span class="pre">.profile</span></tt>, or the system may not find the directory. See here for more <a class="reference external" href="http://publib.boulder.ibm.com/infocenter/pseries/v5r3/index.jsp?topic=/com.ibm.aix.baseadmn/doc/baseadmndita/prof_file.htm">details</a> to see how the profile file is sourced. Note that this one will override the file in <cite>/etc/profile</cite>.</p>
 <img alt="../_images/residue.png" src="../_images/residue.png" />
 <img alt="../_images/profile_file.png" src="../_images/profile_file.png" />
@@ -321,9 +304,7 @@ PATH=/usr/bin:${PATH}
 <li><a class="reference internal" href="#installing-python-with-pip">2.8.2. Installing Python with Pip</a></li>
 <li><a class="reference internal" href="#setting-the-python-path-to-the-scripts">2.8.3. Setting the Python Path to the scripts</a></li>
 <li><a class="reference internal" href="#terminal-commands-stop-working">2.8.4. Terminal Commands stop working</a></li>
-<li><a class="reference internal" href="#installing-enthought-canopy">2.8.5. Installing Enthought Canopy</a></li>
-<li><a class="reference internal" href="#uninstalling-enthought-canopy">2.8.6. Uninstalling Enthought Canopy</a></li>
-<li><a class="reference internal" href="#path-to-python-files-not-found">2.8.7. Path to python files not found</a></li>
+<li><a class="reference internal" href="#path-to-python-files-not-found">2.8.5. Path to python files not found</a></li>
 </ul>
 </li>
 </ul>
