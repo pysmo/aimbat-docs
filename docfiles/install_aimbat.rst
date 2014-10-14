@@ -23,39 +23,6 @@ You may want to download `example code <https://github.com/pysmo/data-example>`_
 
 
 
-.. ############################################################################ ..
-.. #                        WHERE TO INSTALL THE PACKAGES                     # ..
-.. ############################################################################ ..
-
-Where to install the packages
------------------------------
-
-There are several options to install the packages. If you just want to use AIMBAT, it is best to store it somewhere where you would not touch the packages so easily, such as the Python ``site-packages`` directory. If you would like to make some changes to the Python code, it is best to store it somewhere pretty accessible, such as your ``home`` directory on your computer, or in ``Documents``.
-
-Installing into the Python Site-Packages Directory
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To find out where the Python Site-Packages Directory is, in the python console, do::
-
-	import site;
-	site.getsitepackages()
-
-Whatever is output is obtained, lets call it ``<pkg-install-dir>``. Make a directory called ``pysmo``, and place the sac and aimbat directories inside ``<pkg-install-dir>/pysmo``.
-
-Installing into the home directory
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Open your terminal. Type ``open .`` and that will open your home directory. Transfer the ``aimbat`` and ``sac`` repositories inside there. 
-
-.. ############################################################################ ..
-.. #                        WHERE TO INSTALL THE PACKAGES                     # ..
-.. ############################################################################ ..
-
-
-
-
-
-
 
 .. ############################################################################ ..
 .. #                             BUILDING PYSMO                               # ..

@@ -39,26 +39,6 @@ On a mac, to find the version of your operating system, first click on the apple
 
 
 
-.. ############################################################################ ..
-.. #                            WHICH VERSION                                 # ..
-.. ############################################################################ ..
-
-Which Version of AIMBAT?
-------------------------
-
-As AIMBAT uses several python dependencies, some of which are not critical to the primary function of picking travel-wave arrival times, `aimbat-stable <https://github.com/pysmo/aimbat-stable>`_ is recommended for users who do want to install `obspy <https://github.com/obspy/obspy/wiki>`_ and `basemap <http://matplotlib.org/basemap/>`_, as they can sometimes be tricky to install. 
-
-The `enhanced version <https://github.com/pysmo/aimbat>`_ also allows for plotting the station locations on a map, converting pickle files into sac files, and running unit tests, which are relevant only to developers.
-
-.. ############################################################################ ..
-.. #                            WHICH VERSION                                 # ..
-.. ############################################################################ ..
-
-
-
-
-
-
 
 
 .. ############################################################################ ..

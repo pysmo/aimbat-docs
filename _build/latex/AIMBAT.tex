@@ -14,7 +14,7 @@
 
 
 \title{AIMBAT Documentation}
-\date{October 09, 2014}
+\date{October 14, 2014}
 \release{0.2.1}
 \author{Lay Kuan Loh, Xiaoting Lou, \& Suzan van der Lee}
 \newcommand{\sphinxlogo}{}
@@ -185,13 +185,6 @@ We assume that most users of AIMBAT will be using Macs. If our assumptions are w
 On a mac, to find the version of your operating system, first click on the apple icon on the top bar of your desktop, go to \code{System Preferences}, and click on \code{Startup Disk}. The operating system version should then be displayed.
 
 \includegraphics{system_preferences.png}
-
-
-\section{Which Version of AIMBAT?}
-\label{docfiles/install_dependencies:which-version-of-aimbat}
-As AIMBAT uses several python dependencies, some of which are not critical to the primary function of picking travel-wave arrival times, \href{https://github.com/pysmo/aimbat-stable}{aimbat-stable} is recommended for users who do want to install \href{https://github.com/obspy/obspy/wiki}{obspy} and \href{http://matplotlib.org/basemap/}{basemap}, as they can sometimes be tricky to install.
-
-The \href{https://github.com/pysmo/aimbat}{enhanced version} also allows for plotting the station locations on a map, converting pickle files into sac files, and running unit tests, which are relevant only to developers.
 
 
 \section{Github}
@@ -433,7 +426,7 @@ Here some common problems and possible resolutions. If your problem is not liste
 
 
 \subsection{Macports}
-\label{docfiles/install_dependencies:id9}
+\label{docfiles/install_dependencies:id8}
 You may run into problems with AIMBAT if your \href{http://www.macports.org/}{Macport} version is not compatible with your operating system version. For example, if you used Macports for OS X 10.8 to install AIMBAT, then upgraded your operating system or OS X 10.9, you may find that AIMBAT no longer works properly. You will need to upgrade Macports to fix this error.
 
 Do not uninstall MacPorts unless you know what you are doing, uninstalling MacPorts may get rid of other programs you installed using MacPorts. However, if you are sure you want to do so, see \href{https://guide.macports.org/chunked/installing.macports.uninstalling.html}{here} for instructions.
@@ -498,28 +491,6 @@ AIMBAT is released as a sub-package of pysmo in the name of \code{pysmo.aimbat} 
 We are working on a new release of AIMBAT, available on \href{https://github.com/pysmo}{Github}. We are adding more features to make using AIMBAT more convenient, and fixing some bugs in the old code. Download \href{https://github.com/pysmo/aimbat}{pysmo.aimbat} and \href{https://github.com/pysmo/sac}{pysmo.sac} from Github. You will now have two folders called \code{aimbat} and \code{sac} respectively.
 
 You may want to download \href{https://github.com/pysmo/data-example}{example code} to run AIMBAT on, as well.
-
-
-\section{Where to install the packages}
-\label{docfiles/install_aimbat:where-to-install-the-packages}
-There are several options to install the packages. If you just want to use AIMBAT, it is best to store it somewhere where you would not touch the packages so easily, such as the Python \code{site-packages} directory. If you would like to make some changes to the Python code, it is best to store it somewhere pretty accessible, such as your \code{home} directory on your computer, or in \code{Documents}.
-
-
-\subsection{Installing into the Python Site-Packages Directory}
-\label{docfiles/install_aimbat:installing-into-the-python-site-packages-directory}
-To find out where the Python Site-Packages Directory is, in the python console, do:
-
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k+kn}{import} \PYG{n+nn}{site}\PYG{p}{;}
-\PYG{n}{site}\PYG{o}{.}\PYG{n}{getsitepackages}\PYG{p}{(}\PYG{p}{)}
-\end{Verbatim}
-
-Whatever is output is obtained, lets call it \code{\textless{}pkg-install-dir\textgreater{}}. Make a directory called \code{pysmo}, and place the sac and aimbat directories inside \code{\textless{}pkg-install-dir\textgreater{}/pysmo}.
-
-
-\subsection{Installing into the home directory}
-\label{docfiles/install_aimbat:installing-into-the-home-directory}
-Open your terminal. Type \code{open .} and that will open your home directory. Transfer the \code{aimbat} and \code{sac} repositories inside there.
 
 
 \section{Building the Pysmo Packages}

@@ -61,13 +61,8 @@
 <p>On a mac, to find the version of your operating system, first click on the apple icon on the top bar of your desktop, go to <tt class="docutils literal"><span class="pre">System</span> <span class="pre">Preferences</span></tt>, and click on <tt class="docutils literal"><span class="pre">Startup</span> <span class="pre">Disk</span></tt>. The operating system version should then be displayed.</p>
 <img alt="../_images/system_preferences.png" src="../_images/system_preferences.png" />
 </div>
-<div class="section" id="which-version-of-aimbat">
-<h2>2.2. Which Version of AIMBAT?<a class="headerlink" href="#which-version-of-aimbat" title="Permalink to this headline">¶</a></h2>
-<p>As AIMBAT uses several python dependencies, some of which are not critical to the primary function of picking travel-wave arrival times, <a class="reference external" href="https://github.com/pysmo/aimbat-stable">aimbat-stable</a> is recommended for users who do want to install <a class="reference external" href="https://github.com/obspy/obspy/wiki">obspy</a> and <a class="reference external" href="http://matplotlib.org/basemap/">basemap</a>, as they can sometimes be tricky to install.</p>
-<p>The <a class="reference external" href="https://github.com/pysmo/aimbat">enhanced version</a> also allows for plotting the station locations on a map, converting pickle files into sac files, and running unit tests, which are relevant only to developers.</p>
-</div>
 <div class="section" id="github">
-<h2>2.3. Github<a class="headerlink" href="#github" title="Permalink to this headline">¶</a></h2>
+<h2>2.2. Github<a class="headerlink" href="#github" title="Permalink to this headline">¶</a></h2>
 <p><cite>Optional but recommended</cite>.</p>
 <p>The <a class="reference external" href="https://github.com/pysmo">latest version of AIMBAT</a> will be on <a class="reference external" href="https://github.com/">Github</a>, so it would be good to get <a class="reference external" href="https://github.com/">GitHub</a> on your computer. This is not strictly necessary, as you could also download it as a zipfile from the <a class="reference external" href="http://www.earth.northwestern.edu/~xlou/aimbat.html">AIMBAT website</a>.</p>
 <p>To check if you already have <a class="reference external" href="https://github.com/">Github</a> installed, open the terminal and type:</p>
@@ -85,7 +80,7 @@
 <p>To install GitHub, download the package installer <a class="reference external" href="http://git-scm.com/download/mac">here</a>. This would allow only command line usage of Git, so if you want to use a GUI, we recommend <a class="reference external" href="https://mac.github.com/">Git for Mac</a>.</p>
 </div>
 <div class="section" id="macports">
-<h2>2.4. MacPorts<a class="headerlink" href="#macports" title="Permalink to this headline">¶</a></h2>
+<h2>2.3. MacPorts<a class="headerlink" href="#macports" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www.macports.org/">MacPorts</a> is a package management system that will be needed to install some python libraries.</p>
 <p>To check if MacPorts is installed already, in the terminal, type:</p>
 <div class="highlight-python"><div class="highlight"><pre>port version
@@ -102,7 +97,7 @@
 <p>To get MacPorts, download the package installer <a class="reference external" href="http://www.macports.org/install.php">here</a> and follow the instructions to install it. Be sure to get the right version of MacPorts for your operating system.</p>
 </div>
 <div class="section" id="python-and-its-dependencies">
-<h2>2.5. Python and its Dependencies<a class="headerlink" href="#python-and-its-dependencies" title="Permalink to this headline">¶</a></h2>
+<h2>2.4. Python and its Dependencies<a class="headerlink" href="#python-and-its-dependencies" title="Permalink to this headline">¶</a></h2>
 <p>AIMBAT requires python 2.7 and above to run. Note that Python is usually installed by default on Mac computers.</p>
 <p>AIMBAT requires the following packages to run:</p>
 <ol class="arabic simple">
@@ -112,7 +107,7 @@
 <li><a class="reference external" href="http://matplotlib.org/basemap/">Basemap</a>: Used for plotting world maps</li>
 </ol>
 <div class="section" id="checking-if-python-is-installed">
-<h3>2.5.1. Checking if Python is installed<a class="headerlink" href="#checking-if-python-is-installed" title="Permalink to this headline">¶</a></h3>
+<h3>2.4.1. Checking if Python is installed<a class="headerlink" href="#checking-if-python-is-installed" title="Permalink to this headline">¶</a></h3>
 <p>Open the terminal and type:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">python</span> <span class="o">--</span><span class="n">version</span>
 </pre></div>
@@ -127,7 +122,7 @@
 </div>
 </div>
 <div class="section" id="if-python-is-not-installed">
-<h3>2.5.2. If Python is not installed<a class="headerlink" href="#if-python-is-not-installed" title="Permalink to this headline">¶</a></h3>
+<h3>2.4.2. If Python is not installed<a class="headerlink" href="#if-python-is-not-installed" title="Permalink to this headline">¶</a></h3>
 <p>Inside the terminal, once python is installed, type these commands in using sudo mode. Note you will need to enter your admin password.:</p>
 <div class="highlight-python"><div class="highlight"><pre>sudo port install py27
 sudo port install py27-numpy
@@ -144,7 +139,7 @@ sudo port install python_select
 </div>
 </div>
 <div class="section" id="if-python-is-already-installed">
-<h3>2.5.3. If Python is already installed<a class="headerlink" href="#if-python-is-already-installed" title="Permalink to this headline">¶</a></h3>
+<h3>2.4.3. If Python is already installed<a class="headerlink" href="#if-python-is-already-installed" title="Permalink to this headline">¶</a></h3>
 <p>If Python is already installed, first check if you have the four required dependencies. Open up the Python console by typing:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">python</span>
 </pre></div>
@@ -188,7 +183,7 @@ sudo port install py27-matplotlib-basemap
 </div>
 </div>
 <div class="section" id="installing-basemap-without-macports">
-<h2>2.6. Installing Basemap without MacPorts<a class="headerlink" href="#installing-basemap-without-macports" title="Permalink to this headline">¶</a></h2>
+<h2>2.5. Installing Basemap without MacPorts<a class="headerlink" href="#installing-basemap-without-macports" title="Permalink to this headline">¶</a></h2>
 <p>If you have already installed Basemap, which means that:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">mpl_toolkits.basemap</span> <span class="kn">import</span> <span class="n">Basemap</span>
 </pre></div>
@@ -214,7 +209,7 @@ sudo python setup.py install
 </div>
 </div>
 <div class="section" id="fortran">
-<h2>2.7. Fortran<a class="headerlink" href="#fortran" title="Permalink to this headline">¶</a></h2>
+<h2>2.6. Fortran<a class="headerlink" href="#fortran" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt>GFortran must be installed for AIMBAT. Note that f90 or f77 are also acceptable.</dt>
 <dd><p class="first">To check if you already have Gfortran, in the terminal type:</p>
@@ -231,19 +226,19 @@ sudo python setup.py install
 <p>GFortran is available <a class="reference external" href="https://gcc.gnu.org/wiki/GFortranBinaries">here</a>. Be sure to get the correct version for your operating system.</p>
 </div>
 <div class="section" id="possible-issues">
-<h2>2.8. Possible Issues<a class="headerlink" href="#possible-issues" title="Permalink to this headline">¶</a></h2>
+<h2>2.7. Possible Issues<a class="headerlink" href="#possible-issues" title="Permalink to this headline">¶</a></h2>
 <p>Here some common problems and possible resolutions. If your problem is not listed here, or you have a suggestion, please <a class="reference internal" href="introduction.html#authors-contacts"><em>contact the authors</em></a>.</p>
-<div class="section" id="id9">
-<h3>2.8.1. Macports<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id8">
+<h3>2.7.1. Macports<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <p>You may run into problems with AIMBAT if your <a class="reference external" href="http://www.macports.org/">Macport</a> version is not compatible with your operating system version. For example, if you used Macports for OS X 10.8 to install AIMBAT, then upgraded your operating system or OS X 10.9, you may find that AIMBAT no longer works properly. You will need to upgrade Macports to fix this error.</p>
 <p>Do not uninstall MacPorts unless you know what you are doing, uninstalling MacPorts may get rid of other programs you installed using MacPorts. However, if you are sure you want to do so, see <a class="reference external" href="https://guide.macports.org/chunked/installing.macports.uninstalling.html">here</a> for instructions.</p>
 </div>
 <div class="section" id="installing-python-with-pip">
-<h3>2.8.2. Installing Python with Pip<a class="headerlink" href="#installing-python-with-pip" title="Permalink to this headline">¶</a></h3>
+<h3>2.7.2. Installing Python with Pip<a class="headerlink" href="#installing-python-with-pip" title="Permalink to this headline">¶</a></h3>
 <p>Be careful with the operating system. For OS X 10.9 and above, Python 2.7 is not fully compatible and there may be problems installing python with Pip. Best to use Enthought Canopy or Python 3 with OS X 10.9.</p>
 </div>
 <div class="section" id="setting-the-python-path-to-the-scripts">
-<h3>2.8.3. Setting the Python Path to the scripts<a class="headerlink" href="#setting-the-python-path-to-the-scripts" title="Permalink to this headline">¶</a></h3>
+<h3>2.7.3. Setting the Python Path to the scripts<a class="headerlink" href="#setting-the-python-path-to-the-scripts" title="Permalink to this headline">¶</a></h3>
 <p>You are asked to add the path to the AIMBAT scripts in your file. To do that, you add them to the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> file. There are other files you could add it to that work as well, such as the <tt class="docutils literal"><span class="pre">.profile</span></tt> or <tt class="docutils literal"><span class="pre">.bash_profile</span></tt> files. You can see the files by opening the terminal and doing <tt class="docutils literal"><span class="pre">ls</span> <span class="pre">-a</span></tt> to see all the hidden files, and open then by doing <tt class="docutils literal"><span class="pre">vi</span> <span class="pre">.bashrc</span></tt> in vim, for instance.
 To ensure you can open a script, you need to add:</p>
 <div class="highlight-python"><div class="highlight"><pre>export PATH=$PATH:&lt;path-to-folder-with-scripts&gt;
@@ -253,7 +248,7 @@ export PYTHONPATH=$PYTHONPATH:&lt;path-to-folder-with-scripts&gt;
 <p>to the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> file. We recommend adding the paths to the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> file.</p>
 </div>
 <div class="section" id="terminal-commands-stop-working">
-<h3>2.8.4. Terminal Commands stop working<a class="headerlink" href="#terminal-commands-stop-working" title="Permalink to this headline">¶</a></h3>
+<h3>2.7.4. Terminal Commands stop working<a class="headerlink" href="#terminal-commands-stop-working" title="Permalink to this headline">¶</a></h3>
 <p>If ever the terminal commands such as ls stop working in the terminal, it could be that something went wrong with a path in the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> or <tt class="docutils literal"><span class="pre">.profile</span></tt> files. If that happens you may not be able to open them in vim as that command would have stopped working as well. Instead, in the terminal, you do:</p>
 <div class="highlight-python"><div class="highlight"><pre>PATH=/bin:${PATH}
 PATH=/usr/bin:${PATH}
@@ -262,7 +257,7 @@ PATH=/usr/bin:${PATH}
 <p>And that should allow the commands to start working again. Figure out what you did wrong and remove that command.</p>
 </div>
 <div class="section" id="path-to-python-files-not-found">
-<h3>2.8.5. Path to python files not found<a class="headerlink" href="#path-to-python-files-not-found" title="Permalink to this headline">¶</a></h3>
+<h3>2.7.5. Path to python files not found<a class="headerlink" href="#path-to-python-files-not-found" title="Permalink to this headline">¶</a></h3>
 <p>After adding the path to your directory with scripts in <tt class="docutils literal"><span class="pre">.bashrc</span></tt>, you still need to source the <tt class="docutils literal"><span class="pre">.bashrc</span></tt> files in <tt class="docutils literal"><span class="pre">.profile</span></tt>, or the system may not find the directory. See here for more <a class="reference external" href="http://publib.boulder.ibm.com/infocenter/pseries/v5r3/index.jsp?topic=/com.ibm.aix.baseadmn/doc/baseadmndita/prof_file.htm">details</a> to see how the profile file is sourced. Note that this one will override the file in <cite>/etc/profile</cite>.</p>
 <img alt="../_images/residue.png" src="../_images/residue.png" />
 <img alt="../_images/profile_file.png" src="../_images/profile_file.png" />
@@ -288,23 +283,22 @@ PATH=/usr/bin:${PATH}
   <ul>
 <li><a class="reference internal" href="#">2. Installing Dependencies</a><ul>
 <li><a class="reference internal" href="#getting-your-operating-system">2.1. Getting your operating system</a></li>
-<li><a class="reference internal" href="#which-version-of-aimbat">2.2. Which Version of AIMBAT?</a></li>
-<li><a class="reference internal" href="#github">2.3. Github</a></li>
-<li><a class="reference internal" href="#macports">2.4. MacPorts</a></li>
-<li><a class="reference internal" href="#python-and-its-dependencies">2.5. Python and its Dependencies</a><ul>
-<li><a class="reference internal" href="#checking-if-python-is-installed">2.5.1. Checking if Python is installed</a></li>
-<li><a class="reference internal" href="#if-python-is-not-installed">2.5.2. If Python is not installed</a></li>
-<li><a class="reference internal" href="#if-python-is-already-installed">2.5.3. If Python is already installed</a></li>
+<li><a class="reference internal" href="#github">2.2. Github</a></li>
+<li><a class="reference internal" href="#macports">2.3. MacPorts</a></li>
+<li><a class="reference internal" href="#python-and-its-dependencies">2.4. Python and its Dependencies</a><ul>
+<li><a class="reference internal" href="#checking-if-python-is-installed">2.4.1. Checking if Python is installed</a></li>
+<li><a class="reference internal" href="#if-python-is-not-installed">2.4.2. If Python is not installed</a></li>
+<li><a class="reference internal" href="#if-python-is-already-installed">2.4.3. If Python is already installed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#installing-basemap-without-macports">2.6. Installing Basemap without MacPorts</a></li>
-<li><a class="reference internal" href="#fortran">2.7. Fortran</a></li>
-<li><a class="reference internal" href="#possible-issues">2.8. Possible Issues</a><ul>
-<li><a class="reference internal" href="#id9">2.8.1. Macports</a></li>
-<li><a class="reference internal" href="#installing-python-with-pip">2.8.2. Installing Python with Pip</a></li>
-<li><a class="reference internal" href="#setting-the-python-path-to-the-scripts">2.8.3. Setting the Python Path to the scripts</a></li>
-<li><a class="reference internal" href="#terminal-commands-stop-working">2.8.4. Terminal Commands stop working</a></li>
-<li><a class="reference internal" href="#path-to-python-files-not-found">2.8.5. Path to python files not found</a></li>
+<li><a class="reference internal" href="#installing-basemap-without-macports">2.5. Installing Basemap without MacPorts</a></li>
+<li><a class="reference internal" href="#fortran">2.6. Fortran</a></li>
+<li><a class="reference internal" href="#possible-issues">2.7. Possible Issues</a><ul>
+<li><a class="reference internal" href="#id8">2.7.1. Macports</a></li>
+<li><a class="reference internal" href="#installing-python-with-pip">2.7.2. Installing Python with Pip</a></li>
+<li><a class="reference internal" href="#setting-the-python-path-to-the-scripts">2.7.3. Setting the Python Path to the scripts</a></li>
+<li><a class="reference internal" href="#terminal-commands-stop-working">2.7.4. Terminal Commands stop working</a></li>
+<li><a class="reference internal" href="#path-to-python-files-not-found">2.7.5. Path to python files not found</a></li>
 </ul>
 </li>
 </ul>
