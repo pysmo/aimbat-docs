@@ -49,19 +49,19 @@ Saving Options
 
 There are several options for saving the SAC header files of the seismograms you have chosen. 
 
-+----------------------------------+----------------------------------------------------+
-| Button Title                     | What it does                                       |
-+==================================+====================================================+
-| Save Headers Only                | Saves the SAC headers only                         |
-+----------------------------------+----------------------------------------------------+
-| Save Headers & Filter Parameters | Saves the SAC headers and filter parameters used.  |
-|	                           | Those filter parameters will automatically the     |
-|	                           | next time the SAC headers are loaded in AIMBAT     |
-+----------------------------------+----------------------------------------------------+
-| Save Headers & Override Data     | Save SAV headers and write in the filtered data    |
-+----------------------------------+----------------------------------------------------+
++---------------+---------------------------------------------------+
+| Button Title  | What it does                                      |
++===============+===================================================+
+| Save          | Saves the SAC headers only                        |
++---------------+---------------------------------------------------+
+| Save Params   | Saves the SAC headers and filter parameters used. |
+|	            | Those filter parameters will automatically the    |
+|	            | next time the SAC headers are loaded in AIMBAT    |
++---------------+---------------------------------------------------+
+| Save Override | Save SAV headers and write in the filtered data   |
++---------------+---------------------------------------------------+
 
-.. image::filtering-data/saving_types.png
+
 
 .. ############################################################################ ..
 .. #                               SAVING OPTIONS                             # ..

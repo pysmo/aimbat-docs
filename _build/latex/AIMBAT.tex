@@ -14,7 +14,7 @@
 
 
 \title{AIMBAT Documentation}
-\date{October 14, 2014}
+\date{October 26, 2014}
 \release{0.2.1}
 \author{Lay Kuan Loh, Xiaoting Lou, \& Suzan van der Lee}
 \newcommand{\sphinxlogo}{}
@@ -712,8 +712,6 @@ The output should be a PKL file in the same folder as the sac files.
 
 \section{Converting from PKL to SAC files}
 \label{docfiles/sacioAIMBAT:converting-from-pkl-to-sac-files}
-Note: Not available for \emph{aimbat-stable}.
-
 cd into the folder containing the PKL file that you wish to convert into SAC files, and run:
 
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -772,33 +770,6 @@ You can change the order and filter type by selecting the option you want. By cl
 \section{Saving Options}
 \label{docfiles/filteringData:saving-options}
 There are several options for saving the SAC header files of the seismograms you have chosen.
-
-\begin{tabulary}{\linewidth}{|L|L|}
-\hline
-\textsf{\relax 
-Button Title
-} & \textsf{\relax 
-What it does
-}\\
-\hline
-Save Headers Only
- & 
-Saves the SAC headers only
-\\
-
-Save Headers \& Filter Parameters
- & 
-Saves the SAC headers and filter parameters used.
-Those filter parameters will automatically the
-next time the SAC headers are loaded in AIMBAT
-\\
-
-Save Headers \& Override Data
- & 
-Save SAV headers and write in the filtered data
-\\
-\hline\end{tabulary}
-
 
 
 \chapter{Analyzing Data}
@@ -1652,8 +1623,6 @@ If one of the seismograms being picked does not fit completely within the green 
 
 \chapter{Visualizing Stations on a map}
 \label{docfiles/VisualizingStations:visualizing-stations-on-a-map}\label{docfiles/VisualizingStations::doc}
-Note: NOT available in \emph{aimbat-stable}.
-
 After running:
 
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -1667,8 +1636,6 @@ Red dots represent circles used for computing delay times; black triangles repre
 
 \chapter{Unit Testing}
 \label{docfiles/unitTests:unit-testing}\label{docfiles/unitTests::doc}
-Note: NOT available in \emph{aimbat-stable}.
-
 This section is mainly for those who which to make tweaks to AIMBAT themselves. We have added some unit tests to AIMBAT to ensure its robustness. See the \href{https://docs.python.org/2/library/unittest.html}{Python Unit Testing Framework} for more details.
 
 
