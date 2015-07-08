@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>9. Plot Stations &mdash; AIMBAT 0.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/additional_styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="AIMBAT 0.2.1 documentation" href="../index.html" />
+    <link rel="next" title="10. Unit Testing" href="unitTests.html" />
+    <link rel="prev" title="8. Measuring Teleseismic Body Wave Arrival Times" href="PickingTravelTimes.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="unitTests.html" title="10. Unit Testing"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="PickingTravelTimes.html" title="8. Measuring Teleseismic Body Wave Arrival Times"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="plot-stations">
+<h1>9. Plot Stations<a class="headerlink" href="#plot-stations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>9.1. Plot Stations<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Click on the <tt class="docutils literal"><span class="pre">Plot</span> <span class="pre">Stations</span></tt> button and you will get a graph of all the stations for the set you are using. Stations used are the red circles, and deleted stations not used in the cross-correlation are the black triangles.</p>
+</div>
+<div class="section" id="color-by-delay-times">
+<h2>9.2. Color By Delay Times<a class="headerlink" href="#color-by-delay-times" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="instructions">
+<h3>9.2.1. Instructions<a class="headerlink" href="#instructions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>On the terminal, cd into the same folder where you sourced the SAC files to run <tt class="docutils literal"><span class="pre">ttpick.py</span></tt>, after running <tt class="docutils literal"><span class="pre">MCCC</span></tt> on a pickle file name, for instance, <tt class="docutils literal"><span class="pre">earthquake-event.pkl</span></tt>, you will get a mcp file named <tt class="docutils literal"><span class="pre">earthquake-event.mcp</span></tt>.</li>
+<li>Run <tt class="docutils literal"><span class="pre">mccc2delay.py</span> <span class="pre">earthquake-event.mcp</span></tt> and you will get a file with travel times called <tt class="docutils literal"><span class="pre">earthquake-event.dtp</span></tt>.</li>
+<li>Run <tt class="docutils literal"><span class="pre">doplotsta.sh</span></tt> and you will get a two <tt class="docutils literal"><span class="pre">gif</span></tt> files of the stations colored by delay times.</li>
+</ul>
+</div>
+<div class="section" id="learn-more-about-how-to-compute-delay-times">
+<h3>9.2.2. Learn more about how to compute delay times<a class="headerlink" href="#learn-more-about-how-to-compute-delay-times" title="Permalink to this headline">¶</a></h3>
+<p>The equation used to compute delays is explained here <a class="reference internal" href="citations.html#bulandchapman1983" id="id2">[BulandChapMan1983]</a>.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/NU_Logo_purple.jpg" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">9. Plot Stations</a><ul>
+<li><a class="reference internal" href="#id1">9.1. Plot Stations</a></li>
+<li><a class="reference internal" href="#color-by-delay-times">9.2. Color By Delay Times</a><ul>
+<li><a class="reference internal" href="#instructions">9.2.1. Instructions</a></li>
+<li><a class="reference internal" href="#learn-more-about-how-to-compute-delay-times">9.2.2. Learn more about how to compute delay times</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="PickingTravelTimes.html"
+                        title="previous chapter">8. Measuring Teleseismic Body Wave Arrival Times</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="unitTests.html"
+                        title="next chapter">10. Unit Testing</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/docfiles/PlotStations.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="unitTests.html" title="10. Unit Testing"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="PickingTravelTimes.html" title="8. Measuring Teleseismic Body Wave Arrival Times"
+             >previous</a> |</li>
+        <li><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Lay Kuan Loh, Xiaoting Lou &amp; Suzan van der Lee.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

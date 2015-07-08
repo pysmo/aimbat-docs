@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>14. Updating this manual &mdash; AIMBAT 0.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/additional_styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="AIMBAT 0.2.1 documentation" href="../index.html" />
+    <link rel="next" title="15. Citations" href="citations.html" />
+    <link rel="prev" title="13. Unit Testing" href="unitTests.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="citations.html" title="15. Citations"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="unitTests.html" title="13. Unit Testing"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="updating-this-manual">
+<h1>14. Updating this manual<a class="headerlink" href="#updating-this-manual" title="Permalink to this headline">¶</a></h1>
+<p>This is for someone who wants to be a collaborator on AIMBAT only. This is NOT necessary for anyone who only wants to use AIMBAT. AIMBAT will work fine if you do not install the dependencies listed here.</p>
+<p>To be able to update the manual, download the <a class="reference external" href="https://github.com/pysmo/aimbat-docs">source code</a> from Github, and install the dependencies.</p>
+<div class="section" id="dependencies">
+<h2>14.1. Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://sphinx-doc.org/">Sphinx</a>. Download and install from <a class="reference external" href="https://pypi.python.org/pypi/Sphinx">here</a>. Don&#8217;t get the Python Wheel version unless you know what you are doing</li>
+<li><cite>LaTeX</cite>. Download it from <a class="reference external" href="http://www.tug.org/mactex/">here</a>. Get the package installer.</li>
+<li>A browser. But if you are reading this, you already have it.</li>
+</ul>
+</div>
+<div class="section" id="how-to-update-this-manual">
+<h2>14.2. How to update this manual<a class="headerlink" href="#how-to-update-this-manual" title="Permalink to this headline">¶</a></h2>
+<p>On the master branch, cd into the github repository <cite>aimbat-docs &lt;https://github.com/pysmo/aimbat-docs&gt;</cite> and run:</p>
+<div class="highlight-python"><div class="highlight"><pre>sphinx-build -b html . builddir
+make html
+make latexpdf
+</pre></div>
+</div>
+<p>The first two commands build the html for the webpage, while the last command makes a pdf version of the online documentation.</p>
+<p>Now, commit the changes made in github, and push the changes to the master branch. The changes should be visible in the documentation within a few minutes.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/NU_Logo_purple.jpg" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">14. Updating this manual</a><ul>
+<li><a class="reference internal" href="#dependencies">14.1. Dependencies</a></li>
+<li><a class="reference internal" href="#how-to-update-this-manual">14.2. How to update this manual</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="unitTests.html"
+                        title="previous chapter">13. Unit Testing</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="citations.html"
+                        title="next chapter">15. Citations</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/docfiles/updatingThisManual.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="citations.html" title="15. Citations"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="unitTests.html" title="13. Unit Testing"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2014, Lay Kuan Loh, Xiaoting Lou &amp; Suzan van der Lee.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

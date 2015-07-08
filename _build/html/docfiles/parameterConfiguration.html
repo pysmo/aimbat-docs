@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>9. Parameter Configuration &mdash; AIMBAT 0.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/additional_styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="AIMBAT 0.2.1 documentation" href="../index.html" />
+    <link rel="next" title="10. SAC Data Access" href="SACdataAccess.html" />
+    <link rel="prev" title="8. Analyzing Data" href="analyzingData.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="SACdataAccess.html" title="10. SAC Data Access"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="analyzingData.html" title="8. Analyzing Data"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="parameter-configuration">
+<h1>9. Parameter Configuration<a class="headerlink" href="#parameter-configuration" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="backend">
+<h2>9.1. Backend<a class="headerlink" href="#backend" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://matplotlib.org/contents.html">Matplotlib</a> works with six GUI (Graphical User Interface) toolkits:</p>
+<ol class="arabic simple">
+<li>WX</li>
+<li>Tk</li>
+<li>Qt(4)</li>
+<li>FTK</li>
+<li>Fltk</li>
+<li>macosx</li>
+</ol>
+<p>The GUI of AIMBAT uses the following to support interactive plotting:</p>
+<ol class="arabic simple">
+<li><a class="reference external" href="http://matplotlib.org/api/widgets_api.html">GUI neutral widgets</a></li>
+<li><a class="reference external" href="http://matplotlib.org/users/event_handling.html">GUI neutral event handling API (Application Programming Interface)</a></li>
+</ol>
+<p>AIMBAT uses the default toolkit <code class="docutils literal"><span class="pre">Tk</span></code> and backend <code class="docutils literal"><span class="pre">TkAgg</span></code>.</p>
+<p>Visit these pages for an <a class="reference external" href="http://matplotlib.org/faq/usage_faq.html#what-is-a-backend">explanation of the backend</a> and <a class="reference external" href="http://matplotlib.org/users/customizing.html#customizing-matplotlib">how to customize it</a>.</p>
+</div>
+<div class="section" id="configuration-file">
+<h2>9.2. Configuration File<a class="headerlink" href="#configuration-file" title="Permalink to this headline">¶</a></h2>
+<p>Other parameters for the package can be set up by a configuration file <code class="docutils literal"><span class="pre">ttdefaults.conf</span></code>, which is interpreted by the module ConfigParser. This configuration file is searched in the following order:</p>
+<ol class="arabic simple">
+<li>file <code class="docutils literal"><span class="pre">ttdefaults.conf</span></code> in the current working directory</li>
+<li>file <code class="docutils literal"><span class="pre">.aimbat/ttdefaults.conf</span></code> in your <code class="docutils literal"><span class="pre">HOME</span></code> directory</li>
+<li>a file specified by environment variable <code class="docutils literal"><span class="pre">TTCONFIG</span></code></li>
+<li>file <code class="docutils literal"><span class="pre">ttdefaults.conf</span></code> in the directory where AIMBAT is installed</li>
+</ol>
+<p>Python scripts in the <code class="docutils literal"><span class="pre">&lt;pkg-install-dir&gt;/pysmo-aimbat-0.1.2/scripts</span></code> can be executed from the command line. The command line arguments are parsed by the optparse module to improve the scripts&#8217; exitability. If conflicts existed, the command line options override the default parameters given in the configuration file <code class="docutils literal"><span class="pre">ttdefaults.conf</span></code>. Run the scripts with the <code class="docutils literal"><span class="pre">-h</span></code> option for the usage messages.</p>
+<div class="section" id="example-of-aimbat-configuration-file-ttdefaults-conf">
+<h3>9.2.1. Example of AIMBAT configuration file <cite>ttdefaults.conf</cite><a class="headerlink" href="#example-of-aimbat-configuration-file-ttdefaults-conf" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">ttdefaults.conf</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>[sacplot]</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>colorwave = blue</td>
+<td>Color of waveform</td>
+</tr>
+<tr class="row-even"><td>colorwavedel = gray</td>
+<td>Color of waveform which is deselected</td>
+</tr>
+<tr class="row-odd"><td>colortwfill = green</td>
+<td>Color of time window fill</td>
+</tr>
+<tr class="row-even"><td>colortwsele = red</td>
+<td>Color of time window selection</td>
+</tr>
+<tr class="row-odd"><td>alphatwfill = 0.2</td>
+<td>Transparency of time window fill</td>
+</tr>
+<tr class="row-even"><td>alphatwsele = 0.6</td>
+<td>Transparency of time window selection</td>
+</tr>
+<tr class="row-odd"><td>npick = 6</td>
+<td>Number of time picks (plot picks: t0-t5)</td>
+</tr>
+<tr class="row-even"><td>pickcolors = kmrcgyb</td>
+<td>Colors of time picks</td>
+</tr>
+<tr class="row-odd"><td>pickstyles</td>
+<td>Line styles of time picks (use second one if ran out of color)</td>
+</tr>
+<tr class="row-even"><td>figsize = 8 10</td>
+<td>Figure size for <cite>plotphase.py</cite></td>
+</tr>
+<tr class="row-odd"><td>rectseis = 0.1 0.06 0.76 0.9</td>
+<td>Axes rectangle size within the figure</td>
+</tr>
+<tr class="row-even"><td>minspan = 5</td>
+<td>Minimum sample points for SpanSelector to select time window</td>
+</tr>
+<tr class="row-odd"><td>srate = -1</td>
+<td>Sample rate for loading SAC data.
+Read from first file if srate &lt; 0</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">[sachdrs]</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>twhdrs = user8 user9</td>
+<td>SAC headers for time window beginning and ending</td>
+</tr>
+<tr class="row-odd"><td>ichdrs = t0 t1 t2</td>
+<td>SAC headers for ICCS time picks</td>
+</tr>
+<tr class="row-even"><td>mchdrs = t2 t3</td>
+<td>SAC headers for MCCC input and output time picks</td>
+</tr>
+<tr class="row-odd"><td>hdrsel = kuser0</td>
+<td>SAC header for seismogram selection status</td>
+</tr>
+<tr class="row-even"><td>qfactors = ccc snr coh</td>
+<td>Quality factors: cross-correlation coefficient,
+signal-to-noise ratio, time domain coherence</td>
+</tr>
+<tr class="row-odd"><td>qheaders = user0 user1 user2</td>
+<td>SAC Headers for quality factors</td>
+</tr>
+<tr class="row-even"><td>qweights = 0.3333 0.3333 0.3333</td>
+<td>Weights for quality factors</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">[iccs] or Align/Refine</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>srate = -1</td>
+<td>Sample rate for loading SAC data. Read from first file if srate &lt; 0</td>
+</tr>
+<tr class="row-odd"><td>xcorr_modu = xcorrf90</td>
+<td>Module for calculating cross-correlation:
+xcorr for Numpy or xcorrf90 for Fortran</td>
+</tr>
+<tr class="row-even"><td>xcorr_func = xcorr_fast</td>
+<td>Function for calculating cross-correlation</td>
+</tr>
+<tr class="row-odd"><td>shift = 10</td>
+<td>Sample shift for running coarse cross-correlation</td>
+</tr>
+<tr class="row-even"><td>maxiter = 10</td>
+<td>Maximum number of iteration</td>
+</tr>
+<tr class="row-odd"><td>convepsi = 0.001</td>
+<td>Convergence criterion: epsilon</td>
+</tr>
+<tr class="row-even"><td>convtype = coef</td>
+<td>Type of convergence criterion: coef for correlation coefficient,
+or resi for residual</td>
+</tr>
+<tr class="row-odd"><td>stackwgt = coef</td>
+<td>Weight each trace when calculating array stack</td>
+</tr>
+<tr class="row-even"><td>fstack = fstack.sac</td>
+<td>SAC file name for the array stack</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">[mccc]</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>srate = -1</td>
+<td>Sample rate for loading SAC data.
+Read from first file if srate <span class="math">\(&lt; 0\)</span></td>
+</tr>
+<tr class="row-odd"><td>ofilename = mc</td>
+<td>Output file name of MCCC.</td>
+</tr>
+<tr class="row-even"><td>xcorr_modu = xcorrf90</td>
+<td>Module for calculating cross-correlation:
+xcorr for Numpy or xcorrf90 for Fortran</td>
+</tr>
+<tr class="row-odd"><td>xcorr_func = xcorr_faster</td>
+<td>Function for calculating cross-correlation</td>
+</tr>
+<tr class="row-even"><td>shift = 10</td>
+<td>Sample shift for running coarse cross-correlation</td>
+</tr>
+<tr class="row-odd"><td>extraweight = 1000</td>
+<td>Weight for the zero-mean equation in MCCC weighted lsqr solution</td>
+</tr>
+<tr class="row-even"><td>lsqr = nowe</td>
+<td>Type of lsqr solution: no weight</td>
+</tr>
+<tr class="row-odd"><td>#lsqr = lnco</td>
+<td>Type of lsqr solution: weighted by correlation coefficient,
+solved by lapack</td>
+</tr>
+<tr class="row-even"><td>#lsqr = lnre</td>
+<td>Type of lsqr solution: weighted by residual, solved by lapack</td>
+</tr>
+<tr class="row-odd"><td>rcfile = .mcccrc</td>
+<td>Configuration file for MCCC parameters (deprecated)</td>
+</tr>
+<tr class="row-even"><td>evlist = event.list</td>
+<td>File for event hypocenter and origin time (deprecated)</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="62%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">signal</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>tapertype = hanning</td>
+<td>Taper type</td>
+</tr>
+<tr class="row-odd"><td>taperwidth = 0.1</td>
+<td>Taper width</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/NU_Logo_purple.jpg" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">9. Parameter Configuration</a><ul>
+<li><a class="reference internal" href="#backend">9.1. Backend</a></li>
+<li><a class="reference internal" href="#configuration-file">9.2. Configuration File</a><ul>
+<li><a class="reference internal" href="#example-of-aimbat-configuration-file-ttdefaults-conf">9.2.1. Example of AIMBAT configuration file <cite>ttdefaults.conf</cite></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="analyzingData.html"
+                        title="previous chapter">8. Analyzing Data</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="SACdataAccess.html"
+                        title="next chapter">10. SAC Data Access</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/docfiles/parameterConfiguration.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="SACdataAccess.html" title="10. SAC Data Access"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="analyzingData.html" title="8. Analyzing Data"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2014, Lay Kuan Loh, Xiaoting Lou &amp; Suzan van der Lee.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

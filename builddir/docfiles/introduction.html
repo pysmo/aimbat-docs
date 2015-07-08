@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1. Introduction &mdash; AIMBAT 0.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/additional_styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="AIMBAT 0.2.1 documentation" href="../index.html" />
+    <link rel="next" title="2. Installing Dependencies" href="install_dependencies.html" />
+    <link rel="prev" title="Welcome to AIMBAT’s documentation!" href="../index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="install_dependencies.html" title="2. Installing Dependencies"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Welcome to AIMBAT’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <img alt="../_images/NU_Logo_purple.jpg" src="../_images/NU_Logo_purple.jpg" />
+<div class="section" id="introduction">
+<h1>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="about-aimbat">
+<h2>1.1. About AIMBAT<a class="headerlink" href="#about-aimbat" title="Permalink to this headline">¶</a></h2>
+<p>AIMBAT (Automated and Interactive Measurement of Body wave Arrival Times) is an open-source software package for efficiently measuring teleseismic body wave arrival times for large seismic arrays <a class="reference internal" href="citations.html#louvanderlee2013" id="id1">[LouVanDerLee2013]</a>. It is based on a widely used method called MCCC (Multi-Channel Cross-Correlation) <a class="reference internal" href="citations.html#vandecarcrosson1990" id="id2">[VanDecarCrosson1990]</a>. The package is automated in the sense of initially aligning seismograms for MCCC, which is achieved by an ICCS (Iterative Cross Correlation and Stack) algorithm. Meanwhile, a GUI (graphical user interface) is built to perform seismogram quality control interactively. Therefore, user processing time is reduced while valuable input from a user&#8217;s expertise is retained. As a byproduct, SAC <a class="reference internal" href="citations.html#goldsteindodge2003" id="id3">[GoldsteinDodge2003]</a> plotting and phase picking functionalities are replicated and enhanced.</p>
+<p>Modules and scripts included in the AIMBAT package were developed using <a class="reference external" href="http://www.python.org/">Python programming language</a> and its open-source modules on the Mac OS X platform since 2009. The original MCCC <a class="reference internal" href="citations.html#vandecarcrosson1990" id="id4">[VanDecarCrosson1990]</a> code was transcribed into Python. The GUI of AIMBAT was inspired and initiated at the <a class="reference external" href="http://www.iris.edu/hq/es_course/content/2009.html">2009 EarthScope USArray Data Processing and Analysis Short Course</a>. AIMBAT runs on Mac OS X, Linux/Unix and Windows thanks to the platform-independent feature of Python. It has been tested on Mac OS 10.6.8 and 10.7, and Fedora 16.</p>
+<p>The AIMBAT software package is distributed under the <a class="reference external" href="http://www.gnu.org/licenses/gpl.html">GNU General Public License Version 3 (GPLv3)</a> as published by the Free Software Foundation.</p>
+</div>
+<div class="section" id="associated-documents">
+<h2>1.2. Associated Documents<a class="headerlink" href="#associated-documents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference download internal" href="../_downloads/Lou_etal_2013_SRL_AIMBAT.pdf"><code class="xref download docutils literal"><span class="pre">Seismological</span> <span class="pre">Research</span> <span class="pre">Letters</span> <span class="pre">Paper</span></code></a></li>
+<li><code class="xref download docutils literal"><span class="pre">PDF</span> <span class="pre">Version</span> <span class="pre">of</span> <span class="pre">Manual</span></code>. Automatically generated from these online docs; please excuse minor issues that may arise from automated conversion.</li>
+</ul>
+</div>
+<div class="section" id="authors-contacts">
+<span id="id5"></span><h2>1.3. Authors&#8217; Contacts<a class="headerlink" href="#authors-contacts" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first"><a class="reference external" href="http://lkloh2410.wordpress.com/">Lay Kuan Loh</a></p>
+<p>Email: lloh at ece.cmu.edu</p>
+</li>
+<li><p class="first"><a class="reference external" href="http://www.earth.northwestern.edu/~xlou/Welcome.html">Xiaoting Lou</a></p>
+<p>Email: xlou at u.northwestern.edu</p>
+</li>
+<li><p class="first"><a class="reference external" href="http://www.earth.northwestern.edu/research/suzan/">Suzan van der Lee</a></p>
+<p>Email: suzan at earth.northwestern.edu</p>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/NU_Logo_purple.jpg" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">1. Introduction</a><ul>
+<li><a class="reference internal" href="#about-aimbat">1.1. About AIMBAT</a></li>
+<li><a class="reference internal" href="#associated-documents">1.2. Associated Documents</a></li>
+<li><a class="reference internal" href="#authors-contacts">1.3. Authors&#8217; Contacts</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../index.html"
+                        title="previous chapter">Welcome to AIMBAT&#8217;s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="install_dependencies.html"
+                        title="next chapter">2. Installing Dependencies</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/docfiles/introduction.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="install_dependencies.html" title="2. Installing Dependencies"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Welcome to AIMBAT’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2014, Lay Kuan Loh, Xiaoting Lou &amp; Suzan van der Lee.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

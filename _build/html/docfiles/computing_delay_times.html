@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>13. Computing Delay Times &mdash; AIMBAT 0.2.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/additional_styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="AIMBAT 0.2.1 documentation" href="../index.html" />
+    <link rel="next" title="14. Unit Testing" href="unitTests.html" />
+    <link rel="prev" title="12. Visualizing Stations on a map" href="VisualizingStations.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="unitTests.html" title="14. Unit Testing"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="VisualizingStations.html" title="12. Visualizing Stations on a map"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="computing-delay-times">
+<h1>13. Computing Delay Times<a class="headerlink" href="#computing-delay-times" title="Permalink to this headline">¶</a></h1>
+<p>Note: Not relevant to the functionality of AIMBAT, but added in case users want to compute delay times.</p>
+<p>You will need <a class="reference external" href="http://www.seis.sc.edu/software/TauP/">TauP</a> for this.</p>
+<ol class="arabic">
+<li><p class="first">After getting all your SAC data files you want to run AIMBAT on, run <tt class="docutils literal"><span class="pre">taup_setsac</span></tt> to set t0 according to event and station locations. For instance, inside the folder <tt class="docutils literal"><span class="pre">Event_2011.09.15.19.31.04.080</span></tt> in the <a class="reference external" href="https://github.com/pysmo/data-example">data-examples</a> folder, run:</p>
+<div class="highlight-python"><div class="highlight"><pre>taup_setsac -ph S-7 *.BHZ
+</pre></div>
+</div>
+</li>
+</ol>
+<img alt="../_images/taup_command.png" src="../_images/taup_command.png" />
+<p>to write the <cite>t0</cite> value for seach SAC file into the <cite>user7</cite> variable.</p>
+<img alt="../_images/sac_after_taup.png" src="../_images/sac_after_taup.png" />
+<ol class="arabic simple" start="2">
+<li>Bundle the SAC files into a PKL file and run <tt class="docutils literal"><span class="pre">ttpick.py</span></tt> on it to pick the arrival times. The relative arrival times (relative to the average arrival time) is given in the second column (<tt class="docutils literal"><span class="pre">mccc</span> <span class="pre">delay</span></tt>) of the resultant mcp file.</li>
+</ol>
+<img alt="../_images/mcp_output.png" src="../_images/mcp_output.png" />
+<p>The average arrival time is found at the bottom of the mcp file. To find the absolute arrival time for a station, add the value of its <tt class="docutils literal"><span class="pre">mccc</span> <span class="pre">delay</span></tt> in the correponding second column to the average arrival time.</p>
+<ol class="arabic simple" start="3">
+<li>To find the delay time, subtract the <cite>t0</cite> value obtained from running <cite>taup</cite> from the actual arrival time, obtained earlier by adding the average arrival time and the mccc delay time in the mcp file.</li>
+</ol>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/NU_Logo_purple.jpg" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="VisualizingStations.html"
+                        title="previous chapter">12. Visualizing Stations on a map</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="unitTests.html"
+                        title="next chapter">14. Unit Testing</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/docfiles/computing_delay_times.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="unitTests.html" title="14. Unit Testing"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="VisualizingStations.html" title="12. Visualizing Stations on a map"
+             >previous</a> |</li>
+        <li><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Lay Kuan Loh, Xiaoting Lou &amp; Suzan van der Lee.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>
