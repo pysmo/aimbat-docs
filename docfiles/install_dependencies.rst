@@ -48,7 +48,7 @@ On a Mac, to find the version of your operating system, first click on the Apple
 Github
 ------
 
-`Optional`.
+`Optional`
 
 The `latest version of AIMBAT <https://github.com/pysmo>`_ will be on `Github <https://github.com/>`_, so it would be good to get `GitHub <https://github.com/>`_ on your computer. This is not strictly necessary, as you could also download it as a zipfile from the `AIMBAT website <http://www.earth.northwestern.edu/~xlou/aimbat.html>`_.
 
@@ -81,6 +81,8 @@ To install GitHub, download the package installer `here <http://git-scm.com/down
 
 MacPorts
 --------
+
+`Highly recommended`
 
 `MacPorts <http://www.macports.org/>`_ is a package management system that will be very helpful to install some python libraries. 
 
@@ -143,7 +145,7 @@ If Python is not installed, the terminal will output::
 If Python is not installed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Inside the terminal, once python is installed, type these commands in using sudo mode. Note you will need to enter your admin password.::
+Inside the terminal, once python is installed, type these commands in using sudo mode. Note you will need to enter your admin password::
 
   sudo port install py27
   sudo port install py27-numpy
@@ -178,7 +180,7 @@ Now, check if the packages have been installed properly by typing the following 
   import matplotlib
   from mpl_toolkits.basemap import Basemap
 
-If any of the packages are missing (e.g. scipy not installed), the python console will output an error, for instance::
+If any of the packages are missing (e.g. scipy not installed), the python console will output an error. For instance::
 
   Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -190,7 +192,7 @@ If any of the packages are missing, you can choose to install it by whatever mea
 
   sudo port install py27
 
-to get the python version installed in ``opt/local/bin`` where MacPorts installs everything to. Select to use this version of Python by typing::
+to get the python version installed in ``opt/local/bin`` where MacPorts installs everything. Select to use this version of Python by typing::
 
   sudo port install python_select
 
@@ -225,11 +227,11 @@ comes out without an error in the Python console, you can skip this section. Thi
 
 Disclaimer: Lifted from content written by `this guy <http://blog.bluedackers.com/2012/11/13/installing-basemap-on-mac-os-x-mountain-lion/>`_ with some tweaks. 
 
-Enthought Python (aka Canopy) should get you most of the dependencies needed, and can be downloaded `here <https://store.enthought.com/downloads/#default>`_. You do need to get `Geos <http://trac.osgeo.org/geos/>`_ though. The best way to get it is `install Homebrew <http://matthewcarriere.com/2013/08/05/how-to-install-and-use-homebrew/>`_, and then install ``gdal``, a package that has ``Geos`` as a dependency. To get ``gdal``, do::
+Enthought Python (aka Canopy) should get you most of the dependencies needed, and should be downloaded `here <https://store.enthought.com/downloads/#default>`_. You do need to get `Geos <http://trac.osgeo.org/geos/>`_ though. The best way to get it is `install Homebrew <http://matthewcarriere.com/2013/08/05/how-to-install-and-use-homebrew/>`_, and then install ``gdal``, a package that has ``Geos`` as a dependency. To get ``gdal``, do::
 
   brew install gdal
 
-Now install Basemap. Download it `here <https://pypi.python.org/pypi/basemap>`_. Unzip the package and cd into the unzipped package. To install basemap, do::
+Now install Basemap. Download it `here <https://pypi.python.org/pypi/basemap>`_. Unzip the package, cd into the unzipped package and do::
 
   sudo python setup.py build
   sudo python setup.py install
@@ -259,7 +261,8 @@ Fortran
 -------
 
 GFortran must be installed for AIMBAT. Note that f90 or f77 are also acceptable.
- To check if you already have GFortran, in the terminal type::
+
+To check if you already have GFortran, in the terminal type::
 
   gfortran --version
 
@@ -293,12 +296,12 @@ Here some common problems and possible resolutions. If your problem is not liste
 Macports 
 ~~~~~~~~
 
-Many issues encountered can be solved by upgrading all Python directories on your computer using MacPorts. In the command line type::
+Many of the issues encountered can be solved by upgrading all Python directories on your computer using MacPorts. To do this, in the command line type::
 
     sudo port selfupdate
     sudo port upgrade outdated
 
-This will first make sure your version of MacPorts is the most recent version, and will then go through all Python libraries to make sure they are all upgraded as well. Be aware that this step can take upwards of an hour depending on how many Python libraries you have installed. If at any point a library fails to install, type::
+This will first make sure your version of MacPorts is the most recent version, and will then go through all Python libraries to make sure they are all upgraded. Be aware that this step can take upwards of an hour depending on how many Python libraries you have installed. If at any point a library fails to install, type::
 
     sudo port clean <library>
     sudo port install <library>
@@ -341,19 +344,19 @@ to the ``.bashrc`` file. We recommend adding the paths to the ``.bashrc`` file.
 Terminal Commands stop working
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If ever the terminal commands such as ls stop working in the terminal, it could be that something went wrong with a path in the ``.bashrc`` or ``.profile`` files. If that happens you may not be able to open them in vim as that command would have stopped working as well. Instead, in the terminal, you do::
+If ever the terminal commands such as ``ls`` stop working in the terminal, it could be that something went wrong with a path in the ``.bashrc`` or ``.profile`` files. If that happens, you may not be able to open them in vim as that command would have stopped working as well. Instead, in the terminal, do::
 
   PATH=/bin:${PATH}
   PATH=/usr/bin:${PATH}
 
-And that should allow the commands to start working again. Figure out what you did wrong and remove that command.
+That should allow the commands to start working again. Figure out what you did wrong and remove that command.
 
 .. -------------------------------------------------------------------------------- ..
 
 Path to python files not found
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-After adding the path to your directory with scripts in ``.bashrc``, you still need to source the ``.bashrc`` files in ``.profile``, or the system may not find the directory. See here for more `details <http://publib.boulder.ibm.com/infocenter/pseries/v5r3/index.jsp?topic=/com.ibm.aix.baseadmn/doc/baseadmndita/prof_file.htm>`_ to see how the profile file is sourced. Note that this one will override the file in `/etc/profile`.
+After adding the path to your directory with scripts in ``.bashrc``, you still need to source the ``.bashrc`` files in ``.profile``, or the system may not find the directory. See `here <http://publib.boulder.ibm.com/infocenter/pseries/v5r3/index.jsp?topic=/com.ibm.aix.baseadmn/doc/baseadmndita/prof_file.htm>`_ for more details on how the profile file is sourced. Note that this one will override the file in `/etc/profile`.
 
 .. image:: installing-images/residue.png
 

@@ -1,5 +1,6 @@
 mktextfm phvr8t
 mktextfm phvr8t
+<<<<<<< HEAD
 mktextfm ecrm1000
 mktextfm ecrm1000
 mktextfm ecrm1000
@@ -7,3 +8,5 @@ mktextfm ecrm1000
 mktextfm ecrm1000
 mktextfm ecrm1000
 mktextfm ecrm1000
+=======
+>>>>>>> 61f04900b8ba7c296195805632639c367cf8a575

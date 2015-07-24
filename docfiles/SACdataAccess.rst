@@ -2,6 +2,7 @@
 SAC Data Access
 ===============
 
+NOTE: All ``.sac`` files must include origin time, hypocenter, as well as station coordinates and elevation in their headers.
 
 .. ############################################################################ ..
 .. #                         PYTHON OBJECT FOR SAC FILE                       # ..
@@ -16,7 +17,7 @@ The Python class ``sacfile`` of module ``sacio`` opens a SAC file and returns an
 `egsac.py`
 ~~~~~~~~~~
 
-The ``<pkg-install-dir>/aimbat/scripts/egsac.py`` script gives a simple example to read, resample, and plot a seismogram using pysmo, Scipy, and Matplotlib. You can type the codes in a Python/iPython shell, or run as a script in the data example directory ``<pkg-install-dir>/data-example/example_pkl_files/Event_2011.09.15.19.31.04.080``, hereafter refered to as `<example-event-dir>`.
+The ``<pkg-install-dir>/aimbat/scripts/egsac.py`` script gives a simple example to read, resample, and plot a seismogram using pysmo, Scipy, and Matplotlib. You can type the codes in a Python/iPython shell, or run as a script in the data example directory ``<pkg-install-dir>/data-example/example_pkl_files/Event_2011.09.15.19.31.04.080``, hereafter referred to as `<example-event-dir>`.
 
 .. image:: SACdataAccess/prog-egsac.png
 

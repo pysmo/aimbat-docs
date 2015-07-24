@@ -9,7 +9,7 @@ SAC Input/Output procedures for AIMBAT
 Converting from SAC to PKL files
 --------------------------------
 
-Place the SAC files you want to convert to a pickle (PKL) file into the same folder. Suppose for instance, they are BHZ channels. Note that the SAC files must be of the same channel. cd into that folder, and run::
+Place the SAC files you want to convert to a pickle (PKL) file into the same folder. Suppose, for instance, they are BHZ channels. Note that the SAC files must be of the same channel. cd into that folder, and run::
 
 	sac2pkl.py -s *.BHZ.sac 
 

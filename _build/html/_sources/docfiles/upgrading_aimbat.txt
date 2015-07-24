@@ -43,8 +43,11 @@ cd into the site-packages directory and remove all the folders with the word ``p
 
 Now, reinstall the new version of AIMBAT.
 
+<<<<<<< HEAD
 If this still does not work, upgrade your Python libraries as detailed in section 2.7.1 of this manual and reinstall the new verson of AIMBAT.
 
+=======
+>>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 
 
 

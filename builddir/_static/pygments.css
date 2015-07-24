@@ -40,7 +40,10 @@
 .highlight .nv { color: #bb60d5 } /* Name.Variable */
 .highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
 .highlight .w { color: #bbbbbb } /* Text.Whitespace */
+<<<<<<< HEAD
 .highlight .mb { color: #208050 } /* Literal.Number.Bin */
+=======
+>>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 .highlight .mf { color: #208050 } /* Literal.Number.Float */
 .highlight .mh { color: #208050 } /* Literal.Number.Hex */
 .highlight .mi { color: #208050 } /* Literal.Number.Integer */

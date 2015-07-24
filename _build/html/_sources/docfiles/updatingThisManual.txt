@@ -24,9 +24,15 @@ On the master branch, cd into the github repository `aimbat-docs <https://github
 	make html
 	make latexpdf
 
+<<<<<<< HEAD
 The first two commands build the html for the webpage, while the last command makes a pdf version of the online documentation.
 
 Now, commit the changes made in github, and push the changes to the master branch. The changes should be visible in the documentation within a few minutes. 
+=======
+The two commands builds the html for the webpage, while the last command makes a pdf version of the online documentation.
+
+Now, commit the changes make in github, and push the changes to the master branch. The changes should be visible in the documentation within a few minutes. 
+>>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 
 
 

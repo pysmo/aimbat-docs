@@ -2,6 +2,11 @@
 SAC Input/Output procedures for AIMBAT
 ======================================
 
+<<<<<<< HEAD
+=======
+Once you have downloaded 
+
+>>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 .. ############################################################################ ..
 .. #                               SAC -> PKL                                 # ..
 .. ############################################################################ ..
@@ -36,6 +41,10 @@ cd into the folder containing the PKL file that you wish to convert into SAC fil
 
 	sac2pkl.py --p2s <name-of-file>.pkl
 
+<<<<<<< HEAD
 The SAC files contained within will output into the same folder as the PKL file is stored in.
+=======
+The SAC files contained within will output into the same folder as the PKL file is stored in,
+>>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 
 .. image:: sacio/pkl_to_sac_conversion.png

@@ -9,11 +9,11 @@ Installing AIMBAT
 Getting the Packages
 --------------------
 
-AIMBAT is released as a sub-package of pysmo in the name of ``pysmo.aimbat`` along with another sub-package ``pysmo.sac``. The latest stable release of AIMBAT is available for download at the `official project webpage <http://www.earth.northwestern.edu/~xlou/aimbat.html>`_. 
+AIMBAT is released as a sub-package of pysmo under the name ``pysmo.aimbat`` along with another sub-package ``pysmo.sac``. The latest stable release of AIMBAT is available for download at the `official project webpage <http://www.earth.northwestern.edu/~xlou/aimbat.html>`_. 
 
-We are working on a new release of AIMBAT, available on `Github <https://github.com/pysmo>`_. We are adding more features to make using AIMBAT more convenient, and fixing some bugs in the old code. Download `pysmo.aimbat <https://github.com/pysmo/aimbat>`_ and `pysmo.sac <https://github.com/pysmo/sac>`_ from Github. You will now have two folders called ``aimbat`` and ``sac`` respectively.
+We are working on a new release of AIMBAT, available on `Github <https://github.com/pysmo>`_. Download `pysmo.aimbat <https://github.com/pysmo/aimbat>`_ and `pysmo.sac <https://github.com/pysmo/sac>`_ from Github. You will now have two folders called ``aimbat`` and ``sac`` respectively.
 
-You may want to download `example code <https://github.com/pysmo/data-example>`_ to run AIMBAT on, as well. 
+You may want to download `example code <https://github.com/pysmo/data-example>`_ to run AIMBAT on as well. 
 
 .. ############################################################################ ..
 .. #                          GETTING THE PACKAGES                            # ..

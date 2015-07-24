@@ -2,7 +2,11 @@
 Filtering Data
 ==============
 
+<<<<<<< HEAD
 There are several options for filtering data. `SAC <http://www.iris.edu/files/sac-manual/>`_ offers several ways to filter data that are not discussed here. You could also do so when downloading data using SOD. Alternatively, you could filter data in AIMBAT. 
+=======
+There are several options for filtering data. `SAC <http://www.iris.edu/files/sac-manual/>`_ offers several ways to filter data, which are not discussed here. You could also do so when downloading data using SOD. Alternatively, you could filter data in AIMBAT. 
+>>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 
 
 .. ############################################################################ ..
@@ -55,8 +59,13 @@ There are several options for saving the SAC header files of the seismograms you
 | Save          | Saves the SAC headers only                        |
 +---------------+---------------------------------------------------+
 | Save Params   | Saves the SAC headers and filter parameters used. |
+<<<<<<< HEAD
 |	            | Those filter parameters will automatically load   |
 |	            | the next time the SAC headers are loaded in AIMBAT|
+=======
+|	            | Those filter parameters will automatically the    |
+|	            | next time the SAC headers are loaded in AIMBAT    |
+>>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 +---------------+---------------------------------------------------+
 | Save Override | Save SAV headers and write in the filtered data   |
 +---------------+---------------------------------------------------+

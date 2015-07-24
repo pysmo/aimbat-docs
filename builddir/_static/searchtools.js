@@ -4,7 +4,11 @@
  *
  * Sphinx JavaScript utilties for the full-text search.
  *
+<<<<<<< HEAD
  * :copyright: Copyright 2007-2015 by the Sphinx team, see AUTHORS.
+=======
+ * :copyright: Copyright 2007-2014 by the Sphinx team, see AUTHORS.
+>>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
  * :license: BSD, see LICENSE for details.
  *
  */
@@ -439,7 +443,11 @@ var Search = {
                   dataType: "text",
                   complete: function(jqxhr, textstatus) {
                     var data = jqxhr.responseText;
+<<<<<<< HEAD
                     if (data !== '' && data !== undefined) {
+=======
+                    if (data !== '') {
+>>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
                       listItem.append(Search.makeSearchSummary(data, searchterms, hlterms));
                     }
                     Search.output.append(listItem);

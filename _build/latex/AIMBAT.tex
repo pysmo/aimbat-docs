@@ -19,7 +19,7 @@
 
 
 \title{AIMBAT Documentation}
-\date{July 07, 2015}
+\date{July 23, 2015}
 \release{0.2.1}
 \author{Lay Kuan Loh, Xiaoting Lou, \& Suzan van der Lee}
 \newcommand{\sphinxlogo}{}
@@ -435,7 +435,7 @@ Here some common problems and possible resolutions. If your problem is not liste
 
 \subsection{Macports}
 \label{docfiles/install_dependencies:id9}
-Many issues encountered can be solved by upgrading all Python directories on your computer using MacPorts. In the command line type:
+Many of the issues encountered can be solved by upgrading all Python directories on your computer using MacPorts. In the command line type:
 
 \begin{Verbatim}[commandchars=\\\{\}]
 sudo port selfupdate
@@ -485,7 +485,7 @@ to the \code{.bashrc} file. We recommend adding the paths to the \code{.bashrc} 
 
 \subsection{Terminal Commands stop working}
 \label{docfiles/install_dependencies:terminal-commands-stop-working}
-If ever the terminal commands such as ls stop working in the terminal, it could be that something went wrong with a path in the \code{.bashrc} or \code{.profile} files. If that happens you may not be able to open them in vim as that command would have stopped working as well. Instead, in the terminal, you do:
+If ever the terminal commands such as ls stop working in the terminal, it could be that something went wrong with a path in the \code{.bashrc} or \code{.profile} files. If that happens you may not be able to open them in vim as that command would have stopped working as well. Instead, in the termina.l, you do:
 
 \begin{Verbatim}[commandchars=\\\{\}]
 PATH=/bin:\PYGZdl{}\PYGZob{}PATH\PYGZcb{}
@@ -805,6 +805,35 @@ You can change the order and filter type by selecting the option you want. By cl
 \section{Saving Options}
 \label{docfiles/filteringData:saving-options}
 There are several options for saving the SAC header files of the seismograms you have chosen.
+
+\begin{tabulary}{\linewidth}{|L|L|}
+\hline
+\textsf{\relax 
+Button Title
+} & \textsf{\relax 
+What it does
+}\\
+\hline
+Save
+ & 
+Saves the SAC headers only
+\\
+\hline\end{tabulary}
+
+
+\begin{DUlineblock}{0em}
+\item[] Save          \textbar{} Saves the SAC headers only                        \textbar{}
+\end{DUlineblock}
+
+\begin{tabulary}{\linewidth}{|L|L|}
+\hline
+
+Save Override
+ & 
+Save SAV headers and write in the filtered data
+\\
+\hline\end{tabulary}
+
 
 
 \chapter{Analyzing Data}
@@ -1145,6 +1174,8 @@ Taper width
 
 \chapter{SAC Data Access}
 \label{docfiles/SACdataAccess:sac-data-access}\label{docfiles/SACdataAccess::doc}
+NOTE: All \code{.sac} files must include origin time, hypocenter, as well as station coordinates and elevation in their headers.
+
 
 \section{Python Object for SAC File}
 \label{docfiles/SACdataAccess:python-object-for-sac-file}
@@ -1154,7 +1185,7 @@ The Python class \code{sacfile} of module \code{sacio} opens a SAC file and retu
 
 \subsection{\emph{egsac.py}}
 \label{docfiles/SACdataAccess:egsac-py}
-The \code{\textless{}pkg-install-dir\textgreater{}/aimbat/scripts/egsac.py} script gives a simple example to read, resample, and plot a seismogram using pysmo, Scipy, and Matplotlib. You can type the codes in a Python/iPython shell, or run as a script in the data example directory \code{\textless{}pkg-install-dir\textgreater{}/data-example/example\_pkl\_files/Event\_2011.09.15.19.31.04.080}, hereafter refered to as \emph{\textless{}example-event-dir\textgreater{}}.
+The \code{\textless{}pkg-install-dir\textgreater{}/aimbat/scripts/egsac.py} script gives a simple example to read, resample, and plot a seismogram using pysmo, Scipy, and Matplotlib. You can type the codes in a Python/iPython shell, or run as a script in the data example directory \code{\textless{}pkg-install-dir\textgreater{}/data-example/example\_pkl\_files/Event\_2011.09.15.19.31.04.080}, hereafter referred to as \emph{\textless{}example-event-dir\textgreater{}}.
 
 \includegraphics{prog-egsac.png}
 
@@ -1411,6 +1442,16 @@ Input
 } &  \multicolumn{2}{l|}{
 Output
 }\\
+\cline{3-7} &  &  &  &  &  & \\
+\hline \multirow{2}{*}{
+Step
+} &  \multirow{2}{*}{
+Algorithm
+} &  \multicolumn{3}{l|}{
+Input
+} &  \multicolumn{2}{l|}{
+Output
+}\\
 \cline{3-7} &  & 
 Time Window
  & 
@@ -1507,7 +1548,7 @@ and a python GUI should pop up.
 
 \subsection{Align}
 \label{docfiles/PickingTravelTimes:align}
-\code{Align} is only used in the beginning, if you have altered some of the travel time arrivals of the seismograms by pressing \code{t2} and want to realign the array stack.
+\code{Align} is only used in the beginning if you have altered some of the travel time arrivals of the seismograms by pressing \code{t2} and want to realign the array stack. Do not press \code{Align} after pressing \code{Sync}, as that will remove all of your \code{t2} picks.
 
 
 \subsection{Selecting a time window around the arrival of interest}
@@ -1542,9 +1583,41 @@ If there are any really bad seismograms, you can click on them to deselect them.
 \label{docfiles/PickingTravelTimes:filtering}
 To filter your data, hit the \code{filter} button, and a window will popup for you to use the \href{http://en.wikipedia.org/wiki/Butterworth\_filter}{Butterworth filter} to filter your data.
 
-Remember to save your work periodically once you start picking your travel times, otherwise, if AIMBAT crashes, you lose it.
+The defaults used for filtering are:
 
-You can choose the order by selecting one of the values provided (default is 1), and choose the low and high frequencies for bandpassing by clicking on the appropriate start and stop frequency on the lower graph.
+\begin{tabulary}{\linewidth}{|L|L|}
+\hline
+\textsf{\relax 
+Variable
+} & \textsf{\relax 
+Default
+}\\
+\hline
+Order
+ & 
+2
+\\
+\hline
+Filter Type
+ & 
+Bandpass
+\\
+\hline
+Low Frequency
+ & 
+0.05 Hz
+\\
+\hline
+High Frequency
+ & 
+0.25 Hz
+\\
+\hline\end{tabulary}
+
+
+You can change the order and filter type by selecting the option you want. In order to set corner frequencies for the filer, select the low frequency and the high frequency you want on the lower figure. Click \code{apply} to filter the seismograms when you are satisfied with the filter paramters chosen.
+
+Remember to save your work periodically once you start picking your travel times, otherwise, if AIMBAT crashes, you lose it.
 
 
 \subsection{Refine}
@@ -1639,6 +1712,7 @@ Run \code{getsta.py} in the additional scripts (not on Github for now). It gives
 If you run \code{ttick.py \textless{}Event name\textgreater{}.bhz.pkl}, a GUI will pop up for you to manually pick the travel times by pressing the keyboard. If typing on the keyboard as directed does not allow you to pick travel times, it could be a problem with the keyboard settings, or the matplotlib backend.
 
 To fix this, first look for the .matplotlib directory. It is hidden in your home directory, so do \code{ls -a} to find it.
+
 Once you have found the \code{.matplotlib} directory, cd into it, and then look for the \code{matplotlibrc} file.
 Inside that file, ensure the backend is set to:
 

@@ -25,9 +25,9 @@ The one-time manual phase picking at the array stack in step (b) allows the meas
 
 .. table:: Time picks and their SAC headers used in the procedure for measuring teleseismic body wave arrival times.
 
-	+------+-----------+--------------------------------------------+-----------------------------+
+	+------+-----------+-------------+----------------+-------------+---------------+-------------+
 	| Step | Algorithm |                    Input                   |            Output           |
-	|      |           +-------------+----------------+-------------+---------------+-------------+
+	+      +           +-------------+----------------+-------------+---------------+-------------+
 	|      |           | Time Window | Time Pick      | Time Header | Time Pick     | Time Header |
 	+------+-----------+-------------+----------------+-------------+---------------+-------------+
 	| (a)  |   ICCS    | :math:`W_a` | :math:`_0T_i`  | **T0**      | :math:`_1T_i` | **T1**      |     
@@ -83,7 +83,7 @@ and a python GUI should pop up.
 Align
 ~~~~~
 
-``Align`` is only used in the beginning, if you have altered some of the travel time arrivals of the seismograms by pressing ``t2`` and want to realign the array stack.
+``Align`` is only used in the beginning if you have altered some of the travel time arrivals of the seismograms by pressing ``t2`` and want to realign the array stack. Do not press ``Align`` after pressing ``Sync``, as that will remove all of your ``t2`` picks.
 
 .. ----------------------------------------------------------------------------- ..
 
@@ -128,9 +128,23 @@ To filter your data, hit the ``filter`` button, and a window will popup for you 
 
 	Interface to filter your data.
 
-Remember to save your work periodically once you start picking your travel times, otherwise, if AIMBAT crashes, you lose it.
+The defaults used for filtering are:
 
-You can choose the order by selecting one of the values provided (default is 1), and choose the low and high frequencies for bandpassing by clicking on the appropriate start and stop frequency on the lower graph.
++----------------+----------+
+| Variable       | Default  |
++================+==========+
+| Order          | 2        |
++----------------+----------+
+| Filter Type    | Bandpass |
++----------------+----------+
+| Low Frequency  | 0.05 Hz  |
++----------------+----------+
+| High Frequency | 0.25 Hz  |
++----------------+----------+
+
+You can change the order and filter type by selecting the option you want. In order to set corner frequencies for the filer, select the low frequency and the high frequency you want on the lower figure. Click ``apply`` to filter the seismograms when you are satisfied with the filter paramters chosen.
+
+Remember to save your work periodically once you start picking your travel times, otherwise, if AIMBAT crashes, you lose it.
 
 .. ----------------------------------------------------------------------------- ..
 
@@ -279,6 +293,7 @@ Picking Travel Times does not work
 If you run ``ttick.py <Event name>.bhz.pkl``, a GUI will pop up for you to manually pick the travel times by pressing the keyboard. If typing on the keyboard as directed does not allow you to pick travel times, it could be a problem with the keyboard settings, or the matplotlib backend.
 
 To fix this, first look for the .matplotlib directory. It is hidden in your home directory, so do ``ls -a`` to find it.
+
 Once you have found the ``.matplotlib`` directory, cd into it, and then look for the ``matplotlibrc`` file.
 Inside that file, ensure the backend is set to::
 

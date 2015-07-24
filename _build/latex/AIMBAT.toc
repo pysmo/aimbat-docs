@@ -65,7 +65,7 @@
 \contentsline {subsection}{\numberline {11.2.4}Selecting a time window around the arrival of interest}{47}{subsection.11.2.4}
 \contentsline {subsection}{\numberline {11.2.5}Get rid of bad seismograms}{50}{subsection.11.2.5}
 \contentsline {subsection}{\numberline {11.2.6}Filtering}{50}{subsection.11.2.6}
-\contentsline {subsection}{\numberline {11.2.7}Refine}{50}{subsection.11.2.7}
+\contentsline {subsection}{\numberline {11.2.7}Refine}{51}{subsection.11.2.7}
 \contentsline {subsection}{\numberline {11.2.8}Finalize}{51}{subsection.11.2.8}
 \contentsline {subsection}{\numberline {11.2.9}Manually pick the arrival times using t2}{51}{subsection.11.2.9}
 \contentsline {subsection}{\numberline {11.2.10}SACP2 to check for outlier seismograms}{51}{subsection.11.2.10}
