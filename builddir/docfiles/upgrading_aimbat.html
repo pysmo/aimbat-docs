@@ -8,11 +8,7 @@
     
     <title>4. Upgrading AIMBAT &mdash; AIMBAT 0.2.1 documentation</title>
     
-<<<<<<< HEAD
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
-=======
-    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/additional_styles.css" type="text/css" />
     
@@ -28,22 +24,13 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-<<<<<<< HEAD
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-=======
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
     <link rel="top" title="AIMBAT 0.2.1 documentation" href="../index.html" />
     <link rel="next" title="5. Getting Data" href="gettingData.html" />
     <link rel="prev" title="3. Installing AIMBAT" href="install_aimbat.html" /> 
   </head>
-<<<<<<< HEAD
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
-=======
-  <body>
-    <div class="related">
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -55,22 +42,14 @@
         <li class="right" >
           <a href="install_aimbat.html" title="3. Installing AIMBAT"
              accesskey="P">previous</a> |</li>
-<<<<<<< HEAD
         <li class="nav-item nav-item-0"><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
-=======
-        <li><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-<<<<<<< HEAD
           <div class="body" role="main">
-=======
-          <div class="body">
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
             
   <div class="section" id="upgrading-aimbat">
 <h1>4. Upgrading AIMBAT<a class="headerlink" href="#upgrading-aimbat" title="Permalink to this headline">¶</a></h1>
@@ -79,13 +58,13 @@
 <p>The latest version of AIMBAT, currently version 0.1.3, is hosted on the <a class="reference external" href="https://github.com/pysmo">pysmo repository</a> on Github. We will periodically be making updates to it.</p>
 <p>To upgrade AIMBAT, first delete the old AIMBAT files on your computer.</p>
 <p>Next, download the newest version of <a class="reference external" href="https://github.com/pysmo/aimbat">AIMBAT</a> and <a class="reference external" href="https://github.com/pysmo/sac">SAC</a> from github. Now, cd into the newest AIMBAT folder and run:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo python setup.py build --fcompiler=gfortran
-sudo python setup.py install
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build</span> <span class="o">--</span><span class="n">fcompiler</span><span class="o">=</span><span class="n">gfortran</span>
+<span class="n">sudo</span> <span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
 </pre></div>
 </div>
 <p>Also, cd into the newest SAC folder and run:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo python setup.py build
-sudo python setup.py install
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build</span>
+<span class="n">sudo</span> <span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
 </pre></div>
 </div>
 <p>Now, go to the <cite>.profile</cite> file and add the <cite>scripts</cite> folder in the new AIMBAT version to your path.</p>
@@ -94,30 +73,19 @@ sudo python setup.py install
 <div class="section" id="possible-issues">
 <h2>4.2. Possible Issues<a class="headerlink" href="#possible-issues" title="Permalink to this headline">¶</a></h2>
 <p>Some users have reported errors with upgrading. If there are any problems running the updated AIMBAT, try the following:</p>
-<<<<<<< HEAD
 <p>Get the location of the python <code class="docutils literal"><span class="pre">site-packages</span></code> directory by typing the following into the python console:</p>
-=======
-<p>Get the location of the python <tt class="docutils literal"><span class="pre">site-packages</span></tt> directory by typing the following into the python console:</p>
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">site</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">site</span>
 <span class="n">site</span><span class="o">.</span><span class="n">getsitepackages</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>The path to the site packages directory is highlighted in the figure below.</p>
 <img alt="../_images/get-site-package.png" src="../_images/get-site-package.png" />
-<<<<<<< HEAD
 <p>cd into the site-packages directory and remove all the folders with the word <code class="docutils literal"><span class="pre">pysmo</span></code> in their names by typing:</p>
-=======
-<p>cd into the site-packages directory and remove all the folders with the word <tt class="docutils literal"><span class="pre">pysmo</span></tt> in their names by typing:</p>
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
-<div class="highlight-python"><div class="highlight"><pre>sudo rm -rf &lt;psymo-folder&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">&lt;</span><span class="n">psymo</span><span class="o">-</span><span class="n">folder</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>Now, reinstall the new version of AIMBAT.</p>
-<<<<<<< HEAD
 <p>If this still does not work, upgrade your Python libraries as detailed in section 2.7.1 of this manual and reinstall the new verson of AIMBAT.</p>
-=======
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 </div>
 </div>
 
@@ -125,11 +93,7 @@ sudo python setup.py install
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-=======
-      <div class="sphinxsidebar">
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/NU_Logo_purple.jpg" alt="Logo"/>
@@ -149,7 +113,6 @@ sudo python setup.py install
   <h4>Next topic</h4>
   <p class="topless"><a href="gettingData.html"
                         title="next chapter">5. Getting Data</a></p>
-<<<<<<< HEAD
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -158,14 +121,6 @@ sudo python setup.py install
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-=======
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/docfiles/upgrading_aimbat.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -173,20 +128,13 @@ sudo python setup.py install
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-<<<<<<< HEAD
     <div class="related" role="navigation" aria-label="related navigation">
-=======
-    <div class="related">
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -198,21 +146,12 @@ sudo python setup.py install
         <li class="right" >
           <a href="install_aimbat.html" title="3. Installing AIMBAT"
              >previous</a> |</li>
-<<<<<<< HEAD
         <li class="nav-item nav-item-0"><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2014, Lay Kuan Loh, Xiaoting Lou &amp; Suzan van der Lee.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
-=======
-        <li><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
-      </ul>
-    </div>
-    <div class="footer">
-        &copy; Copyright 2014, Lay Kuan Loh, Xiaoting Lou &amp; Suzan van der Lee.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>

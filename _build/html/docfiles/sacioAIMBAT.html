@@ -8,11 +8,7 @@
     
     <title>6. SAC Input/Output procedures for AIMBAT &mdash; AIMBAT 0.2.1 documentation</title>
     
-<<<<<<< HEAD
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
-=======
-    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/additional_styles.css" type="text/css" />
     
@@ -28,60 +24,39 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-<<<<<<< HEAD
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-=======
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
     <link rel="top" title="AIMBAT 0.2.1 documentation" href="../index.html" />
-    <link rel="next" title="7. Filtering Data" href="filteringData.html" />
+    <link rel="next" title="7. Analyzing Data" href="analyzingData.html" />
     <link rel="prev" title="5. Getting Data" href="gettingData.html" /> 
   </head>
-<<<<<<< HEAD
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
-=======
-  <body>
-    <div class="related">
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="filteringData.html" title="7. Filtering Data"
+          <a href="analyzingData.html" title="7. Analyzing Data"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="gettingData.html" title="5. Getting Data"
              accesskey="P">previous</a> |</li>
-<<<<<<< HEAD
         <li class="nav-item nav-item-0"><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
-=======
-        <li><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-<<<<<<< HEAD
           <div class="body" role="main">
             
   <div class="section" id="sac-input-output-procedures-for-aimbat">
 <h1>6. SAC Input/Output procedures for AIMBAT<a class="headerlink" href="#sac-input-output-procedures-for-aimbat" title="Permalink to this headline">¶</a></h1>
-=======
-          <div class="body">
-            
-  <div class="section" id="sac-input-output-procedures-for-aimbat">
-<h1>6. SAC Input/Output procedures for AIMBAT<a class="headerlink" href="#sac-input-output-procedures-for-aimbat" title="Permalink to this headline">¶</a></h1>
-<p>Once you have downloaded</p>
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 <div class="section" id="converting-from-sac-to-pkl-files">
 <h2>6.1. Converting from SAC to PKL files<a class="headerlink" href="#converting-from-sac-to-pkl-files" title="Permalink to this headline">¶</a></h2>
-<p>Place the SAC files you want to convert to a pickle (PKL) file into the same folder. Suppose for instance, they are BHZ channels. Note that the SAC files must be of the same channel. cd into that folder, and run:</p>
-<div class="highlight-python"><div class="highlight"><pre>sac2pkl.py -s *.BHZ.sac
+<p>Place the SAC files you want to convert to a pickle (PKL) file into the same folder. Suppose, for instance, they are BHZ channels. Note that the SAC files must be of the same channel. cd into that folder, and run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sac2pkl</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">s</span> <span class="o">*.</span><span class="n">BHZ</span><span class="o">.</span><span class="n">sac</span>
 </pre></div>
 </div>
 <p>The output should be a PKL file in the same folder as the sac files.</p>
@@ -90,14 +65,10 @@
 <div class="section" id="converting-from-pkl-to-sac-files">
 <h2>6.2. Converting from PKL to SAC files<a class="headerlink" href="#converting-from-pkl-to-sac-files" title="Permalink to this headline">¶</a></h2>
 <p>cd into the folder containing the PKL file that you wish to convert into SAC files, and run:</p>
-<div class="highlight-python"><div class="highlight"><pre>sac2pkl.py --p2s &lt;name-of-file&gt;.pkl
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sac2pkl</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">p2s</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;.</span><span class="n">pkl</span>
 </pre></div>
 </div>
-<<<<<<< HEAD
 <p>The SAC files contained within will output into the same folder as the PKL file is stored in.</p>
-=======
-<p>The SAC files contained within will output into the same folder as the PKL file is stored in,</p>
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 <img alt="../_images/pkl_to_sac_conversion.png" src="../_images/pkl_to_sac_conversion.png" />
 </div>
 </div>
@@ -106,11 +77,7 @@
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-=======
-      <div class="sphinxsidebar">
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/NU_Logo_purple.jpg" alt="Logo"/>
@@ -128,9 +95,8 @@
   <p class="topless"><a href="gettingData.html"
                         title="previous chapter">5. Getting Data</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="filteringData.html"
-                        title="next chapter">7. Filtering Data</a></p>
-<<<<<<< HEAD
+  <p class="topless"><a href="analyzingData.html"
+                        title="next chapter">7. Analyzing Data</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -139,14 +105,6 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-=======
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/docfiles/sacioAIMBAT.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -154,46 +112,30 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-<<<<<<< HEAD
     <div class="related" role="navigation" aria-label="related navigation">
-=======
-    <div class="related">
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="filteringData.html" title="7. Filtering Data"
+          <a href="analyzingData.html" title="7. Analyzing Data"
              >next</a> |</li>
         <li class="right" >
           <a href="gettingData.html" title="5. Getting Data"
              >previous</a> |</li>
-<<<<<<< HEAD
         <li class="nav-item nav-item-0"><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2014, Lay Kuan Loh, Xiaoting Lou &amp; Suzan van der Lee.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
-=======
-        <li><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
-      </ul>
-    </div>
-    <div class="footer">
-        &copy; Copyright 2014, Lay Kuan Loh, Xiaoting Lou &amp; Suzan van der Lee.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>

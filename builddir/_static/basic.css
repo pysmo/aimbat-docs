@@ -4,11 +4,7 @@
  *
  * Sphinx stylesheet -- basic theme.
  *
-<<<<<<< HEAD
- * :copyright: Copyright 2007-2015 by the Sphinx team, see AUTHORS.
-=======
- * :copyright: Copyright 2007-2014 by the Sphinx team, see AUTHORS.
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
+ * :copyright: Copyright 2007-2016 by the Sphinx team, see AUTHORS.
  * :license: BSD, see LICENSE for details.
  *
  */
@@ -56,6 +52,8 @@ div.sphinxsidebar {
     width: 230px;
     margin-left: -100%;
     font-size: 90%;
+    word-wrap: break-word;
+    overflow-wrap : break-word;
 }
 
 div.sphinxsidebar ul {
@@ -191,6 +189,13 @@ div.genindex-jumpbox {
 
 /* -- general body styles --------------------------------------------------- */
 
+div.body p, div.body dd, div.body li, div.body blockquote {
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
 a.headerlink {
     visibility: hidden;
 }
@@ -201,14 +206,10 @@ h3:hover > a.headerlink,
 h4:hover > a.headerlink,
 h5:hover > a.headerlink,
 h6:hover > a.headerlink,
-<<<<<<< HEAD
 dt:hover > a.headerlink,
 caption:hover > a.headerlink,
 p.caption:hover > a.headerlink,
 div.code-block-caption:hover > a.headerlink {
-=======
-dt:hover > a.headerlink {
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
     visibility: visible;
 }
 
@@ -325,7 +326,6 @@ table.docutils {
     border-collapse: collapse;
 }
 
-<<<<<<< HEAD
 table caption span.caption-number {
     font-style: italic;
 }
@@ -333,8 +333,6 @@ table caption span.caption-number {
 table caption span.caption-text {
 }
 
-=======
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 table.docutils td, table.docutils th {
     padding: 1px 8px 1px 5px;
     border-top: 0;
@@ -365,7 +363,6 @@ table.citation td {
     border-bottom: none;
 }
 
-<<<<<<< HEAD
 /* -- figures --------------------------------------------------------------- */
 
 div.figure {
@@ -385,8 +382,6 @@ div.figure p.caption span.caption-text {
 }
 
 
-=======
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 /* -- other body styles ----------------------------------------------------- */
 
 ol.arabic {
@@ -449,13 +444,10 @@ dl.glossary dt {
     font-size: 1.3em;
 }
 
-<<<<<<< HEAD
 .sig-paren {
     font-size: larger;
 }
 
-=======
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 .versionmodified {
     font-style: italic;
 }
@@ -521,7 +513,6 @@ table.highlighttable td {
     padding: 0 0.5em 0 0.5em;
 }
 
-<<<<<<< HEAD
 div.code-block-caption {
     padding: 2px 5px;
     font-size: small;
@@ -552,36 +543,21 @@ div.literal-block-wrapper div.highlight {
 }
 
 code.descname {
-=======
-tt.descname {
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
     background-color: transparent;
     font-weight: bold;
     font-size: 1.2em;
 }
 
-<<<<<<< HEAD
 code.descclassname {
     background-color: transparent;
 }
 
 code.xref, a code {
-=======
-tt.descclassname {
-    background-color: transparent;
-}
-
-tt.xref, a tt {
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
     background-color: transparent;
     font-weight: bold;
 }
 
-<<<<<<< HEAD
 h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
-=======
-h1 tt, h2 tt, h3 tt, h4 tt, h5 tt, h6 tt {
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
     background-color: transparent;
 }
 

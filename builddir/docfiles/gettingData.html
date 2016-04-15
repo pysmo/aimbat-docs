@@ -8,11 +8,7 @@
     
     <title>5. Getting Data &mdash; AIMBAT 0.2.1 documentation</title>
     
-<<<<<<< HEAD
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
-=======
-    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/additional_styles.css" type="text/css" />
     
@@ -28,22 +24,13 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-<<<<<<< HEAD
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-=======
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
     <link rel="top" title="AIMBAT 0.2.1 documentation" href="../index.html" />
     <link rel="next" title="6. SAC Input/Output procedures for AIMBAT" href="sacioAIMBAT.html" />
     <link rel="prev" title="4. Upgrading AIMBAT" href="upgrading_aimbat.html" /> 
   </head>
-<<<<<<< HEAD
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
-=======
-  <body>
-    <div class="related">
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -55,69 +42,44 @@
         <li class="right" >
           <a href="upgrading_aimbat.html" title="4. Upgrading AIMBAT"
              accesskey="P">previous</a> |</li>
-<<<<<<< HEAD
         <li class="nav-item nav-item-0"><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
-=======
-        <li><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-<<<<<<< HEAD
           <div class="body" role="main">
-=======
-          <div class="body">
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
             
   <div class="section" id="getting-data">
 <h1>5. Getting Data<a class="headerlink" href="#getting-data" title="Permalink to this headline">¶</a></h1>
 <p>Note: Not necessary if you already have your own set ways of obtaining data. This section is added for completeness.</p>
-<<<<<<< HEAD
 <p>There are several ways to obtain seismic data from <a class="reference external" href="http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/">IRIS</a> to input into AIMBAT. The authors used two ways to do it, and a further list of libraries for obtaining seismic data is provided in the sidebars <a class="reference external" href="http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/">here</a>.</p>
-=======
-<p>There are several ways to obtain seismic data from <a class="reference external" href="http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/">IRIS</a> to input to AIMBAT. The authors used two ways to do it, and a further list of libraries for obtaining seismic data is provided in the sidebars <a class="reference external" href="http://www.iris.edu/dms/nodes/dmc/data/types/waveform-data/">here</a>.</p>
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 <div class="section" id="obspy-fdsn-for-downloading-data">
 <h2>5.1. Obspy.fdsn for downloading data<a class="headerlink" href="#obspy-fdsn-for-downloading-data" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="installing-obspy">
 <h3>5.1.1. Installing Obspy<a class="headerlink" href="#installing-obspy" title="Permalink to this headline">¶</a></h3>
 <p>We recommend using Macports to install Obspy as detailed in the <cite>Installation</cite> section <a class="reference external" href="https://github.com/obspy/obspy/wiki">here</a>. If you have installed Enthought Canopy:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo port install py27-obspy
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">port</span> <span class="n">install</span> <span class="n">py27</span><span class="o">-</span><span class="n">obspy</span>
 </pre></div>
 </div>
-<<<<<<< HEAD
 <p>should install Obspy. If not, installing it with <a class="reference external" href="https://github.com/obspy/obspy/wiki/Installation-on-OS-X-using-Homebrew">Homebrew</a> also seems to work.</p>
 </div>
 <div class="section" id="did-the-installation-work">
 <h3>5.1.2. Did the installation work?<a class="headerlink" href="#did-the-installation-work" title="Permalink to this headline">¶</a></h3>
 <p>If the installation has worked, <cite>close the terminal</cite> you used to install Obspy on, and then open it again. Now, open the Python terminal in a new terminal by typing <code class="docutils literal"><span class="pre">python</span></code>, and type:</p>
-=======
-<p>should do it. If not, installing with <a class="reference external" href="https://github.com/obspy/obspy/wiki/Installation-on-OS-X-using-Homebrew">Homebrew</a> also seems to work.</p>
-</div>
-<div class="section" id="did-the-installation-work">
-<h3>5.1.2. Did the installation work?<a class="headerlink" href="#did-the-installation-work" title="Permalink to this headline">¶</a></h3>
-<p>If installation has worked, <cite>close the terminal</cite> you used to install Obspy on, and then open it again. Now, open the Python terminal in a new terminal, and type:</p>
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">obspy</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">obspy</span>
 </pre></div>
 </div>
 <p>If there are no errors, your installation has worked.</p>
 </div>
 <div class="section" id="using-obspy">
 <h3>5.1.3. Using Obspy<a class="headerlink" href="#using-obspy" title="Permalink to this headline">¶</a></h3>
-<<<<<<< HEAD
 <p>Use the <a class="reference external" href="http://docs.obspy.org/packages/obspy.fdsn.html#">Obspy FDSN</a> web service client for Obspy in Python. Once you have done so, check out the <a class="reference external" href="http://docs.obspy.org/packages/obspy.sac.html">SAC-Input Output</a> libraries for loading the data to Python and saving it as SAC or Pickle files.</p>
-=======
-<p>Use the <a class="reference external" href="http://docs.obspy.org/packages/obspy.fdsn.html#">Obspy FDSN</a> Web service client for Obspy in Python. Once you have done so, check out the <a class="reference external" href="http://docs.obspy.org/packages/obspy.sac.html">SAC-Input Output</a> libraries for loading the data to Python and saving it as SAC or Pickle files.</p>
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 </div>
 </div>
 <div class="section" id="standing-order-for-data">
 <h2>5.2. Standing Order for Data<a class="headerlink" href="#standing-order-for-data" title="Permalink to this headline">¶</a></h2>
-<<<<<<< HEAD
 <p>Note: NOT needed for AIMBAT, but important to know about as it is a commonly used package for downloading seismic data with the user&#8217;s specifications. Although Obspy also offers ways to download seismic data from IRIS, SOD allows for better fine-tuning of obtained data.</p>
 <p>From the <a class="reference external" href="http://www.seis.sc.edu/index.html">SOD</a> website:</p>
 <blockquote>
@@ -129,33 +91,15 @@
 <img alt="../_images/sod_location.png" src="../_images/sod_location.png" />
 <p>Once you have it there, get the path to the sod folder&#8217;s bin and put it in your path folder.</p>
 <img alt="../_images/path_to_sod_bin.png" src="../_images/path_to_sod_bin.png" />
-<p>Inside my home directory&#8217;s bash profile (you get there by typing <cite>cd</cite>), you put the path to <cite>sod-3.2.3/bin</cite> by adding it to either the <cite>bashrc</cite>, <cite>bash_profile</cite>, or <cite>profile</cite> files.</p>
-=======
-<p>Note: NOT needed for AIMBAT, but important to know about as it is a commonly used package for downloading seismic data with the user&#8217;s specifications. Although Obspy also offers was to download seismic data from IRIS, SOD allows for better fine-tuning of data obtained.</p>
-<p>From the <a class="reference external" href="http://www.seis.sc.edu/index.html">SOD</a> website:</p>
-<blockquote>
-<div>Standing Order for Data, is a framework to define rules to select seismic events, stations, and data. It then allows you to apply processing to the events, stations, and data and currently contains a large set of rules that allow you to select with great precision in these items. The processes mainly consist of simple data transformation and retrieval, but SOD defines hooks to allow you to cleanly insert your own processing steps, either written in Java or an external program.</div></blockquote>
-<div class="section" id="installing-sod">
-<h3>5.2.1. Installing SOD<a class="headerlink" href="#installing-sod" title="Permalink to this headline">¶</a></h3>
-<p>First, download <a class="reference external" href="http://www.seis.sc.edu/index.html">SOD</a>.</p>
-<p>Once you have gotten the folder for SOD, put it somewhere where you won&#8217;t touch it too much. What I did was put the SOD folder in my home directory, though other places are acceptable as well, as long as its not too easy to delete it by accident.</p>
-<img alt="../_images/sod_location.png" src="../_images/sod_location.png" />
-<p>Once you have it there, get the path to the sod folder&#8217;s bin and put it in your path folder.</p>
-<img alt="../_images/path_to_sod_bin.png" src="../_images/path_to_sod_bin.png" />
-<p>Inside my home directory&#8217;s bash profile (you get the by typing <cite>cd</cite>), you put the path to <cite>sod-3.2.3/bin</cite> by adding in either the <cite>bash</cite> or <cite>bash_profile</cite> or <cite>profile</cite> files.</p>
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
+<p>Inside your home directory (you get there by typing <cite>cd</cite>), put the path to <cite>sod-3.2.3/bin</cite> by adding it to either the <cite>.bashrc</cite>, <cite>.bash_profile</cite>, or <cite>.profile</cite> files.</p>
 </div>
 <div class="section" id="example-sod-recipe">
 <h3>5.2.2. Example SOD recipe<a class="headerlink" href="#example-sod-recipe" title="Permalink to this headline">¶</a></h3>
-<p>Inside the repository <a class="reference external" href="https://github.com/pysmo/data-example">data-example</a>, there is a folder <cite>sod_requests</cite>. The file within it called <cite>sod_request.xml</cite>, which is available <a class="reference external" href="https://github.com/pysmo/data-example/blob/master/sod_requests/sod_request.xml">here</a>, is an example of a sod request recipe that will download data from IRIS. To run it, cd into the folder containing <cite>sod_request.xml</cite>, and do:</p>
-<div class="highlight-python"><div class="highlight"><pre>sod sod_request.xml
+<p>Inside the repository <a class="reference external" href="https://github.com/pysmo/data-example">data-example</a>, there is a folder <cite>sod_requests</cite>. The file within it called <cite>sod_request.xml</cite>, which is available <a class="reference external" href="https://github.com/pysmo/data-example/blob/master/sod_requests/sod_request.xml">here</a>, is an example of a sod request recipe that will download data from IRIS. To run it, cd into the folder containing <cite>sod_request.xml</cite> and do:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sod</span> <span class="n">sod_request</span><span class="o">.</span><span class="n">xml</span>
 </pre></div>
 </div>
-<<<<<<< HEAD
 <p>Downloading the data (output as SAC files) may take a while. This receipt filters the data, and outputs the folders <cite>processedSeismograms</cite> and <cite>seismograms</cite>, which contain the filtered and unfiltered data.</p>
-=======
-<p>Downloading the data (output as SAC files) may take a while. This receipt filters the data, and outputs the folders <cite>processedSeismograms</cite> and <cite>seismograms</cite>, which container the filtered and unfiltered data.</p>
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 </div>
 </div>
 </div>
@@ -164,11 +108,7 @@
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-=======
-      <div class="sphinxsidebar">
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/NU_Logo_purple.jpg" alt="Logo"/>
@@ -197,7 +137,6 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="sacioAIMBAT.html"
                         title="next chapter">6. SAC Input/Output procedures for AIMBAT</a></p>
-<<<<<<< HEAD
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -206,14 +145,6 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-=======
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/docfiles/gettingData.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -221,20 +152,13 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-<<<<<<< HEAD
     <div class="related" role="navigation" aria-label="related navigation">
-=======
-    <div class="related">
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -246,21 +170,12 @@
         <li class="right" >
           <a href="upgrading_aimbat.html" title="4. Upgrading AIMBAT"
              >previous</a> |</li>
-<<<<<<< HEAD
         <li class="nav-item nav-item-0"><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2014, Lay Kuan Loh, Xiaoting Lou &amp; Suzan van der Lee.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
-=======
-        <li><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
-      </ul>
-    </div>
-    <div class="footer">
-        &copy; Copyright 2014, Lay Kuan Loh, Xiaoting Lou &amp; Suzan van der Lee.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>

@@ -8,11 +8,7 @@ Installing Dependencies
 
 
 
-<<<<<<< HEAD
 AIMBAT is built on top of `standard Python <https://www.python.org/>`_, and uses several extra Python libraries as well. This page guides the user through checking if the required libraries are already installed on the computer they want to install AIMBAT on, and how to get them if not. 
-=======
-AIMBAT is build on top of `standard Python <https://www.python.org/>`_, and uses several extra Python libraries as well. This page guides the user through checking if the required libraries are already install on the computer they want to install AIMBAT in, and how to get them if not. 
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 
 To install AIMBAT, you will need sudo/root privileges for the computer you are installing it on. 
 
@@ -29,11 +25,7 @@ Getting your operating system
 
 We assume that most users of AIMBAT will be using Macs. If our assumptions are wrong, please :ref:`contact the authors <authors-contacts>`, and if there is sufficient interest we will test and write documentation for installations on other operating systems as well. 
 
-<<<<<<< HEAD
 On a Mac, to find the version of your operating system, first click on the Apple icon on the top bar of your desktop, go to ``System Preferences``, and click on ``Startup Disk``. The operating system version should then be displayed. 
-=======
-On a mac, to find the version of your operating system, first click on the apple icon on the top bar of your desktop, go to ``System Preferences``, and click on ``Startup Disk``. The operating system version should then be displayed. 
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 
 .. image:: installing-images/system_preferences.png
 
@@ -56,11 +48,7 @@ On a mac, to find the version of your operating system, first click on the apple
 Github
 ------
 
-<<<<<<< HEAD
-`Optional`.
-=======
-`Optional but recommended`.
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
+`Optional`
 
 The `latest version of AIMBAT <https://github.com/pysmo>`_ will be on `Github <https://github.com/>`_, so it would be good to get `GitHub <https://github.com/>`_ on your computer. This is not strictly necessary, as you could also download it as a zipfile from the `AIMBAT website <http://www.earth.northwestern.edu/~xlou/aimbat.html>`_.
 
@@ -94,11 +82,9 @@ To install GitHub, download the package installer `here <http://git-scm.com/down
 MacPorts
 --------
 
-<<<<<<< HEAD
+`Highly recommended`
+
 `MacPorts <http://www.macports.org/>`_ is a package management system that will be very helpful to install some python libraries. 
-=======
-`MacPorts <http://www.macports.org/>`_ is a package management system that will be needed to install some python libraries. 
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 
 To check if MacPorts is installed already, in the terminal, type::
 
@@ -108,11 +94,7 @@ If MacPorts is installed, you should see the terminal output the version number,
 
   Version: 2.3.0
 
-<<<<<<< HEAD
 If MacPorts is not installed, you should see the terminal output that ``port`` is not a valid command::
-=======
-If MacPorts is not installed, you should see the terminal complain that ``port`` is not a valid command::
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 
   -bash: port: command not found
 
@@ -163,7 +145,7 @@ If Python is not installed, the terminal will output::
 If Python is not installed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Inside the terminal, once python is installed, type these commands in using sudo mode. Note you will need to enter your admin password.::
+Inside the terminal, once python is installed, type these commands in using sudo mode. Note you will need to enter your admin password::
 
   sudo port install py27
   sudo port install py27-numpy
@@ -198,7 +180,7 @@ Now, check if the packages have been installed properly by typing the following 
   import matplotlib
   from mpl_toolkits.basemap import Basemap
 
-If any of the packages are missing (e.g. scipy not installed), the python console will output an error, for instance::
+If any of the packages are missing (e.g. scipy not installed), the python console will output an error. For instance::
 
   Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -210,11 +192,7 @@ If any of the packages are missing, you can choose to install it by whatever mea
 
   sudo port install py27
 
-<<<<<<< HEAD
-to get the python version installed in ``opt/local/bin`` where MacPorts installs everything to. Select to use this version of Python by typing::
-=======
-to get the python version installed in ``opt/local/bin`` where MacPort installs everything to. Select to use this version of Python by typing::
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
+to get the python version installed in ``opt/local/bin`` where MacPorts installs everything. Select to use this version of Python by typing::
 
   sudo port install python_select
 
@@ -249,15 +227,11 @@ comes out without an error in the Python console, you can skip this section. Thi
 
 Disclaimer: Lifted from content written by `this guy <http://blog.bluedackers.com/2012/11/13/installing-basemap-on-mac-os-x-mountain-lion/>`_ with some tweaks. 
 
-<<<<<<< HEAD
-Enthought Python (aka Canopy) should get you most of the dependencies needed, and can be downloaded `here <https://store.enthought.com/downloads/#default>`_. You do need to get `Geos <http://trac.osgeo.org/geos/>`_ though. The best way to get it is `install Homebrew <http://matthewcarriere.com/2013/08/05/how-to-install-and-use-homebrew/>`_, and then install ``gdal``, a package that has ``Geos`` as a dependency. To get ``gdal``, do::
-=======
-Enthough Python should get you most of the dependencies needed. You do need to get `Geos <http://trac.osgeo.org/geos/>`_ though. The best way to get it is `install Homebrew <http://matthewcarriere.com/2013/08/05/how-to-install-and-use-homebrew/>`_, and then install ``gdal``, a package that has ``Geos`` as a dependency. To get ``gdal``, do::
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
+Enthought Python (aka Canopy) should get you most of the dependencies needed, and should be downloaded `here <https://store.enthought.com/downloads/#default>`_. You do need to get `Geos <http://trac.osgeo.org/geos/>`_ though. The best way to get it is `install Homebrew <http://matthewcarriere.com/2013/08/05/how-to-install-and-use-homebrew/>`_, and then install ``gdal``, a package that has ``Geos`` as a dependency. To get ``gdal``, do::
 
   brew install gdal
 
-Now install Basemap. Download it `here <https://pypi.python.org/pypi/basemap>`_. Unzip the package and cd into the unzipped package. To install basemap, do::
+Now install Basemap. Download it `here <https://pypi.python.org/pypi/basemap>`_. Unzip the package, cd into the unzipped package and do::
 
   sudo python setup.py build
   sudo python setup.py install
@@ -270,11 +244,8 @@ and then::
 
   from mpl_toolkits.basemap import Basemap
 
-<<<<<<< HEAD
 If installed correctly, no errors will occur.
 
-=======
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 .. ############################################################################ ..
 .. #                           INSTALLING BASEMAP                             # ..
 .. ############################################################################ ..
@@ -290,19 +261,12 @@ Fortran
 -------
 
 GFortran must be installed for AIMBAT. Note that f90 or f77 are also acceptable.
-<<<<<<< HEAD
- To check if you already have GFortran, in the terminal type::
+
+To check if you already have GFortran, in the terminal type::
 
   gfortran --version
 
 which will print out the version number you have, if it is already installed. 
-=======
- To check if you already have Gfortran, in the terminal type::
-
-  gfortran --version
-
-Which will print out the version number you have, if it is already install. 
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 
 If GFortran is not installed, the terminal will respond with::
 
@@ -332,13 +296,12 @@ Here some common problems and possible resolutions. If your problem is not liste
 Macports 
 ~~~~~~~~
 
-<<<<<<< HEAD
-Many issues encountered can be solved by upgrading all Python directories on your computer using MacPorts. In the command line type::
+Many of the issues encountered can be solved by upgrading all Python directories on your computer using MacPorts. To do this, in the command line type::
 
     sudo port selfupdate
     sudo port upgrade outdated
 
-This will first make sure your version of MacPorts is the most recent version, and will then go through all Python libraries to make sure they are all upgraded as well. Be aware that this step can take upwards of an hour depending on how many Python libraries you have installed. If at any point a library fails to install, type::
+This will first make sure your version of MacPorts is the most recent version, and will then go through all Python libraries to make sure they are all upgraded. Be aware that this step can take upwards of an hour depending on how many Python libraries you have installed. If at any point a library fails to install, type::
 
     sudo port clean <library>
     sudo port install <library>
@@ -353,9 +316,6 @@ You can then simply retype ``sudo port upgrade outdated`` and it will continue w
 If this last step does not work (i.e. it still outputs an error), type ``sudo port -p upgrade outdated``, which will ignore any errors the upgrade runs into and simply continue through the process. It is likely that these ignored errors will not have any effect on AIMBAT itself.
 
 You may also run into problems with AIMBAT if your `Macport <http://www.macports.org/>`_ version is not compatible with your operating system version. For example, if you used Macports for OS X 10.8 to install AIMBAT, then upgraded your operating system or OS X 10.9, you may find that AIMBAT no longer works properly. You will need to upgrade Macports to fix this error.
-=======
-You may run into problems with AIMBAT if your `Macport <http://www.macports.org/>`_ version is not compatible with your operating system version. For example, if you used Macports for OS X 10.8 to install AIMBAT, then upgraded your operating system or OS X 10.9, you may find that AIMBAT no longer works properly. You will need to upgrade Macports to fix this error.
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 
 Do not uninstall MacPorts unless you know what you are doing, uninstalling MacPorts may get rid of other programs you installed using MacPorts. However, if you are sure you want to do so, see `here <https://guide.macports.org/chunked/installing.macports.uninstalling.html>`_ for instructions.
 
@@ -371,11 +331,7 @@ Be careful with the operating system. For OS X 10.9 and above, Python 2.7 is not
 Setting the Python Path to the scripts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-<<<<<<< HEAD
 You are asked to add the path to the AIMBAT scripts in your file. To do that, you add them to the ``.bashrc`` file. There are other files you could add it to that work as well, such as the ``.profile`` or ``.bash_profile`` files. You can see the files by opening the terminal, going to your home directory and doing ``ls -a`` to see all the hidden files, and open then by doing ``vi .bashrc`` in vim, for instance. If the ``.bashrc`` file does not exist, ``vi .bashrc`` will create it and open it for editing.
-=======
-You are asked to add the path to the AIMBAT scripts in your file. To do that, you add them to the ``.bashrc`` file. There are other files you could add it to that work as well, such as the ``.profile`` or ``.bash_profile`` files. You can see the files by opening the terminal and doing ``ls -a`` to see all the hidden files, and open then by doing ``vi .bashrc`` in vim, for instance.
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 To ensure you can open a script, you need to add::
 
   	export PATH=$PATH:<path-to-folder-with-scripts>
@@ -388,19 +344,19 @@ to the ``.bashrc`` file. We recommend adding the paths to the ``.bashrc`` file.
 Terminal Commands stop working
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If ever the terminal commands such as ls stop working in the terminal, it could be that something went wrong with a path in the ``.bashrc`` or ``.profile`` files. If that happens you may not be able to open them in vim as that command would have stopped working as well. Instead, in the terminal, you do::
+If ever the terminal commands such as ``ls`` stop working in the terminal, it could be that something went wrong with a path in the ``.bashrc`` or ``.profile`` files. If that happens, you may not be able to open them in vim as that command would have stopped working as well. Instead, in the terminal, do::
 
   PATH=/bin:${PATH}
   PATH=/usr/bin:${PATH}
 
-And that should allow the commands to start working again. Figure out what you did wrong and remove that command.
+That should allow the commands to start working again. Figure out what you did wrong and remove that command.
 
 .. -------------------------------------------------------------------------------- ..
 
 Path to python files not found
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-After adding the path to your directory with scripts in ``.bashrc``, you still need to source the ``.bashrc`` files in ``.profile``, or the system may not find the directory. See here for more `details <http://publib.boulder.ibm.com/infocenter/pseries/v5r3/index.jsp?topic=/com.ibm.aix.baseadmn/doc/baseadmndita/prof_file.htm>`_ to see how the profile file is sourced. Note that this one will override the file in `/etc/profile`.
+After adding the path to your directory with scripts in ``.bashrc``, you still need to source the ``.bashrc`` files in ``.profile``, or the system may not find the directory. See `here <http://publib.boulder.ibm.com/infocenter/pseries/v5r3/index.jsp?topic=/com.ibm.aix.baseadmn/doc/baseadmndita/prof_file.htm>`_ for more details on how the profile file is sourced. Note that this one will override the file in `/etc/profile`.
 
 .. image:: installing-images/residue.png
 

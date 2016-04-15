@@ -6,13 +6,9 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>9. Parameter Configuration &mdash; AIMBAT 0.2.1 documentation</title>
+    <title>8. Parameter Configuration &mdash; AIMBAT 0.2.1 documentation</title>
     
-<<<<<<< HEAD
     <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
-=======
-    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/additional_styles.css" type="text/css" />
     
@@ -28,54 +24,37 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-<<<<<<< HEAD
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-=======
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
     <link rel="top" title="AIMBAT 0.2.1 documentation" href="../index.html" />
-    <link rel="next" title="10. SAC Data Access" href="SACdataAccess.html" />
-    <link rel="prev" title="8. Analyzing Data" href="analyzingData.html" /> 
+    <link rel="next" title="9. SAC Data Access" href="SACdataAccess.html" />
+    <link rel="prev" title="7. Analyzing Data" href="analyzingData.html" /> 
   </head>
-<<<<<<< HEAD
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
-=======
-  <body>
-    <div class="related">
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="SACdataAccess.html" title="10. SAC Data Access"
+          <a href="SACdataAccess.html" title="9. SAC Data Access"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="analyzingData.html" title="8. Analyzing Data"
+          <a href="analyzingData.html" title="7. Analyzing Data"
              accesskey="P">previous</a> |</li>
-<<<<<<< HEAD
         <li class="nav-item nav-item-0"><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
-=======
-        <li><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
       </ul>
     </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-<<<<<<< HEAD
           <div class="body" role="main">
-=======
-          <div class="body">
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
             
   <div class="section" id="parameter-configuration">
-<h1>9. Parameter Configuration<a class="headerlink" href="#parameter-configuration" title="Permalink to this headline">¶</a></h1>
+<h1>8. Parameter Configuration<a class="headerlink" href="#parameter-configuration" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="backend">
-<h2>9.1. Backend<a class="headerlink" href="#backend" title="Permalink to this headline">¶</a></h2>
+<h2>8.1. Backend<a class="headerlink" href="#backend" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://matplotlib.org/contents.html">Matplotlib</a> works with six GUI (Graphical User Interface) toolkits:</p>
 <ol class="arabic simple">
 <li>WX</li>
@@ -90,12 +69,11 @@
 <li><a class="reference external" href="http://matplotlib.org/api/widgets_api.html">GUI neutral widgets</a></li>
 <li><a class="reference external" href="http://matplotlib.org/users/event_handling.html">GUI neutral event handling API (Application Programming Interface)</a></li>
 </ol>
-<<<<<<< HEAD
 <p>AIMBAT uses the default toolkit <code class="docutils literal"><span class="pre">Tk</span></code> and backend <code class="docutils literal"><span class="pre">TkAgg</span></code>.</p>
 <p>Visit these pages for an <a class="reference external" href="http://matplotlib.org/faq/usage_faq.html#what-is-a-backend">explanation of the backend</a> and <a class="reference external" href="http://matplotlib.org/users/customizing.html#customizing-matplotlib">how to customize it</a>.</p>
 </div>
 <div class="section" id="configuration-file">
-<h2>9.2. Configuration File<a class="headerlink" href="#configuration-file" title="Permalink to this headline">¶</a></h2>
+<h2>8.2. Configuration File<a class="headerlink" href="#configuration-file" title="Permalink to this headline">¶</a></h2>
 <p>Other parameters for the package can be set up by a configuration file <code class="docutils literal"><span class="pre">ttdefaults.conf</span></code>, which is interpreted by the module ConfigParser. This configuration file is searched in the following order:</p>
 <ol class="arabic simple">
 <li>file <code class="docutils literal"><span class="pre">ttdefaults.conf</span></code> in the current working directory</li>
@@ -104,23 +82,8 @@
 <li>file <code class="docutils literal"><span class="pre">ttdefaults.conf</span></code> in the directory where AIMBAT is installed</li>
 </ol>
 <p>Python scripts in the <code class="docutils literal"><span class="pre">&lt;pkg-install-dir&gt;/pysmo-aimbat-0.1.2/scripts</span></code> can be executed from the command line. The command line arguments are parsed by the optparse module to improve the scripts&#8217; exitability. If conflicts existed, the command line options override the default parameters given in the configuration file <code class="docutils literal"><span class="pre">ttdefaults.conf</span></code>. Run the scripts with the <code class="docutils literal"><span class="pre">-h</span></code> option for the usage messages.</p>
-=======
-<p>AIMBAT uses the default toolkit <tt class="docutils literal"><span class="pre">Tk</span></tt> and backend <tt class="docutils literal"><span class="pre">TkAgg</span></tt>.</p>
-<p>Visit these pages for an <a class="reference external" href="http://matplotlib.org/faq/usage_faq.html#what-is-a-backend">explanation of the backend</a> and <cite>how to customize it &lt;http://matplotlib.org/users/customizing.html#customizing-matplotlib&gt;</cite>.</p>
-</div>
-<div class="section" id="configuration-file">
-<h2>9.2. Configuration File<a class="headerlink" href="#configuration-file" title="Permalink to this headline">¶</a></h2>
-<p>Other parameters for the package can be set up by a configuration file <tt class="docutils literal"><span class="pre">ttdefaults.conf</span></tt>, which is interpreted by the module ConfigParser. This configuration file is searched in the following order:</p>
-<ol class="arabic simple">
-<li>file <tt class="docutils literal"><span class="pre">ttdefaults.conf</span></tt> in the current working directory</li>
-<li>file <tt class="docutils literal"><span class="pre">.aimbat/ttdefaults.conf</span></tt> in your <tt class="docutils literal"><span class="pre">HOME</span></tt> directory</li>
-<li>a file specified by environment variable <tt class="docutils literal"><span class="pre">TTCONFIG</span></tt></li>
-<li>file <tt class="docutils literal"><span class="pre">ttdefaults.conf</span></tt> in the directory where AIMBAT is installed</li>
-</ol>
-<p>Python scripts in the <tt class="docutils literal"><span class="pre">&lt;pkg-install-dir&gt;/pysmo-aimbat-0.1.2/scripts</span></tt> can be executed from the command line. The command line arguments are parsed by the optparse module to improve the scripts&#8217; exibility. If conflicts existed, the command line options override the default parameters given in the configuration file <tt class="docutils literal"><span class="pre">ttdefaults.conf</span></tt>. Run the scripts with the <tt class="docutils literal"><span class="pre">-h</span></tt> option for the usage messages.</p>
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 <div class="section" id="example-of-aimbat-configuration-file-ttdefaults-conf">
-<h3>9.2.1. Example of AIMBAT configuration file <cite>ttdefaults.conf</cite><a class="headerlink" href="#example-of-aimbat-configuration-file-ttdefaults-conf" title="Permalink to this headline">¶</a></h3>
+<h3>8.2.1. Example of AIMBAT configuration file <cite>ttdefaults.conf</cite><a class="headerlink" href="#example-of-aimbat-configuration-file-ttdefaults-conf" title="Permalink to this headline">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="32%" />
@@ -242,16 +205,8 @@ xcorr for Numpy or xcorrf90 for Fortran</td>
 <td>Convergence criterion: epsilon</td>
 </tr>
 <tr class="row-even"><td>convtype = coef</td>
-<<<<<<< HEAD
 <td>Type of convergence criterion: coef for correlation coefficient,
 or resi for residual</td>
-=======
-<td><dl class="first last docutils">
-<dt>Type of convergence criterion: coef for correlation coefficient,</dt>
-<dd>or resi for residual</dd>
-</dl>
-</td>
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 </tr>
 <tr class="row-odd"><td>stackwgt = coef</td>
 <td>Weight each trace when calculating array stack</td>
@@ -337,21 +292,17 @@ solved by lapack</td>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-=======
-      <div class="sphinxsidebar">
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
         <div class="sphinxsidebarwrapper">
             <p class="logo"><a href="../index.html">
               <img class="logo" src="../_static/NU_Logo_purple.jpg" alt="Logo"/>
             </a></p>
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">9. Parameter Configuration</a><ul>
-<li><a class="reference internal" href="#backend">9.1. Backend</a></li>
-<li><a class="reference internal" href="#configuration-file">9.2. Configuration File</a><ul>
-<li><a class="reference internal" href="#example-of-aimbat-configuration-file-ttdefaults-conf">9.2.1. Example of AIMBAT configuration file <cite>ttdefaults.conf</cite></a></li>
+<li><a class="reference internal" href="#">8. Parameter Configuration</a><ul>
+<li><a class="reference internal" href="#backend">8.1. Backend</a></li>
+<li><a class="reference internal" href="#configuration-file">8.2. Configuration File</a><ul>
+<li><a class="reference internal" href="#example-of-aimbat-configuration-file-ttdefaults-conf">8.2.1. Example of AIMBAT configuration file <cite>ttdefaults.conf</cite></a></li>
 </ul>
 </li>
 </ul>
@@ -360,11 +311,10 @@ solved by lapack</td>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="analyzingData.html"
-                        title="previous chapter">8. Analyzing Data</a></p>
+                        title="previous chapter">7. Analyzing Data</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="SACdataAccess.html"
-                        title="next chapter">10. SAC Data Access</a></p>
-<<<<<<< HEAD
+                        title="next chapter">9. SAC Data Access</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -373,14 +323,6 @@ solved by lapack</td>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-=======
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../_sources/docfiles/parameterConfiguration.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -388,46 +330,30 @@ solved by lapack</td>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-<<<<<<< HEAD
     <div class="related" role="navigation" aria-label="related navigation">
-=======
-    <div class="related">
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="SACdataAccess.html" title="10. SAC Data Access"
+          <a href="SACdataAccess.html" title="9. SAC Data Access"
              >next</a> |</li>
         <li class="right" >
-          <a href="analyzingData.html" title="8. Analyzing Data"
+          <a href="analyzingData.html" title="7. Analyzing Data"
              >previous</a> |</li>
-<<<<<<< HEAD
         <li class="nav-item nav-item-0"><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2014, Lay Kuan Loh, Xiaoting Lou &amp; Suzan van der Lee.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
-=======
-        <li><a href="../index.html">AIMBAT 0.2.1 documentation</a> &raquo;</li> 
-      </ul>
-    </div>
-    <div class="footer">
-        &copy; Copyright 2014, Lay Kuan Loh, Xiaoting Lou &amp; Suzan van der Lee.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>

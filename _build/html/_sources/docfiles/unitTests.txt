@@ -2,11 +2,7 @@
 Unit Testing
 ============
 
-<<<<<<< HEAD
 This section is mainly for those who wish to make tweaks to AIMBAT themselves. We have added some unit tests to AIMBAT to ensure that it is robust. See the `Python Unit Testing Framework <https://docs.python.org/2/library/unittest.html>`_ for more details.
-=======
-This section is mainly for those who which to make tweaks to AIMBAT themselves. We have added some unit tests to AIMBAT to ensure its robustness. See the `Python Unit Testing Framework <https://docs.python.org/2/library/unittest.html>`_ for more details.
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 
 .. ############################################################################ ..
 .. #                          GETTING THE PACKAGES                            # ..
@@ -22,8 +18,5 @@ In the AIMBAT repository, ``cd`` into ``/src/pysmo/unit_tests`` and run::
 
 .. ############################################################################ ..
 .. #                          GETTING THE PACKAGES                            # ..
-<<<<<<< HEAD
 .. ############################################################################ ..
-=======
-.. ############################################################################ ..
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
+

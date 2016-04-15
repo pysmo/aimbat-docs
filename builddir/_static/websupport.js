@@ -2,13 +2,9 @@
  * websupport.js
  * ~~~~~~~~~~~~~
  *
- * sphinx.websupport utilties for all documentation.
+ * sphinx.websupport utilities for all documentation.
  *
-<<<<<<< HEAD
- * :copyright: Copyright 2007-2015 by the Sphinx team, see AUTHORS.
-=======
- * :copyright: Copyright 2007-2014 by the Sphinx team, see AUTHORS.
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
+ * :copyright: Copyright 2007-2016 by the Sphinx team, see AUTHORS.
  * :license: BSD, see LICENSE for details.
  *
  */
@@ -54,7 +50,6 @@
   }
 
   function initEvents() {
-<<<<<<< HEAD
     $(document).on("click", 'a.comment-close', function(event) {
       event.preventDefault();
       hide($(this).attr('id').substring(2));
@@ -100,53 +95,6 @@
       deleteComment($(this).attr('id').substring(2));
     });
     $(document).on("click", 'a.comment-markup', function(event) {
-=======
-    $('a.comment-close').live("click", function(event) {
-      event.preventDefault();
-      hide($(this).attr('id').substring(2));
-    });
-    $('a.vote').live("click", function(event) {
-      event.preventDefault();
-      handleVote($(this));
-    });
-    $('a.reply').live("click", function(event) {
-      event.preventDefault();
-      openReply($(this).attr('id').substring(2));
-    });
-    $('a.close-reply').live("click", function(event) {
-      event.preventDefault();
-      closeReply($(this).attr('id').substring(2));
-    });
-    $('a.sort-option').live("click", function(event) {
-      event.preventDefault();
-      handleReSort($(this));
-    });
-    $('a.show-proposal').live("click", function(event) {
-      event.preventDefault();
-      showProposal($(this).attr('id').substring(2));
-    });
-    $('a.hide-proposal').live("click", function(event) {
-      event.preventDefault();
-      hideProposal($(this).attr('id').substring(2));
-    });
-    $('a.show-propose-change').live("click", function(event) {
-      event.preventDefault();
-      showProposeChange($(this).attr('id').substring(2));
-    });
-    $('a.hide-propose-change').live("click", function(event) {
-      event.preventDefault();
-      hideProposeChange($(this).attr('id').substring(2));
-    });
-    $('a.accept-comment').live("click", function(event) {
-      event.preventDefault();
-      acceptComment($(this).attr('id').substring(2));
-    });
-    $('a.delete-comment').live("click", function(event) {
-      event.preventDefault();
-      deleteComment($(this).attr('id').substring(2));
-    });
-    $('a.comment-markup').live("click", function(event) {
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
       event.preventDefault();
       toggleCommentMarkupBox($(this).attr('id').substring(2));
     });
@@ -752,13 +700,8 @@
         (<a href="#" class="comment-markup" id="ab<%id%>">markup</a>):</p>\
       <div class="comment-markup-box" id="mb<%id%>">\
         reStructured text markup: <i>*emph*</i>, <b>**strong**</b>, \
-<<<<<<< HEAD
         <code>``code``</code>, \
         code blocks: <code>::</code> and an indented block after blank line</div>\
-=======
-        <tt>``code``</tt>, \
-        code blocks: <tt>::</tt> and an indented block after blank line</div>\
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
       <form method="post" id="cf<%id%>" class="comment-form" action="">\
         <textarea name="comment" cols="80"></textarea>\
         <p class="propose-button">\

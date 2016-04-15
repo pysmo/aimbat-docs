@@ -4,11 +4,7 @@
  *
  * Sphinx JavaScript utilities for all documentation.
  *
-<<<<<<< HEAD
- * :copyright: Copyright 2007-2015 by the Sphinx team, see AUTHORS.
-=======
- * :copyright: Copyright 2007-2014 by the Sphinx team, see AUTHORS.
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
+ * :copyright: Copyright 2007-2016 by the Sphinx team, see AUTHORS.
  * :license: BSD, see LICENSE for details.
  *
  */
@@ -95,7 +91,6 @@ jQuery.fn.highlightText = function(text, className) {
   });
 };
 
-<<<<<<< HEAD
 /*
  * backward compatibility for jQuery.browser
  * This will be supported until firefox bug is fixed.
@@ -120,8 +115,6 @@ if (!jQuery.browser) {
   jQuery.browser[jQuery.uaMatch(navigator.userAgent).browser] = true;
 }
 
-=======
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
 /**
  * Small JavaScript module for the documentation.
  */
@@ -131,6 +124,7 @@ var Documentation = {
     this.fixFirefoxAnchorBug();
     this.highlightSearchWords();
     this.initIndexTable();
+    
   },
 
   /**
@@ -183,16 +177,10 @@ var Documentation = {
 
   /**
    * workaround a firefox stupidity
-<<<<<<< HEAD
    * see: https://bugzilla.mozilla.org/show_bug.cgi?id=645075
    */
   fixFirefoxAnchorBug : function() {
     if (document.location.hash)
-=======
-   */
-  fixFirefoxAnchorBug : function() {
-    if (document.location.hash && $.browser.mozilla)
->>>>>>> 61f04900b8ba7c296195805632639c367cf8a575
       window.setTimeout(function() {
         document.location.href += '';
       }, 10);
@@ -265,6 +253,29 @@ var Documentation = {
     });
     var url = parts.join('/');
     return path.substring(url.lastIndexOf('/') + 1, path.length - 1);
+  },
+
+  initOnKeyListeners: function() {
+    $(document).keyup(function(event) {
+      var activeElementType = document.activeElement.tagName;
+      // don't navigate when in search box or textarea
+      if (activeElementType !== 'TEXTAREA' && activeElementType !== 'INPUT' && activeElementType !== 'SELECT') {
+        switch (event.keyCode) {
+          case 37: // left
+            var prevHref = $('link[rel="prev"]').prop('href');
+            if (prevHref) {
+              window.location.href = prevHref;
+              return false;
+            }
+          case 39: // right
+            var nextHref = $('link[rel="next"]').prop('href');
+            if (nextHref) {
+              window.location.href = nextHref;
+              return false;
+            }
+        }
+      }
+    });
   }
 };
 
