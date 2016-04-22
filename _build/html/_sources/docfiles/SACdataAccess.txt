@@ -86,7 +86,7 @@ After processing, run::
 
 to convert the pickle file to SAC files.
 
-.. image:: SACdataAccess/help-sac2pkl
+.. image:: SACdataAccess/help-sac2pkl.png
 
 See the doc string of ``pysmo.aimbat.sacpickle`` by typing in a python console::
 

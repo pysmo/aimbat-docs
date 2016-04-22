@@ -13,6 +13,8 @@ Modules and scripts included in the AIMBAT package were developed using `Python 
 
 The AIMBAT software package is distributed under the `GNU General Public License Version 3 (GPLv3) <http://www.gnu.org/licenses/gpl.html>`_ as published by the Free Software Foundation. 
 
+TEST EDIT
+
 Associated Documents
 --------------------
 
