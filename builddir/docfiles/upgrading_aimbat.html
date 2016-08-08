@@ -58,30 +58,30 @@
 <p>The latest version of AIMBAT, currently version 0.1.3, is hosted on the <a class="reference external" href="https://github.com/pysmo">pysmo repository</a> on Github. We will periodically be making updates to it.</p>
 <p>To upgrade AIMBAT, first delete the old AIMBAT files on your computer.</p>
 <p>Next, download the newest version of <a class="reference external" href="https://github.com/pysmo/aimbat">AIMBAT</a> and <a class="reference external" href="https://github.com/pysmo/sac">SAC</a> from github. Now, cd into the newest AIMBAT folder and run:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build</span> <span class="o">--</span><span class="n">fcompiler</span><span class="o">=</span><span class="n">gfortran</span>
-<span class="n">sudo</span> <span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+<div class="highlight-python"><div class="highlight"><pre>sudo python setup.py build --fcompiler=gfortran
+sudo python setup.py install
 </pre></div>
 </div>
 <p>Also, cd into the newest SAC folder and run:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build</span>
-<span class="n">sudo</span> <span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+<div class="highlight-python"><div class="highlight"><pre>sudo python setup.py build
+sudo python setup.py install
 </pre></div>
 </div>
-<p>Now, go to the <cite>.profile</cite> file and add the <cite>scripts</cite> folder in the new AIMBAT version to your path.</p>
+<p>Now, go to the <code class="docutils literal"><span class="pre">.profile</span></code> file and add the <cite>scripts</cite> folder in the new AIMBAT version to your path.</p>
 <img alt="../_images/upgrade-profile.png" src="../_images/upgrade-profile.png" />
 </div>
 <div class="section" id="possible-issues">
 <h2>4.2. Possible Issues<a class="headerlink" href="#possible-issues" title="Permalink to this headline">¶</a></h2>
 <p>Some users have reported errors with upgrading. If there are any problems running the updated AIMBAT, try the following:</p>
 <p>Get the location of the python <code class="docutils literal"><span class="pre">site-packages</span></code> directory by typing the following into the python console:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">site</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">site</span>
 <span class="n">site</span><span class="o">.</span><span class="n">getsitepackages</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>The path to the site packages directory is highlighted in the figure below.</p>
 <img alt="../_images/get-site-package.png" src="../_images/get-site-package.png" />
 <p>cd into the site-packages directory and remove all the folders with the word <code class="docutils literal"><span class="pre">pysmo</span></code> in their names by typing:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">&lt;</span><span class="n">psymo</span><span class="o">-</span><span class="n">folder</span><span class="o">&gt;</span>
+<div class="highlight-python"><div class="highlight"><pre>sudo rm -rf &lt;psymo-folder&gt;
 </pre></div>
 </div>
 <p>Now, reinstall the new version of AIMBAT.</p>
@@ -128,6 +128,9 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -151,7 +154,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2014, Lay Kuan Loh, Xiaoting Lou &amp; Suzan van der Lee.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
     </div>
   </body>
 </html>

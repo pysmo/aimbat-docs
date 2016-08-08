@@ -66,13 +66,13 @@
 <div class="section" id="how-to-update-this-manual">
 <h2>13.2. How to update this manual<a class="headerlink" href="#how-to-update-this-manual" title="Permalink to this headline">¶</a></h2>
 <p>On the master branch, cd into the github repository <cite>aimbat-docs &lt;https://github.com/pysmo/aimbat-docs&gt;</cite> and run:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">build</span> <span class="o">-</span><span class="n">b</span> <span class="n">html</span> <span class="o">.</span> <span class="n">builddir</span>
-<span class="n">make</span> <span class="n">html</span>
-<span class="n">make</span> <span class="n">latexpdf</span>
+<div class="highlight-python"><div class="highlight"><pre>sphinx-build -b html . builddir
+make html
+make latexpdf
 </pre></div>
 </div>
 <p>The first two commands build the html for the webpage, while the last command makes a pdf version of the online documentation.</p>
-<p>Now, commit the changes made in github, and push the changes to the master branch. The changes should be visible in the documentation within a few minutes.</p>
+<p>Now, commit the changes made in GitHub, and push the changes to the master branch. The changes should be visible in the documentation within a few minutes.</p>
 </div>
 </div>
 
@@ -115,6 +115,9 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -138,7 +141,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2014, Lay Kuan Loh, Xiaoting Lou &amp; Suzan van der Lee.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
     </div>
   </body>
 </html>

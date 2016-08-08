@@ -1,5 +1,5 @@
 =======================
-Parameter Configuration 
+Parameter Configuration
 =======================
 
 
@@ -24,7 +24,7 @@ The GUI of AIMBAT uses the following to support interactive plotting:
 #. `GUI neutral widgets <http://matplotlib.org/api/widgets_api.html>`_
 #. `GUI neutral event handling API (Application Programming Interface) <http://matplotlib.org/users/event_handling.html>`_
 
-AIMBAT uses the default toolkit ``Tk`` and backend ``TkAgg``. 
+AIMBAT uses the default toolkit ``Tk`` and backend ``TkAgg``.
 
 Visit these pages for an `explanation of the backend <http://matplotlib.org/faq/usage_faq.html#what-is-a-backend>`_ and `how to customize it <http://matplotlib.org/users/customizing.html#customizing-matplotlib>`_.
 
@@ -87,7 +87,7 @@ Example of AIMBAT configuration file `ttdefaults.conf`
 | minspan = 5                  | Minimum sample points for SpanSelector to select time window  |
 +------------------------------+---------------------------------------------------------------+
 |srate = -1                    | Sample rate for loading SAC data.                             |
-|                              | Read from first file if srate < 0                             | 
+|                              | Read from first file if srate < 0                             |
 +------------------------------+---------------------------------------------------------------+
 
 +---------------------------------+--------------------------------------------------+
@@ -136,7 +136,7 @@ Example of AIMBAT configuration file `ttdefaults.conf`
 +---------------------------+------------------------------------------------------------------+
 | [mccc]                    |                                                                  |
 +===========================+==================================================================+
-| srate = -1                | Sample rate for loading SAC data.                                |        
+| srate = -1                | Sample rate for loading SAC data.                                |
 |                           | Read from first file if srate :math:`< 0`                        |
 +---------------------------+------------------------------------------------------------------+
 | ofilename = mc            | Output file name of MCCC.                                        |
@@ -173,4 +173,3 @@ Example of AIMBAT configuration file `ttdefaults.conf`
 .. ############################################################################ ..
 .. #                           CONFIGURATION FILE                             # ..
 .. ############################################################################ ..
-

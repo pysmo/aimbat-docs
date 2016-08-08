@@ -60,7 +60,7 @@
 <div class="section" id="installing-obspy">
 <h3>5.1.1. Installing Obspy<a class="headerlink" href="#installing-obspy" title="Permalink to this headline">¶</a></h3>
 <p>We recommend using Macports to install Obspy as detailed in the <cite>Installation</cite> section <a class="reference external" href="https://github.com/obspy/obspy/wiki">here</a>. If you have installed Enthought Canopy:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">port</span> <span class="n">install</span> <span class="n">py27</span><span class="o">-</span><span class="n">obspy</span>
+<div class="highlight-python"><div class="highlight"><pre>sudo port install py27-obspy
 </pre></div>
 </div>
 <p>should install Obspy. If not, installing it with <a class="reference external" href="https://github.com/obspy/obspy/wiki/Installation-on-OS-X-using-Homebrew">Homebrew</a> also seems to work.</p>
@@ -68,7 +68,7 @@
 <div class="section" id="did-the-installation-work">
 <h3>5.1.2. Did the installation work?<a class="headerlink" href="#did-the-installation-work" title="Permalink to this headline">¶</a></h3>
 <p>If the installation has worked, <cite>close the terminal</cite> you used to install Obspy on, and then open it again. Now, open the Python terminal in a new terminal by typing <code class="docutils literal"><span class="pre">python</span></code>, and type:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">obspy</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">obspy</span>
 </pre></div>
 </div>
 <p>If there are no errors, your installation has worked.</p>
@@ -96,11 +96,17 @@
 <div class="section" id="example-sod-recipe">
 <h3>5.2.2. Example SOD recipe<a class="headerlink" href="#example-sod-recipe" title="Permalink to this headline">¶</a></h3>
 <p>Inside the repository <a class="reference external" href="https://github.com/pysmo/data-example">data-example</a>, there is a folder <cite>sod_requests</cite>. The file within it called <cite>sod_request.xml</cite>, which is available <a class="reference external" href="https://github.com/pysmo/data-example/blob/master/sod_requests/sod_request.xml">here</a>, is an example of a sod request recipe that will download data from IRIS. To run it, cd into the folder containing <cite>sod_request.xml</cite> and do:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sod</span> <span class="n">sod_request</span><span class="o">.</span><span class="n">xml</span>
+<div class="highlight-python"><div class="highlight"><pre>sod sod_request.xml
 </pre></div>
 </div>
 <p>Downloading the data (output as SAC files) may take a while. This receipt filters the data, and outputs the folders <cite>processedSeismograms</cite> and <cite>seismograms</cite>, which contain the filtered and unfiltered data.</p>
 </div>
+</div>
+<div class="section" id="wilber">
+<h2>5.3. Wilber<a class="headerlink" href="#wilber" title="Permalink to this headline">¶</a></h2>
+<p>Another resource for downloading SAC data is Wilber, created by IRIS (Incorporated Research Institutions for Seismology) and located at their website <a class="reference external" href="https://ds.iris.edu/wilber3/pick_event">here</a> (manual located <a class="reference external" href="https://ds.iris.edu/ds/nodes/dmc/manuals/wilber-3">here</a>). When selecting which events or stations to study, keep in mind that distances between 30 and 90 degrees will result in the best data when studying P waves.</p>
+<p>For P waves, select the BHZ (vertical) channel, and for S waves select the other two BH- channels for a given station (usually BH1/BH2 or BHE/BHN). Make sure to choose appropriate time windows for the type of wave you are studying when prompted.</p>
+<p>After downloading SAC data from Wilber, the theoretical arrival times for each SAC file must be added. One way to do this is using taup_setsac, which is part of the TauP software package available <a class="reference external" href="http://http://www.seis.sc.edu/taup">here</a>.</p>
 </div>
 </div>
 
@@ -127,6 +133,7 @@
 <li><a class="reference internal" href="#example-sod-recipe">5.2.2. Example SOD recipe</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#wilber">5.3. Wilber</a></li>
 </ul>
 </li>
 </ul>
@@ -152,6 +159,9 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -175,7 +185,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2014, Lay Kuan Loh, Xiaoting Lou &amp; Suzan van der Lee.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
     </div>
   </body>
 </html>

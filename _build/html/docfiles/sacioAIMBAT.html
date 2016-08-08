@@ -56,7 +56,7 @@
 <div class="section" id="converting-from-sac-to-pkl-files">
 <h2>6.1. Converting from SAC to PKL files<a class="headerlink" href="#converting-from-sac-to-pkl-files" title="Permalink to this headline">¶</a></h2>
 <p>Place the SAC files you want to convert to a pickle (PKL) file into the same folder. Suppose, for instance, they are BHZ channels. Note that the SAC files must be of the same channel. cd into that folder, and run:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sac2pkl</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">s</span> <span class="o">*.</span><span class="n">BHZ</span><span class="o">.</span><span class="n">sac</span>
+<div class="highlight-python"><div class="highlight"><pre>sac2pkl.py -s *.BHZ.sac
 </pre></div>
 </div>
 <p>The output should be a PKL file in the same folder as the sac files.</p>
@@ -65,7 +65,7 @@
 <div class="section" id="converting-from-pkl-to-sac-files">
 <h2>6.2. Converting from PKL to SAC files<a class="headerlink" href="#converting-from-pkl-to-sac-files" title="Permalink to this headline">¶</a></h2>
 <p>cd into the folder containing the PKL file that you wish to convert into SAC files, and run:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sac2pkl</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">p2s</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;.</span><span class="n">pkl</span>
+<div class="highlight-python"><div class="highlight"><pre>sac2pkl.py --p2s &lt;name-of-file&gt;.pkl
 </pre></div>
 </div>
 <p>The SAC files contained within will output into the same folder as the PKL file is stored in.</p>
@@ -112,6 +112,9 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -135,7 +138,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2014, Lay Kuan Loh, Xiaoting Lou &amp; Suzan van der Lee.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
     </div>
   </body>
 </html>

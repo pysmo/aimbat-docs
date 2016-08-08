@@ -20,30 +20,31 @@
 \BOOKMARK [0][-]{chapter.5}{Getting Data}{}% 20
 \BOOKMARK [1][-]{section.5.1}{Obspy.fdsn for downloading data}{chapter.5}% 21
 \BOOKMARK [1][-]{section.5.2}{Standing Order for Data}{chapter.5}% 22
-\BOOKMARK [0][-]{chapter.6}{SAC Input/Output procedures for AIMBAT}{}% 23
-\BOOKMARK [1][-]{section.6.1}{Converting from SAC to PKL files}{chapter.6}% 24
-\BOOKMARK [1][-]{section.6.2}{Converting from PKL to SAC files}{chapter.6}% 25
-\BOOKMARK [0][-]{chapter.7}{Analyzing Data}{}% 26
-\BOOKMARK [1][-]{section.7.1}{Seismic Analysis Code \(SAC\)}{chapter.7}% 27
-\BOOKMARK [0][-]{chapter.8}{Parameter Configuration}{}% 28
-\BOOKMARK [1][-]{section.8.1}{Backend}{chapter.8}% 29
-\BOOKMARK [1][-]{section.8.2}{Configuration File}{chapter.8}% 30
-\BOOKMARK [0][-]{chapter.9}{SAC Data Access}{}% 31
-\BOOKMARK [1][-]{section.9.1}{Python Object for SAC File}{chapter.9}% 32
-\BOOKMARK [1][-]{section.9.2}{Python Pickle for SAC Files}{chapter.9}% 33
-\BOOKMARK [1][-]{section.9.3}{SAC Plotting and Phase Picking}{chapter.9}% 34
-\BOOKMARK [1][-]{section.9.4}{SAC Phase Picking}{chapter.9}% 35
-\BOOKMARK [0][-]{chapter.10}{Measuring Teleseismic Body Wave Arrival Times}{}% 36
-\BOOKMARK [1][-]{section.10.1}{Automated Phase Alignment}{chapter.10}% 37
-\BOOKMARK [1][-]{section.10.2}{Picking Travel Times}{chapter.10}% 38
-\BOOKMARK [1][-]{section.10.3}{What the Alignments Stand For}{chapter.10}% 39
-\BOOKMARK [1][-]{section.10.4}{Post Processing}{chapter.10}% 40
-\BOOKMARK [0][-]{chapter.11}{Visualizing Stations on a map}{}% 41
-\BOOKMARK [0][-]{chapter.12}{Unit Testing}{}% 42
-\BOOKMARK [1][-]{section.12.1}{Running the Tests}{chapter.12}% 43
-\BOOKMARK [0][-]{chapter.13}{Updating this manual}{}% 44
-\BOOKMARK [1][-]{section.13.1}{Dependencies}{chapter.13}% 45
-\BOOKMARK [1][-]{section.13.2}{How to update this manual}{chapter.13}% 46
-\BOOKMARK [0][-]{chapter.14}{Citations}{}% 47
-\BOOKMARK [0][-]{chapter.15}{Indices and tables}{}% 48
-\BOOKMARK [0][-]{chapter*.9}{Bibliography}{}% 49
+\BOOKMARK [1][-]{section.5.3}{Wilber}{chapter.5}% 23
+\BOOKMARK [0][-]{chapter.6}{SAC Input/Output procedures for AIMBAT}{}% 24
+\BOOKMARK [1][-]{section.6.1}{Converting from SAC to PKL files}{chapter.6}% 25
+\BOOKMARK [1][-]{section.6.2}{Converting from PKL to SAC files}{chapter.6}% 26
+\BOOKMARK [0][-]{chapter.7}{Analyzing Data}{}% 27
+\BOOKMARK [1][-]{section.7.1}{Seismic Analysis Code \(SAC\)}{chapter.7}% 28
+\BOOKMARK [0][-]{chapter.8}{Parameter Configuration}{}% 29
+\BOOKMARK [1][-]{section.8.1}{Backend}{chapter.8}% 30
+\BOOKMARK [1][-]{section.8.2}{Configuration File}{chapter.8}% 31
+\BOOKMARK [0][-]{chapter.9}{SAC Data Access}{}% 32
+\BOOKMARK [1][-]{section.9.1}{Python Object for SAC File}{chapter.9}% 33
+\BOOKMARK [1][-]{section.9.2}{Python Pickle for SAC Files}{chapter.9}% 34
+\BOOKMARK [1][-]{section.9.3}{SAC Plotting and Phase Picking}{chapter.9}% 35
+\BOOKMARK [1][-]{section.9.4}{SAC Phase Picking}{chapter.9}% 36
+\BOOKMARK [0][-]{chapter.10}{Measuring Teleseismic Body Wave Arrival Times}{}% 37
+\BOOKMARK [1][-]{section.10.1}{Automated Phase Alignment}{chapter.10}% 38
+\BOOKMARK [1][-]{section.10.2}{Picking Travel Times}{chapter.10}% 39
+\BOOKMARK [1][-]{section.10.3}{What the Alignments Stand For}{chapter.10}% 40
+\BOOKMARK [1][-]{section.10.4}{Post Processing}{chapter.10}% 41
+\BOOKMARK [0][-]{chapter.11}{Visualizing Stations on a map}{}% 42
+\BOOKMARK [0][-]{chapter.12}{Unit Testing}{}% 43
+\BOOKMARK [1][-]{section.12.1}{Running the Tests}{chapter.12}% 44
+\BOOKMARK [0][-]{chapter.13}{Updating this manual}{}% 45
+\BOOKMARK [1][-]{section.13.1}{Dependencies}{chapter.13}% 46
+\BOOKMARK [1][-]{section.13.2}{How to update this manual}{chapter.13}% 47
+\BOOKMARK [0][-]{chapter.14}{Citations}{}% 48
+\BOOKMARK [0][-]{chapter.15}{Indices and tables}{}% 49
+\BOOKMARK [0][-]{chapter*.9}{Bibliography}{}% 50

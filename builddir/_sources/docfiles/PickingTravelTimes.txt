@@ -2,7 +2,7 @@
 Measuring Teleseismic Body Wave Arrival Times
 =============================================
 
-The core idea in using AIMBAT to measure teleseismic body wave arrival times has two parts: 
+The core idea in using AIMBAT to measure teleseismic body wave arrival times has two parts:
 
 * automated phase alignment, to reduce user processing time, and
 * interactive quality control, to retain valuable user inputs.
@@ -30,14 +30,14 @@ The one-time manual phase picking at the array stack in step (b) allows the meas
 	+      +           +-------------+----------------+-------------+---------------+-------------+
 	|      |           | Time Window | Time Pick      | Time Header | Time Pick     | Time Header |
 	+------+-----------+-------------+----------------+-------------+---------------+-------------+
-	| (a)  |   ICCS    | :math:`W_a` | :math:`_0T_i`  | **T0**      | :math:`_1T_i` | **T1**      |     
+	| (a)  |   ICCS    | :math:`W_a` | :math:`_0T_i`  | **T0**      | :math:`_1T_i` | **T1**      |
 	+------+-----------+-------------+----------------+-------------+---------------+-------------+
-	| (b)  |   ICCS    | :math:`W_b` | :math:`_2T'_i` | **T2**      | :math:`_2T_i` | **T2**      |     
+	| (b)  |   ICCS    | :math:`W_b` | :math:`_2T'_i` | **T2**      | :math:`_2T_i` | **T2**      |
 	+------+-----------+-------------+----------------+-------------+---------------+-------------+
-	| (d)  |   MCCS    | :math:`W_b` | :math:`_2T_i`  | **T2**      | :math:`_3T_i` | **T3**      |     
+	| (d)  |   MCCS    | :math:`W_b` | :math:`_2T_i`  | **T2**      | :math:`_3T_i` | **T3**      |
 	+------+-----------+-------------+----------------+-------------+---------------+-------------+
 
-The ICCS and MCCC algorithms are implemented in two modules ``pysmo.aimbat.algiccs`` and ``pysmo.aimbat.algmccc``, and can be executed in scripts ``iccs.py`` and ``mccc.py`` respectively. 
+The ICCS and MCCC algorithms are implemented in two modules ``pysmo.aimbat.algiccs`` and ``pysmo.aimbat.algmccc``, and can be executed in scripts ``iccs.py`` and ``mccc.py`` respectively.
 
 .. ############################################################################ ..
 .. #                           AUTOMATED PHASE ALIGNMENT                      # ..
@@ -61,72 +61,60 @@ This section explains how to run the program :code:`ttpick.py` to get the travel
 Getting into the right directory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the terminal, cd into the directory with all of the ``pkl`` files you want to run. You want to run either the ``.bht`` or ``.bhz`` files. ``bht`` files are for S-waves and bhz files are for P-waves. ``PKL`` is a bundle of ``SAC`` files. Each ``SAC`` file is a seismogram, but since there may be many seismograms from various stations for each event, we bundle them into a ``PKL`` file so we only have to import one file into AIMBAT, not a few hundred of them.
+In the terminal, cd into the directory with all of the ``pkl`` files you want to run. You want to run either the ``BHT`` or ``BHZ`` files. ``BHT`` files are for S-waves and ``BHZ`` files are for P-waves. ``PKL`` is a bundle of ``SAC`` files. Each ``SAC`` file is a seismogram, but since there may be many seismograms from various stations for each event, we bundle them into a ``PKL`` file so we only have to import one file into AIMBAT, not a few hundred of them.
 
 .. ----------------------------------------------------------------------------- ..
 
 Running ttpick.py
 ~~~~~~~~~~~~~~~~~
 
-Run ``ttpick/py <path-to-pkl-file>``. A GUI should pop up if you successfully ran it. Note that if you click on the buttons, they will not work until you move the mouse off them; this is a problem we are hoping to fix.
+Run ``ttpick.py -p P <path-to-pkl-file>`` for ``BHZ`` files or ``ttpick.py -p S <path-to-pkl-file>`` for ``BHT`` files. A GUI should pop up if you successfully ran it. Note that if you click on the buttons, they will not work until you move your mouse off them; this is a problem we are hoping to fix.
 
 You can get some example data to test this out by downloading the Github repository `data-example <https://github.com/pysmo/data-example>`_. Now, cd into the folder `example_pkl_files`, which has several pickle files for seismic events. Type::
 
-    ttpick.py 20110915.19310408.bhz.pkl
+    ttpick.py -p P 20110915.19310408.bhz.pkl
 
-and a python GUI should pop up. 
+and a python GUI should pop up.
 
 .. image:: pickingTravelTimes-images/pick_travel_times.png
 
+At the top of the GUI is the scaled sum of all of the seismograms known as the array stack, which gives a characteristic waveform of the event for the stations involved. Beneath this is a page of seismograms, with the corresponding station and various quality factors listed on the right. ``CCC`` is the cross-correlation coefficient between that seismogram and the array stack, ``SNR`` is the signal-to-noise ratio, and ``COH`` is the coherence between that seismogram and the array stack.
+
 .. ----------------------------------------------------------------------------- ..
+
+Initial deselection of bad seismograms
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Bad seismograms are those whose waveforms look nothing like the array stack above. By default, the seismograms are sorted by quality, so bad seismograms will likely be at the top. In order to deselect these, click on the waveforms themselves (not the fill) and wait a second or two for them to turn gray. The user can develop criteria for which seismograms to deselect and which to keep. Simply deselecting all seismograms below a certain quality threshold can decrease time but may lead to good seismograms being deselected or bad seismograms remaining.
+
+Remember to save your work periodically once you start picking your travel times. Otherwise, if AIMBAT crashes, you will lose your work.
 
 Align
 ~~~~~
 
-``Align`` is only used in the beginning if you have altered some of the travel time arrivals of the seismograms by pressing ``t2`` and want to realign the array stack. Do not press ``Align`` after pressing ``Sync``, as that will remove all of your ``t2`` picks.
+The first step after deselecting seismograms is to press ``Align``. This will recalculate both the array stack and the T1 picks for the seismograms, not including the deselected seismograms. Do not press ``Align`` after pressing ``Sync`` unless you wish to remove any ``T2`` picks that have been made.
 
 .. ----------------------------------------------------------------------------- ..
 
-Selecting a time window around the arrival of interest
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sync, refine, and setting time window
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+After hitting the ``Align`` button, place the cursor on the array stack where the first motion of the seismogram, either up or down, occurs. Press ``t`` and ``2`` simultaneously on the keyboard to select the arrival time. Now press ``Sync``. Use the mouse to drag and select the desired time window on the seismogram on the array stack. This time window is the portion of the seismogram on which cross-correlation will be run. The time window should begin 2-10 seconds before the first arrival and include a few seconds of the first motion of the waveform. The final time window should be smaller than the default window to increase the accuracy of the cross-correlation.
 
 .. image:: pickingTravelTimes-images/selecting-time-window-highlight.png
 
-Hit the ``Align`` button and use ``t2`` to select the arrival time. Now press ``Sync``. Use the mouse to select the desired time window on the seismogram on the array stack. Press ``Sync`` again.
+Next, set the cursor over the array stack and press the ``w`` key. If the new time window has been saved, a message noting the new size of the time window will be printed in the terminal. The entire width of the x-axis is now colored green and will be stored as the time window to use for the cross-correlations. Press ``Save headers only`` if you wish to keep this time window for future applications.
 
-.. image:: pickingTravelTimes-images/selected-time-window-t2.png
-
-Next, set the mouse over the seismogram and press the `w` key. If the new time window has been saved, a message noting the new size of the time window should be printed in the terminal.
-
-.. image:: pickingTravelTimes-images/saved-smaller-time-window.png
-
-The entire width of the x-axis is now colored green and will be stored as the time window to use for the cross-correlations. Click the ``Save Headers Only`` button. 
-
-Quit the GUI and restart it, and you will see that your new, changed time window is preserved in green in the array stack. 
-
-.. image:: pickingTravelTimes-images/before-refine-reduced-time-window.png
-
-Now press ``refine`` and all the seismograms will align with the smaller time window.
-
-.. image:: pickingTravelTimes-images/after-refine-reduced-time-window.png
-
-.. ----------------------------------------------------------------------------- ..
-
-Get rid of bad seismograms 
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If there are any really bad seismograms, you can click on them to deselect them. Bad seismograms are those that look nothing like the shape of the array stack pictured. Usually there are more than enough seismograms, so it is safe to throw out any that deviate more than a bit from the array stack. 
+Now press ``Refine`` and all the seismograms will align with the smaller time window. Note that the ``Weighted average quality`` printed to the terminal may decrease significantly, but this is likely due to the fact that the time window is smaller than the original.
 
 .. ----------------------------------------------------------------------------- ..
 
 Filtering
 ~~~~~~~~~
 
-To filter your data, hit the ``filter`` button, and a window will popup for you to use the `Butterworth filter <http://en.wikipedia.org/wiki/Butterworth_filter>`_ to filter your data. 
+If you wish to apply a filter to your data, hit the ``Filter`` button, and a window will pop up for you to use the `Butterworth filter <http://en.wikipedia.org/wiki/Butterworth_filter>`_ to filter your data.
 
 .. image:: pickingTravelTimes-images/filtering-interface.png
-
-	Interface to filter your data.
 
 The defaults used for filtering are:
 
@@ -142,47 +130,14 @@ The defaults used for filtering are:
 | High Frequency | 0.25 Hz  |
 +----------------+----------+
 
-You can change the order and filter type by selecting the option you want. In order to set corner frequencies for the filer, select the low frequency and the high frequency you want on the lower figure. Click ``apply`` to filter the seismograms when you are satisfied with the filter paramters chosen.
-
-Remember to save your work periodically once you start picking your travel times, otherwise, if AIMBAT crashes, you lose it.
-
-.. ----------------------------------------------------------------------------- ..
-
-Refine
-~~~~~~
-
-Hit the ``Refine`` button to begin the initial cross-correlations. These appear as red lines.
-
-We are not using ``Align`` here, but these are the theoretical arrival times, marked in black.
+You can change the order and filter type by selecting the option you want. In order to set corner frequencies for the filter, select the low frequency and the high frequency you want on the lower figure by clicking. Press ``Apply`` to filter the seismograms when you are satisfied with the filter parameters chosen.
 
 .. ----------------------------------------------------------------------------- ..
 
 Finalize
-~~~~
+~~~~~~~~
 
-Hit ``Finalize`` to run the Multi-Channel cross-correlation. Do not hit ``Align`` or ``Refine`` again, or all your work will be erased. A warning will pop up to check if you really do want to hit these two buttons if you do click on them.
-
-
-.. ----------------------------------------------------------------------------- ..
-
-Manually pick the arrival times using t2
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-For an earthquake, it is expected that the arrival times should be identical in an idealized situation. However, since stations are located in 3D space, this is not necessarily the case. For earthquakes of magnitude 7.0 and above, usually the arrival times are very well aligned as the signal is high. However, if the earthquake is too strong, the source gets complicated, so it needs filtering.
-
-Below a magnitude of 6.0, the signal to noise ratio gets very weak. If the weighted average quality gets too low (1.0 and below), it may not be worth keeping that data set unless you really need it.
-
-.. image:: pickingTravelTimes-images/not_worth_it.png
-
-	Weighted average quality is 0.85 - should throw away
-
-We manually pick the arrival times to align them. Click on the GUI window, hover over the correct spot where you want to pick the new travel time, and type ``t2``. A red line should appear exactly where your mouse was. You can zoom in to help you with this picking.
-
-Also pick the arrival time on the array stack. For the arrival times, you want to align the point where the first peak occurs most of all, then try to get the peaks to align.
-
-.. image:: pickingTravelTimes-images/align_seismogram.png
-
-	Align Seismogram
+Hit ``Finalize`` to run the multi-channel cross-correlation. Do not hit ``Align`` or ``Refine`` again, or all your previous picks will be written over. A warning will pop up to check if you really do want to hit these two buttons if you do click on them.
 
 .. ----------------------------------------------------------------------------- ..
 
@@ -191,7 +146,7 @@ SACP2 to check for outlier seismograms
 
 Hit ``SACP2`` and go to the last figure, (d). Zoom in to have a better look. Zooming in doesn’t always work well; close and reopen the ``SACP2`` window if there are problems.
 
-Click on the outliers that stray from the main group of stacked seismograms. The terminal will output the names of the seismograms that you clicked on, so you can return to the main GUI window and readjust the travel times. Note: hitting ``SACP2`` before hitting ``finalize`` will often cause AIMBAT to close, so make sure you have finalized before using SACP2.
+Click on the outliers that stray from the main group of stacked seismograms. The terminal will output the names of the seismograms that you clicked on, so you can return to the main GUI window and readjust the travel times. Note: hitting ``SACP2`` before hitting ``Finalize`` will often cause AIMBAT to close, so make sure you have finalized before using SACP2.
 
 .. image:: pickingTravelTimes-images/SACP2_popup.png
 
@@ -202,11 +157,7 @@ Go through the badly aligned seismograms and realign the travel times manually
 
 By default, the worst seismograms are on the first page, and as you click through the pages, the quality of the seismograms gradually gets better. Keep using ``t2`` to realign the arrival times so that the peaks of all the seismograms are nicely aligned. Remember to zoom in to have a better look.
 
-However, you may wish to sort the seismograms in alphabetical order so that you can find the bad seismogrrams and correct them more easily. Hit the ``sort`` button and a window will pop up for you to choose which sorting method to use. In this case, choose to sort the files by filename.
-
-.. image:: pickingTravelTimes-images/sorting-interface.png
-
-The seismograms are stretched to fit together, but they may be scaled differently.
+However, you may wish to sort the seismograms in alphabetical order or by azimuth so that you can find the bad seismogrrams and correct them more easily. Hit the ``Sort`` button and a window will pop up for you to choose which sorting method to use. In this case, choose ``File`` to sort the files by station name alphabetically, or choose ``AZ`` to sort the files by azimuth from the event epicenter. The seismograms are stretched to fit together, but they may be scaled differently.
 
 .. ############################################################################ ..
 .. #                             PICKING TRAVEL TIMES                         # ..
@@ -257,12 +208,12 @@ In the same folder as the initial PKL file you ran ``ttpick.py`` on, you can fin
 
 .. image:: pickingTravelTimes-images/output_list.png
 
-``mccc delay`` is `t3+average arrival times`, and `t0_times` are the theoretical arrival times. `delay_times` are obtained by taking `t3-t0`. 
+``mccc delay`` is `t3+average arrival times`, and `t0_times` are the theoretical arrival times. `delay_times` are obtained by taking `t3-t0`.
 
 Disclaimer about delay times
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`t0` depends on hypocenter location, origin time, and reference model. We compute the delay time by finding `t3-t0`, but it does not have elliptic, topological, or crust corrections. 
+`t0` depends on hypocenter location, origin time, and reference model. We compute the delay time by finding `t3-t0`, but it does not have elliptic, topological, or crust corrections.
 
 .. ----------------------------------------------------------------------------- ..
 
@@ -285,7 +236,6 @@ Run ``getsta.py`` in the additional scripts (not on Github for now). It gives th
 .. #                              POSSIBLE ISSUES                             # ..
 .. ############################################################################ ..
 
-.. -------------------------------------------------------------------------------- ..
 
 Picking Travel Times does not work
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -299,44 +249,9 @@ Inside that file, ensure the backend is set to::
 
   	backend : TkAgg
 
-Comment out the other backends!
-
-.. -------------------------------------------------------------------------------- ..
-
-Travel Times
-~~~~~~~~~~~~
-
-If one of the seismograms being picked does not fit completely within the green (computer) window, and you hit `ICCC-A` or `ICCC-B`, you will get an error message complaining about the exact seismogram which is too short. Simply deselect it.
-
-.. image:: pickingTravelTimes-images/matplotlib_hidden_directory.png
-	
-	Matplotlib hidden directory
-
-.. image:: pickingTravelTimes-images/files_in_matplotlib.png
-
-	``.matplotlib`` files within
-
-.. image:: pickingTravelTimes-images/matplotlibrc_file.png
-
-	Matplotlibrc backend
-
-
+Make sure to comment out the other backends.
 
 
 .. ############################################################################ ..
 .. #                              POSSIBLE ISSUES                             # ..
 .. ############################################################################ ..
-
-
-
-
-
-
-
-
-
-
-
-
-
-
